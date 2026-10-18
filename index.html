@@ -64,6 +64,11 @@ main{padding-block:20px 60px}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr));gap:0 40px}
 .howto{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px;color:#2b303b}
 .howto .tag{margin-right:4px}
+.real{margin:0 0 16px;padding:12px 16px;border-radius:10px;background:var(--bad-bg);color:#5e1d12;font-size:15px;max-width:90ch}
+.rk{display:flex;flex-wrap:wrap;gap:8px 20px;margin:6px 0 14px;font-size:14px;color:var(--muted)}.rk b{color:var(--ink)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:8px 32px}
+.rlist{margin:4px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.rlist .th{font-weight:700}.rlist .how{display:block;color:var(--good);font-size:14px;margin-top:2px}
 .tlay{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
 .tside{position:sticky;top:64px}.tsh{margin:0 0 8px;font-size:13px;font-weight:700;color:var(--muted)}
 .tlist{display:flex;flex-direction:column;gap:2px}
@@ -357,6 +362,11 @@ h3{font-family:var(--f-display);font-size:20px;margin:28px 0 10px;text-wrap:bala
     <div id="commDetail"></div>
     <h3>Points de vulnérabilité à anticiper</h3>
     <div class="tbl stack" id="vulnTable"></div>
+    <h3 id="rallyH">Ralliements : convaincre un candidat de se désister pour Lisnard</h3>
+    <p class="lead" id="rallyIntro"></p>
+    <p class="real" id="rallyReal"></p>
+    <div class="chips" id="rallyChips"></div>
+    <div id="rallyDetail"></div>
   </section>
 
   <section id="v-journal" class="view" hidden>
@@ -406,7 +416,7 @@ function show(v){
   try{localStorage.setItem("tab",v)}catch(e){}
   if(v==="grille") init3d();
   if(v==="sond") renderPolls();
-  if(v==="comm") renderComm();
+  if(v==="comm") {renderComm();renderRally()}
   if(v==="opin") renderOpin();
 }
 
@@ -425,7 +435,7 @@ function show(v){
     ["grille","Grille Lisnard & 3D","La méthode de notation sur cinq axes, le classement de proximité et le nuage en 3D."],
     ["sond","Sondages","Les dernières enquêtes, hypothèse par hypothèse, et la place de Lisnard dans chacune."],
     ["opin","Opinions et motivations","Ce qui décide le vote des Français et ce que l’on sait de l’électorat de Lisnard."],
-    ["comm","Communication Lisnard","Des messages ciblés suggérés à l’équipe de campagne, segment par segment.","part"],
+    ["comm","Communication Lisnard","Des messages ciblés suggérés à l’équipe de campagne, et les arguments pour obtenir le ralliement d’un candidat.","part"],
     ["journal","Journal","Tout ce qui a changé sur la page, jour par jour."]];
   $("#homeGuide").innerHTML=G.map(([v,t,d,c])=>`<button data-go="${v}" class="${c||""}"><b>${t}</b><span>${d}</span></button>`).join("");
   $("#v-accueil").onclick=e=>{const b=e.target.closest("[data-go]");if(b){show(b.dataset.go);window.scrollTo({top:0})}};
@@ -665,6 +675,26 @@ function renderComm(){
   $("#commDetail").innerHTML=`<div class="card"><h2>${esc(g.titre)}</h2><div class="meta">${esc(g.cible)}</div><div class="seg"><div><dl><dt>Pourquoi ce segment</dt><dd>${esc(g.pourquoi)}</dd><dt>Angle</dt><dd>${esc(g.angle)}</dd></dl><div class="msg">${esc(g.message)}</div><dl><dt>Preuves tirées du programme</dt><dd>${pos(g.preuves)}</dd></dl></div><div><dl><dt>Contraste factuel</dt><dd>${esc(g.contraste)}</dd><dt>Objection probable et réponse</dt><dd>${esc(g.objection)}</dd><dt>Canaux suggérés</dt><dd>${esc(g.canal)}</dd></dl></div></div></div>`;
   $("#vulnTable").innerHTML=`<table><thead><tr><th>Point exposé</th><th>Piste de réponse</th></tr></thead><tbody>${K.vulnerabilites.map(v=>`<tr><td style="min-width:180px"><b>${esc(v.p)}</b></td><td>${esc(v.r)}</td></tr>`).join("")}</tbody></table>`;
 }
+let curR=null;
+function renderRally(){
+  const R=D.COMMS&&D.COMMS.ralliements; if(!R) {$("#rallyH").hidden=true;return}
+  curR=curR||R.fiches[0].c;
+  $("#rallyIntro").textContent=R.intro; $("#rallyReal").textContent=R.realite;
+  const nm=id=>(C.find(c=>c.id===id)||{n:id}).n, TN=k=>(THEMES.find(t=>t.k===k)||{n:k}).n;
+  $("#rallyChips").innerHTML=R.fiches.map(f=>`<button class="chip ${f.c===curR?"on":""}" data-r="${f.c}">${esc(nm(f.c))}</button>`).join("");
+  const f=R.fiches.find(x=>x.c===curR), c=C.find(x=>x.id===f.c), px=prox(c);
+  const both=lisHyps().filter(o=>o.hy.scores[f.c]!=null);
+  const any=allHyps().filter(o=>o.hy.scores[f.c]!=null).map(o=>o.hy.scores[f.c]);
+  const poll=both.length?both.map(o=>`${esc(o.p.inst)} (${esc(o.p.terrain)}) : ${fr(o.hy.scores[f.c])} % contre ${fr(o.hy.scores.lisnard)} % pour Lisnard`).join(" ; "):any.length?`entre ${fr(Math.min(...any))} et ${fr(Math.max(...any))} % dans les hypothèses sans Lisnard`:"non testé dans les enquêtes retenues";
+  $("#rallyDetail").innerHTML=`<div class="card"><h2>${esc(nm(f.c))} <span style="font-weight:400;color:var(--muted);font-size:18px">· ${esc(f.scenario)}</span></h2>
+  <div class="rk"><span>Proximité avec Lisnard : <b>${px==null?"non calculée":px+" / 100"}</b></span><span>Sondages : <b>${poll}</b></span><span>${esc(c.st||"")}</span></div>
+  <p style="margin:0 0 12px;max-width:80ch">${esc(f.pourquoi)}</p>
+  <div class="rgrid"><div><h4 style="margin:8px 0 0">Points d'accord à mettre en avant</h4><ul class="rlist">${f.conv.map(([k,t])=>`<li><span class="th">${esc(TN(k))} :</span> ${esc(t)}</li>`).join("")}</ul></div>
+  <div><h4 style="margin:8px 0 0">Désaccords à désamorcer</h4><ul class="rlist">${f.div.map(([k,t,h])=>`<li><span class="th">${esc(TN(k))} :</span> ${esc(t)}<span class="how">Piste : ${esc(h)}</span></li>`).join("")}</ul></div></div>
+  <div class="seg" style="margin-top:12px"><div><div class="msg">${esc(f.message)}</div><dl><dt>Arguments pour le convaincre</dt><dd><ul class="rlist">${f.args.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></dd></dl></div>
+  <div><dl><dt>Ce que Lisnard peut offrir</dt><dd><ul class="rlist">${f.gestes.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></dd><dt>Risque</dt><dd>${esc(f.risque)}</dd></dl></div></div></div>`;
+}
+$("#rallyChips").onclick=e=>{const b=e.target.closest(".chip");if(b){curR=b.dataset.r;renderRally()}};
 $("#commChips").onclick=e=>{const b=e.target.closest(".chip");if(b){curS=b.dataset.s;renderComm()}};
 
 // journal
