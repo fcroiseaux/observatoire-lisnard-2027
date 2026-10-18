@@ -64,6 +64,13 @@ main{padding-block:20px 60px}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr));gap:0 40px}
 .howto{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px;color:#2b303b}
 .howto .tag{margin-right:4px}
+.argsw{display:flex;align-items:flex-start;gap:8px;margin:0 0 12px;font-size:14px;font-weight:600}.argsw em{font-style:normal;font-weight:400;color:var(--muted)}
+.argsw input{accent-color:var(--D);width:16px;height:16px;flex:none;margin-top:2px}
+th.argh{background:#eaf0fa;color:#1e3f73}th.argh small{color:#1e3f73}
+td.arg{background:#f3f6fc;color:#1f2b44;font-size:14.5px;min-width:240px}
+.argbox{background:#f3f6fc;border-radius:10px;padding:12px 16px;margin:0 0 16px;max-width:90ch;color:#1f2b44}.argbox p{margin:4px 0 0}
+.argtag{font-size:12px;font-weight:700;color:#1e3f73;background:#dde6f5;padding:2px 8px;border-radius:999px;margin-left:6px}
+@media (max-width:640px){.tbl.stack td.arg{background:#f3f6fc}}
 .real{margin:0 0 16px;padding:12px 16px;border-radius:10px;background:var(--bad-bg);color:#5e1d12;font-size:15px;max-width:90ch}
 .rk{display:flex;flex-wrap:wrap;gap:8px 20px;margin:6px 0 14px;font-size:14px;color:var(--muted)}.rk b{color:var(--ink)}
 .rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:8px 32px}
@@ -252,7 +259,7 @@ h3{font-family:var(--f-display);font-size:20px;margin:28px 0 10px;text-wrap:bala
           <ul class="howto">
             <li>Les positions sont des résumés : pour un usage précis, se reporter à la source.</li>
             <li>Beaucoup de programmes sont encore partiels ; un candidat sans position sur un thème n’est pas un candidat sans avis.</li>
-            <li>La grille de lecture est un outil de comparaison, pas un jugement. L’onglet <b>Communication Lisnard</b> est le seul à prendre parti : il propose des messages pour l’équipe du candidat.</li>
+            <li>La grille de lecture est un outil de comparaison, pas un jugement. Deux contenus prennent parti : l’onglet <b>Communication Lisnard</b>, et l’argumentaire « Pourquoi Nouvelle Énergie est mieux », affiché dans les vues Par thème et Par candidat et désactivable d’un clic pour une lecture neutre.</li>
           </ul>
         </div>
       </div>
@@ -266,6 +273,7 @@ h3{font-family:var(--f-display);font-size:20px;margin:28px 0 10px;text-wrap:bala
     <label class="tsel">Thème <select id="themeSel"></select></label>
     <h2 class="tt" id="themeTitle"></h2>
     <p class="lead" id="themeLead"></p>
+    <div id="themeArg"></div>
     <div class="bar">
       <label>Trier <select id="sortTheme"><option value="bloc">par bloc politique</option><option value="prox">par proximité avec Lisnard</option></select></label>
       <label><input type="checkbox" id="hideNC" checked> masquer les candidats sans position</label>
@@ -451,6 +459,7 @@ $("#sortTheme").onchange=renderTheme;$("#hideNC").onchange=renderTheme;
 function renderTheme(){
   document.querySelectorAll("#themeChips .chip").forEach(b=>b.classList.toggle("on",b.dataset.t===curT));
   const T=THEMES.find(t=>t.k===curT); $("#themeLead").textContent=T.lead; $("#themeTitle").textContent=T.n; $("#themeSel").value=curT;
+  {const AT=D.COMMS&&D.COMMS.atouts; $("#themeArg").innerHTML=argSwitch()+(AT&&argOn()&&AT.t[curT]?`<div class="argbox"><b>Pourquoi Nouvelle Énergie est mieux</b> <span class="argtag">argumentaire partisan</span><p>${esc(AT.t[curT])}</p></div>`:"");}
   let rows=C.filter(c=>c.id!=="lisnard");
   if($("#sortTheme").value==="prox") rows.sort((a,b)=>(prox(b)??-999)-(prox(a)??-999));
   const has=c=>c.t[curT]&&c.t[curT].length;
@@ -490,12 +499,17 @@ function renderCand(){
   else if(c.s) h+=`<div class="score"><span>Moins de trois axes documentés en commun avec David Lisnard : indice non calculé.</span></div>`;
   else h+=`<div class="score"><span>Positions insuffisantes pour être placé sur la grille.</span></div>`;
   h+=`<div class="legend"><span><span class="diamond"></span>David Lisnard</span>${!isL&&c.s?`<span><span class="dot" style="background:${col(c.b)}"></span>${esc(c.n)}</span>`:""}</div>`+axisBars(c)+"</div>";
-  h+=`<div class="tbl stack"><table><thead><tr><th>Thème</th><th>${isL?"Positions de David Lisnard":esc(c.n)}</th>${isL?"":"<th>David Lisnard</th>"}</tr></thead><tbody>`;
-  THEMES.forEach(t=>{h+=`<tr><td style="min-width:150px"><b>${esc(t.n)}</b>${!isL&&t.ax!=null?"<br>"+gapBadge(c,t.ax):""}</td><td>${pos(c.t[t.k],c,t.k)}</td>${isL?"":`<td style="background:var(--accent-soft)">${pos(L.t[t.k],L,t.k)}</td>`}</tr>`});
+  const AT=argOn()&&D.COMMS&&D.COMMS.atouts;
+  h+=argSwitch();
+  h+=`<div class="tbl stack"><table><thead><tr><th>Thème</th><th>${isL?"Positions de David Lisnard":esc(c.n)}</th>${isL?"":"<th>David Lisnard</th>"}${AT?'<th class="argh">Pourquoi Nouvelle Énergie est mieux<small>argumentaire partisan</small></th>':""}</tr></thead><tbody>`;
+  THEMES.forEach(t=>{h+=`<tr><td style="min-width:150px"><b>${esc(t.n)}</b>${!isL&&t.ax!=null?"<br>"+gapBadge(c,t.ax):""}</td><td>${pos(c.t[t.k],c,t.k)}</td>${isL?"":`<td style="background:var(--accent-soft)">${pos(L.t[t.k],L,t.k)}</td>`}${AT?`<td class="arg">${AT.t[t.k]?esc(AT.t[t.k]):'<span class="nc">—</span>'}</td>`:""}</tr>`});
   h+="</tbody></table></div>";
   $("#candDetail").innerHTML=h;
 }
 $("#candDetail").onclick=e=>{const a=e.target.closest(".jump");if(a){e.preventDefault();curC=a.dataset.c;renderCand()}};
+function argOn(){try{return localStorage.getItem("arg")!=="0"}catch(e){return true}}
+function argSwitch(){return D.COMMS&&D.COMMS.atouts?`<label class="argsw"><input type="checkbox" class="argT" ${argOn()?"checked":""}><span>Afficher l’argumentaire Nouvelle Énergie <em>(partisan, à masquer pour une lecture neutre)</em></span></label>`:""}
+document.addEventListener("change",e=>{if(e.target.classList&&e.target.classList.contains("argT")){try{localStorage.setItem("arg",e.target.checked?"1":"0")}catch(_){ } renderTheme();renderCand()}});
 function openCand(id){curC=id;show("cand");renderCand();window.scrollTo(0,0)}
 
 // grille
