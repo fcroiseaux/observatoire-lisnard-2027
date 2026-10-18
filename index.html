@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Présidentielle 2027 : comparatif des programmes, sondages et opinions, centré sur David Lisnard. Mis à jour chaque jour.">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>Présidentielle 2027 · Observatoire Lisnard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: registre civique — en-tête sobre, onglets, tableaux de lecture, Lisnard comme fil conducteur (accent brique) */
+:root{
+  --bg:#f5f4f0; --panel:#ffffff; --ink:#1c1f26; --muted:#646a75; --line:#dfdcd4; --chip:#eeece6;
+  --accent:#b04a1c; --accent-ink:#ffffff; --accent-soft:#f7e4d8;
+  --P:#1f6f4a; --D:#2d5a9a; --H:#80651a;
+  --good-bg:#d9efe2; --good:#1d6a46; --mid-bg:#f3ead0; --mid:#735710; --bad-bg:#f6d9d3; --bad:#972a1b;
+  --eg:#8e1b1b; --g:#d0453f; --c:#d99a12; --d:#2f6db5; --s:#5b4a8b; --ed:#26324f; --div:#7a7f87;
+  --f-display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14161a; --panel:#1d2026; --ink:#ebe8e2; --muted:#a3a8b2; --line:#30343c; --chip:#282c33;
+  --accent:#ef8b52; --accent-ink:#1a1009; --accent-soft:#3a271c;
+  --P:#5fc490; --D:#7fa8ec; --H:#d8b65a;
+  --good-bg:#1f3a2c; --good:#8fd6ae; --mid-bg:#3d3420; --mid:#e3c77a; --bad-bg:#43221d; --bad:#f0a090;
+  --eg:#e06565; --g:#f07a72; --c:#f0b93e; --d:#6a9ee0; --s:#9b88d0; --ed:#a7b2cf; --div:#9aa0a8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14161a; --panel:#1d2026; --ink:#ebe8e2; --muted:#a3a8b2; --line:#30343c; --chip:#282c33;
+  --accent:#ef8b52; --accent-ink:#1a1009; --accent-soft:#3a271c;
+  --P:#5fc490; --D:#7fa8ec; --H:#d8b65a;
+  --good-bg:#1f3a2c; --good:#8fd6ae; --mid-bg:#3d3420; --mid:#e3c77a; --bad-bg:#43221d; --bad:#f0a090;
+  --eg:#e06565; --g:#f07a72; --c:#f0b93e; --d:#6a9ee0; --s:#9b88d0; --ed:#a7b2cf; --div:#9aa0a8; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-body)}
+::selection{background:var(--accent-soft);color:var(--ink)}
+html{scrollbar-color:var(--line) transparent}
+a{text-underline-offset:2px}
+input[type=checkbox],input[type=range]{accent-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:26px 0}
+h1{font-family:var(--f-display);font-size:clamp(24px,4vw,32px);margin:0 0 4px;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 16px;font-size:14px}
+.sub b{color:var(--ink);font-weight:600}
+.navbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bg)}
+nav{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+nav::-webkit-scrollbar{display:none}
+nav button{background:none;border:0;padding:10px 14px;font:600 14px var(--f-body);color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
+nav button.on{color:var(--ink);border-color:var(--accent)}
+nav button:focus-visible,.chip:focus-visible,.list button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding-block:20px 60px}
+.view[hidden]{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;font:500 13px var(--f-body)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.bar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:0 0 14px;color:var(--muted);font-size:13px}
+select{max-width:100%;font:14px var(--f-body);padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink)}
+.lead{font-family:var(--f-display);font-size:18px;margin:4px 0 16px;max-width:62ch;text-wrap:pretty}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+th small{display:block;text-transform:none;letter-spacing:0;font-weight:400;font-size:11px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--chip);font-weight:600}
+tr:last-child td{border-bottom:0}
+tr.lisrow td{background:var(--accent-soft)}
+td.who{min-width:190px;font-weight:600;cursor:pointer}
+td.who small{display:block;font-weight:400;color:var(--muted)}
+td.who:hover{color:var(--accent)}
+.num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.tag{display:inline-block;font:700 11px var(--f-body);padding:1px 6px;border-radius:4px;color:var(--panel);margin-right:5px;vertical-align:1px}
+.tag.P{background:var(--P)}.tag.D{background:var(--D)}.tag.H{background:var(--H)}
+.pos{display:grid;gap:10px}.pos div{margin:0}
+.nc{color:var(--muted);font-style:italic}
+.src{display:block;font-size:12px;color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px;margin-top:1px}
+.src:hover{color:var(--accent)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0}
+.gap{font:600 12px var(--f-body);padding:2px 8px;border-radius:999px;white-space:nowrap;display:inline-block}
+.g0{background:var(--good-bg);color:var(--good)}.g1{background:var(--mid-bg);color:var(--mid)}.g2{background:var(--bad-bg);color:var(--bad)}
+.gref{background:var(--accent);color:var(--accent-ink)}
+.foot{color:var(--muted);font-size:13px;margin-top:10px;max-width:90ch}
+.grid2{display:grid;grid-template-columns:270px minmax(0,1fr);gap:20px}
+.list{background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:80vh;overflow:auto;align-self:start;position:sticky;top:12px}
+.list h4{margin:0;padding:10px 12px 4px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.list button{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;padding:7px 12px;font:14px var(--f-body);color:var(--ink);cursor:pointer;text-align:left}
+.list button:hover{background:var(--chip)}
+.list button.on{background:var(--ink);color:var(--bg)}
+.list button.lis{color:var(--accent);font-weight:600}
+.list button.on.lis{background:var(--accent);color:var(--accent-ink)}
+.list .sc{font-size:12px;opacity:.8;font-variant-numeric:tabular-nums}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:16px;min-width:0}
+.card h2{font-family:var(--f-display);margin:0;font-size:24px}
+.meta{color:var(--muted);margin:2px 0 12px}
+.facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 16px;margin:10px 0 16px;font-size:14px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+.candsel{display:none;width:100%;margin-bottom:12px;padding:10px;font-size:16px}
+.score{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin:6px 0 14px}
+.score b{font:700 36px var(--f-display);color:var(--accent);font-variant-numeric:tabular-nums}
+.axes{display:grid;gap:12px}
+.axis{display:grid;grid-template-columns:180px minmax(0,1fr);gap:12px;align-items:center;font-size:13px}
+.track{position:relative;height:22px;background:var(--chip);border-radius:4px}
+.track .mid{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line)}
+.track .m{position:absolute;top:3px;width:16px;height:16px;border-radius:50%;transform:translateX(-50%);border:2px solid var(--panel)}
+.track .m.lis{background:var(--accent);border-radius:2px;transform:translateX(-50%) rotate(45deg);width:13px;height:13px;top:4.5px}
+.track .lnk{position:absolute;top:10px;height:2px;background:var(--muted);opacity:.5}
+.poles{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted);margin-top:2px}
+.just{font-size:12px;color:var(--muted);margin-top:2px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin:8px 0}
+.legend a{color:var(--ink)}
+.diamond{display:inline-block;width:9px;height:9px;background:var(--accent);transform:rotate(45deg);margin-right:6px}
+#three{width:100%;height:min(560px,75vh);background:var(--panel);border:1px solid var(--line);border-radius:10px;position:relative;overflow:hidden;cursor:grab}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 10px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:5}
+.weights{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:10px 0 4px}
+.weights label{font-size:13px;display:block}
+.weights input{width:100%;accent-color:var(--accent)}
+.rank{display:grid;gap:5px}
+.rank .r{display:grid;grid-template-columns:24px 170px minmax(0,1fr) 36px 36px;gap:8px;align-items:center;font-size:13px;cursor:pointer;font-variant-numeric:tabular-nums}
+.rank .r:hover b{color:var(--accent)}
+.rank .fill{height:10px;border-radius:0 3px 3px 0}
+.axdef{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.axdef div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px}
+.axdef h5{margin:0 0 6px;font-size:14px}
+.warn{border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft);padding:12px 16px;border-radius:8px;font-size:14px;margin:10px 0 20px;max-width:100ch}
+h3{font-family:var(--f-display);font-size:20px;margin:28px 0 10px;text-wrap:balance}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kpi .v{font:700 30px var(--f-display);font-variant-numeric:tabular-nums}
+.kpi .v.acc{color:var(--accent)}
+.kpi .s{font-size:12px;color:var(--muted)}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;position:relative}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{fill:var(--muted);font:12px var(--f-body)}
+.chart .axisline{stroke:var(--line)}
+.chart .grid{stroke:var(--line);stroke-dasharray:2 3}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:16px}
+.srcs{font-size:13px;color:var(--muted);padding-left:18px}
+.srcs a{color:var(--ink)}
+.seg{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
+.seg .msg{font-family:var(--f-display);font-size:21px;line-height:1.45;padding:14px 0;margin:12px 0 16px;border-block:1px solid var(--line);text-wrap:pretty}
+.seg .msg::before{content:"Message proposé";display:block;font:600 11px var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.seg dl{margin:0;display:grid;gap:10px}
+.seg dt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.seg dd{margin:2px 0 0}
+@media (max-width:820px){.seg{grid-template-columns:minmax(0,1fr)}}
+.hbars{display:grid;gap:6px;max-width:900px}
+.hb{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 3.2rem minmax(0,9rem);gap:12px;align-items:center;font-size:14px}
+.hb .tr{height:12px;background:var(--chip);border-radius:3px;overflow:hidden;display:flex}
+.hb .fl{height:100%;background:var(--muted);opacity:.55}
+.hb .fl.acc{background:var(--accent);opacity:1}
+.hb .fl.alt{background:var(--chip)}
+.hb .v{font-variant-numeric:tabular-nums;text-align:right;font-weight:600}
+.hb .x{font-size:12px;color:var(--muted)}
+.hb .x a{color:var(--accent)}
+.hb.head{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+@media (max-width:640px){.hb.head{display:none}.hb{grid-template-columns:minmax(0,1fr) 3rem;row-gap:4px}.hb .tr{grid-column:1/-1;grid-row:2}.hb .x{grid-column:1/-1}}
+@media (max-width:640px){
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent)}
+  .chip{white-space:nowrap;flex:none}
+  .tbl.stack{border:0;background:none;overflow:visible}
+  .tbl.stack table,.tbl.stack tbody,.tbl.stack tr,.tbl.stack td{display:block;width:100%}
+  .tbl.stack thead{display:none}
+  .tbl.stack tr{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .tbl.stack tr.lisrow{background:var(--accent-soft)}
+  .tbl.stack td{border-bottom:1px solid var(--line);padding:10px 14px}
+  .tbl.stack td:last-child{border-bottom:0}
+  .tbl.stack td[data-label]:not(.who)::before{content:attr(data-label);display:block;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .tbl.stack td.num{text-align:left}
+  .tbl.stack td.who{min-width:0}
+}
+@media (max-width:820px){.grid2{grid-template-columns:minmax(0,1fr)}.list{display:none}.candsel{display:block}.axis{grid-template-columns:minmax(0,1fr)}.rank .r{grid-template-columns:20px 100px minmax(0,1fr) 30px 30px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>Présidentielle 2027 — Observatoire Lisnard</h1>
+  <p class="sub" id="sub"></p>
+  <div class="navbar"><nav id="nav">
+    <button data-v="theme" class="on" id="tab-theme">Par thème</button>
+    <button data-v="cand" id="tab-cand">Par candidat</button>
+    <button data-v="grille" id="tab-grille">Grille Lisnard &amp; 3D</button>
+    <button data-v="sond" id="tab-sond">Sondages</button>
+    <button data-v="opin" id="tab-opin">Opinions et motivations</button>
+    <button data-v="comm" id="tab-comm">Communication Lisnard</button>
+    <button data-v="journal" id="tab-journal">Journal</button>
+  </nav></div>
+</header>
+<main>
+  <section id="v-theme" class="view">
+    <div class="chips" id="themeChips"></div>
+    <p class="lead" id="themeLead"></p>
+    <div class="bar">
+      <label>Trier <select id="sortTheme"><option value="bloc">par bloc politique</option><option value="prox">par proximité avec Lisnard</option></select></label>
+      <label><input type="checkbox" id="hideNC" checked> masquer les candidats sans position</label>
+      <span><span class="tag P">P</span>programme <span class="tag D">D</span>déclaration <span class="tag H">H</span>position antérieure</span>
+    </div>
+    <div class="tbl stack" id="themeTable"></div>
+    <p class="foot" id="themeNC"></p>
+  </section>
+
+  <section id="v-cand" class="view" hidden>
+    <div class="grid2">
+      <div><select class="candsel" id="candSel" aria-label="Choisir un candidat"></select><div class="list" id="candList"></div></div>
+      <div id="candDetail" style="min-width:0"></div>
+    </div>
+  </section>
+
+  <section id="v-grille" class="view" hidden>
+    <div class="warn"><b>Grille interprétative.</b> Les notes sont attribuées à partir des positions recensées dans ce comparatif ; elles traduisent une lecture, pas une mesure. Chaque note est justifiée dans la fiche du candidat, et le poids de chaque axe est réglable : le classement change avec. Les candidats sans positions suffisantes ne sont pas notés.</div>
+    <h3>Les cinq axes</h3>
+    <div class="axdef" id="axDefs"></div>
+    <h3>Pondération et proximité avec David Lisnard</h3>
+    <div class="weights" id="weights"></div>
+    <p class="foot">Proximité = 100 moins la distance euclidienne pondérée entre les deux profils, ramenée sur 100 (100 : profil identique ; 0 : opposé sur tous les axes).</p>
+    <div class="rank" id="rank"></div>
+    <h3>Positions dans l'espace</h3>
+    <div class="bar">
+      <label>Axe X <select id="axX"></select></label>
+      <label>Axe Y <select id="axY"></select></label>
+      <label>Axe Z <select id="axZ"></select></label>
+      <span>Glisser pour tourner, molette ou pincement pour zoomer, toucher une sphère pour ouvrir la fiche.</span>
+    </div>
+    <div class="legend" id="legend3d"></div>
+    <div id="three"><div class="tip" id="tip3" hidden></div></div>
+  </section>
+
+  <section id="v-sond" class="view" hidden>
+    <p class="lead" id="sondLead"></p>
+    <div class="warn" id="pollRule"></div>
+    <div class="kpis" id="kpis"></div>
+    <h3>David Lisnard dans les enquêtes récentes</h3>
+    <div class="tbl stack" id="lisTable"></div>
+    <p class="foot">Chaque ligne est une hypothèse distincte. Cliquer sur une ligne pour afficher la liste complète des candidats.</p>
+    <h3>Comparer dans une même hypothèse</h3>
+    <div class="bar"><label for="hypSel">Enquête et hypothèse</label> <select id="hypSel"></select></div>
+    <div class="two"><div><div class="chart" id="chHyp"></div><p class="foot" id="hypNote"></p></div><div class="tbl stack" id="gapTable" style="align-self:start"></div></div>
+    <h3>Proximité de programme et poids électoral</h3>
+    <div class="chart" id="chScatter"></div>
+    <p class="foot" id="scatNote"></p>
+    <h3>Seconds tours</h3>
+    <p class="foot" id="duelNote"></p>
+    <div class="tbl stack" id="duelTable"></div>
+    <h3>Enquêtes antérieures testant David Lisnard</h3>
+    <p class="foot" id="histNote"></p>
+    <div class="tbl stack" id="histTable"></div>
+    <h3>Sources des sondages</h3>
+    <ul class="srcs" id="pollSrc"></ul>
+    <p class="foot">Les intentions de vote mesurent un rapport de force à une date donnée. Un écart de 1 à 2 points entre deux candidats proches de 5 % reste dans la marge d'erreur et ne prouve pas une différence.</p>
+  </section>
+
+  <section id="v-opin" class="view" hidden>
+    <p class="lead" id="opIntro"></p>
+    <div class="chips" id="opJump"></div>
+    <h3 id="op-prio">Les thèmes qui comptent pour le vote</h3>
+    <p class="foot" id="prioQ"></p>
+    <div class="bar"><label for="prioSel">Population</label> <select id="prioSel"></select></div>
+    <div class="hbars" id="prioBars"></div>
+    <p class="foot" id="prioNote"></p>
+    <h3 id="op-crit">Ce qui entre dans le choix déclaré</h3>
+    <p class="foot" id="critQ"></p>
+    <div class="bar"><label for="critSel">Population</label> <select id="critSel"></select></div>
+    <div class="hbars" id="critBars"></div>
+    <p class="foot" id="critNote"></p>
+    <h3 id="op-cert">Un choix encore susceptible de changer ?</h3>
+    <p class="foot" id="certBase"></p>
+    <div class="hbars" id="certBars"></div>
+    <p class="foot" id="certNote"></p>
+    <h3 id="op-elec">D'où viennent les électeurs de David Lisnard</h3>
+    <div class="tbl stack" id="elecTable"></div>
+    <p class="foot" id="elecNote"></p>
+    <h3 id="op-chg">Les raisons d'un changement d'avis</h3>
+    <p id="chgGap" style="max-width:70ch"></p>
+    <div class="hbars" id="chgBars"></div>
+    <p class="foot" id="chgNote"></p>
+    <h3 id="op-src">Sources et limites</h3>
+    <ul class="srcs" id="opSrc"></ul>
+    <p class="foot">Une priorité décrit un sujet qui compte pour la personne interrogée ; un critère décrit l'importance déclarée d'un élément dans sa décision ; un changement rapporté décrit une évolution déclarée. Les questions sont reformulées pour la lecture ; les rapports liés donnent leur formulation exacte. Aucun résultat manquant n'est interpolé et les enquêtes ou populations différentes ne sont pas fusionnées.</p>
+  </section>
+
+  <section id="v-comm" class="view" hidden>
+    <div class="warn"><b>Onglet partisan, distinct du comparatif.</b> Suggestions de communication à destination de l'équipe de David Lisnard. Les formulations sont des propositions, pas des citations du candidat. Les preuves et les contrastes reprennent uniquement des positions recensées dans les autres onglets ; à revérifier avant toute diffusion.</div>
+    <p class="lead" id="commIntro"></p>
+    <div class="chips" id="commChips"></div>
+    <div id="commDetail"></div>
+    <h3>Points de vulnérabilité à anticiper</h3>
+    <div class="tbl stack" id="vulnTable"></div>
+  </section>
+
+  <section id="v-journal" class="view" hidden>
+    <p class="lead">Mise à jour quotidienne : nouvelles annonces des candidats, nouveaux sondages, candidatures et retraits.</p>
+    <div class="tbl stack" id="journalTable"></div>
+  </section>
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="data.js"></script>
+<script>
+const D=window.DATA||{};
+function labelize(root){root.querySelectorAll("table").forEach(t=>{const hs=[...t.querySelectorAll("thead th")].map(th=>th.childNodes[0]?th.childNodes[0].textContent.trim():th.textContent.trim());t.querySelectorAll("tbody tr").forEach(tr=>[...tr.children].forEach((td,i)=>{if(hs[i])td.dataset.label=hs[i]}))})}
+new MutationObserver(ms=>{const seen=new Set();ms.forEach(m=>{const t=m.target;if(t.querySelector&&t.querySelector(".tbl.stack table"))seen.add(t);else if(t.closest&&t.closest(".tbl.stack"))seen.add(t.closest(".tbl.stack"))});seen.forEach(labelize)}).observe(document.documentElement,{childList:true,subtree:true});
+const {THEMES,AXES,BLOCS,C,POLLS,JOURNAL}=D;
+const L=C.find(c=>c.id==="lisnard");
+const W=[1,1,1,1,1];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const col=b=>css(BLOCS[b][1]);
+const byId=id=>C.find(c=>c.id===id);
+const fr=n=>(Math.round(n*10)/10).toString().replace(".",",");
+const fmtD=s=>{const [y,m,d]=s.split("-");return `${+d} ${["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."][m-1]} ${y}`};
+const AXT=[["eco","ent","fis","fin","ret"],["eur","def","etr"],["imm"],["sec"],["ecol"]];
+function docAx(c){return AXT.map(ts=>ts.some(t=>(c.t[t]||[]).some(x=>!/^\[H\]/.test(x))))}
+const LDOC=docAx(L);
+function common(c){if(!c||!c.s)return [];const a=docAx(c);return AXES.map((_,i)=>i).filter(i=>a[i]&&LDOC[i]&&W[i]>0)}
+function cov(c){return common(c).length}
+function prox(c){if(!c||!c.s||c.id==="lisnard")return null;const ax=common(c);if(ax.length<3)return null;let num=0,den=0;ax.forEach(i=>{num+=W[i]*(c.s[i]-L.s[i])**2;den+=W[i]});return Math.round(100*(1-Math.sqrt(num/den)/10))}
+const MOIS=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+function fmtSD(d){if(/^\d{4}-\d{2}-\d{2}$/.test(d))return fmtD(d);if(/^\d{4}-\d{2}$/.test(d)){const [y,m]=d.split("-");return MOIS[m-1]+" "+y}return d}
+function srcOf(c,k,i){if(!c||!c.S)return null;const ks=c.src&&c.src[k];const key=ks?ks[Math.min(i,ks.length-1)]:(c.S.a?"a":Object.keys(c.S)[0]);return c.S[key]}
+function pos(arr,c,k){ if(!arr||!arr.length) return '<span class="nc">Non connu</span>'; return '<div class="pos">'+arr.map((x,i)=>{const m=x.match(/^\[(P|D|H)\]\s*(.*)$/);const s=c?srcOf(c,k,i):null;const sl=s?`<a class="src" href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])} · ${esc(fmtSD(s[2]))}</a>`:"";return m?`<div><span class="tag ${m[1]}">${m[1]}</span>${esc(m[2])}${sl}</div>`:`<div>${esc(x)}${sl}</div>`}).join("")+"</div>" }
+function gapBadge(c,ax){ if(ax==null||!c.s||c.id==="lisnard"||!docAx(c)[ax]) return ""; const d=Math.abs(c.s[ax]-L.s[ax]); const k=d<=1.5?0:d<=4?1:2; return `<span class="gap g${k}">${["proche","écart modéré","éloigné"][k]} · ${fr(d)}</span>` }
+
+$("#sub").innerHTML=`Mis à jour le <b>${fmtD(D.updated)}</b> · ${C.length} candidatures · ${THEMES.length} thèmes · référence de comparaison : David Lisnard`;
+
+// navigation
+const VIEWS=["theme","cand","grille","sond","opin","comm","journal"];
+$("#nav").onclick=e=>{const b=e.target.closest("button");if(b)show(b.dataset.v)};
+function show(v){
+  document.querySelectorAll("#nav button").forEach(x=>{x.classList.toggle("on",x.dataset.v===v);if(x.dataset.v===v)x.scrollIntoView({inline:"center",block:"nearest"})});
+  VIEWS.forEach(k=>$("#v-"+k).hidden=k!==v);
+  try{localStorage.setItem("tab",v)}catch(e){}
+  if(v==="grille") init3d();
+  if(v==="sond") renderPolls();
+  if(v==="comm") renderComm();
+  if(v==="opin") renderOpin();
+}
+
+// thèmes
+let curT="eco";
+$("#themeChips").innerHTML=THEMES.map(t=>`<button class="chip" data-t="${t.k}">${esc(t.n)}</button>`).join("");
+$("#themeChips").onclick=e=>{const b=e.target.closest(".chip");if(b){curT=b.dataset.t;renderTheme()}};
+$("#sortTheme").onchange=renderTheme;$("#hideNC").onchange=renderTheme;
+function renderTheme(){
+  document.querySelectorAll("#themeChips .chip").forEach(b=>b.classList.toggle("on",b.dataset.t===curT));
+  const T=THEMES.find(t=>t.k===curT); $("#themeLead").textContent=T.lead;
+  let rows=C.filter(c=>c.id!=="lisnard");
+  if($("#sortTheme").value==="prox") rows.sort((a,b)=>(prox(b)??-999)-(prox(a)??-999));
+  const has=c=>c.t[curT]&&c.t[curT].length;
+  const nc=rows.filter(c=>!has(c));
+  if($("#hideNC").checked) rows=rows.filter(has);
+  const ax=T.ax;
+  const row=(c,lis)=>`<tr class="${lis?"lisrow":""}"><td class="who" data-c="${c.id}"><span class="dot" style="background:${col(c.b)}"></span>${esc(c.n)}<small>${esc(c.p)}</small></td><td>${pos(c.t[curT],c,curT)}</td>${ax!=null?`<td>${lis?'<span class="gap gref">référence</span>':gapBadge(c,ax)||'<span class="nc">non noté</span>'}</td>`:""}</tr>`;
+  $("#themeTable").innerHTML=`<table><thead><tr><th>Candidat</th><th>Positions</th>${ax!=null?`<th>Écart à Lisnard<small>axe ${esc(AXES[ax].n)}</small></th>`:""}</tr></thead><tbody>${row(L,true)+rows.map(c=>row(c,false)).join("")}</tbody></table>`;
+  $("#themeNC").textContent=nc.length?"Sans position connue sur ce thème : "+nc.map(c=>c.n).join(", ")+".":"";
+}
+$("#themeTable").onclick=e=>{const w=e.target.closest(".who");if(w)openCand(w.dataset.c)};
+
+// candidats
+let curC="lisnard";
+function renderList(){
+  let h="";Object.keys(BLOCS).forEach(b=>{const cs=C.filter(c=>c.b===b);if(!cs.length)return;h+=`<h4>${BLOCS[b][0]}</h4>`+cs.map(c=>{const p=prox(c);return `<button data-c="${c.id}" class="${c.id===curC?"on":""} ${c.id==="lisnard"?"lis":""}"><span><span class="dot" style="background:${col(c.b)}"></span>${esc(c.n)}</span><span class="sc">${c.id==="lisnard"?"réf.":p!=null?p:""}</span></button>`}).join("")});
+  $("#candList").innerHTML=h;
+  $("#candSel").innerHTML=Object.keys(BLOCS).map(b=>{const cs=C.filter(c=>c.b===b);return cs.length?`<optgroup label="${BLOCS[b][0]}">${cs.map(c=>{const p=prox(c);return `<option value="${c.id}">${esc(c.n)}${c.id==="lisnard"?" (référence)":p!=null?" · proximité "+p:""}</option>`}).join("")}</optgroup>`:""}).join("");
+  $("#candSel").value=curC;
+}
+$("#candSel").onchange=e=>{curC=e.target.value;renderCand()};
+$("#candList").onclick=e=>{const b=e.target.closest("button");if(b){curC=b.dataset.c;renderCand()}};
+function axisBars(c){
+  const isL=c.id==="lisnard";
+  return '<div class="axes">'+AXES.map((a,i)=>{const x=v=>((v+5)/10*100);const dc=c.s&&docAx(c)[i];const lv=x(L.s[i]),cv=c.s&&dc?x(c.s[i]):null;
+   const lnk=cv!=null&&!isL?`<div class="lnk" style="left:${Math.min(lv,cv)}%;width:${Math.abs(lv-cv)}%"></div>`:"";
+   return `<div class="axis"><div><b>${esc(a.n)}</b><div class="just">${esc(isL?L.j[i]:(c.s?(dc?c.j[i]:"non documenté : axe exclu de l'indice"):""))}</div></div><div><div class="track"><div class="mid"></div>${lnk}${cv!=null&&!isL?`<div class="m" style="left:${cv}%;background:${col(c.b)}"></div>`:""}<div class="m lis" style="left:${lv}%"></div></div><div class="poles"><span>${esc(a.neg)}</span><span>${esc(a.pos)}</span></div></div></div>`}).join("")+"</div>";
+}
+function lisHyps(){return POLLS.polls.flatMap((p,pi)=>p.hyps.map((hy,hi)=>({p,hy,key:pi+"-"+hi}))).filter(o=>o.hy.scores.lisnard!=null)}
+function pollOf(id){const o=lisHyps().find(o=>o.hy.scores[id]!=null);return o?`${fr(o.hy.scores[id])} % dans ${o.p.inst} (${o.p.terrain}), ${o.hy.label} ; Lisnard : ${fr(o.hy.scores.lisnard)} %`:""}
+function renderCand(){
+  renderList(); const c=byId(curC); const p=prox(c); const isL=c.id==="lisnard";
+  let h=`<div class="card"><h2><span class="dot" style="background:${col(c.b)};width:12px;height:12px"></span>${esc(c.n)}</h2><dl class="facts"><dt>Parti</dt><dd>${esc(c.p)}</dd><dt>Bloc</dt><dd>${BLOCS[c.b][0]}</dd><dt>Candidature</dt><dd>${esc(c.st)}</dd><dt>Programme</dt><dd>${esc(c.pr)}</dd>${pollOf(c.id)?`<dt>Sondage</dt><dd>${esc(pollOf(c.id))}</dd>`:""}</dl>`;
+  if(isL){ const ranked=C.map(x=>[x,prox(x)]).filter(x=>x[1]!=null).sort((a,b)=>b[1]-a[1]);
+    h+=`<div class="score"><span>Candidat de référence. Les plus proches selon la grille :</span></div><div class="legend">${ranked.slice(0,6).map(([x,v])=>`<a href="#" data-c="${x.id}" class="jump"><b>${esc(x.n)}</b> ${v}</a>`).join(" · ")}</div>`;
+  } else if(p!=null){ h+=`<div class="score"><b>${p}</b><span>/ 100 de proximité avec David Lisnard · calculé sur ${cov(c)} axes documentés sur 5</span></div>` }
+  else if(c.s) h+=`<div class="score"><span>Moins de trois axes documentés en commun avec David Lisnard : indice non calculé.</span></div>`;
+  else h+=`<div class="score"><span>Positions insuffisantes pour être placé sur la grille.</span></div>`;
+  h+=`<div class="legend"><span><span class="diamond"></span>David Lisnard</span>${!isL&&c.s?`<span><span class="dot" style="background:${col(c.b)}"></span>${esc(c.n)}</span>`:""}</div>`+axisBars(c)+"</div>";
+  h+=`<div class="tbl stack"><table><thead><tr><th>Thème</th><th>${isL?"Positions de David Lisnard":esc(c.n)}</th>${isL?"":"<th>David Lisnard</th>"}</tr></thead><tbody>`;
+  THEMES.forEach(t=>{h+=`<tr><td style="min-width:150px"><b>${esc(t.n)}</b>${!isL&&t.ax!=null?"<br>"+gapBadge(c,t.ax):""}</td><td>${pos(c.t[t.k],c,t.k)}</td>${isL?"":`<td style="background:var(--accent-soft)">${pos(L.t[t.k],L,t.k)}</td>`}</tr>`});
+  h+="</tbody></table></div>";
+  $("#candDetail").innerHTML=h;
+}
+$("#candDetail").onclick=e=>{const a=e.target.closest(".jump");if(a){e.preventDefault();curC=a.dataset.c;renderCand()}};
+function openCand(id){curC=id;show("cand");renderCand();window.scrollTo(0,0)}
+
+// grille
+$("#axDefs").innerHTML=AXES.map((a,i)=>`<div><h5>${esc(a.n)}</h5>${esc(a.def)}<br><br><b>−5</b> ${esc(a.neg)} · <b>+5</b> ${esc(a.pos)}<br><b>Lisnard : ${L.s[i]>0?"+":""}${fr(L.s[i])}</b> — ${esc(L.j[i])}</div>`).join("");
+$("#weights").innerHTML=AXES.map((a,i)=>`<label for="w${i}">${esc(a.n)} : <b id="wv${i}">1</b><input id="w${i}" type="range" min="0" max="3" step="0.5" value="1" data-i="${i}"></label>`).join("");
+$("#weights").oninput=e=>{const i=+e.target.dataset.i;W[i]=+e.target.value;$("#wv"+i).textContent=fr(W[i]);renderRank();renderList();if(ready)build3d();renderScatter()};
+function renderRank(){
+  const r=C.map(c=>[c,prox(c)]).filter(x=>x[1]!=null).sort((a,b)=>b[1]-a[1]);
+  const nc=C.filter(c=>c.id!=="lisnard"&&prox(c)==null);
+  $("#rank").innerHTML=r.map(([c,v],i)=>`<div class="r" data-c="${c.id}"><span>${i+1}</span><b>${esc(c.n)}</b><div style="background:var(--chip);border-radius:3px"><div class="fill" style="width:${Math.max(v,0)}%;background:${col(c.b)}"></div></div><span class="num">${v}</span><span class="num" style="color:var(--muted)">${cov(c)}/5</span></div>`).join("")+`<p class="foot">Dernière colonne : nombre d'axes documentés en commun avec Lisnard et pris en compte. Deux indices fondés sur des axes différents ne sont pas strictement comparables. Indice non calculé (moins de trois axes documentés en commun) : ${nc.map(c=>c.n).join(", ")}.</p>`;
+}
+$("#rank").onclick=e=>{const r=e.target.closest(".r");if(r)openCand(r.dataset.c)};
+["axX","axY","axZ"].forEach((id,k)=>{const s=$("#"+id);s.innerHTML=AXES.map((a,i)=>`<option value="${i}">${esc(a.n)}</option>`).join("");s.value=[0,2,1][k];s.onchange=()=>build3d()});
+$("#legend3d").innerHTML=Object.keys(BLOCS).map(b=>`<span><span class="dot" style="background:${col(b)}"></span>${BLOCS[b][0]}</span>`).join("")+`<span><span class="diamond"></span>David Lisnard · sphères pâles : fiabilité faible · pointillés : proximité ≥ 70 · seuls les candidats documentés sur les trois axes affichés sont placés</span><span id="plac3d"></span>`;
+
+// three.js
+let R,S,CAM,CTRL,group,ready=false,meshes=[];
+function shortName(c){const w=c.n.split(" ");return w.length>2&&w[w.length-2]==="Le"?w.slice(-2).join(" "):w[w.length-1]}
+function init3d(){ if(ready) return; const el=$("#three");
+  if(!window.THREE||!THREE.OrbitControls){el.insertAdjacentHTML("beforeend",'<p style="padding:20px">Le moteur 3D n\'a pas pu être chargé.</p>');return}
+  ready=true;
+  R=new THREE.WebGLRenderer({antialias:true,alpha:true}); R.setPixelRatio(Math.min(devicePixelRatio,2)); R.setSize(el.clientWidth,el.clientHeight); el.appendChild(R.domElement);
+  S=new THREE.Scene(); CAM=new THREE.PerspectiveCamera(45,el.clientWidth/el.clientHeight,0.1,200); CAM.position.set(15,10,18);
+  CTRL=new THREE.OrbitControls(CAM,R.domElement); CTRL.enableDamping=true;
+  S.add(new THREE.AmbientLight(0xffffff,.75)); const dl=new THREE.DirectionalLight(0xffffff,.6); dl.position.set(10,20,10); S.add(dl);
+  build3d();
+  const ray=new THREE.Raycaster(),mouse=new THREE.Vector2(),tip=$("#tip3");
+  const pick=e=>{const r=R.domElement.getBoundingClientRect();mouse.x=(e.clientX-r.left)/r.width*2-1;mouse.y=-(e.clientY-r.top)/r.height*2+1;ray.setFromCamera(mouse,CAM);const h=ray.intersectObjects(meshes);return [h.length?h[0].object.userData.c:null,e.clientX-r.left,e.clientY-r.top]};
+  R.domElement.addEventListener("pointermove",e=>{const [c,x,y]=pick(e);if(c){tip.hidden=false;tip.style.left=(x+12)+"px";tip.style.top=(y+12)+"px";tip.textContent=c.n+(c.id==="lisnard"?" (référence)":" · proximité "+(prox(c)??"non calculée"));R.domElement.style.cursor="pointer"}else{tip.hidden=true;R.domElement.style.cursor="grab"}});
+  let down=null;R.domElement.addEventListener("pointerdown",e=>down=[e.clientX,e.clientY]);
+  R.domElement.addEventListener("pointerup",e=>{if(down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])<5){const [c]=pick(e);if(c)openCand(c.id)}down=null});
+  addEventListener("resize",()=>{CAM.aspect=el.clientWidth/el.clientHeight;CAM.updateProjectionMatrix();R.setSize(el.clientWidth,el.clientHeight)});
+  (function loop(){requestAnimationFrame(loop);CTRL.update();R.render(S,CAM)})();
+}
+function label(text,color,size){const c=document.createElement("canvas");const ctx=c.getContext("2d");const f=48;const font=`600 ${f}px "Public Sans",sans-serif`;ctx.font=font;const w=ctx.measureText(text).width;c.width=w+20;c.height=f+20;ctx.font=font;ctx.fillStyle=color;ctx.textBaseline="middle";ctx.fillText(text,10,c.height/2);const t=new THREE.CanvasTexture(c);t.minFilter=THREE.LinearFilter;const s=new THREE.Sprite(new THREE.SpriteMaterial({map:t,depthTest:false,transparent:true}));const k=(size||.5)/f;s.scale.set(c.width*k,c.height*k,1);return s}
+function build3d(){ if(!ready) return; if(group) S.remove(group); group=new THREE.Group(); meshes=[]; S.add(group);
+  const ink=css("--ink"),muted=css("--muted"),acc=css("--accent");
+  const ax=[+$("#axX").value,+$("#axY").value,+$("#axZ").value];
+  group.add(new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(10,10,10)),new THREE.LineBasicMaterial({color:muted,transparent:true,opacity:.35})));
+  const g=new THREE.GridHelper(10,10,muted,muted); g.position.y=-5; g.material.transparent=true; g.material.opacity=.18; group.add(g);
+  [[1,0,0],[0,1,0],[0,0,1]].forEach((d,k)=>{group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-5.6*d[0],-5.6*d[1],-5.6*d[2]),new THREE.Vector3(5.6*d[0],5.6*d[1],5.6*d[2])]),new THREE.LineBasicMaterial({color:muted})));
+    const a=AXES[ax[k]];const lp=label(a.pos,muted,.38),ln=label(a.neg,muted,.38),lt=label(a.n,ink,.5);
+    lp.position.set(6.4*d[0],6.4*d[1],6.4*d[2]);ln.position.set(-6.4*d[0],-6.4*d[1],-6.4*d[2]);lt.position.set(6.4*d[0],6.4*d[1]+(k===1?.7:-.6),6.4*d[2]);group.add(lp,ln,lt)});
+  const Lp=new THREE.Vector3(L.s[ax[0]],L.s[ax[1]],L.s[ax[2]]);
+  const shown=C.filter(c=>c.s&&(c.id==="lisnard"||ax.every(i=>docAx(c)[i])));
+  const pl=$("#plac3d");if(pl)pl.textContent=`${shown.length-1} candidats placés, ${C.filter(c=>c.id!=="lisnard").length-shown.length+1} non placés faute de données sur ces axes.`;
+  shown.forEach(c=>{const isL=c.id==="lisnard";const geo=isL?new THREE.OctahedronGeometry(.42):new THREE.SphereGeometry(c.cf==="faible"?.22:.3,24,16);
+    const m=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({color:isL?acc:col(c.b),transparent:true,opacity:c.cf==="faible"?.45:1,roughness:.5}));
+    m.position.set(c.s[ax[0]],c.s[ax[1]],c.s[ax[2]]); m.userData.c=c; group.add(m); meshes.push(m);
+    const lb=label(shortName(c),isL?acc:ink,isL?.48:.36); lb.position.set(m.position.x,m.position.y+.55,m.position.z); group.add(lb);
+    if(!isL&&(prox(c)??0)>=70){const ln=new THREE.Line(new THREE.BufferGeometry().setFromPoints([m.position.clone(),Lp]),new THREE.LineDashedMaterial({color:muted,dashSize:.2,gapSize:.15}));ln.computeLineDistances();group.add(ln)}
+  });
+}
+
+// sondages
+function svgEl(w,h,inner){return `<svg viewBox="0 0 ${w} ${h}" role="img">${inner}</svg>`}
+function attachTips(box){const tip=document.createElement("div");tip.className="tip";tip.hidden=true;box.appendChild(tip);
+  box.querySelectorAll("[data-tip]").forEach(n=>{n.addEventListener("pointerenter",e=>{tip.hidden=false;tip.textContent=n.dataset.tip});n.addEventListener("pointermove",e=>{const r=box.getBoundingClientRect();let x=e.clientX-r.left+12;if(x>r.width-200)x=e.clientX-r.left-200;tip.style.left=x+"px";tip.style.top=(e.clientY-r.top+12)+"px"});n.addEventListener("pointerleave",()=>tip.hidden=true)})}
+let curH=null;
+function allHyps(){return POLLS.polls.flatMap((p,pi)=>p.hyps.map((hy,hi)=>({p,hy,key:pi+"-"+hi})))}
+function ranked(hy){return Object.entries(hy.scores).sort((a,b)=>b[1]-a[1])}
+function renderPolls(){
+  const P=POLLS, LH=lisHyps(), sel=$("#hypSel");
+  $("#pollRule").innerHTML="<b>Règle de lecture.</b> "+esc(P.rule);
+  const vals=LH.map(o=>o.hy.scores.lisnard), gR=LH.map(o=>o.hy.scores.retailleau!=null?o.hy.scores.lisnard-o.hy.scores.retailleau:null).filter(x=>x!=null);
+  const behind=gR.filter(x=>x<0).length;
+  const ranks=LH.map(o=>ranked(o.hy).findIndex(([k])=>k==="lisnard")+1);
+  const insts=[...new Set(LH.map(o=>o.p.inst))];
+  $("#sondLead").textContent=`En octobre 2026, David Lisnard est testé dans ${LH.length} hypothèses de ${insts.length} enquêtes : entre ${fr(Math.min(...vals))} et ${fr(Math.max(...vals))} % selon l'hypothèse, derrière Bruno Retailleau dans ${behind} cas sur ${gR.length}.`;
+  const f=LH[0];
+  $("#kpis").innerHTML=[
+    ["Dernière enquête",LH.filter(o=>o.p===f.p).map(o=>fr(o.hy.scores.lisnard)).join(" et ")+" %",`${f.p.inst}, ${f.p.terrain}`,true],
+    ["Écart avec Retailleau",`${gR.map(x=>(x>0?"+":"")+fr(x)).join(" / ")} pt`,"dans chacune des hypothèses testant les deux"],
+    ["Rang de Lisnard",`${Math.min(...ranks)}e à ${Math.max(...ranks)}e`,"parmi les candidats testés"],
+    ["Second tour","non testé","aucune enquête publiée"]
+  ].map(([l,v,s,a])=>`<div class="kpi"><div class="l">${l}</div><div class="v ${a?"acc":""}" style="font-size:${String(v).length>12?"22px":""}">${esc(v)}</div><div class="s">${esc(s)}</div></div>`).join("");
+  $("#lisTable").innerHTML=`<table><thead><tr><th>Institut</th><th>Terrain</th><th>Hypothèse</th><th class="num">Lisnard</th><th class="num">Rang</th><th class="num">Écart avec Retailleau</th><th class="num">Écart avec le 2e</th></tr></thead><tbody>${LH.map(o=>{const rk=ranked(o.hy),l=o.hy.scores.lisnard,r=o.hy.scores.retailleau,i=rk.findIndex(([k])=>k==="lisnard")+1;return `<tr class="hrow" data-k="${o.key}" style="cursor:pointer"><td>${esc(o.p.inst)}</td><td>${esc(o.p.terrain)}</td><td>${esc(o.hy.label)}</td><td class="num"><b>${fr(l)} %</b></td><td class="num">${i}e</td><td class="num">${r!=null?((l-r)>0?"+":"")+fr(l-r)+" pt":"—"}</td><td class="num">${fr(l-rk[1][1])} pt</td></tr>`}).join("")}</tbody></table>`;
+  if(!curH) curH=LH[0].key;
+  sel.innerHTML=allHyps().map(o=>`<option value="${o.key}">${esc(o.p.inst)} · ${esc(o.p.terrain)} · ${esc(o.hy.label)}${o.hy.scores.lisnard!=null?"":" (sans Lisnard)"}</option>`).join("");
+  sel.value=curH;
+  renderHyp();
+  $("#duelNote").textContent=P.duelNote;
+  $("#duelTable").innerHTML=`<table><thead><tr><th>Institut</th><th>Terrain</th><th>Duel</th><th class="num">Scores</th></tr></thead><tbody>${P.polls.filter(p=>p.duels).flatMap(p=>p.duels.map(r=>`<tr><td>${esc(p.inst)}</td><td>${esc(p.terrain)}</td><td>${esc(byId(r[0]).n)} – ${esc(byId(r[2]).n)}</td><td class="num">${fr(r[1])} % – ${fr(r[3])} %</td></tr>`)).join("")}</tbody></table>`;
+  $("#histNote").textContent="Relevé d'un agrégateur, sans les autres candidats. Listes et hypothèses différentes : ces valeurs ne se comparent pas entre elles et ne décrivent pas une évolution.";
+  $("#histTable").innerHTML=`<table><thead><tr><th>Fin de terrain</th><th>Institut</th><th>Commanditaire</th><th class="num">Lisnard</th></tr></thead><tbody>${P.history.map(x=>`<tr><td>${fmtD(x.d)}</td><td>${esc(x.inst)}</td><td>${esc(x.com)}</td><td class="num">${esc(x.v)}</td></tr>`).join("")}</tbody></table>`;
+  $("#pollSrc").innerHTML=P.polls.flatMap(p=>p.src.map(([t,u])=>`<li>${esc(p.inst)} (${esc(p.terrain)}) : <a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`)).join("")+`<li>Enquêtes antérieures : <a href="${esc(P.historySrc[1])}" target="_blank" rel="noopener">${esc(P.historySrc[0])}</a></li>`;
+}
+function curHyp(){return allHyps().find(o=>o.key===curH)}
+function renderHyp(){
+  const o=curHyp(); if(!o) return; const rk=ranked(o.hy), l=o.hy.scores.lisnard;
+  $("#hypNote").textContent=[`${o.p.inst} pour ${o.p.com}, terrain du ${o.p.terrain}. ${o.p.n}. Marge : ${o.p.marge}.`,o.hy.note||"",o.p.note||"",o.hy.other?"Autres candidats testés : "+Object.entries(o.hy.other).map(([k,v])=>k+" "+fr(v)+" %").join(", ")+".":""].filter(Boolean).join(" ");
+  const w=560,rowH=30,m={l:160,r:52,t:6};const hh=m.t+rk.length*rowH+6;const max=Math.max(...rk.map(x=>x[1]));const X=v=>(v/max)*(w-m.l-m.r);
+  let g="";rk.forEach(([id,v],i)=>{const c=byId(id),isL=id==="lisnard",y=m.t+i*rowH;
+    g+=`<text x="${m.l-10}" y="${y+19}" text-anchor="end" style="fill:var(--ink);font-weight:${isL?700:400}">${esc(c.n)}</text><rect x="${m.l}" y="${y+6}" width="${Math.max(X(v),2)}" height="18" rx="3" fill="${isL?css("--accent"):css("--muted")}" opacity="${isL?1:.45}" data-tip="${esc(`${c.n} : ${fr(v)} %`)}"/><text x="${m.l+X(v)+6}" y="${y+19}" style="fill:var(--ink)">${v<1?"< 1":fr(v)} %</text>`});
+  $("#chHyp").innerHTML=svgEl(w,hh,g);attachTips($("#chHyp"));
+  $("#gapTable").innerHTML=`<table><thead><tr><th>Candidat</th><th class="num">Score</th><th class="num">Écart avec Lisnard</th></tr></thead><tbody>${rk.map(([id,v])=>{const c=byId(id),isL=id==="lisnard";return `<tr class="${isL?"lisrow":""}"><td class="who" data-c="${id}"><span class="dot" style="background:${col(c.b)}"></span>${esc(c.n)}</td><td class="num">${v<1?"< 1":fr(v)} %</td><td class="num">${isL?"référence":l==null?"Lisnard non testé":(v-l>0?"+":"")+fr(v-l)+" pt"}</td></tr>`}).join("")}</tbody></table>`;
+  renderScatter();
+}
+$("#hypSel").onchange=e=>{curH=e.target.value;renderHyp()};
+$("#lisTable").onclick=e=>{const r=e.target.closest(".hrow");if(r){curH=r.dataset.k;$("#hypSel").value=curH;renderHyp();$("#hypSel").scrollIntoView({behavior:"smooth",block:"center"})}};
+function renderScatter(){
+  const box=$("#chScatter");if(!box||$("#v-sond").hidden)return;const o=curHyp();if(!o)return;
+  const all=Object.entries(o.hy.scores).map(([id,v])=>[byId(id),v]).filter(([c])=>c);
+  const pts=all.filter(([c])=>c.id==="lisnard"||prox(c)!=null), out=all.filter(([c])=>c.id!=="lisnard"&&prox(c)==null);
+  $("#scatNote").textContent=`Hypothèse affichée : ${o.p.inst}, ${o.hy.label}. Axe horizontal : indice de proximité avec Lisnard (pondération de l'onglet Grille). Axe vertical : intentions de vote dans cette hypothèse.${o.hy.scores.lisnard==null?" Lisnard n'est pas testé dans cette hypothèse.":""}${out.length?" Non placés (indice non calculé) : "+out.map(([c])=>c.n).join(", ")+".":""}`;
+  const w=900,h=360,m={l:46,r:24,t:18,b:42};const X=p=>m.l+(p/100)*(w-m.l-m.r);const ymax=Math.ceil(Math.max(...pts.map(x=>x[1]))/5)*5;const Y=v=>h-m.b-(v/ymax)*(h-m.t-m.b);
+  let g="";for(let v=0;v<=ymax;v+=5)g+=`<line class="grid" x1="${m.l}" x2="${w-m.r}" y1="${Y(v)}" y2="${Y(v)}"/><text x="${m.l-8}" y="${Y(v)+4}" text-anchor="end">${v} %</text>`;
+  for(let p=0;p<=100;p+=20)g+=`<text x="${X(p)}" y="${h-m.b+18}" text-anchor="middle">${p}</text>`;
+  g+=`<text x="${(m.l+w-m.r)/2}" y="${h-6}" text-anchor="middle">Proximité de programme avec David Lisnard (0 à 100)</text>`;
+  const placed=[];const fits=(b)=>!placed.some(q=>b.x<q.x+q.w&&b.x+b.w>q.x&&b.y<q.y+q.h&&b.y+b.h>q.y);
+  pts.sort((a,b)=>(a[0].id==="lisnard"?-1:b[0].id==="lisnard"?1:0));
+  pts.forEach(([c,v])=>{const p=c.id==="lisnard"?100:prox(c);placed.push({x:X(p)-9,y:Y(v)-9,w:18,h:18})});
+  pts.forEach(([c,v])=>{const isL=c.id==="lisnard";const p=isL?100:prox(c);const x=X(p),y=Y(v);const nm=shortName(c);const tw=nm.length*7.5+4;
+    const cands=isL?[[x-12-tw,y-30,"end",x-12,y-17],[x-12-tw,y+12,"end",x-12,y+25],[x-tw/2,y-34,"middle",x,y-21]]:[[x+10,y-22,"start",x+10,y-9],[x+10,y+6,"start",x+10,y+19],[x-10-tw,y-22,"end",x-10,y-9],[x-10-tw,y+6,"end",x-10,y+19]];
+    let pick=cands.find(k=>fits({x:k[0],y:k[1],w:tw,h:16}))||cands[0];placed.push({x:pick[0],y:pick[1],w:tw,h:16});
+    g+=isL?`<rect x="${x-7}" y="${y-7}" width="14" height="14" transform="rotate(45 ${x} ${y})" fill="${css("--accent")}" stroke="${css("--panel")}" stroke-width="2"/>`:`<circle cx="${x}" cy="${y}" r="7" fill="${col(c.b)}" stroke="${css("--panel")}" stroke-width="2"/>`;
+    g+=`<text x="${pick[3]}" y="${pick[4]}" text-anchor="${pick[2]}" style="fill:var(--ink);font-weight:${isL?700:500}">${esc(nm)}</text><circle cx="${x}" cy="${y}" r="16" fill="transparent" data-tip="${esc(`${c.n} · ${fr(v)} % · proximité ${isL?"référence":p}`)}"/>`});
+  box.innerHTML=svgEl(w,h,g);attachTips(box);
+}
+
+// opinions
+let opInit=false;
+function bars(rows,opt){opt=opt||{};return (opt.head?`<div class="hb head"><span>${esc(opt.head[0])}</span><span></span><span class="v">${esc(opt.head[1])}</span><span>${esc(opt.head[2]||"")}</span></div>`:"")+rows.map(r=>`<div class="hb"><span>${esc(r[0])}</span><span class="tr"><span class="fl ${r.acc?"acc":""}" style="width:${r[1]}%"></span></span><span class="v">${fr(r[1])} %</span><span class="x">${r.x||""}</span></div>`).join("")}
+function renderOpin(){
+  const O=D.OPINION; if(!O) return;
+  if(!opInit){opInit=true;
+    $("#opIntro").textContent=O.intro;
+    $("#opJump").innerHTML=[["op-prio","Priorités"],["op-crit","Critères de choix"],["op-cert","Solidité du choix"],["op-elec","Électorat de Lisnard"],["op-chg","Changements d'avis"],["op-src","Sources et limites"]].map(([i,t])=>`<button class="chip" data-j="${i}">${t}</button>`).join("");
+    $("#opJump").onclick=e=>{const b=e.target.closest(".chip");if(b)document.getElementById(b.dataset.j).scrollIntoView({behavior:"smooth",block:"start"})};
+    const pops=["Ensemble des inscrits",...Object.keys(O.priorities.groups)];
+    $("#prioSel").innerHTML=pops.map(p=>`<option>${esc(p)}</option>`).join("");
+    $("#critSel").innerHTML=pops.map(p=>`<option>${esc(p)}</option>`).join("");
+    $("#prioSel").onchange=renderOpin;$("#critSel").onchange=renderOpin;
+    $("#prioBars").onclick=e=>{const a=e.target.closest("a[data-t]");if(a){e.preventDefault();curT=a.dataset.t;show("theme");renderTheme();window.scrollTo(0,0)}};
+  }
+  const H=O.harris, src=(p)=>`${H.inst} pour ${H.com}, terrain du ${H.terrain}, ${H.n}. Page ${p} du rapport.`;
+  // priorités
+  $("#prioQ").textContent=O.priorities.q+". "+src(O.priorities.page);
+  const ps=$("#prioSel").value;
+  if(ps==="Ensemble des inscrits"){
+    $("#prioBars").innerHTML=bars(O.priorities.all.map(([t,v,k])=>{const r=[t,v];const n=k&&L.t[k]?L.t[k].length:0;r.x=k?(n?`<a href="#" data-t="${k}">${n} position${n>1?"s":""} de Lisnard</a>`:"aucune position de Lisnard"):"hors des 15 thèmes";return r}),{head:["Thème","Inscrits","Positions de Lisnard"]});
+    $("#prioNote").textContent="Plusieurs réponses possibles : la somme dépasse 100 %. Dernière colonne : nombre de positions de David Lisnard recensées dans le thème correspondant de ce comparatif (cliquer pour les lire). Un thème cité comme important n'est pas pour autant une raison de changer de vote.";
+  } else {
+    $("#prioBars").innerHTML=bars(O.priorities.groups[ps].map(r=>[r[0],r[1]]),{head:["Thème",ps,""]});
+    $("#prioNote").textContent=O.priorities.groupNote;
+  }
+  // critères
+  $("#critQ").textContent=O.criteria.q+". "+src(O.criteria.page);
+  const cs=$("#critSel").value;
+  $("#critBars").innerHTML=cs==="Ensemble des inscrits"?bars(O.criteria.all.map(r=>[r[0],r[1]]),{head:["Critère","« Beaucoup »",""]}):bars(O.criteria.groups[cs].map(r=>[r[0],r[1]]),{head:["Critère",cs,""]});
+  $("#critNote").textContent=cs==="Ensemble des inscrits"?"Chaque critère est évalué séparément : les pourcentages ne s'additionnent pas. Ils décrivent l'importance déclarée, pas la cause démontrée d'un vote.":O.criteria.groupNote;
+  // solidité
+  const K=O.certainty;
+  $("#certBase").textContent=`${K.inst} pour ${K.com}, terrain du ${K.terrain}. Base : ${K.base}.`;
+  const nm=id=>byId(id)?byId(id).n:id;
+  $("#certBars").innerHTML=`<div class="hb head"><span>Électorat</span><span></span><span class="v">Sûr</span><span>Pourrait changer</span></div>`+[["Ensemble",K.all[0],K.all[1]],...K.byCand.map(r=>[nm(r[0]),r[1],r[2]])].map(r=>`<div class="hb"><span>${esc(r[0])}</span><span class="tr"><span class="fl acc" style="width:${r[1]}%"></span><span class="fl alt" style="width:${r[2]}%"></span></span><span class="v">${r[1]} %</span><span class="x">${r[2]} %</span></div>`).join("");
+  $("#certNote").textContent=K.note+" Barre pleine : part des électeurs qui se disent sûrs de leur choix.";
+  // électorat
+  const E=O.lisnardElectorate;
+  $("#elecTable").innerHTML=`<table><thead><tr><th>Groupe</th><th class="num">${esc(E.cols[0])}</th><th class="num">${esc(E.cols[1])}</th></tr></thead><tbody>${E.rows.map(r=>`<tr><td>${esc(r[0])}</td><td class="num">${r[1]} %</td><td class="num">${r[2]} %</td></tr>`).join("")}</tbody></table>`;
+  $("#elecNote").textContent=`${E.inst}, terrain du ${E.terrain}. ${E.note}`;
+  // changements
+  const G=O.change2022;
+  $("#chgGap").textContent=O.gap2027;
+  $("#chgBars").innerHTML=`<p class="foot">${esc(G.q)}. ${esc(G.inst)} pour ${esc(G.com)}, publié le ${fmtD(G.date)}. Base : ${esc(G.base)}.</p>`+bars(G.vals.map(r=>[r[0],r[1]]));
+  $("#chgNote").textContent=G.note;
+  $("#opSrc").innerHTML=[[`${H.inst} pour ${H.com} (${H.terrain}), notice et rapport`,H.url],[`${K.inst} pour ${K.com} (${K.terrain}), rapport`,K.url],[`${G.inst} pour ${G.com}, bilan du quinquennat (archive 2022)`,G.url],["BVA, analyse des réponses ouvertes par Bruno Cautrès (archive 2022)",G.analysis]].map(([t,u])=>`<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
+}
+
+// communication
+let curS=null;
+function renderComm(){
+  const K=D.COMMS; if(!K) return; curS=curS||K.segments[0].id;
+  $("#commIntro").textContent=K.intro;
+  $("#commChips").innerHTML=K.segments.map(g=>`<button class="chip ${g.id===curS?"on":""}" data-s="${g.id}">${esc(g.titre)}</button>`).join("");
+  const g=K.segments.find(x=>x.id===curS);
+  $("#commDetail").innerHTML=`<div class="card"><h2>${esc(g.titre)}</h2><div class="meta">${esc(g.cible)}</div><div class="seg"><div><dl><dt>Pourquoi ce segment</dt><dd>${esc(g.pourquoi)}</dd><dt>Angle</dt><dd>${esc(g.angle)}</dd></dl><div class="msg">${esc(g.message)}</div><dl><dt>Preuves tirées du programme</dt><dd>${pos(g.preuves)}</dd></dl></div><div><dl><dt>Contraste factuel</dt><dd>${esc(g.contraste)}</dd><dt>Objection probable et réponse</dt><dd>${esc(g.objection)}</dd><dt>Canaux suggérés</dt><dd>${esc(g.canal)}</dd></dl></div></div></div>`;
+  $("#vulnTable").innerHTML=`<table><thead><tr><th>Point exposé</th><th>Piste de réponse</th></tr></thead><tbody>${K.vulnerabilites.map(v=>`<tr><td style="min-width:180px"><b>${esc(v.p)}</b></td><td>${esc(v.r)}</td></tr>`).join("")}</tbody></table>`;
+}
+$("#commChips").onclick=e=>{const b=e.target.closest(".chip");if(b){curS=b.dataset.s;renderComm()}};
+
+// journal
+$("#journalTable").innerHTML=`<table><thead><tr><th>Date</th><th>Candidat ou rubrique</th><th>Changement</th></tr></thead><tbody>${JOURNAL.map(j=>`<tr><td class="num" style="text-align:left">${fmtD(j.d)}</td><td>${esc(j.c)}</td><td>${esc(j.t)}</td></tr>`).join("")}</tbody></table>`;
+$("#gapTable").onclick=e=>{const w=e.target.closest(".who");if(w)openCand(w.dataset.c)};
+
+renderTheme(); renderCand(); renderRank();
+let start="theme";try{const s=localStorage.getItem("tab");if(VIEWS.includes(s))start=s}catch(e){}
+const hash=location.hash.slice(1);if(VIEWS.includes(hash))start=hash;
+show(start);
+</script>
+
+</body>
+</html>
