@@ -244,7 +244,7 @@ h3{font-family:var(--f-display);font-size:20px;margin:28px 0 10px;text-wrap:bala
             <li><span class="tag P">P</span>tiré du <b>programme</b> publié ; <span class="tag D">D</span><b>déclaration</b> récente (entretien, discours) ; <span class="tag H">H</span><b>position antérieure</b>, à confirmer pour 2027.</li>
             <li>Sous chaque position, un lien mène à la <b>source</b> et indique sa date.</li>
             <li>L’<b>écart à Lisnard</b> va de « Très proche » à « Très éloigné ». Il compare les notes des deux candidats sur l’axe du thème (échelle de 0 à 10).</li>
-            <li>L’<b>indice de proximité</b> (0 à 100) résume l’écart sur cinq axes. Il n’est calculé que si au moins trois axes sont documentés, et le nombre d’axes utilisés est toujours affiché.</li>
+            <li>L’<b>indice de proximité</b> (0 à 100) résume l’écart sur six axes. Il n’est calculé que si au moins trois axes sont documentés, et le nombre d’axes utilisés est toujours affiché.</li>
             <li>Les <b>sondages</b> ne sont comparés qu’à l’intérieur d’une même hypothèse d’une même enquête : les listes de candidats testées diffèrent d’une hypothèse à l’autre.</li>
           </ul>
         </div>
@@ -293,7 +293,7 @@ h3{font-family:var(--f-display);font-size:20px;margin:28px 0 10px;text-wrap:bala
 
   <section id="v-grille" class="view" hidden>
     <div class="warn"><b>Grille interprétative.</b> Les notes sont attribuées à partir des positions recensées dans ce comparatif ; elles traduisent une lecture, pas une mesure. Chaque note est justifiée dans la fiche du candidat, et le poids de chaque axe est réglable : le classement change avec. Les candidats sans positions suffisantes ne sont pas notés.</div>
-    <h3>Les cinq axes</h3>
+    <h3>Les six axes</h3>
     <div class="axdef" id="axDefs"></div>
     <h3>Pondération et proximité avec David Lisnard</h3>
     <div class="weights" id="weights"></div>
@@ -393,7 +393,7 @@ function labelize(root){root.querySelectorAll("table").forEach(t=>{const hs=[...
 new MutationObserver(ms=>{const seen=new Set();ms.forEach(m=>{const t=m.target;if(t.querySelector&&t.querySelector(".tbl.stack table"))seen.add(t);else if(t.closest&&t.closest(".tbl.stack"))seen.add(t.closest(".tbl.stack"))});seen.forEach(labelize)}).observe(document.documentElement,{childList:true,subtree:true});
 const {THEMES,AXES,BLOCS,C,POLLS,JOURNAL}=D;
 const L=C.find(c=>c.id==="lisnard");
-const W=[1,1,1,1,1];
+const W=AXES.map(()=>1);
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -401,8 +401,8 @@ const col=b=>css(BLOCS[b][1]);
 const byId=id=>C.find(c=>c.id===id);
 const fr=n=>(Math.round(n*10)/10).toString().replace(".",",");
 const fmtD=s=>{const [y,m,d]=s.split("-");return `${+d} ${["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."][m-1]} ${y}`};
-const AXT=[["eco","ent","fis","fin","ret"],["eur","def","etr"],["imm"],["sec"],["ecol"]];
-function docAx(c){return AXT.map(ts=>ts.some(t=>(c.t[t]||[]).some(x=>!/^\[H\]/.test(x))))}
+const AXT=AXES.map((_,i)=>THEMES.filter(t=>t.ax===i).map(t=>t.k));
+function docAx(c){return AXT.map((ts,i)=>!!c.s&&c.s[i]!=null&&ts.some(t=>(c.t[t]||[]).some(x=>!/^\[H\]/.test(x))))}
 const LDOC=docAx(L);
 function common(c){if(!c||!c.s)return [];const a=docAx(c);return AXES.map((_,i)=>i).filter(i=>a[i]&&LDOC[i]&&W[i]>0)}
 function cov(c){return common(c).length}
@@ -411,7 +411,7 @@ const MOIS=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.",
 function fmtSD(d){if(/^\d{4}-\d{2}-\d{2}$/.test(d))return fmtD(d);if(/^\d{4}-\d{2}$/.test(d)){const [y,m]=d.split("-");return MOIS[m-1]+" "+y}return d}
 function srcOf(c,k,i){if(!c||!c.S)return null;const ks=c.src&&c.src[k];const key=ks?ks[Math.min(i,ks.length-1)]:(c.S.a?"a":Object.keys(c.S)[0]);return c.S[key]}
 function pos(arr,c,k){ if(!arr||!arr.length) return '<span class="nc">Non connu</span>'; return '<div class="pos">'+arr.map((x,i)=>{const m=x.match(/^\[(P|D|H)\]\s*(.*)$/);const s=c?srcOf(c,k,i):null;const sl=s?`<a class="src" href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])} · ${esc(fmtSD(s[2]))}</a>`:"";return m?`<div><span class="tag ${m[1]}">${m[1]}</span>${esc(m[2])}${sl}</div>`:`<div>${esc(x)}${sl}</div>`}).join("")+"</div>" }
-function gapBadge(c,ax){ if(ax==null||!c.s||c.id==="lisnard"||!docAx(c)[ax]) return ""; const d=Math.abs(c.s[ax]-L.s[ax]); const k=d<=1.5?0:d<=3?1:d<=4.5?2:d<=7?3:4; return `<span class="gm k${k}" title="écart de ${fr(d)} point(s) sur l'axe, échelle de 0 à 10"><span class="m" aria-hidden="true">${[0,1,2,3,4].map(i=>`<i class="${i<5-k?"on":""}"></i>`).join("")}</span><b>${["Très proche","Proche","Intermédiaire","Éloigné","Très éloigné"][k]} <small>· écart ${fr(d)}</small></b></span>` }
+function gapBadge(c,ax){ if(ax==null||!c.s||c.id==="lisnard"||!docAx(c)[ax]||!LDOC[ax]) return ""; const d=Math.abs(c.s[ax]-L.s[ax]); const k=d<=1.5?0:d<=3?1:d<=4.5?2:d<=7?3:4; return `<span class="gm k${k}" title="écart de ${fr(d)} point(s) sur l'axe, échelle de 0 à 10"><span class="m" aria-hidden="true">${[0,1,2,3,4].map(i=>`<i class="${i<5-k?"on":""}"></i>`).join("")}</span><b>${["Très proche","Proche","Intermédiaire","Éloigné","Très éloigné"][k]} <small>· écart ${fr(d)}</small></b></span>` }
 
 $("#sub").innerHTML=`Mis à jour le <b>${fmtD(D.updated)}</b> · ${C.length} candidatures · ${THEMES.length} thèmes · référence de comparaison : David Lisnard`;
 
@@ -440,7 +440,7 @@ function show(v){
   ].map(([v,l])=>`<div><b>${esc(String(v))}</b><span>${esc(l)}</span></div>`).join("")+(last?`<div style="grid-column:1/-1"><span>Dernier changement (${esc(fmtD(last.d))}, ${esc(last.c)})</span><p style="margin:2px 0 0;font-size:15px">${esc(last.t)}</p></div>`:"");
   const G=[["theme","Par thème","Choisir un thème et voir la position de chaque candidat, avec son écart à Lisnard."],
     ["cand","Par candidat","Choisir un candidat : ses propositions à côté de celles de Lisnard et son indice de proximité."],
-    ["grille","Grille Lisnard & 3D","La méthode de notation sur cinq axes, le classement de proximité et le nuage en 3D."],
+    ["grille","Grille Lisnard & 3D","La méthode de notation sur six axes, le classement de proximité et le nuage en 3D."],
     ["sond","Sondages","Les dernières enquêtes, hypothèse par hypothèse, et la place de Lisnard dans chacune."],
     ["opin","Opinions et motivations","Ce qui décide le vote des Français et ce que l’on sait de l’électorat de Lisnard."],
     ["comm","Communication Lisnard","Des messages ciblés suggérés à l’équipe de campagne, et les arguments pour obtenir le ralliement d’un candidat.","part"],
@@ -495,14 +495,14 @@ function renderCand(){
   let h=`<div class="card"><h2><span class="dot" style="background:${col(c.b)};width:12px;height:12px"></span>${esc(c.n)}</h2><dl class="facts"><dt>Parti</dt><dd>${esc(c.p)}</dd><dt>Bloc</dt><dd>${BLOCS[c.b][0]}</dd><dt>Candidature</dt><dd>${esc(c.st)}</dd><dt>Programme</dt><dd>${esc(c.pr)}</dd>${pollOf(c.id)?`<dt>Sondage</dt><dd>${esc(pollOf(c.id))}</dd>`:""}</dl>`;
   if(isL){ const ranked=C.map(x=>[x,prox(x)]).filter(x=>x[1]!=null).sort((a,b)=>b[1]-a[1]);
     h+=`<div class="score"><span>Candidat de référence. Les plus proches selon la grille :</span></div><div class="legend">${ranked.slice(0,6).map(([x,v])=>`<a href="#" data-c="${x.id}" class="jump"><b>${esc(x.n)}</b> ${v}</a>`).join(" · ")}</div>`;
-  } else if(p!=null){ h+=`<div class="score"><b>${p}</b><span>/ 100 de proximité avec David Lisnard · calculé sur ${cov(c)} axes documentés sur 5</span></div>` }
+  } else if(p!=null){ h+=`<div class="score"><b>${p}</b><span>/ 100 de proximité avec David Lisnard · calculé sur ${cov(c)} axes documentés sur ${AXES.length}</span></div>` }
   else if(c.s) h+=`<div class="score"><span>Moins de trois axes documentés en commun avec David Lisnard : indice non calculé.</span></div>`;
   else h+=`<div class="score"><span>Positions insuffisantes pour être placé sur la grille.</span></div>`;
   h+=`<div class="legend"><span><span class="diamond"></span>David Lisnard</span>${!isL&&c.s?`<span><span class="dot" style="background:${col(c.b)}"></span>${esc(c.n)}</span>`:""}</div>`+axisBars(c)+"</div>";
   const AT=argOn()&&D.COMMS&&D.COMMS.atouts;
   h+=argSwitch();
   h+=`<div class="tbl stack"><table><thead><tr><th>Thème</th><th>${isL?"Positions de David Lisnard":esc(c.n)}</th>${isL?"":"<th>David Lisnard</th>"}${AT?'<th class="argh">Pourquoi Nouvelle Énergie est mieux<small>argumentaire partisan</small></th>':""}</tr></thead><tbody>`;
-  THEMES.forEach(t=>{h+=`<tr><td style="min-width:150px"><b>${esc(t.n)}</b>${!isL&&t.ax!=null?"<br>"+gapBadge(c,t.ax):""}</td><td>${pos(c.t[t.k],c,t.k)}</td>${isL?"":`<td style="background:var(--accent-soft)">${pos(L.t[t.k],L,t.k)}</td>`}${AT?`<td class="arg">${AT.t[t.k]?esc(AT.t[t.k]):'<span class="nc">—</span>'}</td>`:""}</tr>`});
+  THEMES.forEach(t=>{h+=`<tr><td style="min-width:150px"><b>${esc(t.n)}</b>${!isL&&t.ax!=null&&gapBadge(c,t.ax)?"<br>"+gapBadge(c,t.ax)+`<br><small class="nc">axe ${esc(AXES[t.ax].n)}</small>`:""}</td><td>${pos(c.t[t.k],c,t.k)}</td>${isL?"":`<td style="background:var(--accent-soft)">${pos(L.t[t.k],L,t.k)}</td>`}${AT?`<td class="arg">${AT.t[t.k]?esc(AT.t[t.k]):'<span class="nc">—</span>'}</td>`:""}</tr>`});
   h+="</tbody></table></div>";
   $("#candDetail").innerHTML=h;
 }
@@ -519,7 +519,7 @@ $("#weights").oninput=e=>{const i=+e.target.dataset.i;W[i]=+e.target.value;$("#w
 function renderRank(){
   const r=C.map(c=>[c,prox(c)]).filter(x=>x[1]!=null).sort((a,b)=>b[1]-a[1]);
   const nc=C.filter(c=>c.id!=="lisnard"&&prox(c)==null);
-  $("#rank").innerHTML=r.map(([c,v],i)=>`<div class="r" data-c="${c.id}"><span>${i+1}</span><b>${esc(c.n)}</b><div style="background:var(--chip);border-radius:3px"><div class="fill" style="width:${Math.max(v,0)}%;background:${col(c.b)}"></div></div><span class="num">${v}</span><span class="num" style="color:var(--muted)">${cov(c)}/5</span></div>`).join("")+`<p class="foot">Dernière colonne : nombre d'axes documentés en commun avec Lisnard et pris en compte. Deux indices fondés sur des axes différents ne sont pas strictement comparables. Indice non calculé (moins de trois axes documentés en commun) : ${nc.map(c=>c.n).join(", ")}.</p>`;
+  $("#rank").innerHTML=r.map(([c,v],i)=>`<div class="r" data-c="${c.id}"><span>${i+1}</span><b>${esc(c.n)}</b><div style="background:var(--chip);border-radius:3px"><div class="fill" style="width:${Math.max(v,0)}%;background:${col(c.b)}"></div></div><span class="num">${v}</span><span class="num" style="color:var(--muted)">${cov(c)}/${AXES.length}</span></div>`).join("")+`<p class="foot">Dernière colonne : nombre d'axes documentés en commun avec Lisnard et pris en compte. Deux indices fondés sur des axes différents ne sont pas strictement comparables. Indice non calculé (moins de trois axes documentés en commun) : ${nc.map(c=>c.n).join(", ")}.</p>`;
 }
 $("#rank").onclick=e=>{const r=e.target.closest(".r");if(r)openCand(r.dataset.c)};
 ["axX","axY","axZ"].forEach((id,k)=>{const s=$("#"+id);s.innerHTML=AXES.map((a,i)=>`<option value="${i}">${esc(a.n)}</option>`).join("");s.value=[0,2,1][k];s.onchange=()=>build3d()});
