@@ -1,238 +1,7080 @@
 window.DATA={
-updated:"2026-11-26",
-THEMES:[
- {"k":"eco","n":"Économie et pouvoir d'achat","ax":0,"lead":"Le salaire minimum sépare les blocs : de 1 700 à 2 200 € nets à gauche, hausse du net par baisse des cotisations au centre et à droite, baisse de la TVA sur l'énergie au RN."},
- {"k":"ent","n":"Entreprises, travail et emploi","ax":0,"lead":"Interdiction des licenciements et réduction du temps de travail à l'extrême gauche ; sortie des 35 heures et allègement du Code du travail au centre et à droite."},
- {"k":"fis","n":"Fiscalité","ax":0,"lead":"La baisse des impôts de production fait consensus du centre à l'extrême droite ; la taxation du patrimoine (ISF, taxe Zucman, grands héritages) structure la gauche."},
- {"k":"fin","n":"Finances publiques et dette","ax":0,"lead":"Quatre candidats proposent une règle d'or adoptée par référendum ; les économies annoncées vont de 60 à plus de 200 Md€, sur des horizons différents, donc non comparables tels quels."},
- {"k":"ret","n":"Retraites et protection sociale","ax":0,"lead":"Les âges proposés vont de 60 à 65 ans ; Attal supprimerait l'âge légal au profit de la durée de cotisation ; la capitalisation apparaît du centre à l'extrême droite."},
- {"k":"edu","n":"Éducation et enseignement supérieur","ax":null,"lead":"La revalorisation des enseignants traverse les blocs ; un examen à l'entrée en 6e est proposé par Attal, Retailleau et Lisnard ; la fin de Parcoursup par Becht, Lisnard et Branco."},
- {"k":"san","n":"Santé","ax":null,"lead":"Thème le moins documenté : la moitié des candidats n'a pas de position publique ; la suppression des ARS et de l'AME revient le plus souvent à droite."},
- {"k":"def","n":"Défense","ax":5,"lead":"Le rapport à l'OTAN est la ligne de partage : sortie de l'Alliance ou du commandement intégré pour LFI, les souverainistes et le RN ; réarmement européen et atlantique au centre."},
- {"k":"eur","n":"Europe","ax":1,"lead":"De l'approfondissement fédéral (Attal, Tondelier, Glucksmann) à la sortie de l'UE (Philippot, Asselineau, Lalanne), en passant par la primauté du droit national (Retailleau, Le Pen)."},
- {"k":"etr","n":"Politique étrangère","ax":null,"lead":"L'Ukraine trace la ligne principale ; l'accord franco-algérien de 1968 serait dénoncé ou révisé par Philippe, Retailleau, Lisnard et Dupont-Aignan."},
- {"k":"imm","n":"Immigration","ax":2,"lead":"Régularisation à la gauche de la gauche, convention citoyenne chez Glucksmann, points ou quotas au centre, fin du droit du sol et « priorité nationale » à droite et à l'extrême droite."},
- {"k":"sec","n":"Sécurité et justice","ax":3,"lead":"Peines planchers et suppression du juge d'application des peines à droite, majorité pénale abaissée chez Bertrand et Lisnard, encadrement de la police dans une partie de la gauche."},
- {"k":"ecol","n":"Écologie et énergie","ax":4,"lead":"Le nucléaire est soutenu par presque tous, sauf Tondelier et Mélenchon ; le soutien aux renouvelables oppose la gauche et le centre à la droite et à l'extrême droite."},
- {"k":"inst","n":"Institutions et démocratie","ax":null,"lead":"Le référendum est l'outil le plus partagé ; le septennat revient chez Cazeneuve, Lisnard, Bertrand, Branco et dans le programme écologiste."},
- {"k":"num","n":"Numérique, IA et souveraineté technologique","ax":null,"lead":"La souveraineté numérique est le point commun le plus large ; les divergences portent sur la régulation, de l'encadrement renforcé à la dérogation au RGPD."}
-],
-AXES:[
- {"n":"État et économie","neg":"Redistribution, État producteur","pos":"Baisse de la dépense, dérégulation","def":"Rôle de l'État : salaires administrés, nationalisations, taxation du capital (pôle gauche) contre économies budgétaires, baisse des prélèvements, flexibilité du travail, capitalisation (pôle droit). Thèmes : économie, travail, fiscalité, finances, retraites."},
- {"n":"Europe et souveraineté","neg":"Fédéralisme européen","pos":"Sortie de l'UE","def":"Du transfert de souveraineté (fin des vetos, États-Unis d'Europe) à la sortie de l'UE, en passant par la primauté du droit national et les dérogations. Thème : Europe."},
- {"n":"Immigration","neg":"Régularisation, ouverture","pos":"Restriction forte","def":"De la régularisation générale et de la liberté d'installation à la fin du droit du sol, à la priorité nationale et à la « remigration ». Thème : immigration."},
- {"n":"Sécurité et justice","neg":"Prévention, encadrement policier","pos":"Fermeté pénale","def":"De la priorité aux libertés et au contrôle de la police aux peines planchers, à la majorité pénale abaissée et aux procédures d'exception. Thème : sécurité et justice."},
- {"n":"Énergie et écologie","neg":"Priorité climat, sortie du nucléaire","pos":"Nucléaire, fin des aides aux renouvelables","def":"De la sortie du nucléaire et de la sobriété à la relance nucléaire, à la fin du soutien aux renouvelables et à la remise en cause du principe de précaution. Thème : écologie et énergie."},
- {"n":"Défense et effort militaire","neg":"Désarmement, refus du réarmement","pos":"Réarmement, forte hausse de l'effort militaire","def":"Du refus de la hausse du budget militaire et du démantèlement de l'industrie d'armement au réarmement accéléré et à la hausse des moyens (budget, réservistes, équipements). Le rapport à l'OTAN n'est pas noté sur cet axe : une position qui ne porte que sur l'OTAN ou l'organisation européenne de la défense laisse l'axe non documenté (note null). Thème : défense."}
-],
-BLOCS:{"eg":["Extrême gauche","--eg"],"g":["Gauche","--g"],"c":["Centre","--c"],"d":["Droite","--d"],"s":["Souverainistes","--s"],"ed":["Extrême droite","--ed"],"div":["Divers","--div"]},
-C:[
- {"id":"arthaud","n":"Nathalie Arthaud","p":"Lutte ouvrière","b":"eg","st":"Candidate (4e fois)","pr":"Pas de programme ; discours du 26/09/2026","s":[-5,0,-5,-4,-2,-4],"cf":"moyenne","j":["SMIC à 2 200 €, réquisition des profits","aucune position européenne","régularisation, liberté de circulation","critique du racisme dans la police","planification, pas de position sur le nucléaire","contre la hausse du budget militaire et le service national"],"S":{"a":["Lutte ouvrière, discours du meeting du 26 septembre","https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html","2026-09-26"]},"src":{},"t":{"eco":["[D] SMIC à 2 200 € nets ; carburant vendu à prix coûtant par les pétroliers"],"ent":["[D] interdiction des licenciements ; partage du travail sans baisse de salaire"],"fis":["[D] réquisition des profits des pétroliers et de l'armement ; levée du secret commercial"],"fin":["[D] pas de plan sur la dette ; services publics financés par les profits confisqués"],"edu":["[D] contre les classes surchargées et le service national"],"san":["[D] plus de moyens pour les hôpitaux"],"def":["[D] contre la hausse du budget militaire et le service national"],"eur":["[D] pas de mesure européenne ; rejet du souverainisme"],"etr":["[D] contre les livraisons d'armes à l'Ukraine ; retrait des troupes françaises d'Afrique"],"imm":["[D] régularisation de tous les sans-papiers, liberté de circulation, droit de vote des immigrés"],"sec":["[D] dénonciation du racisme dans la police"],"ecol":["[D] planification de l'énergie et de l'eau ; transports publics gratuits"],"inst":["[D] pas de réforme ; primauté des luttes sur l'élection"],"num":["[D] l'IA au service des besoins humains et non du profit"]}},
- {"id":"kazib","n":"Anasse Kazib","p":"Révolution permanente","b":"eg","st":"Annoncée en juin 2026","pr":"Site en ligne, programme 2027 « en élaboration »","s":[-5,0,-5,-5,-3,-5],"cf":"moyenne","j":["expropriation des banques, 28 h","rien sur l'UE","régularisation, fermeture des centres de rétention","dissolution des corps spéciaux de police","énergie publique, transports collectifs","démantèlement de l'industrie d'armement"],"S":{"a":["Programme d'A. Kazib (2027 en élaboration)","https://anasse2027.fr/programme","non daté"]},"src":{},"t":{"eco":["[P] SMIC à 2 000 € nets, +500 € sur tous les salaires, indexation ; gel des loyers"],"ent":["[P] interdiction des licenciements ; semaine de 28 h sans perte de salaire ; CDI pour tous"],"fis":["[P] fin des aides publiques aux grandes entreprises"],"fin":["[P] expropriation des groupes bancaires ; investissement massif dans les services publics"],"ret":["[P] retraite à 60 ans, 55 ans pour les métiers pénibles ; Sécurité sociale financée par le patronat"],"edu":["[P] revenu étudiant au niveau du SMIC ; contre le SNU"],"san":["[P] nationalisation de l'industrie pharmaceutique"],"def":["[P] démantèlement de l'industrie d'armement"],"etr":["[P] retrait des troupes françaises à l'étranger"],"imm":["[P] régularisation, fermeture des centres de rétention, droit de vote des immigrés"],"sec":["[P] dissolution des corps spéciaux de police ; légalisation encadrée du cannabis"],"ecol":["[P] énergie sous contrôle public ; reconversion de l'automobile vers les transports publics"],"inst":["[P] fin de la Ve République, du Sénat et de la présidence ; assemblée unique"]}},
- {"id":"labib","n":"Selma Labib","p":"NPA-Révolutionnaires","b":"eg","st":"Désignée en juin 2026","pr":"Pas de programme ; déclarations","s":[-5,0,-5,-4,-2,-4],"cf":"moyenne","j":["+400 €, interdiction des licenciements","rien sur l'UE","liberté d'installation, contre Frontex","contre les violences policières","adaptation climatique","contre la hausse des dépenses militaires et le service militaire"],"S":{"a":["NPA-R, intervention à la Fête de l'Humanité","https://npa-revolutionnaires.org/articles/intervention-de-selma-labib-a-la-fete-de-lhumanite-2026","2026-09-12"]},"src":{},"t":{"eco":["[D] +400 € sur salaires et pensions, aucun revenu net sous 2 000 €"],"ent":["[D] interdiction des licenciements ; forte réduction du temps de travail"],"fis":["[D] mesures d'urgence financées par actionnaires et milliardaires"],"ret":["[D] rejet de la retraite à 67 ans, de la capitalisation et du projet RN"],"edu":["[D] contre les suppressions de postes et la hausse des frais d'inscription"],"san":["[D] contre le reste à charge pour les affections de longue durée"],"def":["[D] contre la hausse des dépenses militaires et le service militaire"],"etr":["[D] contre les bases militaires françaises en Afrique"],"imm":["[D] liberté de circulation, régularisation, opposition à Frontex"],"sec":["[D] dénonciation des violences policières ; contre l'interdiction du voile"],"ecol":["[D] adaptation immédiate des logements et lieux de travail à la chaleur"],"inst":["[D] pas de réforme ; pouvoir des travailleurs"],"num":["[D] l'IA pour émanciper et planifier, pas pour licencier"]}},
- {"id":"melenchon","n":"Jean-Luc Mélenchon","p":"La France insoumise","b":"g","st":"Déclaré le 03/05/2026","pr":"« L'Avenir en commun », 5e édition (livre, 06/11/2026) : 1 069 mesures, dont 238 nouvelles et 118 modifiées ; présentée au Bourget le 07/11/2026","s":[-4.5,2,-4,-4,-4,null],"cf":"moyenne","j":["SMIC à 1 700 €, ISF, annulation de dette détenue par la BCE","« désobéissance » aux traités, sortie de l'OTAN","statut légal des sans-papiers","remplacement de l'IGPN, encadrement de la police","sortie du nucléaire progressive (édition 2026)","sortie de l'OTAN, non-alignement ; rejette l'objectif de 5 % du PIB (édition 2026)"],"S":{"aec26":["LFI, sortie de la 5e édition de L'Avenir en commun","https://lafranceinsoumise.fr/2026/11/02/avenir-en-commun-nouvelle-france/","2026-11-02"],"aec":["L'Avenir en commun, édition 2025","https://melenchon2027.fr/programme2025/livre/","2025-01"],"ps":["Public Sénat, premier débat devant le Medef","https://www.publicsenat.fr/actualites/politique/dette-retraites-fiscalite-que-retenir-du-premier-debat-des-candidats-a-lelection-presidentielle","2026-08-27"],"inv":["LFI, plans d'investissement","https://melenchon2027.fr/programme/plans-investissement/","2026-09-25"],"ifrap":["IFRAP, comparateur (agrégateur, à vérifier)","https://www.ifrap.org/comparateurs/presidentielles-2027","2026-10"],"mon":["monvote2027 (agrégateur, à vérifier)","https://monvote2027.fr/candidat/melenchon","2026-10"],"bam":["Business AM, colloque de l'Institut La Boétie","https://fr.businessam.be/?p=260863","2026-07-01"],"ely":["ÉlyséeScope (agrégateur, à vérifier)","https://www.elyseescope.com/candidat/jean-luc-melenchon","2026-10"],"bs":["Brussels Signal","https://brusselssignal.eu/2026/06/melenchon-backs-regularisation-migrant-scheme-and-criticises-eu-return-policy/","2026-06-25"],"fw":["FrenchWeb, d'après une tribune au Figaro","https://www.frenchweb.fr/jean-luc-melenchon-fustige-la-vassalisation-numerique-de-la-france/451259","2025-02-09"],"eu":["Euronews, débat devant le Medef","https://fr.euronews.com/2026/08/28/presidentielle-de-2027-a-roland-garros-les-candidats-croisent-le-fer-sur-leconomie","2026-08-27"],"lcp":["LCP, ce qui change dans le nouveau programme de Mélenchon","https://lcp.fr/actualites/presidentielle-2027-ce-qui-change-dans-le-nouveau-programme-de-jean-luc-melenchon-444841","2026-11-06"],"elfr":["élection.fr, LFI publie son programme de 1 069 mesures","https://xn--lection-9xa.fr/actualite/lfi-publie-programme-avenir-en-commun-6-novembre-2026.html","2026-11-06"],"politis":["Politis, le nouveau programme de LFI","https://www.politis.fr/articles/2026/11/politique-gauche-avec-son-nouveau-programme-lfi-melenchon-veut-plier-le-match-des-idees/","2026-11-06"],"qz11m":["Quartz (fr), d'après l'AFP, discours du 11-Novembre","https://fr.qz.com/marine-pen-jean-luc-melenchon-discours-commemorations-11-novembre-111126","2026-11-11"],"psr16":["Public Sénat, débat des candidats aux Restos du Cœur","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos","2026-11-17"],"lib19":["Libération, « l’alliance avec Marine Tondelier « devrait pouvoir se faire », estime Mélenchon »","https://www.liberation.fr/politique/elections/presidentielle-2027-lalliance-avec-marine-tondelier-devrait-pouvoir-se-faire-estime-melenchon-20261119_ER7TVKBPSZAYRLDDPPJDN2O52U/","2026-11-19"]},"src":{"eco":["lcp","lcp"],"ent":["inv","ps"],"fis":["lcp"],"fin":["ps","lcp"],"ret":["lcp","ps","psr16"],"edu":["mon"],"def":["bam","lcp"],"eur":["eu","lcp"],"etr":["bam","ely","lcp","qz11m"],"imm":["bs"],"sec":["mon","lcp"],"ecol":["lcp","lcp"],"inst":["lcp","lcp","lib19"],"num":["fw","lcp"],"san":["lcp"]},"t":{"eco":["[P] SMIC à 1 700 € nets immédiatement ; point d'indice et APL revalorisés de 10 % ; blocage des prix des produits de première nécessité ; écart de salaires limité de 1 à 20","[P] « garantie d'autonomie » au seuil de pauvreté, étendue aux jeunes détachés du foyer fiscal parental"],"ent":["[P] plans d'investissement par filière (BTP-logement, automobile)","[D] pôle bancaire public et planification écologique"],"fis":["[P] rétablissement de l'ISF avec un volet climatique, suppression de la flat tax, héritage plafonné à 12 millions d'euros, taxe Zucman maintenue"],"fin":["[D] annulation de la part de la dette détenue par la BCE et la Banque de France","[P] gel de la part de la dette détenue par la BCE ; révision du traité et des statuts de la BCE pour qu'elle achète de la dette publique directement et ne puisse la revendre"],"ret":["[P] abrogation de la dernière réforme et retour à 62 ans, puis à terme retraite à 60 ans à taux plein pour 40 annuités ; fin des avantages fiscaux de la capitalisation","[D] 62 ans d'abord, puis 60 ans","[D] relèvement des petites pensions au niveau du SMIC et maintien de la répartition (débat des Restos du Cœur, 16 novembre)"],"edu":["[P] recrutements massifs dans l'Éducation nationale (à vérifier)"],"def":["[D] sortie de l'OTAN ; « non-alignement solidaire »","[P] retrait immédiat du commandement intégré de l'OTAN puis de l'organisation par étapes ; rejet de l'objectif de 5 % du PIB pour la défense ; conscription citoyenne écologique obligatoire, rémunérée au SMIC"],"eur":["[D] « désobéissance » aux règles européennes jugées contraires","[P] moratoire voté par le Parlement sur la libre circulation des marchandises et des capitaux, la concurrence appliquée aux services publics et les accords de libre-échange"],"etr":["[D] canal direct avec Moscou sur les garanties de sécurité après les hostilités ; coopération avec la Chine","[P] reconnaissance de l'État de Palestine, arrêt des ventes d'armes à Israël (à vérifier)","[P] souveraineté de l'État de Palestine sur les territoires occupés depuis 1967, avec étude d'autres voies dont un État binational ; en Ukraine, cessez-le-feu, retrait russe et garanties collectives","[D] le 11 novembre, demande que la Russie évacue l'Ukraine et juge qu'aucune modification de frontières ne peut se faire sans consulter les populations concernées (AFP, d'après Quartz)"],"imm":["[D] statut légal pour tous les travailleurs sans papiers ; régularisation accélérée des familles"],"sec":["[P] autorité indépendante à la place de l'IGPN et de l'IGGN (à vérifier)","[P] brevet obligatoire de lutte contre les discriminations pour les policiers"],"ecol":["[P] sortie progressive du nucléaire, 100 % renouvelables au plus tard en 2060, baisse de 65 % des émissions en 2033 ; planification écologique et « règle verte »","[P] interdiction des vols de nuit entre 23 h et 6 h dans tous les aéroports"],"inst":["[P] VIe République par une Constituante convoquée par référendum (article 11), proportionnelle, suppression du 49.3 (RIC non mentionné dans les comptes rendus consultés)","[P] accession de la Kanaky-Nouvelle-Calédonie à l'indépendance au 1er janvier 2028, par référendum national","[D] le 19 novembre, estime que l'alliance proposée par Marine Tondelier « devrait pouvoir se faire » (titre de Libération)"],"num":["[D] cloud public français ; gouvernance de l'IA confiée à l'ONU (2025)","[P] interdiction des IA simulant une relation affective ; autorisation préalable des IA « à haut risque » par une autorité nationale"],"san":["[P] remboursement des séances de psychothérapie pour les moins de 26 ans ; « 100 % Sécu »"]}},
- {"id":"roussel","n":"Fabien Roussel","p":"PCF","b":"g","st":"Déclaré le 06/09/2026","pr":"Projet « VIVRE ! » en 5 axes, sans mesures détaillées","s":[-4.5,2,-2,-1,0.5,-3.5],"cf":"moyenne","j":["ISF, nationalisations, pôle public bancaire","contre l'Europe fédérale","régularisation des travailleurs (2023)","plus de commissariats et de moyens pour la justice","nucléaire et renouvelables, sortie des fossiles","refus de l'« économie de guerre » et de l'objectif de 5 % du PIB"],"S":{"hu":["PCF, discours à la Fête de l'Humanité","https://www.pcf.fr/fete_de_lhumanite_2026_discours_de_fabien_roussel","2026-09-15"],"ue":["PCF, discours des universités d'été","https://www.pcf.fr/ue_26_discours_fr","2026-08-26"],"bud":["PCF, propositions sur le budget 2027","https://www.pcf.fr/budget_2027_lecornu_annonce_une_saignee_sociale_au_service_du_capital","2026-09-18"],"secu":["PCF, cahier « La Sécurité sociale, une ambition communiste »","https://assets.nationbuilder.com/pcf/pages/36196/attachments/original/1766073347/document_-_cahier_se%CC%81cu_v2.pdf","2025"],"paix":["PCF, cahier « Paix et défense nationale »","https://assets.nationbuilder.com/pcf/pages/41211/attachments/original/1779954906/document_cahier_paix_ppp_stc.pdf","2026"],"lc":["lacampagne2027 (agrégateur, à vérifier)","https://lacampagne2027.com/candidats/fabien-roussel","2026-10"],"sud":["Sud Radio, entretien","https://www.sudradio.fr/linvite-politique/il-y-a-du-trumpisme-dans-la-maniere-de-faire-de-jean-luc-melenchon-affirme-fabien-roussel","2023-12-05"],"nat":["PCF, nationalisation de TotalEnergies","https://www.pcf.fr/nationalisation_total","2026-05"]},"src":{"eco":["ue","bud"],"ent":["hu","bud"],"fis":["hu"],"fin":["hu"],"ret":["secu","ue"],"edu":["lc"],"san":["ue","secu"],"def":["ue","paix"],"eur":["ue","paix"],"etr":["hu"],"imm":["sud"],"sec":["ue"],"ecol":["hu","nat"],"inst":["hu"]},"t":{"eco":["[D] SMIC à 1 700 € nets, +5 % sur tous les salaires, point d'indice +30 %, échelle mobile","[P] carburant bloqué à 1,60 €/l, électricité et gaz −30 %"],"ent":["[D] abrogation de la loi Travail, retour des CHSCT, autant de salariés que d'actionnaires dans les CA","[P] fin des aides aux entreprises sans critère, plan de 60 Md€"],"fis":["[D] rétablissement de l'ISF ; héritages exonérés sous 200 000 € ; prison pour la fraude fiscale"],"fin":["[D] nationalisation d'une grande banque pour créer un pôle public bancaire"],"ret":["[P] retraite pleine à 60 ans","[D] aucune retraite sous le SMIC, refus de la capitalisation"],"edu":["[D] recrutement de 24 000 enseignants"],"san":["[D] retour des hôpitaux de proximité","[P] remboursement à 100 % des soins prescrits"],"def":["[D] refus de l'« économie de guerre »","[P] refus de l'objectif de 5 % du PIB et de la dissuasion étendue"],"eur":["[D] refus d'une Europe fédérale","[P] Europe « à géométrie choisie »"],"etr":["[D] cessez-le-feu et dialogue en Ukraine ; sanctions contre le gouvernement israélien"],"imm":["[H] régularisation des travailleurs sans papiers (2023)"],"sec":["[D] loi-cadre contre les violences sexuelles (3 Md€) ; plus de commissariats"],"ecol":["[D] doublement de l'électricité décarbonée, nucléaire et renouvelables ; sortie des fossiles en 15 ans","[P] nationalisation de TotalEnergies et Engie"],"inst":["[D] 50 % d'ouvriers et d'employés parmi les candidats aux législatives"]}},
- {"id":"tondelier","n":"Marine Tondelier","p":"Les Écologistes","b":"g","st":"Investie ; propose le 18/11/2026 (France 2) une coalition autour de la candidature de Mélenchon et se dit toujours candidate ; vote militant du 10 au 13/12/2026, options fixées le 26/11 (candidature autonome, soutien à Mélenchon ou rapprochement avec Glucksmann)","pr":"Programme du parti (juillet 2026, 208 pages)","s":[-3.5,-4.5,-4,-3.5,-5,null],"cf":"moyenne","j":["ISF climatique, État actif","Europe fédérale, fin des vetos","régularisations, fin des OQTF automatiques","interdiction des LBD, cannabis encadré","arrêt des EPR2, 44 % de renouvelables","défense européenne intégrée : pas de position sur l'effort militaire"],"S":{"pdf":["Les Écologistes, programme « Pour une prospérité écologique »","https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf","2026-07-13"],"gaz":["La Gazette France, présentation du programme","https://www.lagazettefrance.fr/article/2027-les-ecologistes-veulent-instaurer-la-premiere-republique-ecologique-et-citoyenne","2026-07-13"],"lc":["lacampagne2027, d'après le programme (agrégateur, à vérifier)","https://lacampagne2027.com/candidats/marine-tondelier","2026-10"],"disc":["Les Écologistes, discours des journées d'été","https://lesecologistes.fr/posts/2s0kOxQEOQdC8JP4jkXuu7/discours-de-marine-tondelier-aux-journees-d-ete-des-ecologistes-2026","2026-08-21"],"ps19t":["Public Sénat, « La main tendue de Marine Tondelier à Mélenchon… »","https://www.publicsenat.fr/actualites/politique/la-main-tendue-de-marine-tondelier-a-melenchon-peut-elle-faire-imploser-les-ecologistes","2026-11-19"]},"src":{"eco":["pdf"],"ent":["pdf"],"fis":["gaz"],"fin":["lc"],"ret":["lc","disc"],"edu":["lc"],"san":["disc"],"def":["gaz"],"eur":["pdf"],"etr":["lc"],"imm":["lc"],"sec":["lc"],"ecol":["pdf"],"inst":["lc","ps19t"],"num":["pdf"]},"t":{"eco":["[P] « bouclier climat » pour ménages modestes et moyens ; électricité découplée des fossiles, baisse de la TVA sur l'électricité"],"ent":["[P] « sobriété compétitive », relocalisation, écoconception"],"fis":["[P] ISF climatique, TVA verte, avion plus cher et train moins cher"],"fin":["[P] approche keynésienne ; renégociation de la trajectoire avec l'UE (à vérifier)"],"ret":["[D] 62 ans, 60 ans pour carrières longues et pénibles","[P] sécurité sociale de l'alimentation"],"edu":["[P] enseignants +15 % sur 5 ans, 19 élèves par classe, remplacement de Parcoursup (à vérifier)"],"san":["[P] santé environnementale prioritaire ; « congé climatique »"],"def":["[P] haut conseil militaire intégré rattaché au Conseil européen"],"eur":["[P] Europe fédérale ; limites planétaires dans les traités ; majorité qualifiée"],"etr":["[P] soutien militaire à l'Ukraine, frappes longue portée comprises (à vérifier)"],"imm":["[P] régularisation des travailleurs, étudiants et parents ; fin des OQTF automatiques (à vérifier)"],"sec":["[P] police de proximité, interdiction des LBD, 9 000 magistrats, cannabis encadré (à vérifier)"],"ecol":["[P] arrêt des EPR2 et SMR, fermeture des réacteurs vieillissants en 20 ans ; 44 % de renouvelables en 2030"],"inst":["[P] fin du présidentialisme ; septennat unique, RIC, proportionnelle, vote à 16 ans (à vérifier)","[D] au journal de France 2 le 18 novembre, se dit prête à travailler à une coalition autour de la candidature de Jean-Luc Mélenchon : accord programmatique, gouvernemental et législatif, et dispositif commun de campagne, sans changer son programme, notamment sur l'Ukraine ; se dit toujours candidate ; le conseil fédéral du 26 novembre fixera les options du vote militant des 10-13 décembre (candidature autonome, soutien à Mélenchon ou rapprochement avec Glucksmann)"],"num":["[P] technologies sobres et ouvertes, « techno-diversités numériques »"]}},
- {"id":"ruffin","n":"François Ruffin","p":"Debout !","b":"g","st":"Retiré le 21/11/2026 (communiqué : campagne jugée dans « l'impasse » faute de grande primaire de la gauche) ; ne soutient aucun candidat ; déclaré en avril 2026","pr":"7 « cahiers de campagne » publiés","s":[-3.5,1,-3,-1,0,null],"cf":"élevée","j":["taxe sur les dividendes, SMIC à 1 700 €","contre le libre-échange et la majorité qualifiée","régularisation des travailleurs présents","indépendance du parquet","EPR2 maintenus, priorité climat","coopération industrielle européenne : pas de position sur l'effort militaire"],"S":{"tr":["Cahier « Travailleurs essentiels »","https://nouspresident.fr/statut-travailleurs-essentiels/","2026-04-13"],"or":["Actu Orange, lancement de campagne","https://actu.orange.fr/france/presidentielle-2027-francois-ruffin-lance-sa-campagne-en-se-posant-en-defenseur-des-travailleurs-essentiels-magic-CNT000002oTqjw.html","2026-04-25"],"tw":["Cahier « Travaillisme écologique »","https://nouspresident.fr/travaillisme-ecologique/","2026-09-09"],"log":["Cahier logement","https://nouspresident.fr/face-a-la-crise-du-logement-faire-sauter-le-verrou/","2026-09-24"],"ind":["Cahier industrie","https://nouspresident.fr/pour-proteger-notre-industrie-relocaliser-100-produits-strategiques/","2026-10-15"],"man":["Manifeste de Debout !","https://www.debout.fr/notre-manifeste","non daté"],"gc":["Le Grand Continent, doctrine de F. Ruffin sur l'Europe","https://legrandcontinent.eu/fr/2026/02/25/pour-une-declaration-dindependance-la-doctrine-ruffin-sur-leurope/","2026-02-25"],"sep":["Cahier « Séparation de l'argent et de l'État »","https://nouspresident.fr/separation-argent-etat/","2026-07-02"],"rt21":["RTBF, retrait de la candidature","https://www.rtbf.be/article/france-ma-campagne-est-dans-une-impasse-francois-ruffin-retire-sa-candidature-pour-la-presidentielle-11819128","2026-11-21"]},"src":{"eco":["or","log"],"ent":["tr"],"fis":["tw"],"ret":["man"],"edu":["tw"],"san":["ind"],"def":["gc"],"eur":["ind","gc"],"etr":["gc"],"imm":["man"],"sec":["sep"],"ecol":["tw"],"inst":["sep"],"num":["gc","ind"]},"t":{"eco":["[D] SMIC à 1 700 € nets, prime de 1 000 € défiscalisée","[P] salaires indexés, encadrement des loyers partout, 200 000 logements publics par an"],"ent":["[P] heures avant 8 h et après 18 h payées double ; statut des travailleurs essentiels ; 80 % de commande publique en France"],"fis":["[P] taxe sur les dividendes soumise à référendum ; meublés touristiques taxés ; taxe Zucman"],"ret":["[P] abrogation des 64 ans ; trimestres bonus pour les métiers pénibles"],"edu":["[P] rénovation d'environ 80 % des écoles ; classes moins chargées"],"san":["[P] pôle public du médicament"],"def":["[D] industrie de défense européenne par coopération entre États"],"eur":["[P] clauses de sauvegarde Mercosur, CETA non ratifié","[D] refus de la majorité qualifiée en politique étrangère"],"etr":["[D] ni dépendance aux États-Unis ni concession à la Russie"],"imm":["[P] régularisation des travailleurs présents"],"sec":["[P] indépendance du parquet ; suppression de la Cour de justice de la République"],"ecol":["[P] prolongation du parc et 6 EPR2 ; leasing de 3 M de petites voitures électriques ; 15 Md€/an de rénovation"],"inst":["[P] fin des avantages post-mandat ; Haute Autorité à la probité ; RIC"],"num":["[D] « CECA du numérique »","[P] cloud réservé aux fournisseurs de droit européen ; communs numériques"]}},
- {"id":"batho","n":"Delphine Batho","p":"Génération Écologie","b":"g","st":"Investie le 06/06/2026","pr":"Pas de programme ; livre (juin 2026)","s":[-3,-1,-2.5,-1,-5,null],"cf":"faible","j":["décroissance assumée","contre le Mercosur","contre la loi immigration 2023","peu de positions","écologie prioritaire, contre l'accélération du nucléaire","pas de position sur l'effort militaire"],"S":{"lj":["Libre Journal, entretien","https://librejournal.fr/article/delphine-batho-tournons-la-page-des-verts/","2026-06-26"],"mv":["monvote2027 (agrégateur, à vérifier)","https://monvote2027.fr/candidat/batho","2026-10"],"fv":["france-vote, votes à l'Assemblée (agrégateur)","https://www.france-vote.fr/candidats/delphine-batho","2026-10"],"ge":["Génération Écologie, « Les lycées mobilisés »","https://www.generationecologie.fr/2026/10/06/les-lycees-mobilises-ecoutons-la-jeunesse/","2026-10-06"],"ge2":["Génération Écologie, réponse à M. Tondelier","https://www.generationecologie.fr/2026/08/20/reponse-de-generation-ecologie-a-marine-tondelier/","2026-08-20"],"os":["Objectif Sud, entretien","https://www.objectifsud.fr/environnement/linterview-delphine-batho-nous-sommes-dans-une-situation-dinsecurite-climatique-qui-nous-concerne-tous-164678.php","2026-05-29"]},"src":{"eco":["lj"],"ent":["lj"],"fis":["mv"],"ret":["fv"],"edu":["ge"],"san":["lj"],"def":["ge2"],"eur":["fv"],"etr":["lj"],"imm":["mv"],"sec":["lj"],"ecol":["os","mv"],"inst":["mv"]},"t":{"eco":["[D] modèle de décroissance, pas de financement par la croissance"],"ent":["[D] adaptation du travail à la chaleur"],"fis":["[H] impôt minimum de 2 % sur les très grandes fortunes"],"ret":["[H] vote pour l'abrogation de la réforme de 2023"],"edu":["[P] rénovation des écoles, classes moins chargées, cantines bio"],"san":["[D] lieux rafraîchis lors des nuits chaudes"],"def":["[D] « écologie de gouvernement » sur la défense"],"eur":["[H] rejet de l'accord UE-Mercosur"],"etr":["[D] écologie comme stratégie de souveraineté"],"imm":["[H] opposée à la loi immigration de 2023"],"sec":["[D] écologie traitée comme enjeu de sécurité civile"],"ecol":["[D] plan national d'isolation ; maintien du Fonds vert et de l'ADEME","[H] contre la loi d'accélération du nucléaire"],"inst":["[H] VIe République, suppression du 49.3"]}},
- {"id":"glucksmann","n":"Raphaël Glucksmann","p":"Place publique (PS-PP-GRS)","b":"g","st":"Désigné par la primaire le 11/10/2026","pr":"Pas de programme présidentiel ; « premières lignes » (mai 2026)","s":[-2,-4,-2,-0.5,-2,null],"cf":"moyenne","j":["taxation des grands patrimoines, baisse de la CSG","fin du veto, souveraineté européenne","convention citoyenne","sécurité sans mesure détaillée","renouvelables, nucléaire maintenu","défense européenne, service civique : pas de position sur l'effort militaire"],"S":{"rfi09":["Dakaractu, d'après RFI, programme des « 100 premiers jours »","https://www.dakaractu.com/Presidentielle-en-France-Raphael-Glucksmann-presente-son-projet-de-revolution-ecologique_a278006.html","2026-11-09"],"lcp1":["LCP, premières lignes du programme","https://lcp.fr/actualites/presidentielle-raphael-glucksmann-devoile-les-premieres-lignes-de-son-possible-programme","2026-05-26"],"lcp2":["LCP, différences entre les candidats de la primaire","https://lcp.fr/actualites/glucksmann-faure-royal-maurel-guedj-quelles-differences-entre-les-candidats-a-la","2026-10-09"],"psg":["Public Sénat, ce que propose R. Glucksmann","https://www.publicsenat.fr/actualites/politique/fiscalite-ecole-immigration-ce-que-propose-raphael-glucksmann","2026-08-24"],"ps":["Public Sénat, premier débat devant le Medef","https://www.publicsenat.fr/actualites/politique/dette-retraites-fiscalite-que-retenir-du-premier-debat-des-candidats-a-lelection-presidentielle","2026-08-27"],"sud":["Sud Radio, dernier débat de la primaire","https://www.sudradio.fr/societe/un-dernier-debat-pour-departager-les-candidats-de-la-primaire-de-la-gauche","2026-10-04"],"ps25":["Public Sénat, projet de Place publique","https://www.publicsenat.fr/actualites/politique/presidentielle-pas-candidat-pour-le-moment-raphael-glucksmann-trace-son-chemin-et-defend-sa-vision-pour-le-pays","2025-06-23"],"ely":["ÉlyséeScope (agrégateur, à vérifier)","https://www.elyseescope.com/questions/raphael-glucksmann-positions-programme-20260930","2026-09-30"],"pp08":["Parlons Politique, coalition sans programme commun","https://www.parlons-politique.fr/elections/presidentielle-2027-une-coalition-sans-programme-commun-peut-elle-vraiment-convaincre-les-electeurs_30929/","2026-11-08"],"v16":["Public Sénat, vote à 16 ans","https://www.publicsenat.fr/actualites/politique/vote-a-16-ans-la-jeunesse-doit-elle-avoir-son-mot-a-dire-dans-les-urnes","2026-10-16"],"psr16":["Public Sénat, débat des candidats aux Restos du Cœur","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos","2026-11-17"],"ps19t":["Public Sénat, « La main tendue de Marine Tondelier à Mélenchon… »","https://www.publicsenat.fr/actualites/politique/la-main-tendue-de-marine-tondelier-a-melenchon-peut-elle-faire-imploser-les-ecologistes","2026-11-19"]},"src":{"eco":["lcp2"],"ent":["ps"],"fis":["sud","rfi09"],"fin":["ps"],"ret":["lcp2","psr16"],"edu":["psg"],"def":["lcp2"],"eur":["lcp1"],"etr":["lcp2"],"imm":["lcp1"],"sec":["lcp1"],"ecol":["ps25","rfi09","rfi09"],"inst":["v16","pp08","ps19t"],"num":["ely"]},"t":{"eco":["[D] baisse de la CSG ; 15 Md€ issus des grands héritages reversés sur les fiches de paie"],"ent":["[D] « contrat patriotique », protection face aux importations chinoises"],"fis":["[D] taxation des très grands héritages, des superprofits et des hauts patrimoines","[D] mise à contribution des patrimoines supérieurs à 100 M€ pour un fonds consacré à la transition écologique ; taux non précisé (9 novembre)"],"fin":["[D] économies et taxation des hauts patrimoines ; grand emprunt européen"],"ret":["[D] retour à 62 ans, départ modulé selon l'espérance de vie en bonne santé","[D] maintien de la retraite par répartition ; revalorisation des petites pensions au-delà de l'inflation et meilleure prise en compte des carrières hachées, notamment des femmes (débat des Restos du Cœur, 16 novembre)"],"edu":["[D] loi de programmation sur 5 ans ; hausse des salaires enseignants ; mixité imposée au privé"],"def":["[D] défense européenne ; service civique obligatoire de 10 mois"],"eur":["[D] suppression du droit de veto ; plan de souveraineté européenne"],"etr":["[D] aide renforcée à l'Ukraine par la saisie des avoirs russes"],"imm":["[D] convention citoyenne sur l'immigration, propositions votées au Parlement"],"sec":["[D] sécurité affichée comme axe, sans mesure détaillée"],"ecol":["[D] sortie du nucléaire non visée ; développement des renouvelables","[D] programme des « 100 premiers jours » pour sortir de la dépendance aux énergies fossiles : investissement massif dans les renouvelables, rénovation énergétique des logements, ferroviaire, fin de la dépendance énergétique à la Russie, sans montants (9 novembre)","[D] pérenniser le nucléaire avec un programme de nouveaux réacteurs, en complément des renouvelables, sans nombre précisé (9 novembre)"],"inst":["[D] proportionnelle ; assemblées citoyennes ; vote à 16 ans","[D] le 7 novembre, rejette l'idée d'un rapprochement avec le projet de David Lisnard prêtée à l'entourage d'Emmanuel Macron, jugeant que gauche et droite ne sont pas « solubles l'une dans l'autre »","[D] se dit déçu de la proposition de coalition de Marine Tondelier autour de Mélenchon, qu'il juge contraire à la tradition pro-européenne des Écologistes, et souhaite conduire la « révolution écologique » avec eux"],"num":["[D] « Airbus du numérique » européen (à vérifier)"]}},
- {"id":"bouamrane","n":"Karim Bouamrane","p":"PS (hors primaire)","b":"g","st":"Déclaré le 09/06/2026","pr":"Manifeste en 5 axes, non chiffré","s":[-1,-1.5,0,1,-0.5,3.5],"cf":"faible","j":["aides conditionnées, gestion rigoureuse","politique numérique européenne commune","accueil et reconduite","lutte contre le narcotrafic","nucléaire et géothermie","forte hausse des dépenses de défense"],"S":{"man":["Manifeste de K. Bouamrane","https://www.karimbouamrane2027.org/manifeste","non daté"],"ou":["Oumma, entretien","https://oumma.com/karim-bouamrane-defie-melenchon-et-vise-le-second-tour-de-la-presidentielle-2027/","2026-07-02"]},"src":{"eco":["ou"],"ent":["ou"],"fis":["ou"],"fin":["man"],"ret":["ou"],"edu":["ou"],"san":["man"],"def":["ou"],"eur":["ou"],"etr":["ou"],"imm":["man"],"sec":["man"],"ecol":["ou"],"num":["man"]},"t":{"eco":["[D] baisse de la TVA sur la construction de logements"],"ent":["[D] accès des PME aux marchés publics ; aides conditionnées à l'emploi local"],"fis":["[D] aides conditionnées au paiement des impôts en France"],"fin":["[P] gestion rigoureuse, sans objectif chiffré"],"ret":["[D] départ plus tôt pour les métiers pénibles, jusqu'à 67-69 ans possible pour les autres"],"edu":["[D] investissement dans l'élémentaire et le périscolaire"],"san":["[P] lutte contre les déserts médicaux"],"def":["[D] forte hausse des dépenses de défense"],"eur":["[D] politique européenne commune sur l'IA, le cloud et la cybersécurité"],"etr":["[D] solution à deux États"],"imm":["[P] accueil digne, reconduite des irréguliers, maintien de l'asile"],"sec":["[P] lutte contre le narcotrafic ; protection de l'enfance"],"ecol":["[D] nucléaire et géothermie, sortie progressive des fossiles"],"num":["[P] maîtrise française des règles de l'IA"]}},
- {"id":"cazeneuve","n":"Bernard Cazeneuve","p":"La Convention","b":"g","st":"Déclaré le 16/07/2026","pr":"« Lettre aux Français » de 86 pages","s":[-1,-3,-0.5,0,-0.5,2],"cf":"élevée","j":["contribution des grandes fortunes, règle d'or sociale","vote à la majorité dans l'UE","accueil et fermeté","police de proximité, moins de prison par défaut","nucléaire pilier et renouvelables","réarmement proportionné"],"S":{"a":["La Convention, Lettre aux Français","https://www.la-convention.fr/lettre","2026-07-15"]},"src":{},"t":{"eco":["[P] plan logement ; aides sociales automatisées"],"ent":["[P] emploi des seniors au niveau allemand ; plan industriel sur 10 ans"],"fis":["[P] contribution des très grandes fortunes ; retour sur la flat tax ; baisse des impôts de production"],"fin":["[P] « règle d'or sociale » sur 5 ans"],"ret":["[P] pas de relèvement de l'âge ; durée de cotisation ; pénibilité rétablie"],"edu":["[P] +2 000 €/an pour les boursiers ; avance jeunesse de 3 000 €"],"san":["[P] santé mentale grande cause ; réorganisation des urgences"],"def":["[P] réarmement proportionné ; dialogue franco-britannique sur la dissuasion ; maintien dans l'OTAN"],"eur":["[P] vote à la majorité ; politique industrielle commune"],"etr":["[P] réforme du Conseil de sécurité ; partenariat avec l'Afrique"],"imm":["[P] accueil digne, intégration, fermeté contre l'irrégulier"],"sec":["[P] police de proximité ; unités contre le crime organisé ; moins de prison par défaut"],"ecol":["[P] nucléaire pilier, renouvelables, « DATAR du climat »"],"inst":["[P] septennat ; encadrement du 49.3 ; dose de proportionnelle"],"num":["[P] données sous droit européen ; recours humain contre les algorithmes"]}},
- {"id":"massard","n":"Lydie Massard","p":"Union démocratique bretonne","b":"g","st":"Sous conditions","pr":"Aucune mesure publiée","t":{}},
- {"id":"attal","n":"Gabriel Attal","p":"Renaissance","b":"c","st":"Déclaré le 22/05/2026","pr":"6 « chantiers » en ligne, peu chiffrés","s":[2.5,-5,1.5,1.5,-1,4],"cf":"moyenne","j":["zéro déficit, 100 000 postes, aucune hausse d'impôt","États-Unis d'Europe","système à points, préférence travail","peu de mesures vérifiées","baisse des émissions de 5 %/an","amplification du réarmement, dissuasion « avancée »"],"S":{"ti24":["Tahiti Infos (AFP), « Attal exhorte Philippe à trouver une autre modalité de départage »","https://www.tahiti-infos.com/%E2%80%8BAttal-exhorte-Philippe-a-trouver-une-autre-modalite-de-departage-s-il-refuse-la-primaire_a240158.html","2026-11-24"],"21n10":["21News, G. Attal sur France Inter","https://www.21news.be/gabriel-attal-envisage-de-voter-a-droite-si-la-primaire-designe-retailleau-ou-lisnard/","2026-11-10"],"ev07":["Entrevue, « Attal affirme que la primaire se rapproche, Philippe lui oppose un nouveau refus »","https://entrevue.fr/politique/presidentielle-2027/presidentielle-2027-attal-affirme-que-la-primaire-se-rapproche-philippe-lui/","2026-11-07"],"lcp28":["LCP, « grande primaire des démocrates »","https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-veut-une-grande-primaire-des-democrates-444417","2026-10-28"],"ts":["Programme de G. Attal, travail et salaires","https://attalpresident.fr/programme/travail-salaires","non daté"],"de":["Programme de G. Attal, dette de l'État","https://attalpresident.fr/programme/dette-de-letat","non daté"],"fr":["Programme de G. Attal, frontières","https://attalpresident.fr/programme/frontieres","non daté"],"ia":["Programme de G. Attal, intelligence artificielle","https://attalpresident.fr/programme/intelligence-artificielle","non daté"],"ec":["Programme de G. Attal, dette écologique","https://attalpresident.fr/programme/dette-ecologique","non daté"],"ed":["Programme de G. Attal, éducation","https://attalpresident.fr/programme/education","non daté"],"ap":["Acteurs publics, d'après Le Parisien","https://acteurspublics.fr/articles/gabriel-attal-propose-100-000-fonctionnaires-en-moins-et-limpunite-zero-pour-les-ministres-depensiers/","2026-07-03"],"pr":["Public Sénat, retraites : ce que proposent les candidats","https://www.publicsenat.fr/actualites/politique/reculer-ou-avancer-lage-legal-avec-ou-sans-capitalisation-ce-que-proposent-les-principaux-candidats-a-lelection-presidentielle-sur-les-retraites","2026-09-30"],"lcp":["LCP, propositions pour l'école","https://lcp.fr/actualites/presidentielle-retour-du-certificat-d-etudes-revalorisation-des-salaires-ce-que-propose","2026-08-25"],"pe":["Public Sénat, « États-Unis d'Europe »","https://www.publicsenat.fr/actualites/politique/gabriel-attal-veut-construire-les-etats-unis-deurope-proposition-choc-pour-relancer-lideal-europeen","2026-09-17"],"gz":["La Gazette France, immigration","https://www.lagazettefrance.fr/article/attal-veut-une-immigration-plus-faible-et-axee-sur-le-travail","2026-05-26"],"fi12":["Yahoo Finance, entretien de Gabriel Attal sur franceinfo","https://fr.finance.yahoo.com/actualites/indemnit%C3%A9-quitter-fonction-publique-gabriel-220438244.html","2026-11-12"],"sh11":["Shango, d'après BFMTV, réunion des directeurs de campagne le 17 novembre (agrégateur, à vérifier)","https://www.shango.media/bfm-tv-primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre-12040845","2026-11-11"],"psr16":["Public Sénat, débat des candidats aux Restos du Cœur","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos","2026-11-17"],"sr17":["Sud Radio, primaire à droite sans Édouard Philippe","https://www.sudradio.fr/politique/primaire-a-droite-attal-retailleau-et-lisnard-avancent-sans-edouard-philippe-pour-tenter-de-fixer-les-regles","2026-11-17"],"pm19":["PolitiqueMatin, « Gabriel Attal sur France 2 voit une place pour Hollande dans une coalition » (agrégateur, à vérifier)","https://www.politiquematin.fr/attal-coalition-hollande-primaire-2027","2026-11-20"]},"src":{"eco":["ts"],"ent":["ts"],"fis":["ap","ts","psr16"],"fin":["de","ap","fi12"],"ret":["pr"],"edu":["lcp","ed"],"def":["fr"],"eur":["pe"],"etr":["fr"],"imm":["fr","gz"],"ecol":["ec"],"inst":["ap","lcp28","ev07","21n10","sh11","sr17","pm19","ti24"],"num":["ia"]},"t":{"eco":["[P] « choc salarial » par baisse des charges salariales ; livret d'épargne pour les crèches"],"ent":["[P] fin du plafond de 220 heures supplémentaires ; « Constitution du travail » ; semaine de 4 jours possible"],"fis":["[D] aucune hausse d'impôts","[P] baisse des charges salariales","[D] selon Public Sénat, propose la suppression de la CSG, sans chiffrage (débat des Restos du Cœur, 16 novembre)"],"fin":["[P] zéro déficit en 10 ans","[D] 100 000 postes en moins, 120 à 150 Md€ d'économies, règle d'or par référendum","[D] précise que les 100 000 suppressions de postes passeraient par un plan de départs volontaires indemnisés, montant fixé par le dialogue social, fonction publique territoriale incluse"],"ret":["[D] fin de l'âge légal : durée de cotisation avec décote et surcote ; pilier de capitalisation"],"edu":["[D] certificat d'études à l'entrée en 6e ; brevet obligatoire pour la seconde","[P] moins de 20 élèves en primaire ; réseaux sociaux interdits avant 15 ans"],"def":["[P] amplification du réarmement ; dissuasion « avancée »"],"eur":["[D] « États-Unis d'Europe », président européen élu au suffrage universel"],"etr":["[P] soutien à l'Ukraine ; taxes sur les produits chinois vendus à perte"],"imm":["[P] système à points inspiré du Canada","[D] « préférence travail »"],"ecol":["[P] baisse des émissions de 5 %/an d'ici 2030 ; rénovation thermique massive"],"inst":["[D] démission du gouvernement si la trajectoire budgétaire est manquée trois ans de suite","[D] propose sur TF1 le 28 octobre une « grande primaire des démocrates » pour éviter un second tour LFI-RN, ouverte aux candidats refusant toute alliance avec l'extrême droite ou l'extrême gauche ; règles et calendrier non fixés","[D] en déplacement dans le Nord le 6 novembre, affirme que les discussions entre partis sur une primaire de la droite et du centre se sont nettement intensifiées et juge responsables d'une division des voix ceux qui resteraient en dehors","[D] dit le 10 novembre sur France Inter ne voir « pas de raison » de ne pas voter pour Retailleau ou Lisnard si l'un d'eux est le seul à pouvoir empêcher un second tour Mélenchon-Le Pen ; souhaite participer lui-même à une primaire","[D] juge la primaire de la droite et du centre « inéluctable » ; son équipe doit réunir le 17 novembre les directeurs de campagne de Bruno Retailleau et de David Lisnard (BFMTV, 11 novembre)","[D] souhaite un vote avant la fin janvier et s'oppose à la participation d'Éric Zemmour à la primaire (réunion des équipes du 17 novembre)","[D] dans « L'Heure de vérité » (France 2, 19 novembre), dit qu'il retirerait sa candidature si David Lisnard était désigné par la primaire, présentée comme une première étape ; envisage pour gouverner une coalition de la droite républicaine, du centre et de la gauche sociale-démocrate, où il situe François Hollande ; demande à Édouard Philippe d'envoyer un représentant à la prochaine réunion sur la primaire","[D] le 24 novembre, souhaite au moins deux débats avant Noël avec Bruno Retailleau, David Lisnard et Édouard Philippe, puis une primaire entre le 15 janvier et le 15 février ; estime que Philippe, s'il refuse la primaire, doit proposer une autre modalité de départage"],"num":["[P] maîtrise de la chaîne de valeur de l'IA ; formation à l'IA obligatoire"]}},
- {"id":"becht","n":"Olivier Becht","p":"Sans parti (« extrême centre »)","b":"c","st":"Déclaré le 24/09/2026","pr":"Plateforme participative ; pas de programme","s":[1.5,-2.5,0,2,0,null],"cf":"faible","j":["contrat de travail unique, moins de normes","noyau dur européen","pas de position","centres de redressement","carburants de synthèse","pas de position sur la défense"],"S":{"sr":["Sud Radio, entretien","https://www.sudradio.fr/politique/olivier-becht-je-suis-candidat-a-lelection-presidentielle-et-jirai-jusquau-bout","2026-10-11"],"en":["Entrevue, annonce de candidature","https://entrevue.fr/entrevue/presidentielle-2027-lancien-ministre-olivier-becht-annonce-sa-candidature/","2026-09-24"],"sp":["Sud Radio, portrait","https://www.sudradio.fr/politique/qui-est-olivier-becht-cet-ancien-ministre-qui-se-lance-dans-la-course-a-lelysee","2026-10-08"]},"src":{"eco":["sr"],"ent":["sr"],"ret":["sp"],"edu":["sr"],"eur":["sr"],"sec":["sp"],"ecol":["en"],"inst":["sr"],"num":["en"]},"t":{"eco":["[D] modèle économique plus souverain"],"ent":["[D] contrat de travail unique et portable ; moins de normes"],"ret":["[D] accompagnement universel fondé sur droits et devoirs"],"edu":["[D] suppression de Parcoursup ; recrutement des enseignants par les chefs d'établissement"],"eur":["[D] « noyau dur » de 6 à 8 États"],"sec":["[D] « centres de redressement » encadrés par d'anciens militaires"],"ecol":["[D] plan sur 20 ans fondé sur les carburants de synthèse"],"inst":["[D] davantage de fédéralisme"],"num":["[D] épargne orientée vers des fonds souverains IA et quantique"]}},
- {"id":"philippe","n":"Édouard Philippe","p":"Horizons","b":"c","st":"Déclaré en septembre 2024","pr":"Programme, volume 1 (18/11/2026), en ligne en 15 thèmes ; autres volumes annoncés","s":[3.5,-2,3,3.5,2,4],"cf":"élevée","j":["sortie des 35 h, 250 000 postes en moins, 65 ans","Europe intégrée et protectrice","immigration divisée par deux","peines planchers, suppression du JAP","8 EPR supplémentaires","250 000 réservistes, service national obligatoire, loi de massification des armées"],"S":{"fi24":["franceinfo, direct du 24 novembre : Édouard Philippe « vote blanc » dans un duel Mélenchon-Le Pen (titre seul, article non lu : accès bloqué)","https://www.franceinfo.fr/elections/direct-presidentielle-2027-le-congres-des-maires-s-ouvre-plusieurs-candidats-attendus-sur-place_8297094.html","2026-11-24"],"ps24":["Public Sénat, É. Philippe : « On peut aimer les tronçonneuses et ne pas savoir trancher ! »","https://www.publicsenat.fr/actualites/politique/on-peut-aimer-les-tronconneuses-et-ne-pas-savoir-trancher-le-tacle-dedouard-philippe-a-david-lisnard-accuse-de-pas-etre-assez-etanche-a-l","2026-11-24"],"eu15":["Europe 1, d'après Le Parisien et l'AFP, réunion autour de G. Larcher","https://www.europe1.fr/politique/presidentielle-2027-edouard-philippe-daccord-pour-une-reunion-autour-de-gerard-larcher-mais-pas-pour-parler-dune-primaire-1235514","2026-11-15"],"ev07":["Entrevue, « Attal affirme que la primaire se rapproche, Philippe lui oppose un nouveau refus »","https://entrevue.fr/politique/presidentielle-2027/presidentielle-2027-attal-affirme-que-la-primaire-se-rapproche-philippe-lui/","2026-11-07"],"nt01":["La Nouvelle Tribune, invité du 20 heures de TF1 (1er novembre)","https://lanouvelletribune.info/2026/11/edouard-philippe-ecarte-la-primaire-dattal-et-lie-pillages-et-jeunes-issus-de-limmigration-sur-tf1/","2026-11-01"],"tm28":["TIME France, la primaire dans le débat","https://www.timefrance.fr/politique/presidentielle-2027-a-droite-et-au-centre-la-primaire-simpose-dans-le-debat/","2026-10-28"],"go":["BFMTV, « Grand Oral 2027 » (vidéos Orange Actualités)","https://actu.orange.fr/videos/france/17-octobre-ce-qui-est-en-cause-c-est-la-democratie-detaille-edouard-philippe-candidat-horizons-a-la-presidentielle-CNT000002t7j6L.html","2026-10-18"],"jdn":["Journal du Net, déplacement à Charleville-Mézières (21 octobre)","https://www.journaldunet.com/business/action-publique/1557005-edouard-philippe-presente-ses-propositions-pour-les-familles-et-defend-ses-positions-securitaires/","2026-10-22"],"su":["É. Philippe, « Pour une France plus sûre »","https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure","non daté"],"pp":["É. Philippe, « Pour une France plus prospère »","https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere","non daté"],"co":["É. Philippe, « Pour une France plus conquérante »","https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante","non daté"],"en":["É. Philippe, « Pour une France plus attentive à ses enfants »","https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants","non daté"],"eun":["Euronews, É. Philippe mise sur le travail","https://fr.euronews.com/2026/10/09/presidentielle-2027-edouard-philippe-mise-sur-le-travail-et-la-reduction-des-depenses-publ","2026-10-09"],"lr":["LCP, retraites à 65 ans","https://lcp.fr/actualites/retraites-edouard-philippe-veut-porter-l-age-de-depart-a-65-ans-et-la-duree-de","2026-09-30"],"pv1":["É. Philippe, programme présidentiel, volume 1 (15 thèmes)","https://www.edouardphilippe.fr/programme","2026-11-18"],"ep18":["Echos Plus, « Retraites, fonction publique, école : les principales mesures du programme d'Édouard Philippe »","https://echosplus.com/2026/11/18/retraites-fonction-publique-ecole-les-principales-mesures-du-programme-dedouard-philippe/","2026-11-18"],"rfi18":["RFI avec agences (Yahoo Actualités), « Édouard Philippe mise sur des réformes radicales »","https://fr.news.yahoo.com/pr%C3%A9sidentielle-2027-france-%C3%A9douard-philippe-160325860.html","2026-11-18"],"sl18":["Stéphane Larue, « 35 heures, chômage et carence, ce que son projet changerait au travail » (blog, à vérifier)","https://stephanelarue.com/edouard-philippe-35-heures-chomage-et-carence-ce-que-son-projet-changerait-au-travail/","2026-11-18"],"or18":["Orange Actualités (AFP), « Lisnard et Retailleau appellent Philippe à rejoindre la primaire »","https://actu.orange.fr/politique/lisnard-et-retailleau-appellent-philippe-a-rejoindre-la-primaire-mais-se-divisent-sur-son-perimetre-CNT000002tNqzd.html","2026-11-18"]},"src":{"eco":["en","jdn","pv1"],"ent":["pp","go","sl18"],"fis":["pp","pv1"],"fin":["pp","ep18"],"ret":["lr","pv1"],"edu":["en","go","ep18"],"san":["pp"],"def":["su","pv1"],"eur":["pp"],"etr":["eun","pv1"],"imm":["su","go","nt01","ep18"],"sec":["su","go","jdn","pv1","rfi18"],"ecol":["co","pv1"],"inst":["eun","tm28","nt01","ev07","eu15","or18","ps24","fi24"],"num":["co","pv1"]},"t":{"eco":["[P] allocation familiale unique de 350 €/mois dès le 1er enfant ; prêt à taux zéro à chaque naissance","[D] allocation unique et dégressive dès le 1er enfant ; réduction d'impôt sur le revenu pendant trois ans après une naissance pour les classes moyennes, jusqu'à 3 000 € ; garantie d'une place de garde dans les mois suivant la naissance ; réfléchit à un travail à « 80 % payés 100 % » pour les mères de nouveau-nés","[P] programme du 18 novembre : allocation familiale de 350 € dès le premier enfant, pas d'impôt sur le revenu pour les classes moyennes pendant les trois premières années de l'enfant, prêt à taux zéro à chaque naissance ; contrôle systématique des antécédents des personnels périscolaires"],"ent":["[P] sortie des 35 h, zéro cotisation patronale au-delà de 37 h ; chômage limité à 12 mois avant 50 ans ; 3 jours de carence","[D] travailler deux heures de plus par semaine pour gagner en pouvoir d'achat ; juge que les 35 heures ont été une erreur","[P] programme du 18 novembre : durée du travail fixée par accord d'entreprise ; heures au-delà de la 35e exonérées d'impôt sur le revenu et de cotisations salariales, cotisations patronales supprimées à partir de la 38e heure ; indemnisation du chômage limitée à 12 mois avant 50 ans ; trois jours de carence pour tous les actifs ; fin des arrêts maladie illimités ; apprentissage étendu ; droit à la reconversion pour les métiers exposés à l'IA"],"fis":["[P] −50 Md€/an d'impôts de production contre −50 Md€ d'aides ; moratoire fiscal","[P] programme du 18 novembre : aucun nouvel impôt pendant cinq ans ; baisse de 50 Md€ des impôts de production ; arrêt des surtranspositions de normes européennes"],"fin":["[P] règle d'or par référendum ; déficit à 2 % ; un tiers des départs de fonctionnaires non remplacés","[P] programme du 18 novembre : déficit ramené sous 2,5 % du PIB, règle d'or adoptée par référendum, environ 150 Md€ d'économies selon la presse ; statut de fonctionnaire réservé aux fonctions essentielles (régalien, enseignement), autres recrutements en droit privé, 250 000 postes en moins sur le quinquennat ; une trentaine d'agences et d'opérateurs fusionnés, supprimés ou privatisés, privatisation de France Travail et suppression du Cese"],"ret":["[P] 65 ans et 45 ans de cotisation ; capitalisation collective obligatoire","[P] programme du 18 novembre : âge légal porté à 65 ans et 45 ans de cotisation en moins de dix ans ; départs anticipés maintenus (carrières longues, handicap, incapacité, invalidité) ; capitalisation collective pour tous les salariés en complément de la répartition ; plan d'épargne retraite pour chaque Français, abondé de 500 € par l'État au premier emploi ; pilotage confié aux partenaires sociaux une fois l'équilibre rétabli"],"edu":["[P] enseignants +20 % ; autonomie des établissements ; amende pour les parents ; portable interdit","[D] un peu plus de semaines de cours avec un peu moins d'heures, donc moins de vacances","[P] programme du 18 novembre : lecture, écriture et calcul au cœur du projet ; salaires des enseignants +20 % ; statut d'école publique autonome ; classes réduites en maternelle"],"san":["[P] prévention et technologie ; santé mentale à l'école"],"def":["[P] 250 000 réservistes ; service militaire volontaire de 50 000 places ; drones et obus","[P] programme du 18 novembre : loi de massification des armées et rétablissement d'un service national obligatoire (les « premières orientations » prévoyaient un service militaire volontaire)"],"eur":["[P] protection face à la Chine ; union des marchés de capitaux ; « verrou Schengen »"],"etr":["[D] soutien à l'Ukraine ; désaccord avec le gouvernement israélien sur Gaza","[P] programme du 18 novembre : soutien constant à l'Ukraine"],"imm":["[P] immigration divisée par deux ; suspension du regroupement familial ; dénonciation de l'accord de 1968","[D] juge qu'un référendum sur l'immigration n'est « ni un totem ni un tabou »","[D] maintient que de nombreux jeunes Français issus de l'immigration figuraient parmi les auteurs des pillages d'octobre et appelle à regarder en face l'échec de l'intégration (TF1, 1er novembre)","[P] programme du 18 novembre : entrées légales divisées par deux ; titres de séjour centrés sur le travail et les études, quotas pour l'immigration de travail ; moratoire sur le regroupement familial pendant le quinquennat ; dénonciation de l'accord franco-algérien de 1968 en vue de le renégocier ; moratoire total sur l'immigration à Mayotte"],"sec":["[P] peines planchers, suppression du JAP ; état d'urgence narcotrafic","[D] après le 17 octobre : loi « casseur-payeur » ; favorable à une commission d'enquête parlementaire","[D] peines minimales pour les violences et pillages en manifestation ; autoriser la reconnaissance faciale et des techniques de marquage ; élargir les pouvoirs des polices municipales","[P] programme du 18 novembre : état d'urgence contre le narcotrafic ; pouvoirs de police accrus pour les maires ; amendes prélevées sur les prestations sociales ; peines planchers et courtes peines dès la première infraction, 30 000 places de prison dédiées ; imprescriptibilité des crimes contre les mineurs","[P] assignation à résidence des « casseurs » lors des manifestations à risque et fichier dédié sur le modèle du FSPRT ; suspension automatique du RSA pour les délinquants condamnés, sauf opposition du maire dans certains cas"],"ecol":["[P] 8 EPR en plus des 6 prévus ; fonds d'adaptation de 2 Md€/an","[P] programme du 18 novembre : relance du nucléaire ; baisse du prix de l'électricité pour l'industrie ; soutien au marché du véhicule électrique d'occasion ; plan de sécurité climatique, climatisation et rénovation des bâtiments publics, stockage et réutilisation de l'eau"],"inst":["[D] une vingtaine d'ordonnances en juillet 2027","[D] exclut toute participation à une primaire ; propose une rencontre des dirigeants de la droite et du centre début novembre","[D] rejette la « primaire des démocrates » proposée par Gabriel Attal, qu'il juge source de division et ne pense pas voir aboutir ; préconise un rassemblement de la droite et du centre dont les modalités seraient fixées en février (TF1, 1er novembre)","[D] en déplacement dans les Bouches-du-Rhône le 6 novembre, refuse de nouveau de participer à une primaire et décline les trois débats proposés par Bruno Retailleau ; dit avoir proposé un échange public à Jean-Luc Mélenchon","[D] accepte de participer à la réunion des candidats de la droite et du centre proposée le 14 novembre par Gérard Larcher, à condition qu'elle porte sur leur rassemblement pour la présidentielle et les législatives et non sur une primaire, à laquelle il confirme qu'il ne participera pas (Le Parisien, 15 novembre)","[D] le 18 novembre, maintient son refus de participer à la primaire de la droite et du centre et dit qu'il ne changera pas d'avis","[D] le 24 novembre, au Congrès des maires, réaffirme son refus d'une primaire, conteste que le choix du candidat dépende des sondages et juge que personne ne pourrait soutenir son vainqueur ; accepte la réunion proposée par Gérard Larcher ; reproche à David Lisnard de ne pas « trancher » face à l'extrême droite, tout en disant avoir voté pour sa réélection à l'AMF","[D] selon le titre d'un direct de franceinfo (24 novembre, article non lu), voterait blanc en cas de second tour entre Jean-Luc Mélenchon et Marine Le Pen"],"num":["[P] IA souveraine européenne ; « Buy European Tech Act » ; 100 000 ingénieurs par an","[P] programme du 18 novembre : pacte européen de puissance numérique ; la France en tête pour la puissance de calcul ; 100 000 ingénieurs formés par an"]}},
- {"id":"retailleau","n":"Bruno Retailleau","p":"Les Républicains","b":"d","st":"Désigné le 19/04/2026","pr":"11 thèmes sur 18 publiés ; plan budgétaire le 12/10/2026","s":[4,2,4,4,4,3.5],"cf":"élevée","j":["197 Md€ d'économies, Code du travail en 50 principes","primauté du droit national, clause de sauvegarde","fin du droit du sol, quotas","réforme pénale par référendum","fin des subventions à l'éolien, nucléaire à 80 ans","IA militaire multipliée par cinq, dissuasion ni partagée ni élargie"],"S":{"qz11":["Quartz, d'après l'AFP et Le Figaro, primaire les 31 janvier et 7 février","https://fr.qz.com/primaire-droite-centre-retailleau-propose-31-janvier-7-fevrier-111126","2026-11-11"],"ev07":["Entrevue, « Attal affirme que la primaire se rapproche, Philippe lui oppose un nouveau refus »","https://entrevue.fr/politique/presidentielle-2027/presidentielle-2027-attal-affirme-que-la-primaire-se-rapproche-philippe-lui/","2026-11-07"],"lc03":["Le Courrier (reprise de presse), « Retailleau remet la pression sur Philippe »","https://lecourrier.vn/primaire-a-droite-et-au-centre-retailleau-remet-la-pression-sur-philippe/1358720.html","2026-11"],"bf03r":["BFMTV, retraites par répartition, titre repris par Titres Presse (agrégateur, à vérifier)","https://www.titrespresse.com/27676142603/bruno-retailleau-bfmtv","2026-11-03"],"bf03":["BFMTV, « Vous Président », titres repris par Titres Presse (agrégateur, à vérifier)","https://www.titrespresse.com/27680422603/bruno-retailleau-bfmtv","2026-11-03"],"ip29":["Imaz Press, d'après l'AFP, primaire des démocrates","https://imazpress.com/france-monde/presidentielle-attal-primaire-democrates","2026-10-29"],"jdd25":["Le JDD, « Retailleau-Lisnard : condamnés à s'entendre »","https://www.lejdd.fr/politique/retailleau-lisnard-condamnes-a-sentendre-186882","2026-10-25"],"en":["Entrevue, déjeuner avec D. Lisnard (21 octobre)","https://entrevue.fr/presidentielle-2027/presidentielle-2027-grace-a-menard-retailleau-et-lisnard-negocient/","2026-10-23"],"jdn":["Journal du Net, date du second tour","https://www.journaldunet.com/business/action-publique/1556849-bruno-retailleau-demande-au-gouvernement-de-changer-la-date-du-second-tour-de-la-presidentielle/","2026-10-20"],"eu18":["Europe 1, réactions après les violences du 17 octobre","https://www.europe1.fr/societe/en-direct-emeutes-du-17-octobre-emmanuel-macron-sadressera-aux-francais-a-20-heures-1159713","2026-10-18"],"tr":["Projet de B. Retailleau, travail et famille","https://www.avecretailleau.fr/projet/theme/travail","non daté"],"ind":["Projet de B. Retailleau, industrie et entreprises","https://www.avecretailleau.fr/projet/theme/industrie-entreprises","non daté"],"cp":["Projet de B. Retailleau, comptes publics","https://www.avecretailleau.fr/projet/theme/comptes-publics","non daté"],"re":["Projet de B. Retailleau, retraites","https://www.avecretailleau.fr/projet/theme/retraites","non daté"],"ed":["Projet de B. Retailleau, éducation","https://www.avecretailleau.fr/projet/theme/education","non daté"],"el":["Projet de B. Retailleau, électricité","https://www.avecretailleau.fr/projet/theme/electricite","non daté"],"ia":["Projet de B. Retailleau, intelligence artificielle","https://www.avecretailleau.fr/projet/theme/l-ia","non daté"],"pj":["Projet de B. Retailleau, institutions","https://www.avecretailleau.fr/projet","non daté"],"p12":["Public Sénat, plan de près de 200 Md€","https://www.publicsenat.fr/actualites/economie/presidentielle-2027-bruno-retailleau-sengage-sur-un-plan-deconomies-de-pres-de-200-milliards-deuros-sil-est-elu","2026-10-12"],"pse":["Public Sénat, refonder l'école","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-bruno-retailleau-veut-refonder-lecole-autour-de-quatre-axes-principaux","2026-08-31"],"dis":["B. Retailleau, communiqué sur la dissuasion","https://www.avecretailleau.fr/presse/communiques/la-dissuasion-nucleaire-francaise-ne-se-partage-pas","2026-03-01"],"lt":["Les Républicains, lettre de B. Retailleau","https://republicains.fr/wp-content/uploads/2026/04/LETTRE-BR-MAJ.pdf","2026-04-29"],"ref":["Public Sénat, projet de référendums","https://www.publicsenat.fr/actualites/politique/referendum-sur-limmigration-primaute-du-droit-national-le-projet-de-bruno-retailleau-est-il-faisable","2026-02-13"],"nx":["Next, B. Retailleau et l'IA","https://next.ink/247354/pour-bruno-retailleau-lia-nattend-pas-notre-consentement/","2026-07-16"],"lx14":["L'Express (via Orange Actualités), G. Larcher appelle les candidats à « se retrouver »","https://actu.orange.fr/politique/presidentielle-2027-gerard-larcher-appelle-a-son-tour-les-candidats-de-la-droite-et-du-centre-a-se-retrouver-l-express-via-6medias-CNT000002tJ131.html","2026-11-14"],"ev13":["Entrevue, B. Retailleau aux « 4 Vérités » (France 2) sur la primaire","https://entrevue.fr/politique/presidentielle-2027/primaire-a-droite-retailleau-ne-croit-pas-a-une-victoire-dattal-et-refuse/","2026-11"],"sh11":["Shango, d'après BFMTV, réunion des directeurs de campagne le 17 novembre (agrégateur, à vérifier)","https://www.shango.media/bfm-tv-primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre-12040845","2026-11-11"],"psr16":["Public Sénat, débat des candidats aux Restos du Cœur","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos","2026-11-17"],"ev18":["Entrevue, principe d'une primaire à deux tours en janvier","https://entrevue.fr/presidentielle-2027/presidentielle-2027-attal-retailleau-et-lisnard-actent-le-principe-dune/","2026-11-18"],"ps18":["Public Sénat, « La participation d'Éric Zemmour flinguerait la primaire, estime Bruno Retailleau »","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-la-participation-deric-zemmour-flinguerait-la-primaire-estime-bruno-retailleau","2026-11-18"]},"src":{"eco":["tr"],"ent":["ind","bf03"],"fis":["p12"],"fin":["cp","p12"],"ret":["re","bf03r"],"edu":["ed","pse","psr16"],"san":["p12"],"def":["dis","ia"],"eur":["pj"],"etr":["lt"],"imm":["pj","p12"],"sec":["ref","pj","eu18"],"ecol":["el"],"inst":["pj","jdn","en","jdd25","ip29","lc03","ev07","qz11","sh11","ev13","lx14","ev18","ps18"],"num":["ia","nx"]},"t":{"eco":["[P] 500 € par an versés à chaque salarié ; revenu familial de 240 €/mois par enfant"],"ent":["[P] Code du travail refondé sur 50 principes ; chômage réduit et plafonné","[D] propose d'enterrer la semaine de 35 heures, avec 30 minutes de travail en plus par jour pour gagner un 13e voire un 14e mois, et de plafonner l'ensemble des aides sociales à 70 % du SMIC ; écarte une hausse du SMIC (BFMTV, « Vous Président », 3 novembre)"],"fis":["[D] 21 Md€ de baisses pour les ménages, 30 Md€ pour les entreprises"],"fin":["[P] 197 Md€ d'économies sur 5 ans","[D] 400 000 départs non remplacés ; règle d'or par référendum"],"ret":["[P] départ dès 63 ans avec décote, taux plein à 65 ans ; capital retraite","[D] dit vouloir sauver le régime de retraites par répartition (BFMTV, 3 novembre)"],"edu":["[P] fin du collège unique ; 1 000 écoles autonomes","[D] examen d'entrée en 6e","[D] défend la sélection à l'université, l'école devant être le principal outil contre la reproduction sociale (débat des Restos du Cœur, 16 novembre)"],"san":["[D] jour de carence non remboursable ; volet santé à venir"],"def":["[D] dissuasion ni partagée ni élargie","[P] IA militaire ×5"],"eur":["[P] droit de l'UE écarté quand il excède ses compétences ; clause de sauvegarde constitutionnelle"],"etr":["[D] dénonciation de l'accord de 1968 ; baisse de l'aide au développement"],"imm":["[P] fin du droit du sol par référendum ; quotas ; prestations après 5 ans","[D] asile traité hors de France"],"sec":["[D] réforme pénale par référendum","[P] droit à la sécurité dans la Constitution","[D] demande l'instauration sans délai de l'état d'urgence après les violences du 17 octobre"],"ecol":["[P] nucléaire prolongé à 80 ans, EPR2 ; fin des subventions à l'éolien ; principe de précaution supprimé"],"inst":["[P] référendum sur toutes les matières législatives ; racines judéo-chrétiennes dans la Constitution","[D] demande au gouvernement de déplacer le second tour, fixé au 2 mai 2027 au lendemain du 1er-Mai, par crainte de troubles (BFMTV, 19 octobre)","[D] après un déjeuner avec David Lisnard le 21 octobre, son porte-parole évoque une candidature commune pour « éviter la dispersion des candidatures » ; serait prêt, selon la presse, à discuter d'une primaire, sans calendrier ni règles acceptés","[D] selon Le JDD (25 octobre), juge qu'une primaire perd son sens sans Édouard Philippe et propose une charte obligeant les perdants à se rallier au vainqueur ; selon Robert Ménard, Lisnard et lui se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027","[D] son entourage juge « mort-né » le projet de primaire de G. Attal, au périmètre jugé flou","[D] juge qu'une primaire de la droite et du centre aura sans doute lieu en début d'année 2027 et qu'à défaut d'un vote il ira « jusqu'au bout » ; propose trois débats (pouvoir d'achat, régalien, écologie) à Édouard Philippe, Gabriel Attal et David Lisnard, dont il se dit le plus proche (BFMTV, 3 novembre)","[D] selon Entrevue (7 novembre), accepte le principe d'une primaire de la droite et du centre, à tenir au plus tard dans la première quinzaine de février 2027, et maintient sa proposition de trois débats télévisés avant Noël","[D] adresse le 10 novembre à Édouard Philippe, Gabriel Attal et David Lisnard des courriers proposant une primaire de la droite et du centre les dimanches 31 janvier et 7 février 2027 et une réunion des directeurs de campagne sous quinze jours ; juge infondé le refus de Philippe","[D] son équipe doit participer le 17 novembre, avec celles de Gabriel Attal et de David Lisnard, à une réunion des directeurs de campagne sur l'organisation d'une primaire (BFMTV, 11 novembre)","[D] le 13 novembre sur France 2, souhaite une primaire ouverte aux règles communes, avec une participation de quelques euros, premier tour le 31 janvier et second le 7 février 2027, dates jugées négociables ; demande aux participants une « forme de loyauté » envers le résultat, sans obligation de défendre ensuite le programme du vainqueur ; ne promet pas de soutenir publiquement Gabriel Attal s'il gagnait, invoquant des convictions différentes ; périmètre (Éric Zemmour, centre gauche) encore à discuter","[D] après l'invitation de Gérard Larcher (14 novembre) à une réunion des candidats sur une « méthode de départage », juge que la primaire doit avoir lieu même sans Édouard Philippe et appelle ses concurrents à se rassembler","[D] réunion du 17 novembre avec les équipes d'Attal et de Lisnard : principe d'une primaire ouverte à deux tours en janvier (17 et 24 ou 24 et 31 janvier envisagés), participation d'environ 2 €, vote surtout électronique, parrainages d'élus et charte commune (respect du résultat, refus d'alliance avec les extrêmes) ; périmètre et seuils non tranchés","[D] le 18 novembre, estime que la participation d'Éric Zemmour ferait échouer la primaire et réserve celle-ci à des candidats « sérieux » ; met en doute la volonté de David Lisnard de la faire aboutir ; refuse de laisser à Édouard Philippe un pouvoir de décision sur la primaire ; précise que les perdants s'engageraient à se retirer, sans obligation de soutenir le vainqueur ; nouvelle réunion des équipes prévue la semaine suivante"],"num":["[P] assistant IA « Marianne »","[D] 23 Md€ ; régime dérogatoire au RGPD et à l'AI Act"]}},
- {"id":"lisnard","n":"David Lisnard","p":"Nouvelle Énergie","b":"d","st":"Déclaré le 31/03/2026 ; dit avoir obtenu les 500 parrainages (BFMTV, 03/11/2026, selon Midi Libre)","pr":"Programme en ligne par thèmes ; discours de Bayeux (17/06/2026)","s":[5,1.5,4.5,4,3.5,5],"cf":"élevée","j":["200 Md€ d'économies, dérégulation, capitalisation","dérogation sur le modèle danois, pas de sortie de l'UE","titres de séjour ÷ 8, sortie de la CEDH en dernier recours","majorité pénale à 16 ans, peines planchers","nucléaire, principe de responsabilité","réarmement immédiat, doctrine de puissance autonome"],"S":{"sr25":["Sud Radio, « David Lisnard brigue un troisième mandat à l'AMF et l'Élysée »","https://www.sudradio.fr/societe/lisnard-cherche-a-crever-lecran-chez-les-maires-avant-la-presidentielle","2026-11-25"],"ps24":["Public Sénat, É. Philippe : « On peut aimer les tronçonneuses et ne pas savoir trancher ! »","https://www.publicsenat.fr/actualites/politique/on-peut-aimer-les-tronconneuses-et-ne-pas-savoir-trancher-le-tacle-dedouard-philippe-a-david-lisnard-accuse-de-pas-etre-assez-etanche-a-l","2026-11-24"],"qz07":["Quartz (fr), d'après Le Figaro Immobilier, flat tax de 25 % sur les revenus fonciers et financiers","https://fr.qz.com/david-lisnard-propose-flat-tax-25-revenus-capital-fonciers-110726","2026-11-07"],"bf06":["BFMTV, « un grand ministère du savoir », titre repris par Titres Presse (agrégateur, à vérifier)","https://www.titrespresse.com/28095672603/david-lisnard-energie","2026-11-06"],"bf03":["AFP, repris par Imaz Press : « gouvernement commando » (BFMTV, 3 novembre)","https://imazpress.com/france-monde/presidentielle-s-il-est-elu-david-lisnard-promet-un-gouvernement-commando","2026-11-04"],"ev02":["Entrevue, réponse aux critiques de J.-F. Copé et M. Fesneau","https://entrevue.fr/politique/presidentielle-2027/ni-avec-les-macronistes-ni-avec-le-rn-david-lisnard-repond-aux-attaques/","2026-11-02"],"pm01":["P. Messad, « Bulletin de l'énergie » (newsletter, à vérifier)","https://paulmessad.substack.com/p/bulletin-de-lenergie-david-lisnard","2026-11-01"],"ia04":["JDNews (repris par Nouvelle Énergie), essai sur l'IA avec R. Marsily","https://www.unenouvelleenergie.fr/david-lisnard-et-romain-marsily-la-france-face-au-defi-de-lia/","2026-11-04"],"ne28":["Nouvelle Énergie, compte rendu de « Objectif Élysée 2027 » (CNews-Europe 1, 27 octobre)","https://www.unenouvelleenergie.fr/david-lisnard-sur-cnews-et-europe-1-je-ne-suis-pas-candidat-pour-un-poste-je-viens-pour-redresser-le-pays/","2026-10-28"],"cp28":["Capital (repris par Yahoo Actualités), baisse de la CSG","https://fr.finance.yahoo.com/actualites/cotisez-moins-gagner-david-lisnard-134350547.html","2026-10-28"],"ip29":["Imaz Press, d'après l'AFP, primaire des démocrates","https://imazpress.com/france-monde/presidentielle-attal-primaire-democrates","2026-10-29"],"ti28":["Times of Israel (fr), d'après l'AFP, appel à Éric Ciotti","https://fr.timesofisrael.com/presidentielle-lisnard-appelle-ciotti-a-se-separer-du-rn-et-a-le-rejoindre/","2026-10-28"],"cn27":["Capital (repris par Yahoo Actualités), invité de CNews le 27 octobre","https://fr.finance.yahoo.com/actualites/%C3%A7a-n-aucun-sens-qu-190455319.html","2026-10-28"],"jdd25":["Le JDD, « Retailleau-Lisnard : condamnés à s'entendre »","https://www.lejdd.fr/politique/retailleau-lisnard-condamnes-a-sentendre-186882","2026-10-25"],"e1":["Europe 1, entretien","https://www.europe1.fr/politique/aujourdhui-en-france-on-depouille-les-actifs-au-profit-des-inactifs-denonce-david-lisnard-938960","2026-05-27"],"vt":["votons-2027, d'après le programme de Nouvelle Énergie (agrégateur, à vérifier sur le site du parti)","https://votons-2027.fr/candidats/lisnard/programme/economie","non daté"],"pg":["Nouvelle Énergie, programme","https://www.unenouvelleenergie.fr/notre-programme/","non daté"],"ed":["Nouvelle Énergie, programme éducation","https://www.unenouvelleenergie.fr/notre-programme/education/","non daté"],"sa":["Nouvelle Énergie, livret santé","https://www.unenouvelleenergie.fr/notre-programme/sante/","2026-05"],"im":["Nouvelle Énergie, programme immigration","https://www.unenouvelleenergie.fr/notre-programme/immigration/","non daté"],"se":["Nouvelle Énergie, programme sécurité","https://www.unenouvelleenergie.fr/notre-programme/securite/","non daté"],"ba":["Discours de Bayeux","https://nouvelle-energie-media-prod.s3.fr-par.scw.cloud/media/legacy/2026/06/Discours-de-David-Lisnard-a-Bayeux-17062026.pdf","2026-06-17"],"jd":["Le JDD, entretien","https://www.lejdd.fr/politique/david-lisnard-il-faudra-un-candidat-qui-porte-toute-la-droite-155878","2025-03-12"],"bf":["BFMTV-RMC, Face-à-Face (vidéo relayée par Orange Actu)","https://actu.orange.fr/videos/france/revoir-l-excuse-de-minorite-david-lisnard-candidat-nouvelle-energie-a-la-presidentielle-souhaite-que-les-jeunes-casseurs-fassent-des-travaux-d-interet-general-CNT000002sJaNM.html","2026-10-13"],"uk":["Nouvelle Énergie, position sur l'Ukraine","https://www.unenouvelleenergie.fr/questions/quelle-est-la-position-de-david-lisnard-sur-la-guerre-en-ukraine/","2026-04-20"],"tf":["Capital (repris par Yahoo Actualités), invité du 20 heures de TF1","https://fr.finance.yahoo.com/actualites/moins-l%C3%A9tat-capable-punir-cassent-220339491.html","2026-10-19"],"ic":["ICI Azur, invité de la matinale (vidéo)","https://www.ici.fr/emissions/l-invite-d-ici-matin-ici-azur/david-lisnard-comme-avec-les-hooligans-isoler-les-voyous-des-manifestations-en-les-mettant-dans-des-centres-fermes-7571835","2026-10-22"],"en":["Entrevue, déjeuner avec B. Retailleau (21 octobre)","https://entrevue.fr/presidentielle-2027/presidentielle-2027-grace-a-menard-retailleau-et-lisnard-negocient/","2026-10-23"],"pp":["Parlons Politique, primaire à droite","https://www.parlons-politique.fr/elections/primaire-a-droite-comment-retailleau-et-lisnard-peuvent-eviter-de-laisser-les-electeurs-face-a-deux-candidatures-rivales-en-2027_29875/","2026-10-21"],"ja11":["Journal de l'Agence, propositions de D. Lisnard pour le logement","https://www.journaldelagence.com/1414680-presidentielle-2027-quelles-sont-les-propositions-de-david-lisnard-pour-le-logement","2026-11-11"],"sh11":["Shango, d'après BFMTV, réunion des directeurs de campagne le 17 novembre (agrégateur, à vérifier)","https://www.shango.media/bfm-tv-primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre-12040845","2026-11-11"],"ds13":["Nouvelle Énergie, podcast « Destinée » avec Anne Coffinier","https://www.unenouvelleenergie.fr/david-lisnard-dans-le-podcast-destinee-faire-de-la-france-une-superpuissance-educative/","2026-11-13"],"cp06":["Capital (repris par Yahoo Finance), retraite par capitalisation obligatoire","https://fr.finance.yahoo.com/actualites/retraite-capitalisation-obligatoire-g%C3%A9r%C3%A9e-fonds-191620450.html","2026-11-06"],"dl13":["Nouvelle Énergie, compte rendu du premier « DLive » (10 novembre)","https://www.unenouvelleenergie.fr/dlive-david-lisnard-lance-son-nouveau-rendez-vous-mensuel-avec-les-francais/","2026-11-13"],"ra13":["Nouvelle Énergie, compte rendu des Rencontres de l'Avenir (Saint-Raphaël, 6 novembre)","https://www.unenouvelleenergie.fr/intelligence-artificielle-robotique-economie-david-lisnard-defend-une-france-conquerante-aux-rencontres-de-lavenir/","2026-11-13"],"ev18":["Entrevue, principe d'une primaire à deux tours en janvier","https://entrevue.fr/presidentielle-2027/presidentielle-2027-attal-retailleau-et-lisnard-actent-le-principe-dune/","2026-11-18"],"or18":["Orange Actualités (AFP), « Lisnard et Retailleau appellent Philippe à rejoindre la primaire »","https://actu.orange.fr/politique/lisnard-et-retailleau-appellent-philippe-a-rejoindre-la-primaire-mais-se-divisent-sur-son-perimetre-CNT000002tNqzd.html","2026-11-18"],"ev19":["Entrevue, « David Lisnard veut mettre la pression sur Édouard Philippe » (matinale de TF1, 18 novembre)","https://entrevue.fr/politique/presidentielle-2027/primaire-a-droite-david-lisnard-veut-mettre-la-pression-sur-edouard/","2026-11-19"],"fg17":["Tribune au Figaro, reprise par Nouvelle Énergie","https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/","2026-11-17"],"tf18n":["TF1, entretien du 18 novembre (compte rendu Nouvelle Énergie)","https://www.unenouvelleenergie.fr/je-crois-a-la-competition-pas-a-la-compromission/","2026-11-19"],"cap23":["Capital, « Un discours économique très proche du mien mais... », ce que David Lisnard pense de Sarah Knafo (propos tenus sur Public Sénat)","https://fr.finance.yahoo.com/actualites/discours-%C3%A9conomique-tr%C3%A8s-proche-mien-211258332.html","2026-11-23"],"ev23":["Entrevue, « Je ne gouvernerai pas avec le RN » : Lisnard riposte à Marine Le Pen sur le Code du travail","https://entrevue.fr/politique/presidentielle-2027/je-ne-gouvernerai-pas-avec-le-rn-lisnard-riposte-a-marine-le-pen/","2026-11-23"],"sr22":["Sud Radio (AFP), « Le Pen attaque Lisnard et son projet de \"broyer\" le code du travail »","https://www.sudradio.fr/societe/le-pen-attaque-lisnard-et-son-projet-de-broyer-le-code-du-travail","2026-11-22"],"of22":["Ouest-France, « Ça n'a aucun sens » : sans Édouard Philippe à la primaire de la droite, David Lisnard n'y participera pas (titre seul, article non lu : accès bloqué)","https://www.ouest-france.fr/politique/david-lisnard/ca-na-aucun-sens-sans-edouard-philippe-a-la-primaire-de-la-droite-david-lisnard-ny-participera-pas-70977960-e685-11f1-afa7-9a0bb82a33d1","2026-11-22"]},"src":{"eco":["e1","ra13"],"ent":["vt","ev23"],"fis":["vt","cp28","qz07"],"fin":["e1","vt","cn27","dl13","tf18n"],"ret":["vt","ti28","ne28","dl13","cp06","fg17","tf18n"],"edu":["ed","cn27","bf06","ds13"],"san":["sa"],"def":["jd"],"eur":["ba","vt","cap23"],"etr":["im","uk"],"imm":["im","ne28"],"sec":["se","bf","tf","ic","ne28"],"ecol":["vt","ba","pm01","pm01","ja11"],"inst":["ba","en","jdd25","ip29","ti28","ev02","bf03","bf03","sh11","ev18","or18","ev19","sr22","of22","ps24","sr25"],"num":["ba","ne28","ia04","ra13"]},"t":{"eco":["[D] « cotiser moins pour gagner plus » ; baisse des taxes sur les carburants","[D] propose un fonds souverain pour les épargnants ne souhaitant pas confier leur épargne à des acteurs privés, et un marché européen des capitaux pour orienter l'épargne vers l'investissement (Rencontres de l'Avenir, 6 novembre)"],"ent":["[P] contrat de travail unique ; dérégulation large ; charges négatives pour l'embauche d'allocataires du RSA","[D] répondant le 22 novembre à Marine Le Pen, qui critique son projet de « broyer » le Code du travail, veut réécrire ce code, qu'il juge « le plus lourd du monde », en donnant plus de poids aux accords d'entreprise sur le temps de travail ; oppose la négociation et la liberté économique au « social-étatisme » qu'il prête au RN"],"fis":["[P] suppression de la C3S et de la CVAE, impôts de production divisés par deux ; plafond du quotient familial levé","[D] baisser la CSG sur les revenus d'activité de 9,2 % à 6,6 %, au niveau de celle des inactifs, pour augmenter le salaire net sans alourdir le coût du travail (CNews-Europe 1, 27 octobre)","[D] propose une flat tax de 25 % unifiant l'imposition des revenus fonciers et des revenus financiers, avec option pour le barème progressif, au nom d'une fiscalité « plus lisible » (Le Figaro Immobilier, 7 novembre)"],"fin":["[D] 80 Md€ d'économies la 1re année, 200 Md€ sur le quinquennat ; suppression d'agences","[P] règle d'or sur les dépenses de fonctionnement","[D] non-remplacement des départs dans la fonction publique, en commençant par les fonctions administratives (CNews, 27 octobre)","[D] réduire la masse salariale publique d'au moins 12 %, avec un objectif de 20 %, en automatisant des tâches administratives par l'IA et la robotique et en réaffectant des agents vers le terrain (DLive, 10 novembre)","[D] baisse d'au moins 12 % des effectifs publics, soit 400 000 fonctionnaires en moins, par une réorganisation des administrations, avec redéploiement d'agents vers la justice, la police et les soins et une direction des ressources humaines de l'État clairement identifiée (TF1, 18 novembre)"],"ret":["[P] socle par répartition dès 65 ans, minimum vieillesse à 1 000 € ; bascule vers la capitalisation","[D] juge l'abaissement de l'âge de départ à 62 ans, voire 60 ans, promis par le RN incompatible avec la baisse des dépenses (CNews, 27 octobre)","[D] parmi les pistes d'économies, cite en exemple la non-revalorisation des pensions supérieures à 2 200 € (CNews-Europe 1, 27 octobre)","[D] veut un échelon obligatoire de retraite par capitalisation, complémentaire au système actuel, et annonce un plan de réforme des retraites avant la fin de l'année (DLive, 10 novembre)","[D] veut transférer environ 40 % des cotisations vers des comptes individuels d'épargne retraite obligatoires, pouvant être gérés par des fonds d'investissement privés, avec un fonds souverain par défaut ; propose aussi de supprimer l'abattement de 10 % pour frais professionnels des retraités (Capital, 6 novembre)","[D] tribune au Figaro : étage de capitalisation collective obligatoire, complétant une répartition réformée et une capitalisation individuelle libre, pour orienter l'épargne longue vers l'économie ; fin des régimes spéciaux et convergence des règles du public et du privé, pénibilité reconnue sur des critères communs ; désindexation certaines années des pensions les plus élevées ; refuse d'aligner la CSG des retraités sur celle des actifs ; financement de la transition à préciser « bientôt »","[D] annonce pour les prochaines semaines son projet de retraites, avec une part de capitalisation obligatoire plus importante que dans le projet du RN, financée par des économies structurelles (TF1, 18 novembre)"],"edu":["[P] abrogation de la carte scolaire, chèque-éducation, certificat de fin de primaire, enseignants +20 % sous conditions ; suppression de Parcoursup","[D] recrutement des nouveaux enseignants comme contractuels et non plus comme fonctionnaires ; liberté pour les enseignants de choisir leur statut (CNews, 27 octobre)","[D] veut créer « un grand ministère du savoir », sans détail publié à ce stade (BFMTV, Rencontres de l'avenir de Saint-Raphaël, 6 novembre)","[D] rétablir les notes chiffrées et instaurer des évaluations en CM2, en sixième et en troisième ; enseigner la philosophie dès l'école primaire ; publier des évaluations des établissements ; garantir un réseau d'établissements de proximité à l'échelle des anciens cantons ; créer des établissements publics disciplinaires de haut niveau avec internats ; développer les dispositifs ULIS (podcast « Destinée », 13 novembre)"],"san":["[P] suppression des ARS ; accès direct aux infirmiers, kinés et pharmaciens ; doublement des étudiants en médecine"],"def":["[D] réarmement immédiat, doctrine de puissance autonome"],"eur":["[D] dérogation asile et immigration sur le modèle danois, pas de sortie de l'UE","[P] traité de démocratisation de l'Europe","[D] le 23 novembre sur Public Sénat, refuse d'appartenir à un groupe européen partageant les positions de l'AfD, qu'il juge « contre les intérêts de la France » ; dit son discours économique proche de celui de Sarah Knafo, tout en écartant ses choix politiques et tout rapprochement avec Marine Le Pen"],"etr":["[P] révision de l'accord de 1968, rétorsions contre les pays non coopératifs","[D] soutien à l'Ukraine"],"imm":["[P] titres de séjour divisés par huit ; AME remplacée par une aide d'urgence ; fin de l'automaticité du droit du sol ; sortie de la CEDH en dernier recours","[D] réduire les prestations non contributives versées aux étrangers, avec un objectif de 2 à 3 Md€ d'économies la 1re année (CNews-Europe 1, 27 octobre)"],"sec":["[P] majorité pénale à 16 ans ; peines planchers pour les récidivistes ; interdiction des Frères musulmans","[D] revoir l'excuse de minorité ; travaux d'intérêt général pour les jeunes auteurs de violences","[D] interdire les manifestations présentant un risque grave pour l'ordre public ; mieux sanctionner les auteurs de dégradations","[D] isoler les casseurs des manifestations dans des centres fermés, en comparant la mesure au traitement des hooligans","[D] principe « casseurs-payeurs » : rendre les auteurs de destructions financièrement responsables, avec des mécanismes de recouvrement des sommes dues (CNews-Europe 1, 27 octobre)"],"ecol":["[P] réacteurs prolongés, nouveaux EPR, petits réacteurs","[D] principe de précaution remplacé par un principe de responsabilité","[D] opposé au dernier appel d'offres pour 11 parcs éoliens en mer, dont il estime le coût à 82 Md€ sur leur durée de vie, et qu'il ne financerait pas ; se dit favorable à l'autoconsommation et au solaire sur les bâtiments agricoles, et soutient l'hydroélectricité","[D] revenir sur l'interdiction de la vente de voitures thermiques neuves en 2035 ; lever l'interdiction de l'exploration et de la production d'hydrocarbures en France","[P] suppression du DPE ; assouplissement du ZAN par un bonus à la densification et un malus à l'étalement urbain ; remplacement des quotas de logements sociaux de la loi SRU par des objectifs portant sur les constructions neuves (Journal de l'Agence, 11 novembre)"],"inst":["[D] retour au septennat ; référendum sur tous sujets ; une cinquantaine de provinces","[D] réclame une primaire ouverte de la droite et du centre, avant la fin de l'année ; déjeuner avec Bruno Retailleau le 21 octobre, à l'initiative de Robert Ménard, sur une candidature commune, sans accord conclu","[D] selon Le JDD (25 octobre), veut une primaire ouverte à tous les candidats de droite et la liberté de ne pas soutenir le vainqueur ; selon Robert Ménard, Retailleau et lui se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027","[D] salue l'idée de « primaire des démocrates » lancée par Gabriel Attal le 28 octobre, qu'il dit proposer depuis deux ans, et appelle à aller vite","[D] appelle Éric Ciotti (UDR) à se séparer du RN et à le rejoindre, jugeant le programme de l'UDR proche de ses idées (CNews, 27 octobre)","[D] répondant le 1er novembre aux critiques de Jean-François Copé et de Marc Fesneau sur sa relation au RN, déclare qu'il ne gouvernerait « ni avec les macronistes ni avec le RN », juge ces accusations fausses et maintient sa demande de primaire ouverte de la droite et du centre","[D] s'il est élu, promet de nommer immédiatement un « gouvernement commando » resserré, avec des missions sur les 200 premiers jours, de convoquer une session extraordinaire du Parlement à l'été 2027 et de remplacer les ministres dont les chantiers ne seraient pas engagés au bout de 200 jours (BFMTV, 3 novembre)","[D] se dit le plus proche de Bruno Retailleau, tout en jugeant que la participation de celui-ci aux gouvernements d'Emmanuel Macron les distingue ; maintient sa demande de primaire de la droite et du centre (BFMTV, 3 novembre)","[D] son équipe doit participer le 17 novembre, avec celles de Gabriel Attal et de Bruno Retailleau, à une réunion des directeurs de campagne sur les modalités et les dates d'une primaire de la droite et du centre (BFMTV, 11 novembre)","[D] à la réunion du 17 novembre, son équipe défend une primaire très large, sans exclure Éric Zemmour avant que les conditions d'accès soient fixées ; Nouvelle Énergie précise qu'aucun accord définitif n'est conclu et réaffirme son attachement à une compétition aussi ouverte que possible","[D] le 18 novembre, juge la participation d'Édouard Philippe à la primaire « indispensable » et veut lui « mettre la pression » ; plaide pour un périmètre pouvant aller jusqu'à Nicolas Dupont-Aignan et Éric Zemmour s'ils respectent les critères de la primaire ; se dit « incapable » de dire si elle aura lieu","[D] sur TF1 (18 novembre), distingue le choix d'un candidat commun d'une coalition fondée sur un programme entièrement négocié ; estime qu'une primaire sans Philippe placerait celui-ci en position privilégiée","[D] le 22 novembre, en réponse à Marine Le Pen, déclare qu'il ne gouvernera pas avec le RN et conteste avoir demandé à être ministre d'Emmanuel Macron","[D] selon le titre d'un article d'Ouest-France (22 novembre), ne participerait pas à une primaire de la droite et du centre sans Édouard Philippe, jugeant qu'elle n'aurait « aucun sens »","[D] selon Public Sénat (24 novembre), a déclaré le 22 novembre qu'une primaire pourrait servir à « éliminer les macronistes » et qu'il ne soutiendrait pas son vainqueur s'il était battu","[D] candidat à un nouveau mandat à la présidence de l'AMF (résultat attendu le 25 novembre), annonce qu'il se mettrait en retrait de l'association pendant la campagne, au profit d'une direction collégiale, et s'engage à défendre les mairies s'il est élu"],"num":["[D] IA centrale pour la performance publique ; « produire l'IA avant de la réguler »","[D] transparence algorithmique, financement des entreprises françaises de l'IA et de la robotique, apprentissages sans machine à l'école (CNews-Europe 1, 27 octobre)","[D] dans un essai sur l'IA cosigné avec R. Marsily : exiger la réversibilité dans la commande publique ; réaffirme le remplacement du principe de précaution par un principe de responsabilité dans la Constitution","[D] propose une structure franco-européenne d'innovation sur le modèle de la DARPA américaine, l'étiquetage des contenus générés par IA, une alliance des démocraties pour des règles communes, et l'exigence d'implantations industrielles et de transferts de technologie lors d'achats à des fournisseurs étrangers (Rencontres de l'Avenir, 6 novembre)"]}},
- {"id":"bertrand","n":"Xavier Bertrand","p":"Nous France","b":"d","st":"Confirmé le 27/08/2026","pr":"Pas de programme","s":[2,0,3,4,2,null],"cf":"faible","j":["classes moyennes, capitalisation","pas de position","quotas, AME supprimée","majorité pénale à 15 ans","nucléaire (2021)","pas de position sur la défense"],"S":{"lcp":["LCP, X. Bertrand teste ses idées","https://lcp.fr/actualites/presidentielle-xavier-bertrand-indique-tester-ses-idees-et-envisager-de-concourir-en","2026-08-03"],"edm":["L'Écho du mardi (campagne 2021)","https://echodumardi.com/politiqueetterritoire/xavier-bertrand-a-courthezon-je-veux-mettre-en-place-une-republique-des-territoires","2021-10-30"],"ti":["TIME France, portrait","https://www.timefrance.fr/politique/les-visages-des-presidentielles-2027-xavier-bertrand-le-candidat-sans-parti-ni-primaire/","2026-08-28"]},"src":{"eco":["lcp","edm"],"ent":["edm"],"fin":["lcp"],"ret":["lcp"],"imm":["ti"],"sec":["ti"],"ecol":["edm"],"inst":["ti"]},"t":{"eco":["[D] priorité aux classes moyennes","[H] prime garantissant 1 500 € nets (2021)"],"ent":["[H] heures au-delà de 35 h sans impôt ni charges (2021)"],"fin":["[D] baisse des dépenses sociales"],"ret":["[D] capitalisation"],"imm":["[D] quotas votés au Parlement ; AME supprimée hors urgences"],"sec":["[D] majorité pénale à 15 ans ; peines planchers"],"ecol":["[H] refus de ramener le nucléaire à 50 % (2021)"],"inst":["[D] septennat unique par référendum ; compétences transférées aux régions"]}},
- {"id":"platret","n":"Gilles Platret","p":"Divers droite","b":"d","st":"Déclaré le 08/10/2026","pr":"Pas de programme ; livre en novembre","s":[2.5,2,4.5,4,1,4],"cf":"faible","j":["39 heures, dette sous 100 %","rétablissement des frontières","forte baisse des titres, voile interdit","interdiction des Frères musulmans","pas de position","accélération du réarmement"],"S":{"dj":["Dijon Actualités, déclaration de candidature","https://dijon-actualites.fr/2026/10/10/presidentielle-2027-le-maire-de-chalon-sur-saone-gilles-platret-sest-lance-dans-la-course-a-lelysee/","2026-10-10"],"lc":["Lyon Capitale","https://www.lyoncapitale.fr/?p=521848","2026-10-08"],"a":["Dijon Actualités, déclaration de candidature","https://dijon-actualites.fr/2026/10/10/presidentielle-2027-le-maire-de-chalon-sur-saone-gilles-platret-sest-lance-dans-la-course-a-lelysee/","2026-10-10"]},"src":{"ent":["lc"]},"t":{"ent":["[D] retour aux 39 heures ; soutien à l'agriculture"],"fin":["[D] dette ramenée sous 100 % du PIB"],"ret":["[D] 39 heures pour limiter le recul de l'âge"],"edu":["[D] discipline ; fin de l'autonomie des universités"],"def":["[D] accélération du réarmement"],"etr":["[D] soutien renforcé à Israël ; rupture avec l'Iran"],"imm":["[D] frontières nationales ; baisse des titres ; voile interdit dans l'espace public"],"sec":["[D] interdiction des Frères musulmans"],"inst":["[D] Conseil constitutionnel d'avant 1971 ; scrutin uninominal à un tour"]}},
- {"id":"dupontaignan","n":"Nicolas Dupont-Aignan","p":"Debout la France","b":"s","st":"Déclaré le 08/03/2025","pr":"Projet en ligne ; livre (avril 2026)","s":[-0.5,4,4,3,4,2.5],"cf":"élevée","j":["protectionnisme, impôt sur les grandes fortunes, 130 Md€ d'économies","référendum sur l'UE","fin du droit du sol","+10 000 policiers","nucléaire à 70 %, moins de renouvelables","2,5 % du PIB pour la défense"],"S":{"ec":["DLF, projet économie et travail","https://www.debout-la-france.fr/projet/economie-travail/","2026-10-10"],"re":["DLF, projet retraites","https://www.debout-la-france.fr/projet/retraites/","2024-02-05"],"in":["DLF, projet instruction publique","https://www.debout-la-france.fr/projet/instruction-publique/","2026-10-12"],"sa":["DLF, projet santé","https://www.debout-la-france.fr/projet/sante/","2024-02-05"],"de":["DLF, projet défense","https://www.debout-la-france.fr/projet/defense/","2026-10-08"],"eu":["DLF, projet affaires européennes","https://www.debout-la-france.fr/projet/affaires-europeennes/","2026-10-05"],"if":["info.fr, candidature","https://info.fr/yerres-dupont-aignan-candidature-presidentielle-2027-sursaut-gaulliste/","2026-04-23"],"im":["DLF, projet immigration","https://www.debout-la-france.fr/projet/immigration-et-assimilation/","2026-03-03"],"se":["DLF, projet sécurité","https://www.debout-la-france.fr/projet/securite/","2026-02-16"],"en":["DLF, projet environnement et énergie","https://www.debout-la-france.fr/projet/environnement-energie/","2025-10-29"],"dm":["DLF, projet démocratie","https://www.debout-la-france.fr/projet/refonder-et-moraliser-notre-democratie/","2026-06-09"],"ia":["DLF, projet intelligence artificielle","https://www.debout-la-france.fr/projet/intelligence-artificielle/","2026-10-12"]},"src":{"eco":["ec"],"ent":["ec"],"fis":["ec"],"fin":["ec"],"ret":["re"],"edu":["in"],"san":["sa"],"def":["de"],"eur":["eu"],"etr":["if"],"imm":["im"],"sec":["se"],"ecol":["en"],"inst":["dm"],"num":["ia"]},"t":{"eco":["[P] électricité divisée par deux ; carburant moins cher ; TVA supprimée sur 50 produits"],"ent":["[P] salaires +8 % ; 75 % de la commande publique aux producteurs français"],"fis":["[P] impôt sur les très grandes fortunes ; IS divisé par deux sur les bénéfices réinvestis"],"fin":["[P] déficit sous 3 %, 130 Md€ d'économies"],"ret":["[P] âge et durée maintenus ; capital de 10 000 € par nouveau-né"],"edu":["[P] uniforme ; +30 % de français et maths ; enseignants +15 %"],"san":["[P] études de médecine contre 5 ans en zone sous-dotée"],"def":["[P] sortie du commandement intégré de l'OTAN ; 2,5 % du PIB ; fin du SCAF"],"eur":["[P] référendum sur le maintien dans l'UE ; sortie de Schengen"],"etr":["[D] renouer avec la Russie ; dénonciation de l'accord de 1968"],"imm":["[P] droit du sol supprimé par référendum ; AME supprimée"],"sec":["[P] +10 000 policiers et gendarmes ; 40 000 places de prison"],"ecol":["[P] nucléaire ≥ 70 % ; 4 Md€ des renouvelables redirigés"],"inst":["[P] RIC à un million d'inscrits ; 500 députés"],"num":["[P] fonds souverain IA ; cloud souverain"]}},
- {"id":"philippot","n":"Florian Philippot","p":"Les Patriotes","b":"s","st":"Déclaré le 09/05/2026","pr":"« Projet pour la France 2026-2027 »","s":[-0.5,5,4,3,4,null],"cf":"élevée","j":["retour au franc, État stratège","sortie de l'UE","sortie de Schengen, exécution des OQTF","peines planchers","moratoire éolien","sortie de l'OTAN : pas de position sur l'effort militaire"],"S":{"a":["Les Patriotes, Projet pour la France 2026-2027","https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf","2026-09"]},"src":{},"t":{"eco":["[P] retour au franc ; tarifs nationaux de l'électricité"],"ent":["[P] réindustrialisation ; fin de l'immigration de travail"],"fis":["[P] allègement pour indépendants et TPE"],"fin":["[P] 60 Md€/an d'économies"],"ret":["[P] possibilité d'abaisser l'âge"],"edu":["[P] moitié du primaire en français ; fin du collège unique"],"san":["[P] suppression des ARS ; sortie de l'OMS"],"def":["[P] sortie de l'OTAN"],"eur":["[P] sortie de l'UE, de l'euro, de Schengen et de la CEDH"],"etr":["[P] fin de l'engagement en Ukraine"],"imm":["[P] sortie de Schengen ; exécution des OQTF"],"sec":["[P] peines planchers ; expulsion des détenus étrangers"],"ecol":["[P] sortie du marché européen de l'électricité ; moratoire éolien"],"inst":["[P] RIC constitutionnel"],"num":["[P] sortie des GAFAM en 3 ans ; école sans IA"]}},
- {"id":"asselineau","n":"François Asselineau","p":"UPR","b":"s","st":"Déclaré le 07/07/2026","pr":"Programme 2027 « en élaboration »","s":[-1,5,0,0,0,null],"cf":"faible","j":["peu de positions","sortie de l'UE et de l'euro","référendum sans position","pas de mesure","référendum sur le nucléaire","sortie de l'OTAN : pas de position sur l'effort militaire"],"S":{"a":["UPR, nos fondamentaux","https://www.upr.fr/nos-fondamentaux","non daté"]},"src":{},"t":{"fin":["[P] référendum sur la dette"],"def":["[P] sortie de l'OTAN"],"eur":["[P] sortie de l'UE et de l'euro"],"etr":["[P] siège permanent à l'ONU incessible"],"imm":["[P] référendum, sans position fixée"],"ecol":["[P] référendum sur le nucléaire"],"inst":["[P] vote blanc reconnu ; RIC"]}},
- {"id":"lepen","n":"Marine Le Pen","p":"Rassemblement national","b":"ed","st":"Déclarée le 07/07/2026 (pourvoi en cassation)","pr":"Pas de programme ; plan de finances publiques le 06/10/2026 ; réforme des retraites présentée le 17/11/2026","s":[-0.5,3,5,3.5,4.5,null],"cf":"moyenne","j":["TVA énergie à 5,5 %, retraite à 62 ans, 140 Md€ d'économies","primauté du droit français","priorité nationale, restriction du droit du sol","expulsions des logements sociaux","moratoire éolien et solaire","commandement intégré de l'OTAN : pas de position sur l'effort militaire"],"S":{"ps25":["Public Sénat, discours d'Orléans (gouvernement d'union nationale)","https://www.publicsenat.fr/actualites/politique/si-elle-gagne-en-2027-marine-le-pen-appelle-a-la-formation-dun-gouvernement-dunion-nationale","2026-10-25"],"ps6":["Public Sénat, plan de 140 Md€ d'économies","https://www.publicsenat.fr/actualites/politique/140-milliards-deuros-deconomies-dici-2032-leffort-radical-propose-par-marine-le-pen-pour-redresser-les-f","2026-10-06"],"eu18":["Europe 1, réactions après les violences du 17 octobre","https://www.europe1.fr/societe/en-direct-emeutes-du-17-octobre-emmanuel-macron-sadressera-aux-francais-a-20-heures-1159713","2026-10-18"],"sr13":["Sud Radio, rentrée politique de M. Le Pen","https://www.sudradio.fr/politique/programme-presidentiel-et-communication-que-vaut-la-rentree-politique-de-marine-le-pen","2026-09-13"],"eu17":["Europe 1, présentation du projet RN sur les retraites","https://www.europe1.fr/politique/maintien-de-lage-legal-a-62-ans-dose-de-capitalisation-le-rassemblement-national-veut-defendre-sa-credibilite-sur-les-retraites-1238295","2026-11-17"],"ht16":["Head Topics, J.-P. Tanguy sur la capitalisation (agrégateur, à vérifier)","https://fr.headtopics.com/news/30-ans-de-mensonges-sur-les-retraites-jean-philippe-89907246","2026-11-16"],"sr27":["Sud Radio, M. Le Pen devant le Medef","https://www.sudradio.fr/societe/marine-le-pen-et-la-delicate-operation-seduction-du-monde-economique","2026-08-27"],"cb":["Public Sénat, contre-budget du RN","https://www.publicsenat.fr/actualites/economie/contre-budget-du-rn-des-propositions-qui-manquent-de-credibilite-economique-mais-trahissent-une-veritable-coherence-doctrinale","2025-10-23"],"or":["Actu Orange, d'après BFMTV","https://actu.orange.fr/question-du-jour-2026-09-21-CNT000002s0few.html","2026-09-21"],"inf":["Informat.ro, d'après Politico (source secondaire)","https://informat.ro/en/international/marine-le-pen-delays-frances-withdrawal-from-nato-command-140447","2026-09-24"],"pm":["Paris Match Belgique, d'après la VRT","https://www.parismatch.be/actualites/monde/2026/10/15/presidentielle-francaise-si-elle-arrive-a-lelysee-marine-le-pen-promet-de-couper-laide-a-lukraine-je-ne-prends-personne-en-traitre-EKOIX7JLGZBBTPVJXNLDVDTVXY/","2026-10-14"],"ha":["Harici, d'après Le Monde (source secondaire)","https://harici.com.tr/en/marine-le-pen-plans-french-constitutional-referendum-on-immigration/","2026-08-19"],"eun17":["Euronews, M. Le Pen présente sa réforme des retraites","https://fr.euronews.com/2026/11/17/dose-de-capitalisation-depart-de-60-a-62-ans-marine-le-pen-devoile-sa-reforme-des-retraite","2026-11-17"],"psr16":["Public Sénat, débat des candidats aux Restos du Cœur","https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos","2026-11-17"],"lx17":["L’Express (Reuters), repris par Orange Actualités","https://actu.orange.fr/politique/ukraine-marine-le-pen-veut-changer-la-nature-de-l-aide-francaise-a-kiev-l-express-CNT000002tLg5S.html","2026-11-17"],"sr22n":["Sud Radio (AFP), « Le Pen attaque Lisnard et son projet de \"broyer\" le code du travail »","https://www.sudradio.fr/societe/le-pen-attaque-lisnard-et-son-projet-de-broyer-le-code-du-travail","2026-11-22"]},"src":{"eco":["or"],"ent":["sr27","sr22n"],"fis":["cb"],"fin":["ps6"],"ret":["sr27","eun17","eu17","ht16"],"edu":["sr13","psr16"],"san":["cb"],"def":["inf"],"eur":["pm"],"etr":["pm","lx17"],"imm":["ha"],"sec":["sr13","eu18"],"ecol":["sr13","psr16"],"inst":["ps6","ps25"]},"t":{"eco":["[D] TVA sur carburants, électricité et gaz à 5,5 % ; logement social et APL réservés aux Français"],"ent":["[D] fin des cotisations retraite et chômage après l'âge de départ","[D] le 22 novembre (France 2, France Inter), juge qu'il y a trop de règles à simplifier, mais s'oppose à passer le Code du travail « à la broyeuse », ce qui laisserait selon elle les travailleurs démunis"],"fis":["[P] −16 Md€ d'impôts de production ; impôt sur la fortune financière (2025)"],"fin":["[D] 140 Md€ d'économies d'ici 2032 ; règle d'or par référendum"],"ret":["[D] 62 ans, 60 ans si début avant 20 ans ; pilier de capitalisation","[D] présente le 17 novembre sa réforme : abrogation de la réforme Borne au 1er janvier 2028 ; âge d'ouverture de 60 à 62 ans et 160 à 168 trimestres selon l'âge d'entrée dans un emploi stable (cinq catégories) ; taux plein maintenu à 67 ans ; trimestre validé dès un mi-temps ; indexation de toutes les pensions pendant cinq ans ; pilier de capitalisation obligatoire pour les actifs de moins de 52 ans, géré par la Caisse des dépôts et alimenté par la réaffectation de cotisations patronales existantes (1 % logement, FNAL, moitié de la formation professionnelle), sans prélèvement nouveau ; coût annoncé de 18,6 Md€ bruts et 10,1 Md€ nets ; référendum envisagé","[D] selon Europe 1, le projet présenté le 17 novembre exclut tout report de l'âge légal au-delà de 62 ans et prévoit une part de capitalisation ; Marine Le Pen chiffre le maintien à 62 ans à 9 milliards d'euros par an","[D] le député RN Jean-Philippe Tanguy promet une part de capitalisation pour tous, financée par des économies dans le système social, et l'alignement des trimestres validés sur les trimestres cotisés, sans relever l'âge ni la durée de cotisation (16 novembre)"],"edu":["[D] priorité des Français en résidence étudiante","[D] hausse de la rémunération des apprentis et prime d'activité étudiante (débat des Restos du Cœur, 16 novembre)"],"san":["[P] AME remplacée par une aide d'urgence (2025)"],"def":["[D] sortie du commandement intégré de l'OTAN, reportée pendant la guerre"],"eur":["[D] pas de hausse de la contribution ; primauté du droit français"],"etr":["[D] aide à l'Ukraine maintenue 6 mois puis arrêtée","[D] communiqué du 16 novembre après une rencontre avec l'ambassadeur d'Ukraine : fin de l'aide financière française, mais maintien des dons de matériel, de l'aide humanitaire et des engagements pris, dont le prêt européen de 90 Md€ ; veut peser dans les négociations de paix"],"imm":["[D] référendum : restriction du droit du sol, priorité nationale"],"sec":["[D] expulsion des familles délinquantes des logements sociaux","[D] après les violences du 17 octobre : règle du « casseur/payeur » et rétablissement de l'ordre républicain"],"ecol":["[D] moratoire éolien et solaire ; Fessenheim ; fin du ZAN","[D] gratuité des trains aux heures creuses (débat des Restos du Cœur, 16 novembre)"],"inst":["[D] référendums sur la règle d'or et l'immigration","[D] en cas de victoire, annonce un gouvernement « ouvert et pluraliste », d'union nationale, avec Jordan Bardella à Matignon (Orléans, 25 octobre)"]}},
- {"id":"zemmour","n":"Éric Zemmour","p":"Reconquête","b":"ed","st":"Annoncé le 17/09/2026 ; candidature confirmée au journal de TF1 le 10/11/2026 ; meeting de lancement à Toulon le 21/11/2026","pr":"Pas de programme ; consultation en cours","s":[4,3,5,5,4.5,null],"cf":"moyenne","j":["fin des droits de succession, 140 Md€/an (Knafo)","budget de l'UE réduit, pas de sortie","« remigration »","renvoi des délinquants étrangers","fin du soutien aux renouvelables","pas de position sur la défense"],"S":{"pm10":["Politique Matin, premières mesures sur TF1 (agrégateur, à vérifier)","https://www.politiquematin.fr/zemmour-presidentielle-2027-confirme-candidature-tf1-programme-101126-2055","2026-11-10"],"21n":["21News, candidature confirmée sur TF1","https://www.21news.be/eric-zemmour-confirme-sa-candidature-a-la-presidentielle-de-2027-pour-conserver-une-france-francaise/","2026-11-10"],"bv":["Boulevard Voltaire, lancement de campagne","https://www.bvoltaire.fr/nous-sommes-en-train-de-manquer-notre-siecle-zemmour-lance-reconquete-vers-2027/","2026-09-13"],"ps":["Public Sénat, candidature d'É. Zemmour","https://www.publicsenat.fr/actualites/politique/eric-zemmour-officialise-sa-candidature-a-la-presidentielle-2027","2026-09-17"],"ag":["Agra, É. Zemmour et la production","https://www.agra.fr/articles/presidentielle-zemmour-veut-remettre-la-production-au-coeur-du-systeme","2026-10-07"],"b27":["budget2027.fr (Sarah Knafo)","https://budget2027.fr","2026"],"la":["L'Avenir, d'après BFMTV","https://www.lavenir.net/actu/monde/2026/09/18/zemmour-confirme-quil-sera-candidat-a-lelection-presidentielle-en-france-et-durcit-encore-son-discours-sur-limmigration-5OFMOVM6CVCDFHY4B3GI5QID3Q/","2026-09-17"],"cap21":["Capital via Yahoo Finance, meeting de Toulon","https://fr.finance.yahoo.com/actualites/enfants-h%C3%A9riteront-payer-euro-eric-225243177.html","2026-11-21"]},"src":{"eco":["bv"],"ent":["ps"],"fis":["ag","cap21"],"fin":["b27","pm10"],"ret":["b27"],"edu":["bv"],"san":["b27"],"eur":["b27"],"imm":["la","21n"],"sec":["la","cap21"],"ecol":["bv"],"inst":["bv"],"num":["bv","21n"]},"t":{"eco":["[D] baisse des taxes sur les carburants (Knafo)"],"ent":["[D] automatisation contre la main-d'œuvre immigrée"],"fis":["[D] abolition des droits de succession ; fin de la CSG sur le travail (Knafo)","[D] suppression des droits de succession réaffirmée au meeting de lancement de Toulon (21/11), dans un plan de baisse des prélèvements"],"fin":["[D] 140 Md€/an d'économies, 800 000 départs non remplacés (Knafo)","[D] plan de redressement des finances publiques de 280 Md€ de baisses de dépenses et d'impôts, sans période ni ventilation précisées (TF1, 10 novembre, selon Politique Matin)"],"ret":["[D] capitalisation ; prestations réservées aux Français (Knafo)"],"edu":["[D] école exigeante ; fin de la gratuité pour les étudiants étrangers"],"san":["[D] suppression de l'AME et des ARS (Knafo)"],"eur":["[D] contre le DSA ; budget de l'UE ramené à avant-Covid"],"imm":["[D] « remigration » ; référendum","[D] objectif de réduire de deux millions le nombre d'immigrés au cours du quinquennat ; renvoi des étrangers au chômage depuis plus de six mois, y compris en situation régulière ; politique migratoire soumise à référendum (TF1, 10 novembre)"],"sec":["[D] renvoi des détenus et délinquants étrangers","[D] fermeté promise envers les squatteurs et fin de « l'indulgence judiciaire » envers les atteintes à la propriété (Toulon, 21/11)"],"ecol":["[D] relance massive du nucléaire ; fin des renouvelables intermittents"],"inst":["[D] contre la régulation des réseaux sociaux ; suppression du CESE"],"num":["[D] surplus nucléaire réservé à l'IA ; pas de régulation spécifique","[D] investissements dans l'intelligence artificielle, présentée comme pouvant remplacer une partie du travail des immigrés ; montant non précisé (TF1, 10 novembre)"]}},
- {"id":"polony","n":"Natacha Polony","p":"Nous sommes la France","b":"div","st":"Déclarée le 14/10/2026","pr":"Pas de programme ; déclarations","s":[-1.5,1.5,1.5,0,2,null],"cf":"faible","j":["salaires +20-30 %, EDF renationalisée","préférence communautaire","départ des étrangers délinquants","pas de position","nucléaire, EDF publique","préférence européenne dans l'armement : pas de position sur l'effort militaire"],"S":{"lcp":["LCP, annonce de candidature","https://lcp.fr/actualites/natacha-polony-annonce-sa-candidature-a-l-election-presidentielle-443808","2026-10-14"],"sr":["Sud Radio, entretien (avant la déclaration)","https://www.sudradio.fr/sud-radio/natacha-polony-je-lance-un-appel-aux-orphelins-de-la-politique","2026-09-15"],"pc":["Pleinchamp, N. Polony et l'agriculture","https://www.pleinchamp.com/actualite/natacha-polony-candidate-a-l-elysee-avec-l-agriculture-comme-champ-de-bataille","2026-10-14"],"eu":["Euronews, candidature","https://fr.euronews.com/2026/10/14/france-natacha-polony-officialise-sa-candidature-a-la-presidentielle","2026-10-14"]},"src":{"eco":["lcp"],"ent":["lcp"],"fis":["sr"],"fin":["sr"],"def":["eu"],"eur":["pc"],"etr":["sr"],"imm":["sr"],"ecol":["sr"]},"t":{"eco":["[D] salaires +20 à 30 % ; « état d'urgence de la production »"],"ent":["[D] priorité à la production française ; nouvelle loi Egalim"],"fis":["[D] taxe sur les superprofits des énergéticiens"],"fin":["[D] réforme de l'État, sans chiffrage"],"def":["[D] préférence européenne dans l'armement"],"eur":["[D] préférence communautaire ; clauses miroirs"],"etr":["[D] rapport de force avec les États-Unis"],"imm":["[D] départ des étrangers qui enfreignent les règles"],"ecol":["[D] renationalisation d'EDF ; soutien au nucléaire"]}},
- {"id":"branco","n":"Juan Branco","p":"Les Ruches","b":"div","st":"Déclaré le 19/12/2025","pr":"Projet en ligne de plus de 300 propositions","s":[-4,4,-1,-3,-1,null],"cf":"élevée","j":["ISF, annulation partielle de dette, nationalisations","référendum de sortie","régularisation sur critères","police municipalisée, garde à vue de 24 h","nationalisation de l'électricité","pôle public de l'armement : pas de position sur l'effort militaire"],"S":{"a":["Les Ruches, projet","https://ruches.org/le-projet","non daté"]},"src":{},"t":{"eco":["[P] SMIC à 1 500 € nets"],"ent":["[P] salariés dans les CA ; 75 % des appels d'offres aux entreprises nationales"],"fis":["[P] rétablissement de l'ISF ; taxe sur les transactions financières"],"fin":["[P] annulation partielle de la dette ; circuit du Trésor"],"ret":["[P] régimes alignés ; RSA sans condition dès 18 ans"],"edu":["[P] université gratuite ; fin de Parcoursup"],"san":["[P] service public de santé universel"],"def":["[P] pôle public de l'armement"],"eur":["[P] référendum sur la sortie de l'UE et de l'euro"],"etr":["[P] référendum sur la sortie de l'OTAN"],"imm":["[P] regroupement familial conditionné ; régularisations sur critères"],"sec":["[P] police municipalisée ; procureur élu"],"ecol":["[P] nationalisation du marché de l'électricité"],"inst":["[P] RIC ; suppression du Premier ministre ; septennat"],"num":["[P] transparence des algorithmes ; indépendance numérique"]}},
- {"id":"lalanne","n":"Francis Lalanne","p":"France Libre","b":"div","st":"Déclaré le 19/08/2026","pr":"Déclarations","S":{"a":["Brussels Signal","https://brusselssignal.eu/2026/08/french-singer-turned-activist-francis-lalanne-announces-2027-presidential-run/","2026-08-20"]},"src":{},"t":{"eur":["[D] sortie de l'UE et retour au franc"],"etr":["[D] sortie de l'OTAN"],"sec":["[D] abrogation des lois Pleven, Gayssot et Avia"],"inst":["[D] RIC"]}},
- {"id":"riner","n":"Teddy Riner","p":"Sans étiquette","b":"div","st":"Déclaré le 09/11/2026 (vidéo sur les réseaux sociaux et entretien au Parisien)","pr":"Pas de programme ; son conseiller Philippe Veran annonce un programme de 585 propositions, non publié (LCP, 13/11/2026)","S":{"yh13":["AFP (Yahoo Actualités), premier déplacement de campagne","https://fr.news.yahoo.com/pr%C3%A9sidentielle-2027-premier-d%C3%A9placement-campagne-230253360.html","2026-11-13"],"a":["Actumag, annonce de candidature","https://www.actumag.fr/2026/11/09/des-tatamis-a-lelysee-teddy-riner-officialise-sa-candidature-surprise-pour-la-presidentielle-2027","2026-11-09"],"fj":["France-Jeunes, annonce de candidature","https://france-jeunes.net/actualites/teddy-riner-candidat-presidentielle-2027-annonce-authentique-beaucoup-ont-prise-fausse/","2026-11-09"],"rt":["Reuters (Boursorama), point sur les candidatures","https://www.boursorama.com/actualite-economique/actualites/france-le-pen-et-melenchon-s-installent-dans-la-course-a-l-elysee-embouteillage-a-leur-suite-bb903935e024d11a3fac476d27885ecb","2026-11-09"]},"src":{"eco":["fj"],"ent":["fj"],"fin":["fj"],"ret":["a"],"etr":["fj"],"inst":["rt"],"san":["yh13"]},"t":{"san":["[D] fait de la santé une priorité ; premier déplacement de campagne le 13 novembre aux urgences pédiatriques de l'hôpital Delafontaine (Saint-Denis), à l'écoute des soignants, sans mesure détaillée"],"eco":["[D] allègements de charges pour rapprocher le salaire net du brut"],"ent":["[D] sortir du « carcan figé des 35 heures » sans les remettre en cause"],"fin":["[D] « dépenser moins et réinjecter mieux », sans chiffrage"],"ret":["[D] réforme combinant répartition et incitation à la capitalisation"],"etr":["[D] relation « ferme » avec Donald Trump, sans précision"],"inst":["[D] candidature sans étiquette, « ni de droite, ni de gauche »"]}},
- {"id":"villepin","n":"Dominique de Villepin","p":"La France humaniste","b":"div","st":"Déclaré le 20/11/2026 (conférence de presse à Paris)","pr":"Pas de programme présidentiel ; texte « Big bang - la règle républicaine » (site du parti, 28/08/2026)","S":{"a":["LCP, déclaration de candidature (conférence de presse du 20 novembre)","https://lcp.fr/actualites/presidentielle-2027-dominique-de-villepin-officiellement-candidat-a-l-elysee-445372","2026-11-20"],"lcp28":["LCP, texte « Big bang - la règle républicaine »","https://lcp.fr/actualites/presidentielle-2027-dominique-villepin-veut-une-nouvelle-abolition-des-privileges-et-un","2026-08-28"]},"src":{"fis":["lcp28"],"fin":["a","lcp28"],"ret":["a"],"inst":["a","a"]},"t":{"fis":["[P] ne conserver que neuf grands impôts, dont un impôt unique sur le patrimoine ; taux unique de CSG à assiette élargie ; extinction progressive de toutes les niches fiscales et sociales"],"fin":["[D] première mesure annoncée : redresser les comptes publics selon une « trajectoire pluriannuelle »","[P] ramener le déficit public à 3 % du PIB d'ici la fin du quinquennat par une forte baisse des dépenses"],"ret":["[D] écarte une réforme des retraites annoncée par un seul candidat et privilégie la concertation"],"inst":["[D] veut une présidence « arbitre » et une « démocratie du consentement » (conventions citoyennes, conférences sociales)","[D] écarte toute primaire de la droite et du centre"]}},
- {"id":"lassalle","n":"Jean Lassalle","p":"Résistons","b":"div","st":"Non confirmée au 08/10/2026","pr":"Déclarations","S":{"a":["Pleinchamp, J. Lassalle","https://www.pleinchamp.com/actualite/jean-lassalle-agriculteurs-reprenez-vos-reves.-parce-que-les-reves-ca-permet-de-sortir-du-cauchemar","2026-10-08"]},"src":{},"t":{"ent":["[D] SMIC pour le conjoint d'agriculteur au foyer"],"edu":["[D] investissement dans les lycées agricoles"]}},
- {"id":"markovic","n":"Mira Markovic","p":"Parti animaliste","b":"div","st":"Présentée le 02/10/2026","pr":"Objectifs du parti","S":{"a":["Parti animaliste","https://www.parti-animaliste.fr","non daté"]},"src":{},"t":{"ecol":["[P] consommation de produits animaux −40 % d'ici 2030 (objectif du parti)"]}},
- {"id":"mathieu","n":"Benoît Mathieu","p":"Indépendant","b":"div","st":"Déclaré en mars 2026","pr":"Programme collaboratif","S":{"a":["Sud Radio, portrait","https://www.sudradio.fr/sud-radio/presidentielle-2027-un-professeur-sillonne-la-france-a-velo-en-quete-des-500-parrainages","2026-05-06"]},"src":{},"t":{"inst":["[D] conventions citoyennes tirées au sort"]}},
- {"id":"egger","n":"Clara Egger","p":"Solution démocratique","b":"div","st":"Maintien non vérifié","pr":"RIC constituant (2022)","S":{"a":["Solution démocratique","https://solutiondemocratique.substack.com/p/premieres-retombees-medias-pour-notre","2026-04-26"]},"src":{},"t":{"inst":["[H] RIC constituant (2022)"]}},
- {"id":"mikolajczak","n":"Antoine Mikolajczak","p":"Équinoxe","b":"div","st":"Déclaré le 27/06/2026","pr":"Trois priorités, sans mesure détaillée","t":{}},
- {"id":"durif","n":"Sylvain Durif","p":"—","b":"div","st":"Déclaré le 23/08/2026","pr":"Aucune mesure publiée","t":{}},
- {"id":"mlekuz","n":"Manolo Mlekuz","p":"—","b":"div","st":"Déclaré","pr":"Aucune mesure publiée","t":{}},
- {"id":"legendre","n":"Jean-François Legendre","p":"À nous maintenant","b":"div","st":"Déclaré","pr":"Aucune information","t":{}}
-],
-POLLS:{"rule":"Chaque écart est calculé dans une seule hypothèse d'une seule enquête, sur une même liste de candidats. Les scores de David Lisnard dans des enquêtes ou des hypothèses différentes ne forment pas une série temporelle : aucune moyenne ni courbe ne les relie.","polls":[{"id":"toluna1119","inst":"Toluna Harris Interactive","com":"M6, RTL et L'Express","terrain":"18-19 novembre 2026","end":"2026-11-19","pub":"2026-11-23","n":"2 088 inscrits sur les listes électorales, extraits d'un échantillon de 2 378 personnes de 18 ans et plus ; en ligne, méthode des quotas et redressement","marge":"±1,4 à ±2,9 points au premier tour, ±2,9 à ±3,0 points au second tour (rapport)","src":[["Rapport Toluna Harris Interactive, baromètre vague 10 (PDF)","https://tolunacorporate.com/wp-content/uploads/2026/11/Rapport-Toluna-Barometre-Presidentielle-2027-Vague-10-M6-RTL-LExpress-23-novembre-2026.pdf"],["Toluna, « Intentions de vote à l'élection présidentielle 2027 - Vague 10 »","https://tolunacorporate.com/fr/intentions-de-vote-a-lelection-presidentielle-2027-vague-10/"]],"hyps":[{"label":"H1 : Attal et Philippe candidats","scores":{"lepen":31,"melenchon":18,"glucksmann":11,"lisnard":11,"philippe":9,"attal":4,"retailleau":4,"riner":4,"zemmour":3,"arthaud":1,"roussel":1,"tondelier":1,"villepin":1,"dupontaignan":1},"note":"Rapport, p. 13."},{"label":"H2 : Philippe candidat unique du centre","scores":{"lepen":31,"melenchon":19,"glucksmann":11,"lisnard":11,"philippe":10,"retailleau":4,"zemmour":4,"riner":4,"villepin":2,"arthaud":1,"roussel":1,"tondelier":1,"dupontaignan":1},"note":"Rapport, p. 16."},{"label":"H3 : Attal candidat unique du centre","scores":{"lepen":30,"melenchon":19,"lisnard":12,"glucksmann":11,"attal":7,"retailleau":5,"riner":5,"zemmour":4,"tondelier":2,"villepin":2,"arthaud":1,"roussel":1,"dupontaignan":1},"note":"Rapport, p. 19."}],"duels":[["lepen",65,"melenchon",35]],"note":"Trois hypothèses qui diffèrent par l'offre du centre ; David Lisnard obtient 11 % dans H1 et H2 et 12 % dans H3, scores issus d'hypothèses différentes qui ne se comparent pas entre eux. Il devance Bruno Retailleau dans les trois. Seul duel chiffré : Le Pen-Mélenchon (p. 25). Teddy Riner est testé pour la première fois dans ce baromètre. Totaux à 100 % dans chaque hypothèse."},{"id":"ifopsud1104","inst":"Ifop-Fiducial","com":"Sud Radio","terrain":"2-4 novembre 2026","end":"2026-11-04","pub":"2026-11-20","n":"1 834 inscrits sur les listes électorales, extraits d'un échantillon de 1 978 personnes de 18 ans et plus ; questionnaire auto-administré en ligne","marge":"Non précisée pour cet effectif dans la notice (±2,2 points à 50 % pour 2 000 répondants selon le tableau de la notice)","src":[["Notice de la Commission des sondages n° 10392 (PDF)","http://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10392-pres-iv-ifop-sud-radio-20-novembre.pdf"],["Sud Radio, « Le Pen au-dessus du lot, Philippe seul résistant face à Mélenchon »","https://www.sudradio.fr/sud-radio/presidentielle-2027-le-pen-au-dessus-du-lot-philippe-seul-resistant-face-a-melenchon"]],"hyps":[{"label":"H1 : Philippe, candidat unique de la droite et du centre","scores":{"lepen":37,"philippe":19,"melenchon":18,"glucksmann":13,"zemmour":5,"roussel":3,"tondelier":3,"dupontaignan":1.5,"arthaud":0.5},"note":"Ne se prononcent pas : 32 %."},{"label":"H2 : Retailleau, candidat unique de la droite et du centre","scores":{"lepen":38,"melenchon":18,"glucksmann":17,"retailleau":14,"zemmour":4,"tondelier":3.5,"roussel":3,"dupontaignan":2,"arthaud":0.5},"note":"Ne se prononcent pas : 34,4 %."},{"label":"H3 : Lisnard, candidat unique de la droite et du centre","scores":{"lepen":37,"glucksmann":18,"melenchon":17,"lisnard":14,"zemmour":4,"roussel":3.5,"tondelier":3.5,"dupontaignan":2,"arthaud":1},"note":"Ne se prononcent pas : 33,2 %."},{"label":"H4 : Attal, candidat unique de la droite et du centre","scores":{"lepen":38,"melenchon":18,"glucksmann":16,"attal":13,"zemmour":5,"dupontaignan":3,"roussel":3,"tondelier":3,"arthaud":1},"note":"Ne se prononcent pas : 34,6 %."}],"duels":[],"note":"Enquête publiée le 20 novembre, mais dont le terrain (2-4 novembre) est antérieur à celui des autres enquêtes de la liste. Quatre hypothèses de candidature unique de la droite et du centre, chacune sans les trois autres candidats de ce bloc : David Lisnard y obtient 14 % (H3), comme Retailleau dans H2 ; ces scores relèvent d'hypothèses différentes et ne se comparent pas entre eux. Lisnard n'est testé que dans H3. Aucun duel de second tour. Scores lus sur la notice de la Commission des sondages (totaux à 100 %)."},{"id":"ifopfid1116","inst":"Ifop-Fiducial","com":"TF1, LCI, Le Figaro et Sud Radio","terrain":"13-16 novembre 2026","end":"2026-11-16","pub":"2026-11-18","n":"1 690 inscrits sur les listes électorales, extraits d'un échantillon de 1 823 personnes de 18 ans et plus ; questionnaire auto-administré en ligne, méthode des quotas","marge":"Indicative : ±1,5 point pour un score de 10 % sur 1 500 répondants (rapport, p. 2)","src":[["Ifop, « Petit-déjeuner électoral : intentions de vote et déterminants du vote » (PDF)","https://www.ifopgroup.com/wp-content/uploads/2026/11/122919-petit-dejeuner-electoral-intentions-de-vote-et-determinants-du-vote.pdf"],["Ifop, « Les intentions de vote à l'élection présidentielle 2027 »","https://www.ifopgroup.com/article/les-intentions-de-vote-a-lelection-presidentielle-2027/"],["Sud Radio, « Présidentielle 2027 : le duel Le Pen-Mélenchon se dessine »","https://www.sudradio.fr/sud-radio/presidentielle-2027-le-pen-et-melenchon-qualifies-dans-tous-les-scenarios-la-droite-et-le-centre-disperses"]],"hyps":[{"label":"H1 : liste élargie avec Riner, Villepin, Ruffin et Polony","scores":{"lepen":32,"melenchon":17,"philippe":10,"glucksmann":8,"lisnard":8,"attal":4.5,"retailleau":4,"riner":4,"zemmour":3,"ruffin":2,"tondelier":2,"roussel":1.5,"dupontaignan":1.5,"polony":1},"other":{"Dominique de Villepin":1.5},"note":"Rapport, p. 5. Nathalie Arthaud non testée dans cette hypothèse."},{"label":"H2 : Philippe, Attal, Retailleau et Lisnard candidats","scores":{"lepen":34,"melenchon":19,"philippe":11,"glucksmann":10,"lisnard":9,"attal":4,"retailleau":4,"zemmour":3,"tondelier":2.5,"roussel":1.5,"dupontaignan":1.5,"arthaud":0.5},"note":"Rapport, p. 6 (scénario de référence)."},{"label":"H3 : Philippe, Retailleau et Lisnard (sans Attal)","scores":{"lepen":35,"melenchon":19.5,"philippe":12,"glucksmann":10,"lisnard":10,"retailleau":4,"zemmour":3,"roussel":2.5,"tondelier":2.5,"dupontaignan":1.5},"note":"Rapport, p. 7. Nathalie Arthaud non testée dans cette hypothèse."},{"label":"H4 : Attal, Retailleau et Lisnard (sans Philippe)","scores":{"lepen":35,"melenchon":19,"glucksmann":11,"lisnard":11,"attal":9,"retailleau":5,"zemmour":3,"tondelier":2.5,"roussel":2,"dupontaignan":2,"arthaud":0.5},"note":"Rapport, p. 8."},{"label":"H5 : Philippe et Lisnard (sans Attal ni Retailleau)","scores":{"lepen":34,"melenchon":19.5,"philippe":14,"lisnard":12,"glucksmann":11,"zemmour":3,"tondelier":2.5,"roussel":2,"dupontaignan":1.5,"arthaud":0.5},"note":"Rapport, p. 9."},{"label":"H6 : Philippe et Retailleau (sans Attal ni Lisnard)","scores":{"lepen":36,"melenchon":19,"philippe":15,"glucksmann":11.5,"retailleau":7,"zemmour":3.5,"tondelier":3,"roussel":2.5,"dupontaignan":2,"arthaud":0.5},"note":"Lisnard non testé. Rapport, p. 10."}],"duels":[],"note":"David Lisnard obtient de 8 à 12 % dans les cinq hypothèses où il est testé, devant Bruno Retailleau dans les quatre qui testent les deux (8 contre 4, 9 contre 4, 10 contre 4 et 11 contre 5 %). Aucun duel de second tour chiffré n'est publié ; Le Pen et Mélenchon sont qualifiés dans toutes les hypothèses. Scores lus sur le rapport PDF (p. 5 à 11), totaux vérifiés à 100 %. Autres résultats (hypothèse H2) : 44 % des électeurs de Lisnard se disent sûrs de leur choix (voir onglet Opinion) ; ses électeurs jugent déterminantes la réduction de la dette (87 %), la sécurité (83 %) et la maîtrise des impôts (75 %) (p. 16). Reports en cas d'absence (p. 13) : sans Retailleau, ses électeurs iraient à 39 % vers Lisnard, 33 % vers Le Pen et 28 % vers Philippe ; sans Lisnard, les siens iraient à 30 % vers Retailleau, 20 % vers Philippe, 19 % vers Le Pen et 10 % vers Zemmour. Ces reports déclarés ne prédisent pas les reports réels. Profil de l'électorat de Lisnard (p. 12) : lecture du graphique incertaine, non reprise."},{"id":"yougov1117","inst":"YouGov","com":"Le HuffPost","terrain":"12-17 novembre 2026","end":"2026-11-17","pub":"2026-11-17","n":"1 030 personnes de 18 ans et plus, dont 952 inscrites sur les listes électorales ; en ligne, panel YouGov France ; intentions de vote calculées sur les « votants décidés » (bases pondérées de 608 à 661 selon le scénario)","marge":"Non indiquée dans le document","src":[["YouGov pour Le HuffPost, résultats « Intentions de vote à l'élection présidentielle 2027 – Novembre 2026 » (PDF)","https://ygo-assets-websites-editorial-emea.yougov.net/documents/R%C3%A9sultats_YouGov_pour_le_HuffPost_Intentions_de_vote_Novembre_2026_17.11.2026.pdf"]],"hyps":[{"label":"Scénario principal : Philippe, Attal, Retailleau et Lisnard candidats","scores":{"lepen":32,"melenchon":19,"glucksmann":9,"lisnard":9,"philippe":8,"retailleau":6,"attal":5,"tondelier":4,"zemmour":3,"roussel":2,"dupontaignan":2,"arthaud":1},"note":"Base pondérée de 656 votants décidés."},{"label":"Scénario Attal (sans Philippe)","scores":{"lepen":34,"melenchon":19,"glucksmann":10,"lisnard":10,"retailleau":8,"attal":7,"tondelier":6,"zemmour":3,"roussel":2,"dupontaignan":1,"arthaud":1},"note":"Base pondérée de 653."},{"label":"Scénario Philippe (sans Attal)","scores":{"lepen":33,"melenchon":19,"glucksmann":10,"lisnard":10,"philippe":9,"retailleau":7,"tondelier":4,"zemmour":3,"roussel":3,"dupontaignan":2,"arthaud":1},"note":"Base pondérée de 652."},{"label":"Scénario Philippe unique (sans Retailleau, Attal, Tondelier ni Lisnard)","scores":{"lepen":40,"melenchon":22,"philippe":16,"glucksmann":12,"zemmour":4,"roussel":3,"dupontaignan":2,"arthaud":1},"note":"Lisnard non testé. Base pondérée de 608."},{"label":"Scénario complet avec Riner et Villepin","scores":{"lepen":32,"melenchon":17,"glucksmann":9,"lisnard":9,"philippe":7,"retailleau":6,"tondelier":5,"attal":4,"riner":3,"zemmour":3,"roussel":2,"dupontaignan":2,"arthaud":1},"other":{"Dominique de Villepin":2},"note":"Base pondérée de 661."}],"duels":[["philippe",46,"lepen",54],["glucksmann",42,"lepen",58],["melenchon",37,"lepen",63],["attal",45,"lepen",55],["philippe",61,"melenchon",39]],"note":"David Lisnard obtient 9 ou 10 % dans les quatre scénarios où il est testé, devant Bruno Retailleau dans chacun (6, 8, 7 et 6 %). Totaux arrondis pouvant ne pas faire exactement 100 %. Certitude d'aller voter publiée (69 % certains au premier tour) : c'est une mesure de participation, pas de solidité du choix. Aucune question de thèmes, de critères, de solidité du choix ni de composition de l'électorat de Lisnard dans le document. Duels : aucun n'inclut Lisnard ou Retailleau. Notice de la Commission des sondages non consultée."},{"id":"elabe1113","inst":"Elabe","com":"BFMTV et La Tribune Dimanche","terrain":"12-13 novembre 2026","end":"2026-11-13","pub":"2026-11-14","n":"1 500 personnes de 18 ans et plus, dont 1 391 inscrits sur les listes électorales ; en ligne, méthode des quotas ; intentions de vote calculées sur les inscrits déclarant une probabilité d'aller voter de 8 à 10 sur 10","marge":"1,1 à 3,5 points selon le résultat (rapport) ; 1,1 à 3,1 points selon la presse","src":[["Elabe, rapport « Les Français et l'élection présidentielle 2027 », novembre 2026 (PDF)","https://elabe.fr/fichier-pdf/13399-les-francais-et-lelection-presidentielle-2027/"],["Elabe, présentation de l'enquête","https://elabe.fr/presidentielle-2027-novembre/"]],"hyps":[{"label":"Cas 1 : Philippe, Tondelier et Villepin candidats","scores":{"lepen":33,"melenchon":17,"philippe":15,"glucksmann":13.5,"retailleau":6,"zemmour":4.5,"tondelier":3,"dupontaignan":3,"roussel":2,"arthaud":0.5},"other":{"Dominique de Villepin":2.5},"note":"Lisnard non testé. 11,5 % sans intention de vote."},{"label":"Cas 2 : Attal, Tondelier et Villepin candidats","scores":{"lepen":33,"melenchon":17.5,"glucksmann":14,"attal":10,"retailleau":9,"zemmour":4.5,"tondelier":3,"dupontaignan":2.5,"roussel":2.5,"arthaud":1},"other":{"Dominique de Villepin":3},"note":"Lisnard non testé. 14 % sans intention de vote."},{"label":"Cas 3 : Philippe et Attal candidats","scores":{"lepen":33,"melenchon":17.5,"glucksmann":13,"philippe":12,"retailleau":6,"attal":5.5,"zemmour":4,"tondelier":3.5,"dupontaignan":3,"roussel":2,"arthaud":0.5},"note":"Lisnard non testé. 12 % sans intention de vote."},{"label":"Cas 4 : Attal, Ruffin et Lisnard candidats","scores":{"lepen":32,"melenchon":17.5,"glucksmann":14,"lisnard":10.5,"attal":8.5,"retailleau":6,"zemmour":4,"ruffin":3,"dupontaignan":2.5,"roussel":1.5,"arthaud":0.5},"note":"Ni Philippe ni Tondelier. 12,5 % sans intention de vote."},{"label":"Cas 5 : Philippe et Lisnard candidats","scores":{"lepen":32.5,"melenchon":18.5,"glucksmann":13.5,"philippe":13,"lisnard":9,"retailleau":4,"zemmour":3.5,"dupontaignan":3,"roussel":2.5,"arthaud":0.5},"note":"Ni Attal, ni Tondelier, ni Ruffin. 12 % sans intention de vote."},{"label":"Cas 6 : liste large avec Philippe, Attal, Lisnard, Polony et Riner","scores":{"lepen":31,"melenchon":17,"glucksmann":10.5,"philippe":9.5,"lisnard":8,"riner":4.5,"attal":4,"retailleau":4,"zemmour":3,"tondelier":3,"dupontaignan":2,"polony":1.5,"roussel":1.5,"arthaud":0.5},"note":"Première hypothèse de ce baromètre testant Teddy Riner. 9,5 % sans intention de vote."}],"duels":[["melenchon",31.5,"lepen",68.5],["glucksmann",45,"lepen",55],["philippe",45,"lepen",55]],"note":"Quatrième vague du baromètre Elabe. David Lisnard obtient 10,5 % (cas 4, avec Attal), 9 % (cas 5, avec Philippe) et 8 % (cas 6, liste large), devant Retailleau dans les trois (6, 4 et 4 %). Scores relevés dans le tableau récapitulatif du rapport (chaque hypothèse totalise 100 %) ; un compte rendu de presse (Le Centrisme) attribue certains scores à d'autres cas : se reporter au rapport. Les évolutions publiées par l'institut se rapportent à des hypothèses différentes de la vague d'octobre et ne sont pas reprises. Solidité du choix publiée pour le cas 1 seulement, sans Lisnard (voir l'onglet Opinions) ; part de chaque électorat déclarant voter Lisnard publiée pour les cas 4 et 5. Duels : aucun n'inclut Lisnard ou Retailleau."},{"id":"owlesechos1110","inst":"OpinionWay","com":"Les Échos et Radio Classique (Prési-Track, vague 4)","terrain":"9-10 novembre 2026","end":"2026-11-10","pub":"2026-11-12","n":"982 personnes représentatives de la population française de 18 ans et plus, en ligne, méthode des quotas (selon Le Centrisme ; base des inscrits non précisée)","marge":"1,4 à 3,1 points (selon Le Centrisme)","src":[["Le Centrisme, compte rendu du sondage Prési-Track OpinionWay (presse, à vérifier)","http://www.lecentrisme.com/2026/11/presidentielle-2027-sondage-presi-track.html"],["21 News, « David Lisnard grimpe à 12 % » (presse, à vérifier : chiffres en partie divergents)","https://www.21news.be/presidentielle-2027-david-lisnard-grimpe-a-12-et-se-rapproche-du-second-tour/"]],"hyps":[{"label":"H1 : Philippe et Attal candidats","scores":{"lepen":35,"melenchon":17,"glucksmann":11,"philippe":11,"lisnard":10,"attal":4,"retailleau":4,"zemmour":4,"tondelier":3,"arthaud":1,"roussel":1,"dupontaignan":1},"note":"Total publié de 102 % (arrondis ou erreur de transcription) ; 14 % sans préférence. À vérifier sur le rapport."},{"label":"H2 : Attal seul au centre","scores":{"lepen":34,"melenchon":16,"glucksmann":13,"lisnard":12,"attal":10,"retailleau":6,"zemmour":3,"tondelier":3,"arthaud":1,"roussel":1,"dupontaignan":1},"note":"17 % sans préférence."},{"label":"H3 : Philippe seul au centre","scores":{"lepen":34,"melenchon":16,"glucksmann":12,"philippe":12,"lisnard":11,"retailleau":4,"tondelier":3,"zemmour":3,"roussel":2,"arthaud":1},"note":"Liste incomplète : le score de Nicolas Dupont-Aignan est absent du compte rendu ; 17 % sans préférence."}],"duels":[],"note":"Première vague de ce baromètre testant David Lisnard : 10, 12 et 11 % selon les hypothèses, devant Retailleau (4, 6 et 4 %). Rapport de l'institut et notice de la Commission des sondages non consultés : scores relevés dans la presse, à vérifier. Le compte rendu cite aussi 12 % pour Attal ou Philippe « seul candidat du camp présidentiel », sans liste complète (non repris comme hypothèse). Aucun duel de second tour testé ; aucune question de solidité du choix ni d'électorat de Lisnard publiée. Teddy Riner n'est pas testé."}],"history":[{"d":"2026-11-10","inst":"Cluster17","com":"Politico","v":"8 à 10 % (4 hypothèses, listes en partie connues par la presse)"},{"d":"2026-11-05","inst":"Toluna Harris Interactive","com":"M6 et RTL","v":"9 % (2 hypothèses)"},{"d":"2026-10-29","inst":"Ifop","com":"LCI","v":"7 à 9 % (3 hypothèses)"},{"d":"2026-10-22","inst":"Cluster17","com":"Politico","v":"8 % (1 hypothèse)"},{"d":"2026-10-22","inst":"Ipsos bva","com":"Le Parisien, avec CESI École d'ingénieurs","v":"6,5 % (1 hypothèse)"},{"d":"2026-10-21","inst":"Toluna Harris Interactive","com":"M6 et RTL","v":"7 et 8 % (2 hypothèses)"},{"d":"2026-10-22","inst":"OpinionWay","com":"CNEWS","v":"6 % (1 hypothèse)"},{"d":"2026-10-20","inst":"Ifop-Fiducial","com":"LCI, Le Figaro et Sud Radio","v":"5,5 et 7 % (2 hypothèses)"},{"d":"2026-10-16","inst":"Elabe","com":"BFMTV et La Tribune Dimanche","v":"5,5 et 6,5 % (2 hypothèses)"},{"d":"2026-10-15","inst":"Cluster17","com":"Le Point","v":"7 et 17 % (2 hypothèses)"},{"d":"2026-10-15","inst":"YouGov","com":"Le HuffPost","v":"4 % (1 hypothèse)"},{"d":"2026-10-14","inst":"OpinionWay","com":"CNEWS","v":"4 %"},{"d":"2026-10-14","inst":"Ifop-Fiducial","com":"LCI et Sud Radio","v":"6 % (1 hypothèse)"},{"d":"2026-09-29","inst":"Ifop","com":"LCI, Le Figaro, Sud Radio","v":"3,5 %"},{"d":"2026-09-21","inst":"YouGov","com":"Le HuffPost","v":"2 %"},{"d":"2026-09-16","inst":"Cluster17","com":"Politico","v":"5,2 %"},{"d":"2026-09-10","inst":"OpinionWay","com":"CNews","v":"2 % (3 hypothèses)"},{"d":"2026-09-01","inst":"Cluster17","com":"Le Point","v":"4,2 %"},{"d":"2026-08-28","inst":"Elabe","com":"BFMTV, La Tribune Dimanche","v":"3 et 3,5 % (2 hypothèses)"},{"d":"2026-07-09","inst":"Cluster17","com":"Le Point","v":"4,1 %"},{"d":"2026-06-24","inst":"Ifop","com":"LCI, Le Figaro, Sud Radio","v":"2 %"}],"historySrc":["sondages2027.fr, enquêtes testant David Lisnard (agrégateur)","https://sondages2027.fr/candidats/david-lisnard/"],"duelNote":"Aucun sondage d'intentions de vote de second tour publié n'a testé David Lisnard (dernier relevé : YouGov pour Le HuffPost, 12-17 novembre, cinq duels sans lui). Le baromètre Odoxa-Mascaret pour Public Sénat, la presse régionale et L'Obs (18-19 novembre, 1 005 personnes de 18 ans et plus, publié le 24 novembre) pose une autre question : la préférence entre Marine Le Pen et sept candidats, avec l'option « aucun des deux », choisie par 29 à 42 % des répondants selon le duel. David Lisnard y est préféré à Marine Le Pen (32 % contre 27 %), comme Édouard Philippe (35 % contre 31 %) ; ces préférences ne sont pas des intentions de vote et ne se comparent pas aux duels ci-dessous (Public Sénat, 24 novembre ; notice 10395 de la Commission des sondages)."},
-OPINION:{"intro":"Ce que les personnes interrogées déclarent : les thèmes qui comptent pour leur vote, l'importance de chaque critère dans leur choix, la solidité de ce choix, et la composition de l'électorat de David Lisnard. Ces réponses décrivent un état déclaré à une date ; elles ne mesurent ni les causes d'un changement de vote ni sa probabilité.","harris":{"inst":"Toluna Harris Interactive","com":"M6, RTL et L'Express","terrain":"18-19 novembre 2026","pub":"2026-11-23","n":"2 088 inscrits issus d'un échantillon de 2 378 personnes de 18 ans et plus ; en ligne, quotas et redressement","marge":"±1,4 à ±2,9 points","url":"https://tolunacorporate.com/wp-content/uploads/2026/11/Rapport-Toluna-Barometre-Presidentielle-2027-Vague-10-M6-RTL-LExpress-23-novembre-2026.pdf"},"priorities":{"q":"Thèmes qui compteront le plus pour votre vote au premier tour (jusqu'à cinq réponses)","page":29,"all":[["Pouvoir d'achat",59,"eco"],["Santé",40,"san"],["Immigration",36,"imm"],["Retraites",31,"ret"],["Impôts et fiscalité",29,"fis"],["Déficits et dette publics",28,"fin"],["Sécurité des personnes et des biens",25,"sec"],["Emploi",23,"ent"],["Éducation et formation",23,"edu"],["Inégalités",17,null],["Terrorisme",15,"sec"],["Environnement et développement durable",13,"ecol"],["Logement",13,null],["Guerre en Ukraine",12,"etr"],["Réforme des institutions",10,"inst"],["Égalité femmes-hommes",10,null],["Compétitivité des entreprises françaises",10,"ent"],["Politique étrangère",9,"etr"],["Europe",9,"eur"],["Prise en charge des personnes âgées",8,null],["Moralisation de la vie politique",7,"inst"],["Tensions au Proche et au Moyen-Orient",4,"etr"],["Développement du référendum",4,"inst"],["Décentralisation",2,"inst"]],"groups":{"Proches de LFI":[["Pouvoir d'achat",60],["Santé",42],["Inégalités",42],["Emploi",37],["Impôts et fiscalité",28]],"Proches du PS":[["Pouvoir d'achat",69],["Santé",47],["Retraites",34],["Inégalités",29],["Éducation et formation",26]],"Proches des Écologistes":[["Santé",40],["Environnement et développement durable",39],["Emploi",35],["Éducation et formation",35],["Pouvoir d'achat",34]],"Proches de Renaissance":[["Pouvoir d'achat",55],["Déficits et dette publics",34],["Santé",32],["Retraites",32],["Impôts et fiscalité",29]],"Proches de LR":[["Immigration",51],["Pouvoir d'achat",49],["Déficits et dette publics",44],["Impôts et fiscalité",43],["Sécurité des personnes et des biens",39]],"Proches du RN":[["Immigration",66],["Pouvoir d'achat",64],["Santé",37],["Retraites",33],["Sécurité des personnes et des biens",33]]},"groupNote":"Cinq premiers thèmes par proximité partisane (pages 31-32, vague du 18-19 novembre). Le texte extrait du rapport ne porte pas les libellés de parti : l'attribution suit l'ordre habituel du baromètre (LFI, PS, Écologistes, Renaissance, LR, RN) et reste à vérifier sur le PDF. Effectifs des sous-groupes non publiés : aucune marge propre n'est calculée et les écarts ne sont pas présentés comme significatifs."},"criteria":{"q":"Importance de chaque élément dans votre choix au premier tour (réponse « beaucoup »)","page":33,"all":[["Projet proposé",63],["Honnêteté du candidat",62],["Valeurs défendues",62],["Souhait de voir ce candidat gagner",61],["Présence de son candidat au second tour",58],["Prise en compte de ses préoccupations",57],["Idées nouvelles",56],["Capacité à battre Jean-Luc Mélenchon au second tour",56],["Empêcher la qualification de Jean-Luc Mélenchon",55],["Représentation de la France à l'étranger",51],["Capacité à rassembler",50],["Personnalité du candidat",48],["Empêcher la qualification d'un autre candidat",45],["Parti ou mouvement",43],["Capacité à battre Marine Le Pen au second tour",42],["Expérience et parcours",42],["Bilan du candidat",42],["Empêcher la qualification de Marine Le Pen",40],["Personnalités qui le soutiennent",33],["Notoriété du candidat",33],["Score dans les sondages",29]],"groups":{"Proches de LFI":[["Empêcher la qualification de Marine Le Pen",70],["Présence de son candidat au second tour",68],["Projet proposé",64],["Souhait de voir ce candidat gagner",64],["Capacité à battre Marine Le Pen au second tour",64]],"Proches du PS":[["Honnêteté du candidat",71],["Projet proposé",69],["Empêcher la qualification de Marine Le Pen",62],["Valeurs défendues",62],["Prise en compte de ses préoccupations",58]],"Proches des Écologistes":[["Honnêteté du candidat",64],["Projet proposé",63],["Prise en compte de ses préoccupations",59],["Valeurs défendues",56],["Souhait de voir ce candidat gagner",50]],"Proches de Renaissance":[["Capacité à battre Jean-Luc Mélenchon au second tour",75],["Honnêteté du candidat",69],["Valeurs défendues",65],["Souhait de voir ce candidat gagner",64],["Capacité à battre Marine Le Pen au second tour",64]],"Proches de LR":[["Empêcher la qualification de Jean-Luc Mélenchon",77],["Capacité à battre Jean-Luc Mélenchon au second tour",75],["Souhait de voir ce candidat gagner",70],["Valeurs défendues",68],["Honnêteté du candidat",67]],"Proches du RN":[["Empêcher la qualification de Jean-Luc Mélenchon",77],["Présence de son candidat au second tour",75],["Capacité à battre Jean-Luc Mélenchon au second tour",74],["Souhait de voir ce candidat gagner",74],["Projet proposé",70]]},"groupNote":"Cinq premiers critères par proximité partisane (pages 34-35, vague du 18-19 novembre). Le rapport présente six blocs sans libellé de parti dans le texte extrait ; leur attribution suit l'ordre habituel du baromètre (LFI, PS, Écologistes, Renaissance, LR, RN) et reste à vérifier sur le PDF. Pour l'ensemble (p. 33), l'appariement des libellés et des valeurs a été reconstitué à partir du texte extrait (valeurs décroissantes) et reste lui aussi à vérifier. Effectifs non publiés."},"certainty":{"inst":"Ifop-Fiducial","com":"TF1, LCI, Le Figaro et Sud Radio","terrain":"13-16 novembre 2026","url":"https://www.ifopgroup.com/wp-content/uploads/2026/11/122919-petit-dejeuner-electoral-intentions-de-vote-et-determinants-du-vote.pdf","base":"Inscrits exprimant une intention de vote, hypothèse H2 (Philippe, Attal, Retailleau et Lisnard candidats)","all":[69,31],"byCand":[["zemmour",95,5],["lepen",88,12],["melenchon",85,15],["retailleau",59,41],["dupontaignan",52,48],["attal",47,53],["philippe",47,53],["lisnard",44,56],["glucksmann",41,59],["tondelier",35,65],["roussel",29,71]],"note":"Enquête Ifop-Fiducial des 13-16 novembre, qui remplace Elabe (12-13 novembre) : même question (« sûr de son choix » ou non), terrain plus récent, et première mesure publiée pour l'électorat de David Lisnard (44 % sûrs de leur choix). Part « peut encore changer » calculée comme complément de la part « sûr » publiée (rapport, p. 14) ; les valeurs de Lisnard, Le Pen, Mélenchon, Philippe, Attal et Glucksmann sont confirmées par Sud Radio. Effectifs des électorats non publiés, à lire avec prudence, surtout pour les petits candidats. Mesure distincte, à ne pas confondre : Toluna Harris Interactive (19-21 octobre) publie un potentiel électoral sur l'ensemble des inscrits (note de 0 à 10) ; 6 % se disent certains de voter pour Lisnard (10) et 43 % certains de ne pas voter pour lui (0)."},"lisnardElectorate":{"inst":"Elabe","terrain":"12-13 novembre 2026","url":"https://elabe.fr/fichier-pdf/13399-les-francais-et-lelection-presidentielle-2027/","rows":[["Sympathisants Renaissance et alliés (total)",14,10],["Sympathisants de droite (total)",44,42],["dont sympathisants LR",27,23],["Sympathisants RN et souverainistes (total)",3,4],["Sans préférence partisane",13,10],["Électeurs LR, DVD, UDI aux législatives 2024",32,31],["Électeurs Ensemble aux législatives 2024",19,13],["Électeurs de V. Pécresse au 1er tour 2022",37,33],["Électeurs d'E. Macron au 1er tour 2022",18,14],["Électeurs d'É. Zemmour au 1er tour 2022",12,10],["Abstentionnistes et autres votes au 1er tour 2022",11,12]],"cols":["Cas 4 (avec Attal et Ruffin)","Cas 5 (avec Philippe)"],"note":"Enquête de novembre, qui remplace celle des 14-16 octobre (même question, même institut). Part de chaque groupe qui déclare voter Lisnard (rapport, p. 39 et 41), et non poids de chaque groupe parmi ses électeurs ; effectifs des sous-groupes non publiés, à lire avec prudence. Les deux colonnes viennent de deux hypothèses différentes de la même enquête et ne se comparent pas comme une évolution. Les lignes « sympathisants de gauche » et « électeurs RN aux législatives 2024 » n'ont pas été relevées dans cette vague."},"change2022":{"inst":"BVA","com":"RTL et Orange","date":"2022-04-03","url":"https://presidentielle2022.bva-group.com/wp-content/uploads/2022/04/BVA-RTL-Orange-Presidentielle-2022-Bilan-quinquennat-E.-Macron.pdf","analysis":"https://presidentielle2022.bva-group.com/etudes-analyses/engagement-presidentielle2022-bruno-cautres-7/","q":"Évolution du jugement sur Emmanuel Macron pendant son premier mandat (archive 2022)","vals":[["Jugement devenu plus favorable",17],["Jugement devenu moins favorable",24]],"base":"1 638 adultes","note":"Archive d'un autre contexte : évolution d'image déclarée rétrospectivement, pas un changement de vote mesuré. Dans les réponses ouvertes, l'analyse de Bruno Cautrès relève surtout la gestion des crises sanitaire et ukrainienne chez ceux dont le jugement s'est amélioré. Non transposable à 2027."},"gap2027":"Pour 2027, aucune enquête consultée ne mesure encore les motifs d'un changement d'avis effectivement intervenu. Les priorités et les critères ne sont pas utilisés pour combler ce manque."},
-COMMS:{"intro":"Sept segments d'électorat retenus à partir de deux critères : la proximité de programme mesurée par la grille, et le poids électoral des candidats concurrents dans les hypothèses de sondage d'octobre 2026 qui testent David Lisnard. Chaque fiche propose un angle, une formulation de message, des preuves tirées de son programme, un contraste factuel et une réponse à l'objection la plus probable.","segments":[{"id":"lr","titre":"Électeurs de droite tentés par Bruno Retailleau","cible":"Électorat LR classique, attaché à l'ordre et à la maîtrise des comptes","pourquoi":"Proximité de programme la plus forte (94/100, sur 5 axes documentés). Dans les quatorze hypothèses des enquêtes en cours testant les deux, Retailleau obtient entre 4 et 7 % et Lisnard entre 7 et 12 % : c'est le premier réservoir. François Fillon a annoncé son soutien à Retailleau le 17 octobre.","angle":"Même fermeté régalienne, davantage de liberté économique et de décentralisation.","message":"La droite qui tient ses promesses sur l'ordre et qui ose enfin libérer le travail : moins de normes, moins d'impôts de production, plus de pouvoir aux territoires.","preuves":["[P] impôts de production divisés par deux","[P] contrat de travail unique et dérégulation large","[D] regroupement en une cinquantaine de provinces"],"contraste":"Le programme LR publié laisse encore la santé, la sécurité et l'Europe « à venir » ; Lisnard a déjà publié ses volets santé (suppression des ARS) et sécurité (majorité pénale à 16 ans).","objection":"« Diviser la droite fait perdre la droite. » Réponse proposée : défendre une primaire ouverte, que Lisnard réclame depuis sa déclaration, plutôt qu'une candidature imposée.","canal":"Presse régionale, réunions publiques avec des élus locaux, réseaux militants LR."},{"id":"centre","titre":"Électeurs de centre droit tentés par Édouard Philippe","cible":"Cadres, professions libérales, électeurs d'Emmanuel Macron en 2017","pourquoi":"Proximité de 80/100 et réservoir important (8 à 17 % dans les hypothèses des enquêtes en cours où il est testé avec Lisnard) : Philippe est le concurrent le plus fort parmi les candidats proches.","angle":"Les mêmes réformes de structure, menées plus loin et plus vite.","message":"Sortir des 35 heures et redresser les comptes, beaucoup le promettent ; la question est de savoir qui ira jusqu'au bout. 80 milliards d'économies dès la première année.","preuves":["[D] 80 Md€ d'économies la 1re année, 200 Md€ sur le quinquennat","[P] chèque-éducation et abrogation de la carte scolaire","[P] suppression de Parcoursup"],"contraste":"Philippe propose le non-remplacement d'un tiers des départs de fonctionnaires et un déficit à 2 % en fin de quinquennat ; Lisnard fixe un objectif d'économies plus élevé et plus rapide.","objection":"« Philippe est mieux placé pour battre Marine Le Pen. » Réponse proposée : rappeler que les sondages de second tour à six mois du scrutin ont un faible pouvoir prédictif, et porter le débat sur le contenu.","canal":"Presse économique, LinkedIn, tribunes, débats d'idées dans les grandes écoles."},{"id":"rn","titre":"Électeurs de droite tentés par Zemmour ou le RN pour l'immigration","cible":"Électeurs qui placent l'immigration et la sécurité en tête mais doutent du programme économique du RN","pourquoi":"Zemmour est proche sur la grille (90/100) mais faible dans les sondages (3 à 5 %) ; Marine Le Pen obtient 30,5 à 36 % dans les hypothèses d'octobre et de novembre testant Lisnard, mais s'éloigne de lui sur l'économie.","angle":"La fermeté migratoire sans quitter l'Europe ni sacrifier le sérieux budgétaire.","message":"Diviser par huit les titres de séjour et remplacer l'AME par une aide d'urgence, oui. Promettre la retraite à 62 ans sans dire qui paie, non.","preuves":["[P] titres de séjour divisés par huit, AME remplacée par une aide d'urgence","[P] fin de l'automaticité du droit du sol","[D] dérogation asile et immigration sur le modèle danois, sans sortie de l'UE"],"contraste":"Le RN propose un départ à 62 ans et une TVA à 5,5 % sur l'énergie ; Lisnard propose un socle de retraite à 65 ans et la baisse des cotisations.","objection":"« Seul le RN peut gagner. » Réponse proposée : insister sur la crédibilité d'exécution (expérience de maire de Cannes) plutôt que sur le rapport de force.","canal":"Télévision d'information, réseaux sociaux grand public, déplacements en zones périurbaines."},{"id":"pme","titre":"Artisans, commerçants, indépendants et dirigeants de PME","cible":"Dirigeants de TPE et PME, artisans, commerçants et indépendants","pourquoi":"Segment le plus aligné sur le cœur du programme (axe État et économie, note de +5).","angle":"Le candidat qui allège le coût du travail et la paperasse.","message":"Embaucher ne doit plus être un risque. Contrat unique, charges allégées, impôts de production divisés par deux.","preuves":["[P] contrat de travail unique","[P] charges patronales négatives pour l'embauche d'allocataires du RSA de longue durée","[P] suppression de la C3S et de la CVAE"],"contraste":"Philippe compense la baisse des impôts de production par la suppression de 50 Md€ d'aides aux entreprises ; vérifier avant diffusion si Lisnard prévoit une compensation, pour éviter un contraste inexact.","objection":"« Qui paie ? » Réponse proposée : relier chaque baisse à la trajectoire d'économies publiée, chiffre par chiffre.","canal":"Chambres de commerce et de métiers, fédérations professionnelles, presse spécialisée, LinkedIn."},{"id":"parents","titre":"Parents d'élèves des classes moyennes","cible":"Familles préoccupées par le niveau scolaire et la carte scolaire","pourquoi":"L'éducation est l'un des volets les plus détaillés du programme et distingue Lisnard des autres candidats de droite.","angle":"Rendre aux parents le choix de l'école et aux enseignants une meilleure rémunération.","message":"Vous devriez pouvoir choisir l'école de vos enfants. Fin de la carte scolaire, chèque-éducation, et des enseignants mieux payés.","preuves":["[P] abrogation de la carte scolaire et chèque-éducation","[P] certificat de fin de primaire conditionnant l'entrée au collège","[D] notes chiffrées rétablies ; évaluations en CM2, en sixième et en troisième","[P] salaires des enseignants +20 % en 5 ans, sous conditions"],"contraste":"Attal propose de fermer 100 collèges jugés les plus ségrégués ; Lisnard mise sur le libre choix des familles.","objection":"« Le chèque-éducation videra l'école publique. » Réponse proposée : préciser les règles d'affectation et les garanties pour les établissements publics, sur la base de documents de campagne.","canal":"Presse parentale, réunions en mairie, réseaux sociaux ciblés par centres d'intérêt (sans données personnelles)."},{"id":"territoires","titre":"Élus locaux et habitants des territoires ruraux","cible":"Maires, élus départementaux, habitants des déserts médicaux","pourquoi":"Maire de Cannes et défenseur d'une décentralisation radicale, Lisnard dispose d'une légitimité propre sur ce segment.","angle":"Rendre le pouvoir aux territoires et l'accès aux soins à ceux qui en sont privés.","message":"Ceux qui connaissent le terrain doivent décider. Moins d'administration à Paris, plus de pouvoir aux maires et aux régions, et un accès direct aux infirmiers et aux pharmaciens.","preuves":["[P] suppression des ARS au profit des préfets et des élus","[P] accès direct aux infirmiers, kinés et pharmaciens ; remboursement majoré en zones sous-dotées","[P] doublement des étudiants en médecine d'ici 2030"],"contraste":"Bertrand propose aussi de confier la santé de proximité aux régions ; l'angle distinctif de Lisnard est l'accès direct sans passage par le médecin.","objection":"« Supprimer les ARS, c'est désorganiser la santé. » Réponse proposée : expliquer qui reprend chaque mission et selon quel calendrier.","canal":"Congrès des maires, presse quotidienne régionale, réunions de canton."},{"id":"actifs","titre":"Jeunes actifs du secteur privé","cible":"25-40 ans salariés, qui financent les retraites sans croire en toucher une","pourquoi":"Le message « cotiser moins pour gagner plus » et la capitalisation leur sont directement adressés.","angle":"Gagner plus sur sa fiche de paie et construire sa propre retraite.","message":"Votre salaire net doit refléter votre travail. Cotiser moins pour gagner plus, et bâtir une retraite qui vous appartient.","preuves":["[D] « cotiser moins pour gagner plus »","[P] socle par répartition dès 65 ans, puis capitalisation","[P] suppression de Parcoursup ; doublement des étudiants en médecine"],"contraste":"Le RN maintient un départ à 62 ans avec une part de capitalisation ; Lisnard propose un socle à 65 ans et le transfert d'environ 40 % des cotisations vers des comptes individuels obligatoires.","objection":"« La capitalisation, c'est le risque des marchés. » Réponse proposée : préciser le niveau du socle garanti et le calendrier de transition.","canal":"Réseaux sociaux vidéo, podcasts, médias économiques grand public."}],"atouts":{"note":"Argumentaire partisan rédigé pour l'équipe de David Lisnard : il présente le point de vue de Nouvelle Énergie, pas une évaluation neutre. Il s'appuie uniquement sur les positions recensées dans le comparatif.","t":{"eco":"Baisser les cotisations augmente le salaire net sans alourdir le coût du travail pour l'employeur : le pouvoir d'achat vient du travail, pas d'une hausse du SMIC qui pèse sur l'emploi des moins qualifiés, ni d'un chèque financé par la dette.","ent":"Réécrire le Code du travail en donnant plus de poids aux accords d'entreprise sur le temps de travail rend la décision à ceux qui connaissent le terrain, et le contrat de travail unique met fin à l'opposition entre CDI protégés et CDD précaires. Les charges négatives rendent l'embauche d'un allocataire du RSA rentable : on finance le retour à l'emploi plutôt que l'inactivité.","fis":"Diviser par deux les impôts de production, qui frappent l'entreprise avant tout bénéfice, et ramener la CSG sur les revenus d'activité au niveau de celle des inactifs récompensent l'industrie et le travail. Une flat tax unique de 25 % sur les revenus fonciers et financiers, avec option pour le barème, et la levée du plafond du quotient familial rendent la fiscalité plus lisible pour les épargnants et les familles.","fin":"C'est l'un des rares programmes qui chiffre ses économies (80 Md€ la première année, 200 Md€ sur le quinquennat) au lieu de financer ses promesses par l'impôt ou la dette. La règle d'or sur le fonctionnement et une masse salariale publique réduite d'au moins 12 %, par l'automatisation des tâches administratives et le redéploiement d'agents vers le terrain, tiennent la dépense courante tout en remettant plus d'humains au contact des usagers.","ret":"Un socle par répartition réformé dès 65 ans, complété par un étage obligatoire de capitalisation, rend à chacun la propriété d'une partie de sa retraite et oriente l'épargne longue vers l'économie, avec un fonds souverain par défaut. La fin des régimes spéciaux et des règles communes au public et au privé, pénibilité comprise, rendent le système plus juste, tandis que le minimum vieillesse à 1 000 € protège les petites retraites et que l'effort porte d'abord sur les pensions les plus élevées.","edu":"Le chèque-éducation et la fin de la carte scolaire donnent aux familles modestes la liberté de choix que les familles aisées ont déjà, tandis que les notes chiffrées, les évaluations en CM2, en sixième et en troisième et le certificat de fin de primaire vérifient les fondamentaux. Des enseignants mieux payés sous conditions, des établissements de proximité dans les anciens cantons et des établissements disciplinaires de haut niveau avec internats portent la même exigence partout sur le territoire.","san":"Supprimer les ARS, c'est retirer une couche administrative entre les soignants et les patients. L'accès direct aux infirmiers, kinés et pharmaciens soigne plus vite là où les médecins manquent, et doubler les étudiants en médecine traite la pénurie à la racine.","def":"Réarmer tout de suite, et non à l'horizon d'une loi de programmation, répond à la réalité des menaces. La doctrine de puissance autonome garde la France maîtresse de ses choix tout en restant un allié fiable.","eur":"Obtenir des dérogations sur l'asile et l'immigration, comme le Danemark, permet de reprendre la main sans le risque économique d'une sortie de l'UE. Le traité de démocratisation répond au déficit démocratique européen au lieu de le subir.","etr":"Réviser l'accord de 1968 et sanctionner les pays qui refusent de reprendre leurs ressortissants transforme la diplomatie en levier concret sur l'immigration. Le soutien à l'Ukraine reste ferme : la fermeté ne s'arrête pas aux frontières.","imm":"Un objectif chiffré (titres de séjour divisés par huit) se vérifie, contrairement aux promesses vagues. Remplacer l'AME par une aide d'urgence soigne sans attirer, et la sortie de la CEDH n'est envisagée qu'en dernier recours, ce qui reste dans le cadre de l'État de droit.","sec":"La majorité pénale à 16 ans, les peines planchers pour les récidivistes et les travaux d'intérêt général apportent une sanction rapide et visible à la délinquance telle qu'elle est aujourd'hui. Isoler les casseurs dans des centres fermés, interdire les manifestations à risque grave et mieux sanctionner les dégradations protège la liberté de manifester de tous, comme l'interdiction des Frères musulmans s'attaque à l'islamisme à la source.","ecol":"Le nucléaire (réacteurs prolongés, nouveaux EPR, petits réacteurs), avec l'hydroélectricité et l'autoconsommation solaire, offre une électricité décarbonée et pilotable sans engager l'argent public dans un nouvel appel d'offres d'éolien en mer. Remplacer le principe de précaution par un principe de responsabilité, supprimer le DPE et récompenser la densification plutôt que geler le foncier permet d'innover et de construire au lieu de bloquer.","inst":"Le référendum sur tous les sujets rend la parole aux citoyens, le septennat et une cinquantaine de provinces donnent du temps et de la proximité à l'action publique, et un gouvernement commando resserré, jugé sur ses 200 premiers jours avec une session extraordinaire du Parlement à l'été 2027, engage les réformes sans attendre. Nouvelle Énergie revendique une ligne indépendante, sans gouverner ni avec les macronistes ni avec le RN, et une primaire ouverte de la droite et du centre pour désigner un candidat commun.","num":"Produire l'IA en France avant de la réguler, avec une structure franco-européenne d'innovation sur le modèle de la DARPA et des transferts de technologie exigés des fournisseurs étrangers, c'est la voie pour ne pas dépendre des États-Unis et de la Chine. La transparence des algorithmes, l'étiquetage des contenus générés par IA, la réversibilité dans la commande publique et des apprentissages sans machine à l'école gardent l'humain et la souveraineté au centre."}},"ralliements":{"intro":"Un désistement se négocie avec des arguments de fond (ce que le candidat retrouve chez Lisnard), une offre (ce qu'il obtient en se ralliant) et une réponse à son principal risque (perdre la face devant ses soutiens). Les convergences et divergences ci-dessous reprennent uniquement des positions recensées dans le comparatif. La proximité et les scores de sondage sont recalculés à chaque mise à jour.","realite":"Dans les hypothèses publiées depuis la mi-octobre qui testent les deux, Bruno Retailleau devance David Lisnard dans quatre cas sur trente-six ; Lisnard le devance dans vingt-neuf cas (Toluna Harris Interactive pour M6, RTL et L'Express, 18-19 novembre, 11 % contre 4 % dans deux hypothèses et 12 % contre 5 % sans Philippe ; Ifop-Fiducial pour TF1, LCI, Le Figaro et Sud Radio, 13-16 novembre, 8 % contre 4 % dans la liste élargie, 9 % contre 4 % dans le scénario de référence, 10 % contre 4 % sans Attal et 11 % contre 5 % sans Philippe ; YouGov pour Le HuffPost, 12-17 novembre, 9 % contre 6 % dans le scénario principal, 10 % contre 8 % sans Philippe, 10 % contre 7 % sans Attal et 9 % contre 6 % dans la liste complète ; Elabe pour BFMTV et La Tribune Dimanche, 12-13 novembre, 10,5 % contre 6 % avec Attal, 9 % contre 4 % avec Philippe et 8 % contre 4 % dans la liste large ; OpinionWay pour Les Échos et Radio Classique, 9-10 novembre, 10 % contre 4 %, 12 % contre 6 % et 11 % contre 4 %, scores relevés dans la presse ; Cluster17 pour Politico, 9-10 novembre, 10 % contre 5 % dans deux hypothèses et 8 % contre 5 % dans la liste large, listes en partie connues par la presse seulement ; Toluna Harris Interactive, 3-5 novembre, 9 % contre 5 % et 9 % contre 6 % ; Ifop pour LCI, 27-29 octobre, 7 % contre 4 % et 7,5 % contre 5 % ; Ifop, 12-14 octobre ; Toluna Harris Interactive, 19-21 octobre, 7 % contre 4 % et 8 % contre 5 % ; Ipsos bva, 21-22 octobre, 6,5 % contre 5,5 % ; Cluster17 pour Politico, 19-22 octobre, 8 % contre 7 %) et les deux sont à égalité dans trois autres (Cluster17, 14-15 octobre, 7 % chacun ; Ifop, 17-19 octobre, 5,5 % chacun ; OpinionWay, 21-22 octobre, 6 % chacun). Le rapport de force reste donc partagé. Les deux hommes ont déjeuné le 21 octobre et évoqué une candidature commune et une primaire, sans accord conclu ; selon Robert Ménard (Le JDD, 25 octobre), ils se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027, mais divergent sur le périmètre de la primaire et l'obligation de soutenir le vainqueur. Le 3 novembre sur BFMTV, chacun se dit le plus proche de l'autre ; Retailleau juge une primaire probable en début d'année 2027 et dit qu'à défaut de vote il ira « jusqu'au bout ». Le 8 novembre, Laurent Wauquiez (LR) demande à Philippe, Retailleau et Lisnard de se rencontrer sous quinze jours pour convenir d'une méthode de désignation d'un candidat commun avant Noël, de préférence une primaire. Le 10 novembre, Retailleau propose par courrier à Philippe, Attal et Lisnard une primaire les dimanches 31 janvier et 7 février 2027 ; le même jour, Gabriel Attal dit qu'il pourrait voter pour Retailleau ou Lisnard si l'un d'eux est le seul à pouvoir éviter un second tour Mélenchon-Le Pen. Les directeurs de campagne d'Attal, Retailleau et Lisnard doivent se réunir le 17 novembre sur les modalités et les dates de cette primaire (BFMTV, 11 novembre) ; l'entourage d'Édouard Philippe réitère le 12 novembre son refus d'y participer (Le Figaro). Le 13 novembre sur France 2, Retailleau souhaite une primaire ouverte, avec une participation de quelques euros, et demande aux participants une « forme de loyauté » envers le résultat sans obligation de défendre le programme du vainqueur (Entrevue). Le 17 novembre, les équipes d'Attal, Retailleau et Lisnard actent le principe d'une primaire ouverte à deux tours en janvier, avec une participation d'environ 2 € ; les dates, les parrainages et le périmètre restent à fixer, l'équipe de Lisnard refusant d'exclure Éric Zemmour à ce stade et celle d'Attal s'y opposant ; Édouard Philippe refuse toujours d'y participer (Entrevue, 18 novembre). Le 18 novembre, Lisnard juge la présence de Philippe « indispensable » et accepte Zemmour et Dupont-Aignan s'ils respectent les critères ; Retailleau estime qu'une participation de Zemmour ferait échouer la primaire et met en doute la volonté de Lisnard de la faire aboutir ; Philippe maintient son refus ; une nouvelle réunion des équipes est prévue la semaine suivante (AFP, Public Sénat). Un sondage Ifop pour Le Figaro sur la primaire (13-18 novembre, 996 personnes envisageant d'y participer parmi 2 542 inscrits) donne Attal 38 %, Lisnard 33 % et Retailleau 29 % sans Philippe, et Lisnard 29 %, Philippe 28 %, Attal 25 % et Retailleau 18 % avec lui ; chez les sympathisants LR, Retailleau 39 % et Lisnard 34 % (scénario avec Philippe). Ces intentions de vote à une primaire ne se comparent pas aux intentions de premier tour. Dans l'enquête Ifop-Fiducial des 13-16 novembre, sans Retailleau, 39 % de ses électeurs déclarent qu'ils se reporteraient sur Lisnard (33 % sur Le Pen, 28 % sur Philippe) ; sans Lisnard, 30 % des siens iraient à Retailleau. Le 19 novembre sur France 2, Gabriel Attal dit qu'il retirerait sa candidature si Lisnard était désigné par la primaire (PolitiqueMatin, à vérifier). Le 22 novembre, Lisnard déclare qu'il ne gouvernera pas avec le RN (Sud Radio, AFP) ; selon le titre d'un article d'Ouest-France du même jour, il ne participerait pas à une primaire sans Édouard Philippe. Le 25 novembre, selon le titre d'un article de BFMTV, Lisnard rejette un débat avec Philippe proposé à la place de la primaire. Additionner deux scores ne prédit pas le report réel des électeurs.","fiches":[{"c":"platret","scenario":"Le plus accessible","pourquoi":"Candidat de droite déclaré le 8 octobre, sans programme publié (livre annoncé en novembre) et non testé dans les sondages : il a peu de chances de réunir ses parrainages et cherchera à peser.","conv":[["sec","Les deux veulent interdire les Frères musulmans."],["imm","Forte baisse des titres de séjour des deux côtés."],["def","Réarmement accéléré pour l'un, immédiat pour l'autre."],["fin","Réduction de la dette et de la dépense publique."]],"div":[["ent","Platret défend le retour aux 39 heures ; Lisnard un contrat de travail unique et une dérégulation large.","Présenter la liberté de négocier le temps de travail dans l'entreprise comme le moyen d'y parvenir."],["inst","Platret veut un scrutin uninominal à un tour et un Conseil constitutionnel d'avant 1971 ; Lisnard le septennat et le référendum.","Proposer un groupe de travail commun sur les institutions plutôt qu'un arbitrage immédiat."]],"args":["Sur l'immigration, la sécurité et l'islamisme, vos priorités sont déjà dans le programme de Lisnard : les porter ensemble leur donne une chance d'être appliquées.","Lisnard dit disposer de 500 promesses de parrainage : votre engagement ne se perd pas dans une candidature qui risque de ne pas être sur le bulletin.","Votre livre de novembre peut devenir la contribution d'un allié plutôt que le programme d'un candidat isolé."],"gestes":["Reprendre dans le programme une ou deux mesures signées Platret (temps de travail, discipline à l'école) en les lui attribuant publiquement.","Lui confier la coordination d'un volet régalien de la campagne."],"message":"Nos combats sont les mêmes : l'ordre, la frontière, la lutte contre l'islamisme. Je préfère les gagner avec vous qu'en face de vous.","risque":"Faible poids électoral mesuré : le gain est d'abord symbolique (dynamique de rassemblement à droite)."},{"c":"bertrand","scenario":"Ralliement d'expérience","pourquoi":"Candidature confirmée le 27 août, sans programme publié et non testée dans les sondages d'octobre. Profil d'élu de terrain proche de celui de Lisnard.","conv":[["ret","Les deux veulent introduire la capitalisation."],["sec","Peines planchers et majorité pénale abaissée (15 ans pour Bertrand, 16 ans pour Lisnard)."],["imm","AME supprimée ou remplacée par une aide d'urgence."],["inst","Retour au septennat chez les deux (unique et par référendum pour Bertrand)."]],"div":[["eco","Bertrand met en avant le pouvoir d'achat des classes moyennes et a proposé en 2021 une prime garantissant 1 500 € nets ; Lisnard mise sur la baisse des cotisations.","« Cotiser moins pour gagner plus » répond au même objectif : faire du salaire net le cœur du message commun."],["inst","Bertrand transfère des compétences aux régions ; Lisnard veut une cinquantaine de provinces.","Mettre en avant l'objectif commun, la décentralisation, et renvoyer la carte à une concertation."]],"args":["Vous défendez les classes moyennes ; la baisse des cotisations est la mesure la plus directe pour augmenter leur salaire net.","Sur la sécurité, la retraite et l'immigration, vos positions et celles de Lisnard sont presque identiques : deux candidatures se neutralisent.","Le septennat que vous proposez figure aussi dans le programme de Lisnard : vous pouvez en faire une promesse commune."],"gestes":["Faire du septennat unique par référendum un engagement commun signé par les deux.","Lui confier le pilote d'un volet « pouvoir d'achat des classes moyennes » dans le programme."],"message":"Vous parlez aux classes moyennes, je veux leur rendre ce qu'elles gagnent. Ensemble, c'est une même promesse : travailler doit payer.","risque":"Notoriété supérieure à son poids sondagier actuel : il peut exiger plus qu'un rôle de soutien. Les écarts sur l'économie restent à documenter, faute de programme."},{"c":"retailleau","scenario":"Union de la droite (conditionnel)","pourquoi":"Proximité de programme la plus forte de toute la grille. Les deux ont évoqué le 21 octobre une candidature commune et une primaire, sans accord conclu ; selon Robert Ménard, ils se sont engagés à ne pas être candidats tous les deux d'ici avril 2027. Points ouverts : périmètre de la primaire (tous les candidats de droite pour Lisnard, présence de Philippe pour Retailleau) et charte de ralliement au vainqueur, que Lisnard ne veut pas obligatoire. Retailleau devance Lisnard dans quatre hypothèses sur trente-six depuis la mi-octobre (trois égalités, vingt-neuf cas inverses, dont les trois de Toluna Harris Interactive pour M6, RTL et L'Express des 18-19 novembre, de 11 à 12 % contre 4 à 5 %, les quatre d'Ifop-Fiducial pour TF1, LCI, Le Figaro et Sud Radio des 13-16 novembre, de 8 à 11 % contre 4 à 5 %, les quatre de YouGov pour Le HuffPost des 12-17 novembre, de 9 à 10 % contre 6 à 8 %, les trois d'Elabe pour BFMTV et La Tribune Dimanche des 12-13 novembre, de 8 à 10,5 % contre 4 à 6 %, les trois de Cluster17 pour Politico des 9-10 novembre, 10 % contre 5 % deux fois et 8 % contre 5 %, et les trois d'OpinionWay pour Les Échos et Radio Classique des 9-10 novembre, de 10 à 12 % contre 4 à 6 %) et dispose de l'appareil LR. Ce scénario ne devient crédible que si Lisnard passe durablement devant lui. Le 28 octobre, Lisnard salue l'idée de « primaire des démocrates » lancée par Gabriel Attal, projet que l'entourage de Retailleau juge « mort-né ». Le 3 novembre sur BFMTV, Retailleau juge une primaire probable en début d'année 2027, faute de quoi il ira « jusqu'au bout », et propose trois débats à Philippe, Attal et Lisnard ; Lisnard se dit le plus proche de lui, tout en soulignant sa participation aux gouvernements d'Emmanuel Macron. Le 6 novembre, selon Entrevue, Retailleau accepte le principe d'une primaire à tenir au plus tard dans la première quinzaine de février 2027, tandis qu'Édouard Philippe refuse d'y participer. Le 8 novembre, Laurent Wauquiez demande une rencontre des trois candidats de droite sous quinze jours et un candidat commun avant Noël. Le 10 novembre, Retailleau adresse à Lisnard, Philippe et Attal une proposition écrite de primaire les dimanches 31 janvier et 7 février 2027, avec une réunion des directeurs de campagne sous quinze jours. Une réunion des directeurs de campagne de Retailleau, Attal et Lisnard est annoncée pour le 17 novembre. Le 13 novembre, Retailleau demande aux participants de la primaire une « forme de loyauté » envers le résultat, sans obligation de défendre le programme du vainqueur, ce qui rapproche sa position de la liberté de soutien que réclame Lisnard. Le 14 novembre, Gérard Larcher invite Retailleau, Lisnard, Philippe et Attal à convenir d'une « méthode de départage » ; Retailleau juge que la primaire doit se faire même sans Philippe, qui accepte la réunion mais exclut d'y parler de primaire (15 novembre). Le 18 novembre, Retailleau juge qu'une participation de Zemmour ferait échouer la primaire et met en doute la volonté de Lisnard de la faire aboutir, tandis que Lisnard maintient un périmètre ouvert sous conditions. Dans l'enquête Ifop pour Le Figaro sur la primaire (13-18 novembre), Retailleau devance Lisnard chez les sympathisants LR (39 % contre 34 %, scénario avec Philippe), mais Lisnard le devance sur l'ensemble des participants potentiels (33 % contre 29 % sans Philippe, 29 % contre 18 % avec lui). Dans la même enquête Ifop-Fiducial, 39 % des électeurs de Retailleau déclarent qu'ils se reporteraient sur Lisnard en son absence (33 % sur Le Pen, 28 % sur Philippe), et 30 % des électeurs de Lisnard sur Retailleau dans le cas inverse ; Retailleau garde un électorat plus sûr de son choix (59 % contre 44 %).","conv":[["fin","Environ 200 Md€ d'économies sur le quinquennat des deux côtés (197 Md€ pour Retailleau)."],["imm","Fin de l'automaticité du droit du sol et prestations conditionnées."],["etr","Révision ou dénonciation de l'accord franco-algérien de 1968."],["ecol","Nucléaire prolongé, nouveaux EPR et suppression du principe de précaution."],["inst","Référendum élargi à tous les sujets ; primaire ouverte de la droite et du centre, sans obligation pour les perdants de défendre le programme du vainqueur."]],"div":[["ret","Départ possible dès 63 ans avec décote pour Retailleau ; socle par répartition dès 65 ans et bascule vers la capitalisation pour Lisnard.","Mettre en avant le capital retraite que les deux défendent."],["eur","Clause de sauvegarde constitutionnelle pour Retailleau ; dérogations sur le modèle danois pour Lisnard.","Deux chemins vers le même objectif : reprendre la main sur l'immigration sans quitter l'UE."],["inst","Périmètre de la primaire : ouvert à Éric Zemmour et Nicolas Dupont-Aignan sous conditions pour Lisnard ; pour Retailleau, la participation de Zemmour ferait échouer la primaire.","Fixer d'abord des critères d'accès communs (parrainages, charte), puis les appliquer à toutes les candidatures."]],"args":["Nos programmes convergent sur l'essentiel : deux candidatures de droite au même niveau laissent le second tour au RN et au centre.","Lisnard a déjà publié ses volets santé et sécurité ; le programme commun serait complet tout de suite.","La primaire ouverte que Lisnard réclame est le moyen le plus loyal de départager les deux sans division."],"gestes":["Proposer une primaire ouverte ou un départage sur une série de sondages convenue à l'avance.","Garantir la place de LR dans la future majorité et le gouvernement."],"message":"Nous voulons la même France. Ce qui nous sépare tient en une question : lequel de nous deux peut gagner. Laissons les électeurs de droite trancher, puis rassemblons-nous.","risque":"Un appel prématuré, avec des sondages défavorables, peut se retourner en demande de désistement de Lisnard au profit de Retailleau. Refuser la charte de ralliement peut être présenté comme un refus de l'union."},{"c":"dupontaignan","scenario":"Ralliement souverainiste","pourquoi":"Testé entre 1 et 3 % en octobre, candidat pour la quatrième fois : il peut chercher une sortie honorable.","conv":[["imm","Suppression du droit du sol par référendum et de l'AME."],["ecol","Nucléaire majoritaire et moins d'argent public pour les renouvelables (Lisnard ne financerait pas le dernier appel d'offres d'éolien en mer)."],["sec","Fermeté pénale et plus de moyens pour les forces de l'ordre."]],"div":[["eur","Dupont-Aignan veut un référendum sur le maintien dans l'UE et la sortie de Schengen ; Lisnard exclut la sortie de l'UE.","Ne pas transiger : présenter les dérogations danoises comme une souveraineté obtenue sans rupture."],["eco","Protectionnisme, impôt sur les très grandes fortunes et baisse de TVA chez Dupont-Aignan ; libéralisme chez Lisnard.","Chercher un terrain commun sur l'énergie moins chère et la commande publique, sans reprendre la fiscalité."],["def","Sortie du commandement intégré de l'OTAN contre « doctrine de puissance autonome ».","Mettre en avant l'autonomie stratégique, sans engagement sur l'OTAN."]],"args":["Sur l'immigration et le nucléaire, Lisnard porte vos combats avec une chance réelle de peser dans la recomposition de la droite.","La souveraineté par dérogation, sur le modèle danois, donne des résultats concrets sans attendre un référendum incertain.","Votre électorat attend un débouché : le diriger vers une candidature de droite de gouvernement plutôt que vers le RN."],"gestes":["Reprendre la mesure sur le prix de l'électricité si elle est compatible avec le cadrage budgétaire.","Associer Debout la France à un volet « souveraineté énergétique »."],"message":"Vous avez toujours défendu la nation et l'énergie française. Je vous propose de les défendre là où se décidera la majorité de demain.","risque":"Coût d'image élevé auprès des électeurs du centre et de la droite modérée à cause de l'écart sur l'Europe ; à réserver à un accord sans concession européenne."},{"c":"becht","scenario":"Ralliement libéral-réformateur","pourquoi":"Candidat sans parti déclaré le 24 septembre, sans programme ni score mesuré ; ancien membre de la majorité présidentielle, il peut ouvrir vers le centre-droit.","conv":[["ent","Contrat de travail unique chez les deux, et moins de normes."],["edu","Suppression de Parcoursup des deux côtés ; plus de pouvoir aux chefs d'établissement."],["num","Priorité à l'investissement souverain dans l'IA."]],"div":[["eur","Becht veut un « noyau dur » européen et davantage de fédéralisme ; Lisnard des dérogations nationales.","Insister sur l'objectif partagé d'une Europe plus démocratique (traité de démocratisation proposé par Lisnard)."],["ecol","Becht mise sur les carburants de synthèse ; Lisnard sur le nucléaire.","Présenter les deux comme complémentaires dans un mix décarboné."]],"args":["Le contrat de travail unique et la fin de Parcoursup figurent déjà dans le programme de Lisnard : vos réformes ont un porteur.","Lisnard offre ce que votre démarche n'a pas encore : une équipe, des parrainages et un programme complet.","Rallier un candidat de droite libéral élargit votre audience au-delà du centre."],"gestes":["Lui confier le volet « simplification et travail » ou « éducation ».","Ouvrir la plateforme participative de Becht à la campagne commune."],"message":"Vous voulez libérer le travail et l'école. C'est exactement mon programme. Faisons-en une majorité.","risque":"Positions européennes opposées : le ralliement peut brouiller le message souverainiste de Lisnard auprès des électeurs de droite."}]},"vulnerabilites":[{"p":"Retraite par capitalisation","r":"Sujet anxiogène pour les retraités et les 50-64 ans, d'autant que la non-revalorisation des pensions supérieures à 2 200 € est citée comme piste d'économies (CNews-Europe 1, 27 octobre). Préciser le périmètre et la durée de cette piste, garantir explicitement les pensions en cours et détailler la transition."},{"p":"Suppression des ARS","r":"Peut être lue comme une désorganisation de la santé. Montrer qui reprend chaque mission."},{"p":"200 Md€ d'économies","r":"Les adversaires demanderont où. Publier la liste des économies par poste avant qu'elle ne soit reconstituée par d'autres."},{"p":"Score dans les sondages (4 à 12 % depuis la mi-octobre lorsque Retailleau est aussi testé)","r":"Argument du vote utile contre lui, repris le 21 octobre par Éric Ciotti (UDR), qui appelle Lisnard et Retailleau à se rallier à Marine Le Pen (21News, 22 octobre). Travailler la notoriété et les ralliements d'élus plutôt que commenter les sondages. À l'inverse, Jean-François Copé lui reproche une ambiguïté envers le RN et Marc Fesneau (MoDem) veut l'exclure d'une primaire élargie (La Tribune Dimanche, 1er novembre) ; il répond ne gouverner ni avec les macronistes ni avec le RN (Entrevue, 2 novembre) : tenir cette ligne de façon constante. Le 24 novembre, Édouard Philippe lui reproche à son tour de ne pas « trancher » face à l'extrême droite et estime qu'il aurait du mal à dire son vote dans un duel face à Marine Le Pen (Public Sénat) : préparer une réponse explicite sur ce cas de second tour. Le porte-parole de Retailleau relativise sa progression : « les sondages de novembre sont toujours démentis par les votes d'avril » (AFP, 4 novembre) ; s'appuyer sur des résultats d'hypothèses précises plutôt que sur une tendance."},{"p":"Réponse sur le 17 octobre 1961 (LCI, 19 octobre)","r":"Échange vif avec une étudiante, vivement critiqué par LFI et le PS ; 61 maires, dont celui de Paris, lui demandent par lettre ouverte (20 octobre) de retirer ses propos ou de quitter la présidence de l'AMF. Exposé à un procès en indifférence mémorielle : préparer une réponse sur le fond plutôt que sur le ton."},{"p":"Propos sur le plateau de Millevaches (RTL, 20 octobre)","r":"Après l'incendie de la mairie de Limoges, il évoque des « camps d'entraînement terroristes » d'ultragauche sur le plateau ; une cinquantaine d'élus du Limousin lui demandent par lettre ouverte (29 octobre) de retirer ses propos et de choisir entre l'AMF et sa candidature, avec une pétition ouverte aux élus (Radio Totem). Expose à nouveau la question du cumul AMF-candidature avant le congrès des maires du 24 au 26 novembre, où Philippe Laurent (UDI) lui dispute la présidence et où Marc Fesneau (MoDem) critique la « double casquette » (AFP, 29 octobre) : préparer une réponse sur les faits et sur ce cumul. Il annonce le 25 novembre qu'il se mettrait en retrait de l'AMF pendant la campagne s'il est réélu, au profit d'une direction collégiale (Sud Radio). Réélu le 25 novembre avec 72 % des voix (Public Sénat) : tenir l'engagement de retrait pendant la campagne et le faire savoir."},{"p":"Sortie de la CEDH en dernier recours","r":"Exposée juridiquement et à gauche. Expliquer les étapes préalables et le modèle danois de dérogation."},{"p":"Réécriture du Code du travail","r":"Attaquée le 22 novembre par Marine Le Pen, pour qui passer le code « à la broyeuse » laisserait les travailleurs démunis (Sud Radio, AFP). Préciser ce qui reste garanti par la loi et ce qui relèverait des accords d'entreprise, plutôt que de s'en tenir à l'image de la broyeuse."}]},
-JOURNAL:[
- {"d":"2026-11-26","c":"Candidats","t":"David Lisnard : deux entrées ajoutées en institutions. Il est réélu le 25 novembre président de l'AMF pour un troisième mandat, avec 72 % des voix face à Philippe Laurent (Public Sénat) ; selon le titre d'un article de BFMTV non lu, il rejette un débat avec Édouard Philippe proposé à la place de la primaire. Aucune proposition programmatique nouvelle. Édouard Philippe : entrée ajoutée en santé (vaccination obligatoire contre les papillomavirus, LCP, 24 novembre). Teddy Riner : entrée ajoutée en défense (critique de l'envoi de militaires en Ukraine, Euronews, 25 novembre). Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi ; primaire de la droite et du centre : pas de décision nouvelle relevée."},
- {"d":"2026-11-26","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis le baromètre Toluna Harris Interactive (18-19 novembre). Le baromètre Odoxa (18-19 novembre), non intégré la veille faute de chiffre publié sur Lisnard, est mentionné dans la note des seconds tours : selon Public Sénat, Lisnard y est préféré à Marine Le Pen (32 % contre 27 %), sur une question de préférence avec option « aucun des deux », distincte d'une intention de vote ; il n'est pas ajouté aux duels. Opinion inchangée : aucune nouvelle mesure des thèmes du vote, des critères, de la solidité du choix, de l'électorat de Lisnard ou des motifs de changement d'avis."},
- {"d":"2026-11-26","c":"Communication","t":"Vulnérabilité sur le cumul AMF-candidature complétée par la réélection du 25 novembre (72 %). Champ « réalité » des ralliements complété par le refus d'un débat avec Philippe à la place de la primaire. Argumentaire, segments et fiches de ralliement inchangés."},
- {"d":"2026-11-25","c":"Candidats","t":"David Lisnard : deux entrées ajoutées en institutions. Selon Public Sénat (24 novembre), il a déclaré le 22 novembre qu'une primaire pourrait servir à « éliminer les macronistes » et qu'il ne soutiendrait pas son vainqueur s'il était battu ; candidat à sa réélection à l'AMF (résultat attendu le 25 novembre), il annonce qu'il se mettrait en retrait de l'association pendant la campagne (Sud Radio). Édouard Philippe : refus de la primaire réaffirmé au Congrès des maires, critique de Lisnard sur l'extrême droite, vote pour sa réélection à l'AMF (Public Sénat) et, selon le titre d'un direct de franceinfo non lu, vote blanc dans un duel Mélenchon-Le Pen. Gabriel Attal : deux débats avant Noël puis une primaire entre le 15 janvier et le 15 février (AFP). Aucune proposition programmatique nouvelle ; notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi."},
- {"d":"2026-11-25","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis le baromètre Toluna Harris Interactive (18-19 novembre). Le baromètre Odoxa pour Public Sénat, la presse régionale et L'Obs (18-19 novembre, publié le 24 novembre) mesure l'adhésion et le mécontentement en cas d'élection de plusieurs candidats, sans donnée publiée sur Lisnard : non intégré. Opinion inchangée : aucune nouvelle mesure des thèmes du vote, des critères, de la solidité du choix, de l'électorat de Lisnard ou des motifs de changement d'avis."},
- {"d":"2026-11-25","c":"Communication","t":"Deux vulnérabilités complétées : la critique d'Édouard Philippe sur la netteté de Lisnard face à l'extrême droite (24 novembre) est ajoutée à celle sur le score et les accusations d'ambiguïté ; l'annonce d'un retrait de l'AMF pendant la campagne est ajoutée à celle sur le cumul. Argumentaire, segments, fiches de ralliement et champ « réalité » inchangés."},
- {"d":"2026-11-24","c":"Candidats","t":"David Lisnard : entrée ajoutée en Europe. Le 23 novembre sur Public Sénat, il refuse d'appartenir à un groupe européen partageant les positions de l'AfD. Il dit son discours économique proche de celui de Sarah Knafo, mais écarte ses choix politiques et tout rapprochement avec Marine Le Pen (Capital). Il dit aussi qu'il restera candidat même s'il n'est pas réélu à la présidence de l'AMF, dont le congrès s'ouvre le 24 novembre (BFMTV) : aucune proposition nouvelle. Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi. Primaire de la droite et du centre : pas de décision nouvelle relevée."},
- {"d":"2026-11-24","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis le baromètre Toluna Harris Interactive (18-19 novembre). Les articles du 23 novembre (CNews, La Libre) qui présentent Lisnard devant Philippe portent sur cette même enquête, déjà intégrée. Opinion inchangée."},
- {"d":"2026-11-24","c":"Communication","t":"Aucun changement. La position ajoutée en Europe complète les positions existantes de Lisnard sans les modifier : argumentaire « Europe » inchangé. Fiches de ralliement et champ « réalité » inchangés."},
- {"d":"2026-11-23","c":"Candidats","t":"David Lisnard : entrée ajoutée en entreprise et travail (réécriture du Code du travail donnant plus de poids aux accords d'entreprise sur le temps de travail, en réponse le 22 novembre aux critiques de Marine Le Pen ; Entrevue) et deux entrées en institutions (refus de gouverner avec le RN, Sud Radio-AFP ; selon le titre d'un article d'Ouest-France non lu, pas de participation à une primaire sans Édouard Philippe). Marine Le Pen : entrée ajoutée en entreprise et travail (simplification des règles, mais refus de passer le Code du travail « à la broyeuse », France 2 et France Inter, 22 novembre). Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait ni ralliement de candidat suivi ; primaire de la droite et du centre : pas de décision nouvelle relevée."},
- {"d":"2026-11-23","c":"Sondages","t":"Ajout du baromètre Toluna Harris Interactive pour M6, RTL et L'Express (vague 10, terrain 18-19 novembre, publié le 23 novembre, 3 hypothèses, un duel). David Lisnard obtient 11 % avec Attal et Philippe, 11 % avec Philippe seul au centre et 12 % avec Attal seul ; il devance Retailleau (4 à 5 %) dans les trois hypothèses, et Philippe (9 à 10 %) dans les deux où celui-ci est testé. Duel Le Pen-Mélenchon : 65-35. L'enquête Cluster17 pour Politico (9-10 novembre) sort de la liste et passe dans l'historique de Lisnard (8 à 10 %)."},
- {"d":"2026-11-23","c":"Opinion","t":"Priorités et critères de choix : les blocs de la vague 9 de Toluna Harris Interactive (3-5 novembre) sont remplacés par ceux de la vague 10 (18-19 novembre, mêmes questions, pages 29 et 33 ; pouvoir d'achat 59 %, santé 40 %, immigration 36 %). Attribution des sous-groupes partisans et appariement libellés-valeurs des critères à vérifier sur le PDF. Aucune nouvelle mesure de solidité du choix, de composition de l'électorat de Lisnard ou de motifs de changement d'avis."},
- {"d":"2026-11-23","c":"Communication","t":"Argumentaire « entreprise et travail » réécrit (réécriture du Code du travail par les accords d'entreprise, en plus du contrat unique et des charges négatives). Vulnérabilité ajoutée sur la réécriture du Code du travail après l'attaque de Marine Le Pen. Champ « réalité » des ralliements et fiche Retailleau (champ « pourquoi ») mis à jour : Lisnard devance Retailleau dans 29 hypothèses sur 36 (trois de Toluna Harris Interactive ajoutées) ; refus de gouverner avec le RN et position sur une primaire sans Philippe ajoutés au champ « réalité ». Autres fiches et segments inchangés."},
- {"d":"2026-11-22","c":"Candidats","t":"François Ruffin (Debout !) retire sa candidature le 21 novembre par communiqué, jugeant sa campagne dans « l'impasse » faute de grande primaire de la gauche ; il ne soutient aucun candidat (RTBF). Statut mis à jour ; il reste présent dans les hypothèses des enquêtes déjà publiées. Éric Zemmour lance sa campagne à Toulon le 21 novembre : entrées ajoutées en fiscalité (suppression des droits de succession réaffirmée) et sécurité (fermeté envers les squatteurs), d'après Capital. Aucune nouvelle mesure de David Lisnard relevée (réunions de Troyes le 21 et de Nice le 22 novembre annoncées sur son site). Primaire de la droite et du centre : pas de décision nouvelle relevée. Notes d'axes inchangées."},
- {"d":"2026-11-22","c":"Sondages","t":"Ajout de l'enquête Ifop-Fiducial pour Sud Radio (terrain 2-4 novembre, publiée le 20 novembre, 4 hypothèses de candidature unique de la droite et du centre, aucun duel). David Lisnard, testé seul pour son bloc, obtient 14 % (Le Pen 37 %, Glucksmann 18 %, Mélenchon 17 %). L'enquête ne teste jamais Lisnard et Retailleau ensemble : champ « réalité » des ralliements inchangé. L'enquête Toluna Harris Interactive (3-5 novembre) sort de la liste et passe dans l'historique de Lisnard (9 %, 2 hypothèses) ; elle reste la source du bloc Opinion des priorités et critères."},
- {"d":"2026-11-22","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis ; blocs inchangés."},
- {"d":"2026-11-22","c":"Communication","t":"Aucun changement : pas de nouvelle position de Lisnard ni des candidats ayant une fiche de ralliement ; le retrait de Ruffin ne concerne aucune fiche."},
- {"d":"2026-11-21","c":"Candidats","t":"Dominique de Villepin (La France humaniste) déclare sa candidature le 20 novembre lors d'une conférence de presse à Paris : ajouté aux candidats (bloc « Divers » par défaut, sans notes d'axes faute de trois axes documentés). Entrées en fiscalité et finances (texte « Big bang » d'août : neuf grands impôts, impôt unique sur le patrimoine, déficit à 3 % du PIB en fin de quinquennat), retraites (refus d'une réforme annoncée par un seul candidat) et institutions (présidence « arbitre », refus d'une primaire de la droite et du centre). Aucune nouvelle mesure de David Lisnard relevée (réunions publiques du 20 novembre à Nancy, Angers, Agde et Strasbourg ; articles de presse sur sa stratégie de primaire, sans proposition nouvelle). Primaire de la droite et du centre : pas de décision nouvelle relevée. Aucun retrait, désistement ni ralliement de candidat suivi."},
- {"d":"2026-11-21","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis Ifop-Fiducial (13-16 novembre) et YouGov (12-17 novembre). Opinion et onglet Communication inchangés."},
- {"d":"2026-11-20","c":"Candidats","t":"Lisnard : deux entrées ajoutées en retraites, d'après sa tribune au Figaro reprise par Nouvelle Énergie le 17 novembre (étage de capitalisation collective obligatoire, fin des régimes spéciaux et convergence public-privé, désindexation certaines années des pensions les plus élevées, refus d'aligner la CSG des retraités sur celle des actifs) et son entretien sur TF1 du 18 novembre (projet de retraites annoncé pour les prochaines semaines) ; une entrée en finances publiques (au moins 12 % d'effectifs en moins, soit 400 000 fonctionnaires, avec redéploiement vers la justice, la police et les soins). Notes d'axes inchangées."},
- {"d":"2026-11-20","c":"Candidats","t":"Gauche : Marine Tondelier propose le 18 novembre sur France 2 une coalition autour de la candidature de Jean-Luc Mélenchon tout en restant candidate ; Mélenchon juge le 19 novembre que l'alliance « devrait pouvoir se faire » ; Glucksmann se dit déçu. Entrées ajoutées en institutions pour Tondelier, Mélenchon et Glucksmann ; statut de Tondelier mis à jour (options du vote militant des 10-13 décembre fixées le 26 novembre). Hors candidats suivis : Yannick Jadot et Jérémie Iordanoff quittent Les Écologistes ; le PS suspend ses discussions avec eux (titres de presse). Attal (France 2, 19 novembre) : dit qu'il retirerait sa candidature si Lisnard était désigné par la primaire et envisage une coalition jusqu'à la gauche sociale-démocrate (source agrégateur, à vérifier). Le Pen : entrée ajoutée en international (fin de l'aide financière à l'Ukraine, maintien de l'aide matérielle et humanitaire, communiqué du 16 novembre). Dominique de Villepin est présenté comme en route vers une candidature, sans déclaration à ce jour. Aucun retrait, désistement ni ralliement de candidat relevé."},
- {"d":"2026-11-20","c":"Sondages","t":"Ajout de l'enquête Ifop-Fiducial pour TF1, LCI, Le Figaro et Sud Radio (13-16 novembre, 6 hypothèses, aucun duel chiffré). David Lisnard obtient de 8 à 12 % dans les cinq hypothèses où il est testé (12 % face à Philippe sans Attal ni Retailleau), devant Retailleau dans les quatre qui testent les deux. Reports déclarés : 39 % des électeurs de Retailleau iraient vers Lisnard en son absence. L'enquête Ifop pour LCI (27-29 octobre) sort de la liste et passe dans l'historique de Lisnard (7 à 9 %, 3 hypothèses)."},
- {"d":"2026-11-20","c":"Opinion","t":"Solidité du choix : le bloc Elabe (12-13 novembre) est remplacé par Ifop-Fiducial (13-16 novembre, même question), qui publie pour la première fois une mesure pour l'électorat de David Lisnard : 44 % de ses électeurs se disent sûrs de leur choix (69 % pour l'ensemble, 59 % chez Retailleau, 47 % chez Philippe et Attal). Ifop publie aussi des déterminants du vote (question « rôle déterminant » par thème, santé 79 %, pouvoir d'achat 75 %, sécurité 70 %, dette 61 %) : formulation différente de celle de Toluna Harris Interactive (cinq thèmes au plus), bloc des priorités non remplacé. Profil de l'électorat de Lisnard (p. 12 du rapport) non repris, lecture du graphique incertaine ; aucun motif de changement d'avis publié."},
- {"d":"2026-11-20","c":"Communication","t":"Argumentaire « retraites » réécrit (étage obligatoire de capitalisation, fin des régimes spéciaux et règles communes public-privé). Champ « réalité » des ralliements et fiche Retailleau (champ « pourquoi ») mis à jour : Lisnard devance Retailleau dans 26 hypothèses sur 33 (quatre d'Ifop-Fiducial ajoutées), reports déclarés et solidité du choix comparée ; propos d'Attal du 19 novembre ajoutés au champ « réalité ». Segments, autres fiches et vulnérabilités inchangés."},
- {"d":"2026-11-19","c":"Candidats","t":"Édouard Philippe présente le 18 novembre le premier volume de son programme (site de campagne, 15 thèmes ; autres volumes annoncés) : entrées ajoutées en finances (déficit sous 2,5 % du PIB, 250 000 postes en moins, statut réservé aux fonctions essentielles, privatisation de France Travail, suppression du Cese), fiscalité, travail (durée fixée par accord d'entreprise, chômage limité à 12 mois avant 50 ans, trois jours de carence), retraites (65 ans, 45 ans de cotisation, PER abondé de 500 €), famille, école, sécurité (assignation à résidence des casseurs, suspension du RSA des délinquants condamnés), immigration, défense, Ukraine, énergie et numérique. Défense : le service national devient obligatoire (service militaire volontaire dans les premières orientations) ; justification de l'axe défense mise à jour, notes d'axes inchangées. État du programme mis à jour."},
- {"d":"2026-11-19","c":"Candidats","t":"Primaire de la droite et du centre : Lisnard (TF1, 18 novembre) juge la participation de Philippe « indispensable », accepte Zemmour et Dupont-Aignan s'ils respectent les critères et dit ne pas savoir si la primaire aura lieu ; Retailleau estime qu'une participation de Zemmour la ferait échouer et met en doute la volonté de Lisnard de l'organiser ; Philippe maintient son refus ; nouvelle réunion des équipes la semaine suivante. Entrées ajoutées pour Lisnard (deux), Retailleau et Philippe en institutions. Aucune nouvelle mesure de Lisnard ; notes d'axes inchangées. Aucune candidature, aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-19","c":"Sondages","t":"Ajout de l'enquête YouGov pour Le HuffPost (12-17 novembre, 5 scénarios, 5 duels). David Lisnard obtient 9 ou 10 % dans les quatre scénarios où il est testé, devant Retailleau dans chacun (6 à 8 %) ; aucun duel ne l'inclut. L'enquête Cluster17 pour Politico (19-22 octobre) sort de la liste et passe dans l'historique de Lisnard (8 %, 1 hypothèse). Hors intentions de premier tour : sondage Ifop pour Le Figaro sur une primaire de la droite et du centre (13-18 novembre) : Lisnard en tête avec Philippe (29 %, contre 28 % à Philippe, 25 % à Attal, 18 % à Retailleau), deuxième sans lui (33 %, derrière Attal à 38 %) ; non intégré aux intentions de vote présidentielles, mentionné dans l'onglet Communication."},
- {"d":"2026-11-19","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard (YouGov ne publie qu'une certitude d'aller voter) ; blocs inchangés."},
- {"d":"2026-11-19","c":"Communication","t":"Champ « réalité » des ralliements mis à jour : Lisnard devance Retailleau dans 22 hypothèses sur 29 (quatre de YouGov ajoutées), échanges du 18 novembre sur la primaire et sondage Ifop sur la primaire. Fiche Retailleau : champ « pourquoi » mis à jour (décomptes, sympathisants LR) et divergence ajoutée sur le périmètre de la primaire. Argumentaire, segments, autres fiches et vulnérabilités inchangés."},
- {"d":"2026-11-18","c":"Candidats","t":"Primaire de la droite et du centre : réunion du 17 novembre des équipes d'Attal, Retailleau et Lisnard, sans Philippe. Principe acté d'une primaire ouverte à deux tours en janvier (17 et 24 ou 24 et 31 janvier envisagés), participation d'environ 2 €, vote surtout électronique, parrainages et charte commune ; périmètre et seuils non tranchés (Entrevue, Sud Radio). Lisnard : entrée ajoutée en institutions (primaire très large, sans exclure Zemmour à ce stade ; aucun accord définitif selon Nouvelle Énergie). Entrées ajoutées pour Attal (vote avant fin janvier, opposé à la participation de Zemmour) et Retailleau (modalités). Aucune nouvelle mesure de Lisnard relevée ; notes d'axes inchangées."},
- {"d":"2026-11-18","c":"Candidats","t":"Le Pen : la réforme des retraites présentée le 17 novembre remplace l'entrée d'annonce (Euronews) : âge d'ouverture de 60 à 62 ans selon l'âge d'entrée dans l'emploi, taux plein à 67 ans, indexation des pensions cinq ans, capitalisation obligatoire pour les moins de 52 ans via la Caisse des dépôts, coût net annoncé de 10,1 Md€, référendum envisagé. Débat des Restos du Cœur (16 novembre, Public Sénat) : entrées ajoutées pour Le Pen (trains gratuits aux heures creuses, apprentis), Attal (suppression de la CSG, selon Public Sénat), Glucksmann et Mélenchon (petites pensions), Retailleau (sélection à l'université). Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-18","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis Elabe (12-13 novembre)."},
- {"d":"2026-11-18","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."},
- {"d":"2026-11-18","c":"Communication","t":"Champ « réalité » des ralliements complété par l'issue de la réunion du 17 novembre sur la primaire ; ordre Retailleau/Lisnard dans les sondages inchangé. Argumentaire, segments, fiches et vulnérabilités inchangés (la position de Lisnard sur la primaire ouverte est précisée, pas modifiée)."},
- {"d":"2026-11-17","c":"Candidats","t":"Lisnard : entrée ajoutée en retraites d'après Capital (6 novembre) : transfert d'environ 40 % des cotisations vers des comptes individuels d'épargne retraite obligatoires, pouvant être gérés par des fonds privés, avec un fonds souverain par défaut, et suppression de l'abattement de 10 % des retraités. Un article du JDD annonçant « le plan de David Lisnard pour les retraites » (répartition réformée et part de capitalisation obligatoire) n'a pas pu être lu : détail non intégré. Notes d'axes inchangées. Aucune nouvelle mesure relevée sur le site de Nouvelle Énergie depuis le 13 novembre."},
- {"d":"2026-11-17","c":"Candidats","t":"Le Pen : deux entrées ajoutées en retraites avant la conférence de presse du RN prévue ce 17 novembre à 11 h (comptes rendus préalables) : pas de report de l'âge légal au-delà de 62 ans et part de capitalisation (Europe 1) ; selon Jean-Philippe Tanguy, capitalisation pour tous financée par des économies et alignement des trimestres validés sur les trimestres cotisés (source agrégateur, à vérifier). Le contenu définitif sera vérifié à la prochaine mise à jour. Primaire de la droite et du centre : réunion des représentants d'Attal (trois), Retailleau et Lisnard (deux chacun) ce 17 novembre, sans l'équipe de Philippe, sur les dates (31 janvier et 7 février évoqués) et le mode de scrutin ; résultat non connu. Aucune candidature, aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-17","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis Elabe (12-13 novembre)."},
- {"d":"2026-11-17","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."},
- {"d":"2026-11-17","c":"Communication","t":"Argumentaire « retraites » réécrit à la suite de la nouvelle entrée de Lisnard (comptes individuels obligatoires recevant environ 40 % des cotisations, fonds souverain par défaut). Segment « 25-40 ans salariés » : contraste avec le RN corrigé, le RN prévoyant aussi une part de capitalisation. Champ « réalité », fiches de ralliement et vulnérabilités inchangés."},
- {"d":"2026-11-16","c":"Candidats","t":"Primaire de la droite et du centre : le 14 novembre, le président du Sénat Gérard Larcher invite Attal, Philippe, Retailleau et Lisnard à se retrouver pour convenir d'une « méthode de départage » en vue d'une candidature unique au début de 2027. Philippe (Le Parisien, 15 novembre) accepte une réunion consacrée au rassemblement pour la présidentielle et les législatives, mais confirme qu'il ne participera pas à une primaire (entrée ajoutée en institutions). Retailleau juge que la primaire doit avoir lieu même sans Philippe (entrée ajoutée en institutions, d'après L'Express). La réunion des directeurs de campagne d'Attal, Retailleau et Lisnard reste annoncée pour le 17 novembre. Lisnard : aucune nouvelle mesure ni réaction publique relevée ; le site de Nouvelle Énergie annonce le soutien de la sénatrice des Alpes-Maritimes Alexandra Borchio Fontimp (13 novembre). Notes d'axes inchangées ; aucune candidature, aucun retrait ni désistement relevé. Hors champ des fiches : la députée Sandrine Rousseau appelle Les Écologistes à rejoindre Jean-Luc Mélenchon."},
- {"d":"2026-11-16","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis Elabe (12-13 novembre). Un article du JDD sur les reports de voix au second tour (« face à Le Pen, seuls 26 % des électeurs de Glucksmann voteraient Mélenchon ») n'a pas pu être lu : institut et terrain inconnus, non intégré. Hors champ : le baromètre Ipsos bva pour La Tribune Dimanche (10-12 novembre, 1 000 personnes) mesure la satisfaction en cas d'élection de chaque personnalité, et non des intentions de vote ; Lisnard y obtient 20 % (+4 points) et 59 % chez les sympathisants LR-UDI-Nouvelle Énergie."},
- {"d":"2026-11-16","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."},
- {"d":"2026-11-16","c":"Communication","t":"Fiche Retailleau : champ « pourquoi » complété par l'invitation de Gérard Larcher, la position de Retailleau (primaire même sans Philippe) et le refus de Philippe d'y parler de primaire. Champ « réalité », argumentaire, segments, autres fiches et vulnérabilités inchangés (aucune position de Lisnard modifiée, aucun nouveau sondage)."},
- {"d":"2026-11-15","c":"Sondages","t":"Nouvelle enquête Elabe pour BFMTV et La Tribune Dimanche (12-13 novembre, 1 500 personnes dont 1 391 inscrits, publiée le 14 novembre), ajoutée en tête avec ses six hypothèses et trois duels, d'après le rapport de l'institut. Lisnard obtient 10,5 % avec Attal (cas 4), 9 % avec Philippe (cas 5) et 8 % dans la liste large avec Riner et Polony (cas 6), devant Retailleau dans les trois (6, 4 et 4 %). Riner obtient 4,5 % dans le cas 6. Duels sans Lisnard : Le Pen 68,5 % contre Mélenchon, 55 % contre Glucksmann et contre Philippe. Enquête Ipsos bva du 21-22 octobre déplacée vers l'historique (Lisnard 6,5 %)."},
- {"d":"2026-11-15","c":"Opinion","t":"Blocs « solidité du choix » et « électorat de David Lisnard » remplacés par la vague Elabe de novembre (même question que la vague d'octobre). Solidité : 55 % des personnes ayant une intention de vote se disent sûres de leur choix ; Lisnard n'est toujours pas mesuré (question publiée pour le cas 1 seulement, sans lui). Électorat : part de chaque groupe votant Lisnard dans les cas 4 et 5, notamment 27 et 23 % des sympathisants LR, 37 et 33 % des électeurs de Pécresse en 2022, 18 et 14 % de ceux de Macron. Aucune mesure des motifs de changement d'avis."},
- {"d":"2026-11-15","c":"Candidats","t":"Retailleau : le 13 novembre sur France 2, souhaite une primaire ouverte avec une participation de quelques euros et des dates négociables (31 janvier et 7 février 2027), et demande aux participants une loyauté envers le résultat sans obligation de défendre le programme du vainqueur (entrée ajoutée en institutions, d'après Entrevue). Lisnard : aucune nouvelle mesure ni déclaration relevée depuis les comptes rendus du 13 novembre. Hors champ des fiches : le ministre Vincent Jeanbrun propose dans Le JDD une primaire à éliminations hebdomadaires du 30 novembre au 10 janvier. Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-15","c":"Communication","t":"Champ « réalité » et fiche Retailleau : Lisnard devant Retailleau dans dix-huit hypothèses sur vingt-cinq depuis la mi-octobre (quatre cas inverses, trois égalités), avec les trois hypothèses Elabe ; déclaration de Retailleau du 13 novembre ajoutée, et point d'accord sur la primaire ajouté en institutions dans la fiche. Segment LR actualisé (Lisnard 7 à 12 %, Retailleau 4 à 7 % dans quatorze hypothèses). Argumentaire, autres fiches et vulnérabilités inchangés."},
- {"d":"2026-11-14","c":"Candidats","t":"Lisnard : entrées ajoutées d'après trois comptes rendus publiés le 13 novembre par Nouvelle Énergie. Éducation (podcast « Destinée ») : notes chiffrées, évaluations en CM2, sixième et troisième, philosophie dès le primaire, évaluation publiée des établissements, établissements de proximité à l'échelle des anciens cantons, établissements disciplinaires avec internats, dispositifs ULIS. Finances publiques (DLive du 10 novembre) : masse salariale publique réduite d'au moins 12 %, objectif 20 %. Retraites (DLive) : échelon obligatoire de capitalisation et plan de réforme annoncé avant la fin de l'année. Numérique et économie (Rencontres de l'Avenir, 6 novembre) : structure franco-européenne sur le modèle de la DARPA, étiquetage des contenus d'IA, transferts de technologie, fonds souverain pour les épargnants. Une réunion de Nouvelle Énergie est annoncée à Angers le 20 novembre, sans le candidat. Notes d'axes inchangées."},
- {"d":"2026-11-14","c":"Candidats","t":"Teddy Riner : premier déplacement de campagne le 13 novembre aux urgences pédiatriques de l'hôpital Delafontaine (Saint-Denis) ; fait de la santé une priorité, sans mesure détaillée (entrée ajoutée en santé). Son conseiller annonce un programme de 585 propositions, non publié (champ programme mis à jour). Aucune autre candidature, aucun retrait, désistement ni ralliement relevé ; aucune nouveauté relevée pour Retailleau, Philippe, Attal, Le Pen ou Mélenchon sur la primaire ou les programmes."},
- {"d":"2026-11-14","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis OpinionWay (9-10 novembre). Hors champ : une enquête Odoxa pour Le Figaro (publiée le 12 novembre, terrain non précisé par la source consultée) indique que 42 % des Français jugent que Teddy Riner a raison de se présenter ; question d'opinion sur une candidature, non intégrée. Blocs d'opinion inchangés : aucune mesure de solidité du choix ni de motifs de changement d'avis concernant Lisnard."},
- {"d":"2026-11-14","c":"Communication","t":"Argumentaire réécrit pour quatre thèmes à la suite des nouvelles positions de Lisnard : éducation (notes chiffrées, évaluations, établissements de proximité et internats), finances publiques (réduction de la masse salariale publique), retraites (échelon obligatoire de capitalisation), numérique (structure de type DARPA, étiquetage des contenus d'IA). Segment « parents » : preuve ajoutée sur les notes chiffrées et les évaluations. Champ « réalité », fiches de ralliement et vulnérabilités inchangés (pas de nouveau sondage, pas de position modifiée chez les candidats ayant une fiche)."},
- {"d":"2026-11-13","c":"Sondages","t":"Nouvelle enquête OpinionWay pour Les Échos et Radio Classique (Prési-Track, vague 4, 9-10 novembre, 982 personnes de 18 ans et plus, publiée le 12 novembre), ajoutée en tête avec trois hypothèses, d'après la presse (rapport et notice non consultés, à vérifier). Lisnard, testé pour la première fois dans ce baromètre, obtient 10 % avec Philippe et Attal, 12 % avec Attal seul et 11 % avec Philippe seul, devant Retailleau (4, 6 et 4 %). Aucun duel. Un sondage présenté par CNEWS le 12 novembre (« Teddy Riner rebat les cartes au centre ») n'a pas pu être lu : non intégré. Enquête Toluna Harris Interactive du 19-21 octobre déplacée vers l'historique (Lisnard 7 et 8 %)."},
- {"d":"2026-11-13","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."},
- {"d":"2026-11-13","c":"Candidats","t":"Attal : précise le 12 novembre sur franceinfo que les 100 000 suppressions de postes de fonctionnaires passeraient par des départs volontaires indemnisés, fonction publique territoriale incluse (entrée ajoutée en finances publiques). Lisnard : aucune nouvelle mesure ni réponse publique relevée à la proposition de primaire de Retailleau. Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-13","c":"Communication","t":"Champ « réalité » et fiche Retailleau : Lisnard devant Retailleau dans quinze hypothèses sur vingt-deux depuis la mi-octobre (quatre cas inverses, trois égalités), avec les trois hypothèses OpinionWay. Segment LR (Lisnard 6,5 à 12 %, Retailleau 4 à 7 % dans douze hypothèses) et vulnérabilité « score dans les sondages » (4 à 12 %) actualisés. Argumentaire et autres fiches inchangés."},
- {"d":"2026-11-12","c":"Sondages","t":"Nouvelle enquête Cluster17 pour Politico (9-10 novembre, 1 242 personnes dont 1 164 inscrits, publiée le 11 novembre), ajoutée en tête avec quatre hypothèses. Lisnard obtient 10 % lorsque le centre est représenté par Philippe (H1, liste complète relevée par un agrégateur d'après le graphique de Politico), par Christine Lagarde (14 %, non candidate) ou par Attal, et 8 % dans une liste large de 18 personnalités ; Retailleau 5 % là où son score est publié. Les hypothèses Lagarde, Attal et liste large ne sont connues que partiellement par la presse (rapport de l'institut et notice non consultables), d'où des listes incomplètes à vérifier. Aucun duel publié. Enquête OpinionWay pour CNEWS du 21-22 octobre déplacée vers l'historique (Lisnard 6 %)."},
- {"d":"2026-11-12","c":"Opinion","t":"Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés. Hors champ des blocs : une enquête Cluster17 pour Le Point (2-3 novembre, 2 405 personnes de 18 ans et plus) mesure l'adhésion au principe d'une primaire (46 % favorables, 35 % opposés) et à six périmètres possibles ; une primaire du bloc central et de LR, d'Attal à Lisnard, recueille 33 % d'avis favorables et 49 % d'opposés. Non intégrée."},
- {"d":"2026-11-12","c":"Candidats","t":"Lisnard : entrée ajoutée (écologie) sur ses propositions de logement présentées comme issues du programme de Nouvelle Énergie : suppression du DPE, assouplissement du ZAN (bonus à la densification, malus à l'étalement), remplacement des quotas SRU par des objectifs sur les constructions neuves (Journal de l'Agence, 11 novembre) ; entrée ajoutée (institutions) sur la réunion des directeurs de campagne d'Attal, Retailleau et Lisnard annoncée pour le 17 novembre (BFMTV, via un agrégateur), également ajoutée pour Retailleau et Attal. Mélenchon : le 11 novembre, demande l'évacuation de l'Ukraine par la Russie et une consultation des populations avant toute modification de frontières (AFP, d'après Quartz). Marine Le Pen : discours commémoratif à Hénin-Beaumont, sans mesure nouvelle. Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-12","c":"Communication","t":"Argumentaire, thème écologie : argument réécrit pour intégrer la suppression du DPE et la densification plutôt que le gel du foncier. Champ « réalité » et fiche Retailleau : Lisnard devant Retailleau dans douze hypothèses sur dix-neuf depuis la mi-octobre (quatre cas inverses, trois égalités), réunion du 17 novembre et nouveau refus de Philippe (12 novembre) ajoutés. Réservoirs actualisés : segment LR (Lisnard 6,5 à 10 %, Retailleau 4 à 7 % dans onze hypothèses), segment centre (Philippe 8 à 17 %), vulnérabilité « score dans les sondages » (4 à 10 %)."},
- {"d":"2026-11-11","c":"Candidats","t":"Zemmour : confirme sa candidature au journal de TF1 le 10 novembre (statut mis à jour) ; entrées ajoutées : objectif de réduire de deux millions le nombre d'immigrés sur le quinquennat, renvoi des étrangers au chômage depuis plus de six mois, référendum sur la politique migratoire (immigration), investissements dans l'IA (numérique) et plan de 280 Md€ de baisses de dépenses et d'impôts, selon Politique Matin seulement (finances publiques). Glucksmann : présente le 9 novembre un programme des « 100 premiers jours » pour sortir des énergies fossiles, avec nouveaux réacteurs nucléaires et contribution des patrimoines de plus de 100 M€ (écologie, fiscalité ; d'après RFI). Notes d'axes inchangées."},
- {"d":"2026-11-11","c":"Candidats","t":"Primaire de la droite et du centre : Retailleau propose le 10 novembre, par courrier à Philippe, Attal et Lisnard, un scrutin les dimanches 31 janvier et 7 février 2027 (Quartz, d'après l'AFP) ; Attal dit le même jour sur France Inter qu'il pourrait voter pour Retailleau ou Lisnard si l'un d'eux est le seul à pouvoir éviter un second tour Mélenchon-Le Pen. Entrées ajoutées (institutions) pour les deux. Aucune réponse de Lisnard relevée, aucune nouvelle mesure de sa part ; aucun retrait, désistement ni ralliement relevé."},
- {"d":"2026-11-11","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis la vague 9 de Toluna Harris Interactive (3-5 novembre). Hors champ des blocs d'opinion : selon La Libre (10 novembre), le baromètre Verian pour Le Figaro Magazine de novembre crédite Lisnard de 23 % sur la « stature présidentielle » (+8 points sur un mois), à égalité avec Attal, Retailleau et Glucksmann, derrière Philippe (27 %) ; terrain et échantillon non vérifiés, non intégré. Aucune mesure de solidité du choix ni de motifs de changement d'avis concernant Lisnard."},
- {"d":"2026-11-11","c":"Communication","t":"Champ « réalité » et fiche Retailleau (pourquoi) : ajout de la proposition de primaire des 31 janvier et 7 février 2027 et de la déclaration d'Attal du 10 novembre. Ordre Retailleau/Lisnard dans les sondages inchangé. Argumentaire, autres fiches et vulnérabilités inchangés (aucune position de Lisnard modifiée)."},
- {"d":"2026-11-10","c":"Candidats","t":"Nouveau candidat : Teddy Riner annonce le 9 novembre sa candidature, sans étiquette, par une vidéo sur ses réseaux sociaux et un entretien au Parisien (selon Actumag, France-Jeunes et Reuters). Fiche ajoutée (bloc Divers) avec six déclarations non chiffrées : allègements de charges, sortie du « carcan » des 35 heures, réforme des retraites avec une part de capitalisation, baisse de la dépense publique. Pas de notes d'axes faute de positions suffisamment précises. Aucune nouvelle mesure de Lisnard (réunions publiques à Anglet le 9 novembre et à l'île Maurice le 10 novembre, sans annonce relevée) ni des autres candidats suivis ; aucun retrait, désistement ni ralliement relevé"},
- {"d":"2026-11-10","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis la vague 9 de Toluna Harris Interactive (3-5 novembre). Aucune nouvelle mesure d'opinion (thèmes, critères, solidité du choix, composition de l'électorat, motifs de changement) concernant Lisnard"},
- {"d":"2026-11-10","c":"Communication","t":"Aucune position de Lisnard ni d'un candidat ayant une fiche de ralliement modifiée : argumentaire, fiches, champ « réalité » et vulnérabilités inchangés"},
- {"d":"2026-11-09","c":"Sondages","t":"Nouvelle enquête Toluna Harris Interactive pour M6 et RTL (vague 9, 3-5 novembre, 2 101 inscrits, publiée le 9 novembre), ajoutée en tête avec ses cinq hypothèses et trois duels (rapport officiel). Lisnard obtient 9 % dans les deux hypothèses où il est testé (7 et 8 % dans la vague du 19-21 octobre), devant Retailleau (5 et 6 %). Duels : Le Pen 68-32 face à Mélenchon, 60-40 face à Glucksmann, 58-42 face à Philippe ; aucun duel avec Lisnard. Enquête Ifop-Fiducial du 17-19 octobre déplacée vers l'historique. Aucune mesure de solidité du choix ni de motifs de changement d'avis pour l'électorat de Lisnard ; le rapport donne seulement la part d'électeurs Macron 2022 qui le choisissent (13 et 14 %), notée avec l'enquête"},
- {"d":"2026-11-09","c":"Opinion","t":"Blocs « thèmes du vote » et « critères de choix » remplacés par la vague 9 de Toluna Harris Interactive (même question, 3-5 novembre) : pouvoir d'achat 58 %, santé 38 %, immigration 36 % ; honnêteté 64 % et projet 62 % en tête des critères. Tops par proximité attribués selon l'ordre habituel du baromètre, à vérifier sur le PDF. Blocs solidité du choix et électorat de Lisnard (Elabe) inchangés"},
- {"d":"2026-11-09","c":"Candidats","t":"Laurent Wauquiez (non candidat) demande le 8 novembre (France Inter, France 2) aux candidats de droite de convenir sous quinze jours d'une méthode de désignation et d'un candidat commun avant Noël, de préférence par primaire ; mentionné dans le champ « réalité » et la fiche Retailleau. Glucksmann : rejette le 7 novembre un rapprochement avec le projet de Lisnard prêté à l'entourage d'Emmanuel Macron ; entrée ajoutée (institutions). Aucune nouvelle mesure de Lisnard ni des autres candidats suivis, aucune candidature, aucun retrait, désistement ou ralliement relevé ; notes d'axes inchangées"},
- {"d":"2026-11-09","c":"Communication","t":"Réservoirs actualisés après le sondage Harris : segment LR (Lisnard 6 à 9 %, Retailleau 4 à 7 % dans neuf hypothèses), segment centre (Philippe 9,5 à 17 %), segment RN (Le Pen 30,5 à 36 %) et vulnérabilité « score dans les sondages » (4 à 9 %). Champ « réalité » et fiche Retailleau : Lisnard devant dans neuf hypothèses sur seize, Retailleau dans quatre ; initiative Wauquiez ajoutée. Argumentaire inchangé (aucune position de Lisnard modifiée)"},
- {"d":"2026-11-08","c":"Candidats","t":"Lisnard : propose une flat tax de 25 % unifiant l'imposition des revenus fonciers et financiers, avec option pour le barème progressif (Le Figaro Immobilier, 7 novembre, d'après Quartz) ; entrée ajoutée (fiscalité). Veut créer « un grand ministère du savoir » (BFMTV, 6 novembre, Rencontres de l'avenir de Saint-Raphaël) ; contenu non publié, entrée ajoutée (éducation) via un agrégateur, à vérifier. Notes d'axes inchangées. Primaire de la droite et du centre (Entrevue, 7 novembre) : Attal dit que les discussions s'intensifient ; Retailleau accepte le principe d'une primaire au plus tard début février 2027 ; Philippe refuse de nouveau d'y participer et décline les débats proposés par Retailleau. Entrées ajoutées (institutions) pour les trois. Aucune autre mesure, candidature, retrait, désistement ni ralliement relevé ; aucun détail nouveau trouvé sur le meeting de LFI au Bourget du 7 novembre"},
- {"d":"2026-11-08","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis l'Ifop pour LCI (27-29 octobre). Notice officielle de cette enquête (Commission des sondages, n° 10351) désormais consultée : les scores des quatre hypothèses, repris d'un agrégateur le 4 novembre, sont confirmés à l'identique ; source, échantillon et note mis à jour, mention « à vérifier » levée. Aucun duel publié. Aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-11-08","c":"Communication","t":"Argumentaire fiscalité réécrit (flat tax de 25 % sur les revenus fonciers et financiers). Argumentaire éducation inchangé faute de contenu publié sur le « ministère du savoir ». Fiche Retailleau (champ « pourquoi ») complétée : acceptation du principe d'une primaire d'ici février 2027. Champ « réalité », autres fiches et vulnérabilités inchangés"},
- {"d":"2026-11-07","c":"Candidats","t":"Mélenchon : contenu de la 5e édition de « L'Avenir en commun » désormais documenté (LCP, 6 novembre). SMIC porté à 1 700 € nets (au lieu de 1 600 €), ISF avec volet climatique, flat tax supprimée et héritage plafonné à 12 M€ confirmés ; retraite à 60 ans « à terme » pour 40 annuités ; sortie du commandement intégré de l'OTAN puis de l'organisation ; conscription citoyenne écologique ; 100 % renouvelables repoussé à 2060 ; interdiction des vols de nuit ; psychothérapie remboursée pour les moins de 26 ans ; indépendance de la Kanaky-Nouvelle-Calédonie au 1er janvier 2028. Entrées précisées ou ajoutées dans 12 thèmes ; mentions « à vérifier » levées en fiscalité, écologie et institutions. Notes d'axes inchangées. Fourchette du SMIC à gauche corrigée dans l'introduction du thème. Aucune nouvelle mesure de Lisnard ni d'autre candidat suivi, aucune candidature, aucun retrait, désistement ou ralliement relevé"},
- {"d":"2026-11-07","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote depuis l'Ifop pour LCI (27-29 octobre). Odoxa-Backbone pour Le Figaro (4-5 novembre, 1 005 personnes), sur une primaire de la droite et du centre : 37 % des Français (+10 depuis septembre) et 58 % des sympathisants de la droite hors RN et du centre (+17) jugent Lisnard « bon candidat » pour une primaire, contre 59 % pour Philippe et 62 % pour Retailleau dans ce second champ ; Lisnard arrive en tête pour la proximité et le dynamisme chez ces sympathisants. Questions sans équivalent dans l'onglet Opinion : non ajoutées aux blocs. Elabe pour Les Échos (3-4 novembre) : 22 % d'image positive pour Lisnard. Source : https://www.odoxa.fr/sondage/vox-populi-vox-dei-74-des-sympathisants-de-droite-et-du-centre-veulent-une-primaire-pour-2027/"},
- {"d":"2026-11-07","c":"Communication","t":"Aucune position de Lisnard ni d'un candidat ayant une fiche de ralliement modifiée : argumentaire, fiches, champ « réalité » et vulnérabilités inchangés"},
- {"d":"2026-11-06","c":"Candidats","t":"Lisnard : dans un court essai sur l'intelligence artificielle cosigné avec Romain Marsily (JDNews, 4 novembre, repris par Nouvelle Énergie), propose d'imposer la réversibilité dans la commande publique et réaffirme le remplacement du principe de précaution par un principe de responsabilité dans la Constitution (déjà recensé en écologie) ; entrée ajoutée (numérique). Notes d'axes inchangées. Nouvelle Énergie affiche 112 747 adhérents au 5 novembre. Mélenchon : sortie en librairie le 6 novembre de la 5e édition de « L'Avenir en commun » (1 069 mesures, dont 238 nouvelles et 118 modifiées), présentée au Bourget le 7 novembre ; détail des nouvelles mesures non encore consultable, état du programme mis à jour. Aucune autre mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis"},
- {"d":"2026-11-06","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'Ifop pour LCI (27-29 octobre) ; rapport complet de cette enquête toujours non trouvé. Aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-11-06","c":"Communication","t":"Argumentaire numérique réécrit (principe de responsabilité, réversibilité dans la commande publique). Fiches de ralliement, champ « réalité » et vulnérabilités inchangés"},
- {"d":"2026-11-05","c":"Candidats","t":"Lisnard : Nouvelle Énergie fait certifier par un commissaire de justice 100 517 adhérents le 4 novembre et invite ses concurrents à la même transparence (Le Figaro, relayé par le site du mouvement) ; meeting annoncé à Lyon le 13 décembre 2026. Aucune nouvelle mesure ni position thématique relevée ; notes d'axes, argumentaire et fiches de ralliement inchangés. Autres candidats suivis : aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé depuis le 4 novembre (propos de Villepin et de Retailleau du 3 novembre déjà consignés) ; nouvelle édition du programme de LFI attendue le 6 novembre"},
- {"d":"2026-11-05","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'Ifop pour LCI (27-29 octobre) ; rapport complet et notice de cette enquête toujours non trouvés. Aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-11-04","c":"Candidats","t":"Lisnard, sur BFMTV le 3 novembre : promet, s'il est élu, un « gouvernement commando » resserré aux missions fixées sur les 200 premiers jours, une session extraordinaire du Parlement à l'été 2027 et le remplacement des ministres dont les chantiers ne seraient pas engagés au bout de 200 jours ; se dit le plus proche de Bruno Retailleau tout en relevant sa participation aux gouvernements Macron (AFP) ; dit avoir obtenu les 500 parrainages (Midi Libre, via un agrégateur) : statut mis à jour. Entrées ajoutées (institutions). Notes d'axes inchangées"},
- {"d":"2026-11-04","c":"Candidats","t":"Retailleau, sur BFMTV (« Vous Président », 3 novembre) : fin de la semaine de 35 heures avec 30 minutes de travail en plus par jour pour un 13e voire 14e mois, plafonnement des aides sociales à 70 % du SMIC, pas de hausse du SMIC (entreprise-travail) ; défense du régime par répartition (retraites) ; primaire jugée probable en début 2027, sinon il ira « jusqu'au bout », trois débats proposés à Philippe, Attal et Lisnard (institutions). Sources d'agrégateur à vérifier pour les deux premiers points. Notes d'axes inchangées. Dominique de Villepin (France Inter, 3 novembre) dit qu'il sera candidat sans l'officialiser : non ajouté. Gérald Darmanin appelle Attal et Retailleau à se rassembler derrière Édouard Philippe. Aucune autre mesure, candidature, retrait, désistement ni ralliement relevé ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"},
- {"d":"2026-11-04","c":"Sondages","t":"Nouvelle enquête Ifop pour LCI (terrain 27-29 octobre, publiée le 3 novembre), 4 hypothèses : Lisnard 7 % contre 4 % pour Retailleau (H1, avec Philippe et Attal), 7,5 % contre 5 % (H2, sans Philippe), 9 % sans Attal ni Retailleau (H4). Rapport et notice officiels non encore disponibles : scores repris d'un agrégateur (à vérifier). Aucun duel publié ; aucune mesure de solidité du choix ni de composition de l'électorat de Lisnard. L'enquête Cluster17 pour Le Point (14-15 octobre) passe dans l'historique"},
- {"d":"2026-11-04","c":"Communication","t":"Argumentaire institutions réécrit (gouvernement commando, 200 premiers jours, session extraordinaire à l'été 2027). Champ « réalité » et fiche Retailleau mis à jour : Lisnard devance désormais Retailleau dans sept hypothèses sur quatorze testant les deux depuis la mi-octobre (quatre cas inverses, trois égalités) ; déclarations croisées du 3 novembre ajoutées. Vulnérabilité « Score dans les sondages » complétée. Autres fiches inchangées"},
- {"d":"2026-11-03","c":"Candidats","t":"Lisnard : répondant le 1er novembre aux critiques de Jean-François Copé (ambiguïté envers le RN) et de Marc Fesneau (MoDem), qui souhaite l'exclure d'une primaire allant des sociaux-démocrates à la droite (La Tribune Dimanche), il déclare qu'il ne gouvernerait « ni avec les macronistes ni avec le RN » et maintient sa demande de primaire ouverte de la droite et du centre (Entrevue, 2 novembre) ; entrée ajoutée (institutions). Notes d'axes inchangées. Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"},
- {"d":"2026-11-03","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-11-03","c":"Communication","t":"Argumentaire institutions complété (ligne indépendante : ni macronistes ni RN, primaire ouverte de la droite et du centre). Vulnérabilité « Score dans les sondages » complétée par les critiques de J.-F. Copé et M. Fesneau et sa réponse. Fiches de ralliement et champ « réalité » inchangés"},
- {"d":"2026-11-02","c":"Candidats","t":"Lisnard : positions sur l'énergie relevées dans une newsletter spécialisée (1er novembre, à vérifier) : opposition au dernier appel d'offres pour 11 parcs éoliens en mer, dont il estime le coût à 82 Md€ et qu'il ne financerait pas ; soutien à l'autoconsommation, au solaire sur les bâtiments agricoles et à l'hydroélectricité ; retour sur l'interdiction des voitures thermiques neuves en 2035 ; levée de l'interdiction de l'exploration d'hydrocarbures (écologie). Nouvelle Énergie revendique 100 000 adhérents (31 octobre, Dijon Actualités). Notes d'axes inchangées"},
- {"d":"2026-11-02","c":"Candidats","t":"Édouard Philippe, au 20 heures de TF1 le 1er novembre : rejette la « primaire des démocrates » proposée par Gabriel Attal et préconise un rassemblement de la droite et du centre aux modalités fixées en février (institutions) ; maintient son analyse sur la présence de jeunes issus de l'immigration parmi les auteurs des pillages d'octobre (immigration). Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"},
- {"d":"2026-11-02","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-11-02","c":"Communication","t":"Argumentaire réécrit sur le thème écologie-énergie (hydroélectricité, autoconsommation solaire, refus de financer le nouvel appel d'offres d'éolien en mer, retour sur l'interdiction des thermiques en 2035). Fiche Dupont-Aignan : convergence énergie complétée. Autres fiches, champ « réalité » et vulnérabilités inchangés"},
- {"d":"2026-11-01","c":"Candidats","t":"Lisnard : autres propositions de l'émission « Objectif Élysée 2027 » (CNews-Europe 1, 27 octobre), non encore recensées, ajoutées d'après Capital (28 octobre) et le compte rendu de Nouvelle Énergie : CSG sur les revenus d'activité ramenée de 9,2 % à 6,6 % (fiscalité) ; non-revalorisation des pensions supérieures à 2 200 € citée en exemple de piste d'économies (retraites) ; réduction des prestations non contributives versées aux étrangers, 2 à 3 Md€ visés la 1re année (immigration) ; principe « casseurs-payeurs » (sécurité) ; transparence algorithmique, financement des entreprises françaises d'IA et de robotique, apprentissages sans machine à l'école (numérique). Selon Nouvelle Énergie, il publie le 28 octobre chez Fayard un livre co-écrit sur l'IA avec Romain Marsily. Positions conformes à son orientation ; notes d'axes inchangées"},
- {"d":"2026-11-01","c":"Candidats","t":"Édouard Philippe est annoncé au 20 heures de TF1 le 1er novembre, sur la primaire et la mobilisation sociale (TF1 Info, relayé par un blog). Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"},
- {"d":"2026-11-01","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre (dernières notices de la Commission des sondages, jusqu'au 30 octobre : baromètres et enquêtes thématiques) ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-11-01","c":"Communication","t":"Argumentaire réécrit sur les thèmes fiscalité (baisse de la CSG sur les revenus d'activité), retraites (mention « sans baisser les pensions » retirée, au vu de la piste de non-revalorisation au-delà de 2 200 €) et numérique (financement de l'IA et de la robotique, transparence algorithmique). Vulnérabilité « Retraite par capitalisation » complétée par cette piste. Thèmes immigration et sécurité inchangés (textes toujours exacts) ; fiches de ralliement et champ « réalité » inchangés"},
- {"d":"2026-10-31","c":"Candidats","t":"Lisnard : sur CNews le 27 octobre (AFP, 28 octobre), appelle Éric Ciotti (UDR) à se séparer du RN et à le rejoindre, et juge l'abaissement de l'âge de départ à 62 voire 60 ans promis par le RN incompatible avec la baisse des dépenses ; entrées ajoutées (institutions, retraites). Il annonce un meeting le 13 décembre à Eurexpo, près de Lyon (Entrevue, 31 octobre). Notes d'axes inchangées"},
- {"d":"2026-10-31","c":"Candidats","t":"AMF : selon l'AFP (29 octobre), Philippe Laurent (UDI), candidat face à Lisnard à la présidence de l'AMF lors du congrès du 24 au 26 novembre, et Marc Fesneau (MoDem) critiquent le cumul avec la candidature présidentielle. Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis"},
- {"d":"2026-10-31","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-10-31","c":"Communication","t":"Vulnérabilités : la ligne sur le plateau de Millevaches mentionne la candidature concurrente de Philippe Laurent à l'AMF et les critiques de Marc Fesneau sur le cumul (AFP, 29 octobre). Argumentaire, fiches de ralliement et champ « réalité » inchangés (la position de Lisnard sur les retraites ne change pas)"},
- {"d":"2026-10-30","c":"Candidats","t":"Lisnard : une cinquantaine d'élus du Limousin lui demandent, par lettre ouverte rendue publique le 29 octobre, de retirer ses propos tenus sur RTL le 20 octobre sur des « camps d'entraînement terroristes » du plateau de Millevaches et de choisir entre la présidence de l'AMF et sa candidature (Radio Totem). Aucune nouvelle mesure ; positions et notes d'axes inchangées"},
- {"d":"2026-10-30","c":"Candidats","t":"Primaire : selon 21News (29 octobre), Retailleau veut une consultation ouverte à la droite et au centre, sans Éric Zemmour, et jugée peu légitime sans Édouard Philippe ; Lisnard se dit ouvert à une consultation pour désigner un candidat unique ; Philippe reste réticent ; aucune date fixée ; pétition d'Hervé Morin pour une primaire. Aucun désistement ni ralliement. Aucune nouvelle mesure, candidature ni retrait relevé pour les autres candidats suivis"},
- {"d":"2026-10-30","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre (les notices déposées du 27 au 29 octobre portent sur d'autres sujets) ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-10-30","c":"Communication","t":"Vulnérabilités : ajout d'une ligne sur les propos du 20 octobre concernant le plateau de Millevaches et la lettre ouverte d'élus du Limousin (29 octobre). Argumentaire, fiches de ralliement et champ « réalité » inchangés"},
- {"d":"2026-10-29","c":"Candidats","t":"Lisnard (éducation, finances publiques) : sur CNews le 27 octobre, propose de recruter les nouveaux enseignants comme contractuels, de laisser les enseignants choisir leur statut et de ne pas remplacer les départs dans la fonction publique, en commençant par les fonctions administratives (Capital). Positions conformes à son orientation ; notes d'axes inchangées"},
- {"d":"2026-10-29","c":"Candidats","t":"Primaire : Gabriel Attal propose sur TF1 le 28 octobre une « grande primaire des démocrates » (LCP). David Lisnard salue l'idée et appelle à aller vite ; l'entourage de Bruno Retailleau juge le projet « mort-né » (AFP, via Imaz Press) ; Édouard Philippe exclut toute primaire et propose une rencontre des dirigeants de la droite et du centre début novembre (TIME France). Aucun désistement ni ralliement ; notes d'axes inchangées. Aucune nouvelle mesure, candidature ni retrait relevé pour les autres candidats suivis"},
- {"d":"2026-10-29","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"},
- {"d":"2026-10-29","c":"Communication","t":"Argumentaire réécrit sur les thèmes éducation (statut contractuel des nouveaux enseignants) et finances publiques (non-remplacement des départs administratifs). Fiche de ralliement Retailleau (pourquoi) complétée avec les réactions à la primaire proposée par G. Attal ; champ « réalité » inchangé"},
- {"d":"2026-10-28","c":"Sondages","t":"Ajout de l'enquête Cluster17 pour Politico (19-22 octobre, 3 000 adultes, 3 hypothèses, sans duel ; publiée le 26 octobre, notice de la Commission des sondages non trouvée à cette date). David Lisnard, testé dans la seule hypothèse avec François Hollande et sans Raphaël Glucksmann, recueille 8 %, devant Bruno Retailleau (7 %) dans la même hypothèse ; 25 % des électeurs de V. Pécresse en 2022 et 31 % des électeurs LR aux européennes 2024 le choisiraient. L'enquête Elabe des 14-16 octobre sort de la liste et passe dans l'historique de Lisnard (5,5 et 6,5 %)"},
- {"d":"2026-10-28","c":"Opinions","t":"L'enquête Cluster17 pour Politico ne publie ni solidité du choix, ni motifs de changement, ni composition de l'électorat de Lisnard (seulement la part de chaque groupe qui le choisit, portée en note de l'enquête, sur une seule hypothèse) ; sa question sur les attentes envers le prochain président diffère de celle de Toluna Harris Interactive. Blocs inchangés"},
- {"d":"2026-10-28","c":"Candidats","t":"Lisnard et Retailleau : selon une dépêche AFP (27 octobre), Retailleau, lors d'un débat à HEC, doute de l'utilité d'une primaire entre eux, jugeant leurs idées très proches ; Lisnard déclare sur CNews que, d'après les sondages, ce n'est pas à lui de se retirer. Aucun désistement ni ralliement ; positions et notes d'axes inchangées. Aucune nouvelle mesure, candidature, désistement ni ralliement relevé pour les autres candidats suivis"},
- {"d":"2026-10-28","c":"Communication","t":"Ralliements : champ « réalité » et fiche Retailleau mis à jour (douze hypothèses d'octobre testant les deux : quatre en faveur de Retailleau, cinq en faveur de Lisnard, trois égalités). Segment « droite tentée par Retailleau » actualisé (sept hypothèses en cours : Retailleau 4 à 7 %, Lisnard 5,5 à 8 %). Argumentaire inchangé"},
- {"d":"2026-10-27","c":"Sondages","t":"Ajout de l'enquête Ipsos bva pour Le Parisien et CESI (21-22 octobre, 4 hypothèses, sans duel ; notice n° 10338). David Lisnard, testé pour la première fois dans ce baromètre, recueille 6,5 % dans l'hypothèse où Philippe et lui sont candidats, devant Bruno Retailleau (5,5 %) dans la même hypothèse. L'enquête YouGov des 12-15 octobre sort de la liste et passe dans l'historique de Lisnard (4 %)"},
- {"d":"2026-10-27","c":"Opinions","t":"L'enquête Ipsos bva ne publie ni solidité du choix, ni motifs de changement, ni profil de l'électorat de Lisnard (seule donnée : 26 % des électeurs de Valérie Pécresse en 2022 le choisiraient, portée en note de l'enquête) ; onglet inchangé"},
- {"d":"2026-10-27","c":"Candidats","t":"Tondelier : sur France 2 le 26 octobre, se dit prête à retirer sa candidature au profit d'une candidature commune de la gauche, à condition que l'écologie soit au cœur du projet ; décision renvoyée au vote militant du 10 au 13 décembre (Orange Actu d'après L'Express). Statut mis à jour ; positions et notes inchangées. Aucune nouvelle mesure de David Lisnard relevée ; aucune nouvelle mesure, candidature, désistement ni ralliement pour les autres candidats suivis"},
- {"d":"2026-10-27","c":"Communication","t":"Ralliements : champ « réalité » et fiche Retailleau mis à jour (onze hypothèses d'octobre testant les deux : quatre en faveur de Retailleau, quatre en faveur de Lisnard, trois égalités). Segments « droite tentée par Retailleau » et « centre droit tenté par Philippe » et vulnérabilité « score » actualisés avec les fourchettes des enquêtes en cours. Argumentaire inchangé ; aucun ralliement ni désistement concernant Lisnard"},
- {"d":"2026-10-26","c":"Candidats","t":"Lisnard et Retailleau (institutions) : selon Robert Ménard, cité par Le JDD (25 octobre), les deux hommes se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027. Désaccords sur la primaire : Lisnard la veut ouverte à tous les candidats de droite et sans obligation de soutenir le vainqueur ; Retailleau la juge sans objet sans Édouard Philippe et propose une charte de ralliement. Aucun désistement ; notes d'axes inchangées"},
- {"d":"2026-10-26","c":"Candidats","t":"Le Pen (institutions, retraites) : lors du lancement de campagne à Orléans le 25 octobre, annonce en cas de victoire un gouvernement « ouvert et pluraliste », d'union nationale, avec Jordan Bardella à Matignon, et la présentation de sa réforme des retraites le 17 novembre (Public Sénat). Aucune autre mesure détaillée relevée ; notes d'axes inchangées. Aucune nouvelle mesure, candidature, désistement ni ralliement relevé pour les autres candidats suivis"},
- {"d":"2026-10-26","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Toluna Harris Interactive des 19-21 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement) concernant Lisnard"},
- {"d":"2026-10-26","c":"Communication","t":"Ralliements : champ « réalité » et fiche Retailleau (pourquoi, risque) complétés avec l'engagement rapporté par Robert Ménard et les points de désaccord sur la primaire. Argumentaire, segments et vulnérabilités inchangés"},
- {"d":"2026-10-25","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Toluna Harris Interactive des 19-21 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement) concernant Lisnard"},
- {"d":"2026-10-25","c":"Candidats","t":"Congrès du Rassemblement national à Orléans les 24 et 25 octobre, avec un premier meeting de campagne de Marine Le Pen prévu le 25 octobre après-midi ; aucune mesure nouvelle publiée à ce stade, positions inchangées. Aucune nouvelle mesure, candidature, désistement ni ralliement relevé pour les autres candidats suivis"},
- {"d":"2026-10-25","c":"Communication","t":"Vulnérabilités : la ligne sur le score dans les sondages mentionne l'appel d'Éric Ciotti (21 octobre) à Lisnard et Retailleau de se rallier à Marine Le Pen (21News). Argumentaire et fiches de ralliement inchangés"},
- {"d":"2026-10-24","c":"Sondages","t":"Ajout de l'enquête Toluna Harris Interactive pour M6 et RTL (19-21 octobre, 5 hypothèses, 3 duels). David Lisnard, testé pour la première fois dans ce baromètre, recueille 7 % (avec Philippe) et 8 % (avec Attal), devant Bruno Retailleau dans ces mêmes hypothèses (4 et 5 %). L'enquête OpinionWay Presitrack des 13-14 octobre, qui ne testait pas Lisnard, sort de la liste ; historique inchangé"},
- {"d":"2026-10-24","c":"Opinions","t":"Priorités et critères de choix remplacés par la vague 8 du baromètre Toluna Harris Interactive (19-21 octobre), mêmes questions : pouvoir d'achat 56 %, immigration 38 %, santé 36 %. Libellés des sous-groupes partisans attribués selon l'ordre du rapport, à vérifier. Le même rapport publie un potentiel électoral de Lisnard (6 % de notes 10, 43 % de notes 0), signalé dans le bloc Solidité du choix comme mesure distincte ; aucune mesure de solidité du choix ni de motifs de changement concernant son électorat"},
- {"d":"2026-10-24","c":"Candidats","t":"Lisnard et Retailleau (institutions) : déjeuner le 21 octobre, à l'initiative de Robert Ménard, sur une candidature commune ; Lisnard réclame une primaire ouverte avant la fin de l'année, Retailleau serait prêt à en discuter, selon la presse, sans calendrier ni règles acceptés (Entrevue, Parlons Politique). Aucun accord ni désistement ; notes d'axes inchangées"},
- {"d":"2026-10-24","c":"Communication","t":"Ralliements : champ « réalité » et fiche Retailleau mis à jour (sur dix hypothèses d'octobre testant les deux : quatre en faveur de Retailleau, trois en faveur de Lisnard, trois égalités ; mention du déjeuner du 21 octobre). Argumentaire inchangé"},
- {"d":"2026-10-23","c":"Sondages","t":"Ajout de l'enquête OpinionWay pour CNEWS (21-22 octobre, hypothèse unique, 3 duels) : David Lisnard recueille 6 %, à égalité avec Bruno Retailleau, contre 4 % dans la même hypothèse des 13-14 octobre (même liste de candidats). L'enquête OpinionWay pour CNEWS des 13-14 octobre sort de la liste et passe dans l'historique de Lisnard (4 %)"},
- {"d":"2026-10-23","c":"Opinions","t":"L'enquête OpinionWay du 21-22 octobre ventile les duels de second tour selon le vote Lisnard (base très réduite), portés en note de l'enquête ; aucune mesure de solidité du choix ni de motifs de changement concernant Lisnard ; onglet inchangé"},
- {"d":"2026-10-23","c":"Candidats","t":"Lisnard (sécurité) : sur ICI Azur le 22 octobre, propose d'isoler les casseurs des manifestations dans des centres fermés, en comparaison avec les hooligans ; position ajoutée au thème Sécurité, notes d'axes inchangées"},
- {"d":"2026-10-23","c":"Candidats","t":"Philippe (Charleville-Mézières, 21 octobre ; Journal du Net) : précise sa politique familiale (allocation unique dégressive dès le 1er enfant, réduction d'impôt jusqu'à 3 000 € pendant trois ans, garantie d'une place de garde) et propose des peines minimales pour les violences en manifestation, la reconnaissance faciale et l'élargissement des pouvoirs des polices municipales ; notes d'axes inchangées"},
- {"d":"2026-10-23","c":"Communication","t":"Argumentaire : texte du thème Sécurité réécrit pour intégrer la proposition du 22 octobre (centres fermés pour les casseurs). Ralliements : champ « réalité » et fiche Retailleau mis à jour (quatre hypothèses sur huit en octobre, trois égalités dont OpinionWay du 21-22 octobre). Segment RN (Le Pen 31 à 36 %) et vulnérabilité sur l'échange du 19 octobre actualisés (lettre ouverte de 61 maires, Algérie360, 22 octobre). Aucun ralliement ni désistement concernant Lisnard relevé"},
- {"d":"2026-10-22","c":"Candidats","t":"Philippe (BFMTV, « Grand Oral 2027 », 18 octobre) : propose de travailler deux heures de plus par semaine, un calendrier scolaire avec plus de semaines et moins d'heures de cours, une loi « casseur-payeur » ; un référendum sur l'immigration n'est « ni un totem ni un tabou ». Positions ajoutées aux thèmes Entreprises, Éducation, Sécurité et Immigration ; notes d'axes inchangées"},
- {"d":"2026-10-22","c":"Candidats","t":"Retailleau (institutions) : demande au gouvernement de déplacer le second tour, fixé au 2 mai 2027, par crainte de troubles liés au 1er-Mai (BFMTV, 19 octobre ; Journal du Net)"},
- {"d":"2026-10-22","c":"Sondages","t":"Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Ifop-Fiducial du 17-19 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement) concernant Lisnard"},
- {"d":"2026-10-22","c":"Communication","t":"Aucune nouvelle mesure ni position de David Lisnard relevée (réunions publiques en Gironde, Vaucluse, Isère et à Aix-en-Provence le 22 octobre) ; aucun ralliement ni désistement. Argumentaire, fiches de ralliement et champ « réalité » inchangés"},
- {"d":"2026-10-21","c":"Sondages","t":"Ajout de l'enquête Ifop-Fiducial pour LCI, Le Figaro et Sud Radio (17-19 octobre, 8 hypothèses, 5 duels) : David Lisnard recueille 5,5 %, à égalité avec Bruno Retailleau, dans l'hypothèse où Ruffin, Villepin et lui sont candidats, et 7 % dans l'hypothèse où il est le seul candidat de droite. L'enquête Ifop des 12-14 octobre sort de la liste et passe dans l'historique de Lisnard (6 %)"},
- {"d":"2026-10-21","c":"Opinions","t":"L'enquête Ifop du 17-19 octobre ne contient ni question de solidité du choix ni profil de l'électorat de Lisnard ; onglet inchangé"},
- {"d":"2026-10-21","c":"Candidats","t":"Le Pen (sécurité) : après les violences du 17 octobre, propose la règle du « casseur/payeur » et le rétablissement de l'ordre républicain ; Retailleau (sécurité) : demande l'instauration de l'état d'urgence (Europe 1, 18 octobre)"},
- {"d":"2026-10-21","c":"Candidats","t":"Lisnard : sur LCI le 19 octobre, répond sèchement à une question sur le 17 octobre 1961, propos critiqués par des responsables de LFI et du PS (Le JDD, 20 octobre) ; aucune nouvelle mesure. Nouvelle Énergie annonce une réunion publique à Longchamp (Vosges) le 31 octobre"},
- {"d":"2026-10-21","c":"Communication","t":"Ralliements : champ « réalité » et fiche Retailleau mis à jour (Retailleau devant dans quatre hypothèses sur sept en octobre, deux égalités dont l'enquête Ifop du 17-19 octobre). Segment « droite tentée par Retailleau » et vulnérabilité « score » actualisés ; nouvelle vulnérabilité sur l'échange du 19 octobre. Argumentaire inchangé ; aucun ralliement ni désistement concernant Lisnard relevé"},
- {"d":"2026-10-20","c":"Sondages","t":"Ajout de l'enquête Cluster17 pour Le Point (14-15 octobre, 5 hypothèses, sans duel) : David Lisnard recueille 7 %, à égalité avec Bruno Retailleau, dans l'hypothèse où Philippe, Retailleau et lui sont candidats, et 17 % dans l'hypothèse où il est le seul candidat du bloc central et de LR. L'enquête Toluna Harris Interactive (5-8 octobre), qui ne testait pas Lisnard, sort de la liste"},
- {"d":"2026-10-20","c":"Opinions","t":"Cluster17 publie un profil de l'électorat de Lisnard (positionnement, vote 2022, priorités : immigration 54 %, cotisations 38 %, insécurité 37 %) et une question sur les qualités présidentielles (20 % pour Lisnard) ; portés en note de l'enquête, le bloc de l'onglet Opinions (part de chaque groupe votant Lisnard, Elabe) mesurant une autre question. Aucune mesure de solidité du choix ni de motifs de changement concernant Lisnard"},
- {"d":"2026-10-20","c":"Candidats","t":"Lisnard (sécurité) : invité du 20 heures de TF1 le 19 octobre, se dit favorable à l'interdiction des manifestations présentant un risque grave pour l'ordre public et à une meilleure sanction des auteurs de dégradations (Capital)"},
- {"d":"2026-10-20","c":"Communication","t":"Argumentaire : texte du thème Sécurité réécrit pour intégrer la position du 19 octobre. Ralliements : champ « réalité » et fiche Retailleau mis à jour (Retailleau devant dans quatre hypothèses sur six, une égalité dans l'enquête Cluster17). Aucun ralliement ni désistement concernant Lisnard relevé"},
- {"d":"2026-10-19","c":"Méthode","t":"Nouvel axe « Défense et effort militaire » (désarmement à réarmement) : le thème Défense y est rattaché au lieu de l'axe Europe et souveraineté, qui ne mesurait pas l'effort militaire ; le thème Politique étrangère n'est plus rattaché à un axe. Notes établies à partir des positions recensées ; les candidats dont les positions ne portent que sur l'OTAN ou l'Europe de la défense restent non documentés sur cet axe."},
- {"d":"2026-10-19","c":"Sondages","t":"Ajout de l'enquête YouGov pour Le HuffPost (12-15 octobre, 5 hypothèses, 6 duels) : David Lisnard, testé dans une seule hypothèse, y recueille 4 % (Retailleau 5 %) ; aucune question de solidité du choix ni de motifs de vote. L'enquête Odoxa-Backbone (24 septembre - 7 octobre), qui ne testait pas Lisnard, sort de la liste"},
- {"d":"2026-10-19","c":"Communication","t":"Ralliements : champ « réalité » et fiche Retailleau mis à jour, Retailleau devançant Lisnard dans quatre des cinq hypothèses d'octobre testant les deux ; aucune nouvelle mesure, ni ralliement ou désistement concernant Lisnard relevé ; argumentaire inchangé"},
- {"d":"2026-10-18","c":"Communication","t":"Ajout de l'argumentaire « Pourquoi Nouvelle Énergie est mieux », thème par thème, dans les vues Par thème et Par candidat ; affichage désactivable pour une lecture neutre"},
- {"d":"2026-10-18","c":"Présentation","t":"Nouvelle présentation (fond clair, police plus lisible, écart à Lisnard en cinq niveaux), page d'accueil avec mode d'emploi, et section « Ralliements » dans l'onglet Communication : arguments pour obtenir le désistement de cinq candidats en faveur de Lisnard"},
- {"d":"2026-10-18","c":"Candidats","t":"Lisnard (sécurité) : sur BFMTV-RMC le 13 octobre, propose de revoir l'excuse de minorité et des travaux d'intérêt général pour les jeunes auteurs de violences ; aucun nouveau sondage ni ralliement relevé depuis l'enquête Elabe du 16 octobre"},
- {"d":"2026-10-18","c":"Tous","t":"Aucun changement significatif"},
- {"d":"2026-10-18","c":"Sondages","t":"Ajout de trois enquêtes ne testant pas Lisnard : OpinionWay Presitrack pour Les Échos et Radio Classique (13-14 octobre, 3 hypothèses), Toluna Harris Interactive pour M6 et RTL (5-8 octobre, 5 hypothèses, 2 duels), Odoxa-Backbone (24 septembre - 7 octobre, 2 hypothèses, 2 duels)"},
- {"d":"2026-10-18","c":"Opinions","t":"Odoxa : 19 % des Français jugent David Lisnard bon candidat pour son camp (78 % mauvais), mesure portée en note de l'enquête ; aucune nouvelle mesure de solidité du choix ni de motifs de changement le concernant"},
- {"d":"2026-10-18","c":"Candidats","t":"Lisnard : dit disposer de 500 promesses de parrainage (Ouest-France, 14 octobre, d'après le site de Nouvelle Énergie)"},
- {"d":"2026-10-18","c":"Candidats","t":"Ralliement : François Fillon annonce son soutien à Bruno Retailleau le 17 octobre à Avignon (CNews, Entrevue)"},
- {"d":"2026-10-18","c":"Communication","t":"Segment Retailleau : mention du soutien de François Fillon dans le champ « pourquoi »"},
- {"d":"2026-10-18","c":"Opinions","t":"Nouvel onglet Opinions et motivations : priorités et critères de vote (Harris, 5-8 octobre), solidité du choix (Elabe), composition de l'électorat de Lisnard (Elabe)"},
- {"d":"2026-10-18","c":"Sondages","t":"Elabe 14-16 octobre vérifié sur le rapport de l'institut : correction du cas 2 (Mélenchon 16 %, Roussel 2 %) et ajout du cas 6"},
- {"d":"2026-10-18","c":"Communication","t":"Chiffres des segments mis à jour d'après les hypothèses de sondage d'octobre et le nouvel indice de proximité"},
- {"d":"2026-10-18","c":"Méthode","t":"Source et date ajoutées à chaque position ; indice de proximité calculé sur les seuls axes documentés (3 au minimum), couverture affichée"},
- {"d":"2026-10-18","c":"Sondages","t":"Ajout de l'Elabe du 14-16 octobre (Lisnard 5,5 et 6,5 %) et de l'OpinionWay du 13-14 octobre (4 %) ; suppression de la courbe qui mélangeait des hypothèses différentes"},
- {"d":"2026-10-18","c":"Communication","t":"Ajout de l'onglet de suggestions de communication pour l'équipe de David Lisnard (7 segments, 5 points de vulnérabilité)"},
- {"d":"2026-10-18","c":"Sondages","t":"Ajout de l'onglet sondages : série des intentions de vote de David Lisnard (9 enquêtes) et dernier Ifop-Fiducial"},
- {"d":"2026-10-18","c":"Tous","t":"Mise en ligne : 35 candidatures, 15 thèmes, grille de proximité avec David Lisnard"}
-]
+ "updated": "2026-11-27",
+ "THEMES": [
+  {
+   "k": "eco",
+   "n": "Économie et pouvoir d'achat",
+   "ax": 0,
+   "lead": "Le salaire minimum sépare les blocs : de 1 700 à 2 200 € nets à gauche, hausse du net par baisse des cotisations au centre et à droite, baisse de la TVA sur l'énergie au RN."
+  },
+  {
+   "k": "ent",
+   "n": "Entreprises, travail et emploi",
+   "ax": 0,
+   "lead": "Interdiction des licenciements et réduction du temps de travail à l'extrême gauche ; sortie des 35 heures et allègement du Code du travail au centre et à droite."
+  },
+  {
+   "k": "fis",
+   "n": "Fiscalité",
+   "ax": 0,
+   "lead": "La baisse des impôts de production fait consensus du centre à l'extrême droite ; la taxation du patrimoine (ISF, taxe Zucman, grands héritages) structure la gauche."
+  },
+  {
+   "k": "fin",
+   "n": "Finances publiques et dette",
+   "ax": 0,
+   "lead": "Quatre candidats proposent une règle d'or adoptée par référendum ; les économies annoncées vont de 60 à plus de 200 Md€, sur des horizons différents, donc non comparables tels quels."
+  },
+  {
+   "k": "ret",
+   "n": "Retraites et protection sociale",
+   "ax": 0,
+   "lead": "Les âges proposés vont de 60 à 65 ans ; Attal supprimerait l'âge légal au profit de la durée de cotisation ; la capitalisation apparaît du centre à l'extrême droite."
+  },
+  {
+   "k": "edu",
+   "n": "Éducation et enseignement supérieur",
+   "ax": null,
+   "lead": "La revalorisation des enseignants traverse les blocs ; un examen à l'entrée en 6e est proposé par Attal, Retailleau et Lisnard ; la fin de Parcoursup par Becht, Lisnard et Branco."
+  },
+  {
+   "k": "san",
+   "n": "Santé",
+   "ax": null,
+   "lead": "Thème le moins documenté : la moitié des candidats n'a pas de position publique ; la suppression des ARS et de l'AME revient le plus souvent à droite."
+  },
+  {
+   "k": "def",
+   "n": "Défense",
+   "ax": 5,
+   "lead": "Le rapport à l'OTAN est la ligne de partage : sortie de l'Alliance ou du commandement intégré pour LFI, les souverainistes et le RN ; réarmement européen et atlantique au centre."
+  },
+  {
+   "k": "eur",
+   "n": "Europe",
+   "ax": 1,
+   "lead": "De l'approfondissement fédéral (Attal, Tondelier, Glucksmann) à la sortie de l'UE (Philippot, Asselineau, Lalanne), en passant par la primauté du droit national (Retailleau, Le Pen)."
+  },
+  {
+   "k": "etr",
+   "n": "Politique étrangère",
+   "ax": null,
+   "lead": "L'Ukraine trace la ligne principale ; l'accord franco-algérien de 1968 serait dénoncé ou révisé par Philippe, Retailleau, Lisnard et Dupont-Aignan."
+  },
+  {
+   "k": "imm",
+   "n": "Immigration",
+   "ax": 2,
+   "lead": "Régularisation à la gauche de la gauche, convention citoyenne chez Glucksmann, points ou quotas au centre, fin du droit du sol et « priorité nationale » à droite et à l'extrême droite."
+  },
+  {
+   "k": "sec",
+   "n": "Sécurité et justice",
+   "ax": 3,
+   "lead": "Peines planchers et suppression du juge d'application des peines à droite, majorité pénale abaissée chez Bertrand et Lisnard, encadrement de la police dans une partie de la gauche."
+  },
+  {
+   "k": "ecol",
+   "n": "Écologie et énergie",
+   "ax": 4,
+   "lead": "Le nucléaire est soutenu par presque tous, sauf Tondelier et Mélenchon ; le soutien aux renouvelables oppose la gauche et le centre à la droite et à l'extrême droite."
+  },
+  {
+   "k": "inst",
+   "n": "Institutions et démocratie",
+   "ax": null,
+   "lead": "Le référendum est l'outil le plus partagé ; le septennat revient chez Cazeneuve, Lisnard, Bertrand, Branco et dans le programme écologiste."
+  },
+  {
+   "k": "num",
+   "n": "Numérique, IA et souveraineté technologique",
+   "ax": null,
+   "lead": "La souveraineté numérique est le point commun le plus large ; les divergences portent sur la régulation, de l'encadrement renforcé à la dérogation au RGPD."
+  }
+ ],
+ "AXES": [
+  {
+   "n": "État et économie",
+   "neg": "Redistribution, État producteur",
+   "pos": "Baisse de la dépense, dérégulation",
+   "def": "Rôle de l'État : salaires administrés, nationalisations, taxation du capital (pôle gauche) contre économies budgétaires, baisse des prélèvements, flexibilité du travail, capitalisation (pôle droit). Thèmes : économie, travail, fiscalité, finances, retraites."
+  },
+  {
+   "n": "Europe et souveraineté",
+   "neg": "Fédéralisme européen",
+   "pos": "Sortie de l'UE",
+   "def": "Du transfert de souveraineté (fin des vetos, États-Unis d'Europe) à la sortie de l'UE, en passant par la primauté du droit national et les dérogations. Thème : Europe."
+  },
+  {
+   "n": "Immigration",
+   "neg": "Régularisation, ouverture",
+   "pos": "Restriction forte",
+   "def": "De la régularisation générale et de la liberté d'installation à la fin du droit du sol, à la priorité nationale et à la « remigration ». Thème : immigration."
+  },
+  {
+   "n": "Sécurité et justice",
+   "neg": "Prévention, encadrement policier",
+   "pos": "Fermeté pénale",
+   "def": "De la priorité aux libertés et au contrôle de la police aux peines planchers, à la majorité pénale abaissée et aux procédures d'exception. Thème : sécurité et justice."
+  },
+  {
+   "n": "Énergie et écologie",
+   "neg": "Priorité climat, sortie du nucléaire",
+   "pos": "Nucléaire, fin des aides aux renouvelables",
+   "def": "De la sortie du nucléaire et de la sobriété à la relance nucléaire, à la fin du soutien aux renouvelables et à la remise en cause du principe de précaution. Thème : écologie et énergie."
+  },
+  {
+   "n": "Défense et effort militaire",
+   "neg": "Désarmement, refus du réarmement",
+   "pos": "Réarmement, forte hausse de l'effort militaire",
+   "def": "Du refus de la hausse du budget militaire et du démantèlement de l'industrie d'armement au réarmement accéléré et à la hausse des moyens (budget, réservistes, équipements). Le rapport à l'OTAN n'est pas noté sur cet axe : une position qui ne porte que sur l'OTAN ou l'organisation européenne de la défense laisse l'axe non documenté (note null). Thème : défense."
+  }
+ ],
+ "BLOCS": {
+  "eg": [
+   "Extrême gauche",
+   "--eg"
+  ],
+  "g": [
+   "Gauche",
+   "--g"
+  ],
+  "c": [
+   "Centre",
+   "--c"
+  ],
+  "d": [
+   "Droite",
+   "--d"
+  ],
+  "s": [
+   "Souverainistes",
+   "--s"
+  ],
+  "ed": [
+   "Extrême droite",
+   "--ed"
+  ],
+  "div": [
+   "Divers",
+   "--div"
+  ]
+ },
+ "C": [
+  {
+   "id": "arthaud",
+   "n": "Nathalie Arthaud",
+   "p": "Lutte ouvrière",
+   "b": "eg",
+   "st": "Candidate (4e fois)",
+   "pr": "Pas de programme ; discours du 26/09/2026",
+   "s": [
+    -5,
+    0,
+    -5,
+    -4,
+    -2,
+    -4
+   ],
+   "cf": "moyenne",
+   "j": [
+    "SMIC à 2 200 €, réquisition des profits",
+    "aucune position européenne",
+    "régularisation, liberté de circulation",
+    "critique du racisme dans la police",
+    "planification, pas de position sur le nucléaire",
+    "contre la hausse du budget militaire et le service national"
+   ],
+   "S": {
+    "a": [
+     "Lutte ouvrière, discours du meeting du 26 septembre",
+     "https://www.lutte-ouvriere.org/portail/brochures/meeting-26-septembre-2026-discours-nathalie-arthaud-197446.html",
+     "2026-09-26"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eco": [
+     "[D] SMIC à 2 200 € nets ; carburant vendu à prix coûtant par les pétroliers"
+    ],
+    "ent": [
+     "[D] interdiction des licenciements ; partage du travail sans baisse de salaire"
+    ],
+    "fis": [
+     "[D] réquisition des profits des pétroliers et de l'armement ; levée du secret commercial"
+    ],
+    "fin": [
+     "[D] pas de plan sur la dette ; services publics financés par les profits confisqués"
+    ],
+    "edu": [
+     "[D] contre les classes surchargées et le service national"
+    ],
+    "san": [
+     "[D] plus de moyens pour les hôpitaux"
+    ],
+    "def": [
+     "[D] contre la hausse du budget militaire et le service national"
+    ],
+    "eur": [
+     "[D] pas de mesure européenne ; rejet du souverainisme"
+    ],
+    "etr": [
+     "[D] contre les livraisons d'armes à l'Ukraine ; retrait des troupes françaises d'Afrique"
+    ],
+    "imm": [
+     "[D] régularisation de tous les sans-papiers, liberté de circulation, droit de vote des immigrés"
+    ],
+    "sec": [
+     "[D] dénonciation du racisme dans la police"
+    ],
+    "ecol": [
+     "[D] planification de l'énergie et de l'eau ; transports publics gratuits"
+    ],
+    "inst": [
+     "[D] pas de réforme ; primauté des luttes sur l'élection"
+    ],
+    "num": [
+     "[D] l'IA au service des besoins humains et non du profit"
+    ]
+   }
+  },
+  {
+   "id": "kazib",
+   "n": "Anasse Kazib",
+   "p": "Révolution permanente",
+   "b": "eg",
+   "st": "Annoncée en juin 2026",
+   "pr": "Site en ligne, programme 2027 « en élaboration »",
+   "s": [
+    -5,
+    0,
+    -5,
+    -5,
+    -3,
+    -5
+   ],
+   "cf": "moyenne",
+   "j": [
+    "expropriation des banques, 28 h",
+    "rien sur l'UE",
+    "régularisation, fermeture des centres de rétention",
+    "dissolution des corps spéciaux de police",
+    "énergie publique, transports collectifs",
+    "démantèlement de l'industrie d'armement"
+   ],
+   "S": {
+    "a": [
+     "Programme d'A. Kazib (2027 en élaboration)",
+     "https://anasse2027.fr/programme",
+     "non daté"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eco": [
+     "[P] SMIC à 2 000 € nets, +500 € sur tous les salaires, indexation ; gel des loyers"
+    ],
+    "ent": [
+     "[P] interdiction des licenciements ; semaine de 28 h sans perte de salaire ; CDI pour tous"
+    ],
+    "fis": [
+     "[P] fin des aides publiques aux grandes entreprises"
+    ],
+    "fin": [
+     "[P] expropriation des groupes bancaires ; investissement massif dans les services publics"
+    ],
+    "ret": [
+     "[P] retraite à 60 ans, 55 ans pour les métiers pénibles ; Sécurité sociale financée par le patronat"
+    ],
+    "edu": [
+     "[P] revenu étudiant au niveau du SMIC ; contre le SNU"
+    ],
+    "san": [
+     "[P] nationalisation de l'industrie pharmaceutique"
+    ],
+    "def": [
+     "[P] démantèlement de l'industrie d'armement"
+    ],
+    "etr": [
+     "[P] retrait des troupes françaises à l'étranger"
+    ],
+    "imm": [
+     "[P] régularisation, fermeture des centres de rétention, droit de vote des immigrés"
+    ],
+    "sec": [
+     "[P] dissolution des corps spéciaux de police ; légalisation encadrée du cannabis"
+    ],
+    "ecol": [
+     "[P] énergie sous contrôle public ; reconversion de l'automobile vers les transports publics"
+    ],
+    "inst": [
+     "[P] fin de la Ve République, du Sénat et de la présidence ; assemblée unique"
+    ]
+   }
+  },
+  {
+   "id": "labib",
+   "n": "Selma Labib",
+   "p": "NPA-Révolutionnaires",
+   "b": "eg",
+   "st": "Désignée en juin 2026",
+   "pr": "Pas de programme ; déclarations",
+   "s": [
+    -5,
+    0,
+    -5,
+    -4,
+    -2,
+    -4
+   ],
+   "cf": "moyenne",
+   "j": [
+    "+400 €, interdiction des licenciements",
+    "rien sur l'UE",
+    "liberté d'installation, contre Frontex",
+    "contre les violences policières",
+    "adaptation climatique",
+    "contre la hausse des dépenses militaires et le service militaire"
+   ],
+   "S": {
+    "a": [
+     "NPA-R, intervention à la Fête de l'Humanité",
+     "https://npa-revolutionnaires.org/articles/intervention-de-selma-labib-a-la-fete-de-lhumanite-2026",
+     "2026-09-12"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eco": [
+     "[D] +400 € sur salaires et pensions, aucun revenu net sous 2 000 €"
+    ],
+    "ent": [
+     "[D] interdiction des licenciements ; forte réduction du temps de travail"
+    ],
+    "fis": [
+     "[D] mesures d'urgence financées par actionnaires et milliardaires"
+    ],
+    "ret": [
+     "[D] rejet de la retraite à 67 ans, de la capitalisation et du projet RN"
+    ],
+    "edu": [
+     "[D] contre les suppressions de postes et la hausse des frais d'inscription"
+    ],
+    "san": [
+     "[D] contre le reste à charge pour les affections de longue durée"
+    ],
+    "def": [
+     "[D] contre la hausse des dépenses militaires et le service militaire"
+    ],
+    "etr": [
+     "[D] contre les bases militaires françaises en Afrique"
+    ],
+    "imm": [
+     "[D] liberté de circulation, régularisation, opposition à Frontex"
+    ],
+    "sec": [
+     "[D] dénonciation des violences policières ; contre l'interdiction du voile"
+    ],
+    "ecol": [
+     "[D] adaptation immédiate des logements et lieux de travail à la chaleur"
+    ],
+    "inst": [
+     "[D] pas de réforme ; pouvoir des travailleurs"
+    ],
+    "num": [
+     "[D] l'IA pour émanciper et planifier, pas pour licencier"
+    ]
+   }
+  },
+  {
+   "id": "melenchon",
+   "n": "Jean-Luc Mélenchon",
+   "p": "La France insoumise",
+   "b": "g",
+   "st": "Déclaré le 03/05/2026",
+   "pr": "« L'Avenir en commun », 5e édition (livre, 06/11/2026) : 1 069 mesures, dont 238 nouvelles et 118 modifiées ; présentée au Bourget le 07/11/2026",
+   "s": [
+    -4.5,
+    2,
+    -4,
+    -4,
+    -4,
+    null
+   ],
+   "cf": "moyenne",
+   "j": [
+    "SMIC à 1 700 €, ISF, annulation de dette détenue par la BCE",
+    "« désobéissance » aux traités, sortie de l'OTAN",
+    "statut légal des sans-papiers",
+    "remplacement de l'IGPN, encadrement de la police",
+    "sortie du nucléaire progressive (édition 2026)",
+    "sortie de l'OTAN, non-alignement ; rejette l'objectif de 5 % du PIB (édition 2026)"
+   ],
+   "S": {
+    "aec26": [
+     "LFI, sortie de la 5e édition de L'Avenir en commun",
+     "https://lafranceinsoumise.fr/2026/11/02/avenir-en-commun-nouvelle-france/",
+     "2026-11-02"
+    ],
+    "aec": [
+     "L'Avenir en commun, édition 2025",
+     "https://melenchon2027.fr/programme2025/livre/",
+     "2025-01"
+    ],
+    "ps": [
+     "Public Sénat, premier débat devant le Medef",
+     "https://www.publicsenat.fr/actualites/politique/dette-retraites-fiscalite-que-retenir-du-premier-debat-des-candidats-a-lelection-presidentielle",
+     "2026-08-27"
+    ],
+    "inv": [
+     "LFI, plans d'investissement",
+     "https://melenchon2027.fr/programme/plans-investissement/",
+     "2026-09-25"
+    ],
+    "ifrap": [
+     "IFRAP, comparateur (agrégateur, à vérifier)",
+     "https://www.ifrap.org/comparateurs/presidentielles-2027",
+     "2026-10"
+    ],
+    "mon": [
+     "monvote2027 (agrégateur, à vérifier)",
+     "https://monvote2027.fr/candidat/melenchon",
+     "2026-10"
+    ],
+    "bam": [
+     "Business AM, colloque de l'Institut La Boétie",
+     "https://fr.businessam.be/?p=260863",
+     "2026-07-01"
+    ],
+    "ely": [
+     "ÉlyséeScope (agrégateur, à vérifier)",
+     "https://www.elyseescope.com/candidat/jean-luc-melenchon",
+     "2026-10"
+    ],
+    "bs": [
+     "Brussels Signal",
+     "https://brusselssignal.eu/2026/06/melenchon-backs-regularisation-migrant-scheme-and-criticises-eu-return-policy/",
+     "2026-06-25"
+    ],
+    "fw": [
+     "FrenchWeb, d'après une tribune au Figaro",
+     "https://www.frenchweb.fr/jean-luc-melenchon-fustige-la-vassalisation-numerique-de-la-france/451259",
+     "2025-02-09"
+    ],
+    "eu": [
+     "Euronews, débat devant le Medef",
+     "https://fr.euronews.com/2026/08/28/presidentielle-de-2027-a-roland-garros-les-candidats-croisent-le-fer-sur-leconomie",
+     "2026-08-27"
+    ],
+    "lcp": [
+     "LCP, ce qui change dans le nouveau programme de Mélenchon",
+     "https://lcp.fr/actualites/presidentielle-2027-ce-qui-change-dans-le-nouveau-programme-de-jean-luc-melenchon-444841",
+     "2026-11-06"
+    ],
+    "elfr": [
+     "élection.fr, LFI publie son programme de 1 069 mesures",
+     "https://xn--lection-9xa.fr/actualite/lfi-publie-programme-avenir-en-commun-6-novembre-2026.html",
+     "2026-11-06"
+    ],
+    "politis": [
+     "Politis, le nouveau programme de LFI",
+     "https://www.politis.fr/articles/2026/11/politique-gauche-avec-son-nouveau-programme-lfi-melenchon-veut-plier-le-match-des-idees/",
+     "2026-11-06"
+    ],
+    "qz11m": [
+     "Quartz (fr), d'après l'AFP, discours du 11-Novembre",
+     "https://fr.qz.com/marine-pen-jean-luc-melenchon-discours-commemorations-11-novembre-111126",
+     "2026-11-11"
+    ],
+    "psr16": [
+     "Public Sénat, débat des candidats aux Restos du Cœur",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos",
+     "2026-11-17"
+    ],
+    "lib19": [
+     "Libération, « l’alliance avec Marine Tondelier « devrait pouvoir se faire », estime Mélenchon »",
+     "https://www.liberation.fr/politique/elections/presidentielle-2027-lalliance-avec-marine-tondelier-devrait-pouvoir-se-faire-estime-melenchon-20261119_ER7TVKBPSZAYRLDDPPJDN2O52U/",
+     "2026-11-19"
+    ]
+   },
+   "src": {
+    "eco": [
+     "lcp",
+     "lcp"
+    ],
+    "ent": [
+     "inv",
+     "ps"
+    ],
+    "fis": [
+     "lcp"
+    ],
+    "fin": [
+     "ps",
+     "lcp"
+    ],
+    "ret": [
+     "lcp",
+     "ps",
+     "psr16"
+    ],
+    "edu": [
+     "mon"
+    ],
+    "def": [
+     "bam",
+     "lcp"
+    ],
+    "eur": [
+     "eu",
+     "lcp"
+    ],
+    "etr": [
+     "bam",
+     "ely",
+     "lcp",
+     "qz11m"
+    ],
+    "imm": [
+     "bs"
+    ],
+    "sec": [
+     "mon",
+     "lcp"
+    ],
+    "ecol": [
+     "lcp",
+     "lcp"
+    ],
+    "inst": [
+     "lcp",
+     "lcp",
+     "lib19"
+    ],
+    "num": [
+     "fw",
+     "lcp"
+    ],
+    "san": [
+     "lcp"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[P] SMIC à 1 700 € nets immédiatement ; point d'indice et APL revalorisés de 10 % ; blocage des prix des produits de première nécessité ; écart de salaires limité de 1 à 20",
+     "[P] « garantie d'autonomie » au seuil de pauvreté, étendue aux jeunes détachés du foyer fiscal parental"
+    ],
+    "ent": [
+     "[P] plans d'investissement par filière (BTP-logement, automobile)",
+     "[D] pôle bancaire public et planification écologique"
+    ],
+    "fis": [
+     "[P] rétablissement de l'ISF avec un volet climatique, suppression de la flat tax, héritage plafonné à 12 millions d'euros, taxe Zucman maintenue"
+    ],
+    "fin": [
+     "[D] annulation de la part de la dette détenue par la BCE et la Banque de France",
+     "[P] gel de la part de la dette détenue par la BCE ; révision du traité et des statuts de la BCE pour qu'elle achète de la dette publique directement et ne puisse la revendre"
+    ],
+    "ret": [
+     "[P] abrogation de la dernière réforme et retour à 62 ans, puis à terme retraite à 60 ans à taux plein pour 40 annuités ; fin des avantages fiscaux de la capitalisation",
+     "[D] 62 ans d'abord, puis 60 ans",
+     "[D] relèvement des petites pensions au niveau du SMIC et maintien de la répartition (débat des Restos du Cœur, 16 novembre)"
+    ],
+    "edu": [
+     "[P] recrutements massifs dans l'Éducation nationale (à vérifier)"
+    ],
+    "def": [
+     "[D] sortie de l'OTAN ; « non-alignement solidaire »",
+     "[P] retrait immédiat du commandement intégré de l'OTAN puis de l'organisation par étapes ; rejet de l'objectif de 5 % du PIB pour la défense ; conscription citoyenne écologique obligatoire, rémunérée au SMIC"
+    ],
+    "eur": [
+     "[D] « désobéissance » aux règles européennes jugées contraires",
+     "[P] moratoire voté par le Parlement sur la libre circulation des marchandises et des capitaux, la concurrence appliquée aux services publics et les accords de libre-échange"
+    ],
+    "etr": [
+     "[D] canal direct avec Moscou sur les garanties de sécurité après les hostilités ; coopération avec la Chine",
+     "[P] reconnaissance de l'État de Palestine, arrêt des ventes d'armes à Israël (à vérifier)",
+     "[P] souveraineté de l'État de Palestine sur les territoires occupés depuis 1967, avec étude d'autres voies dont un État binational ; en Ukraine, cessez-le-feu, retrait russe et garanties collectives",
+     "[D] le 11 novembre, demande que la Russie évacue l'Ukraine et juge qu'aucune modification de frontières ne peut se faire sans consulter les populations concernées (AFP, d'après Quartz)"
+    ],
+    "imm": [
+     "[D] statut légal pour tous les travailleurs sans papiers ; régularisation accélérée des familles"
+    ],
+    "sec": [
+     "[P] autorité indépendante à la place de l'IGPN et de l'IGGN (à vérifier)",
+     "[P] brevet obligatoire de lutte contre les discriminations pour les policiers"
+    ],
+    "ecol": [
+     "[P] sortie progressive du nucléaire, 100 % renouvelables au plus tard en 2060, baisse de 65 % des émissions en 2033 ; planification écologique et « règle verte »",
+     "[P] interdiction des vols de nuit entre 23 h et 6 h dans tous les aéroports"
+    ],
+    "inst": [
+     "[P] VIe République par une Constituante convoquée par référendum (article 11), proportionnelle, suppression du 49.3 (RIC non mentionné dans les comptes rendus consultés)",
+     "[P] accession de la Kanaky-Nouvelle-Calédonie à l'indépendance au 1er janvier 2028, par référendum national",
+     "[D] le 19 novembre, estime que l'alliance proposée par Marine Tondelier « devrait pouvoir se faire » (titre de Libération)"
+    ],
+    "num": [
+     "[D] cloud public français ; gouvernance de l'IA confiée à l'ONU (2025)",
+     "[P] interdiction des IA simulant une relation affective ; autorisation préalable des IA « à haut risque » par une autorité nationale"
+    ],
+    "san": [
+     "[P] remboursement des séances de psychothérapie pour les moins de 26 ans ; « 100 % Sécu »"
+    ]
+   }
+  },
+  {
+   "id": "roussel",
+   "n": "Fabien Roussel",
+   "p": "PCF",
+   "b": "g",
+   "st": "Déclaré le 06/09/2026",
+   "pr": "Projet « VIVRE ! » en 5 axes, sans mesures détaillées",
+   "s": [
+    -4.5,
+    2,
+    -2,
+    -1,
+    0.5,
+    -3.5
+   ],
+   "cf": "moyenne",
+   "j": [
+    "ISF, nationalisations, pôle public bancaire",
+    "contre l'Europe fédérale",
+    "régularisation des travailleurs (2023)",
+    "plus de commissariats et de moyens pour la justice",
+    "nucléaire et renouvelables, sortie des fossiles",
+    "refus de l'« économie de guerre » et de l'objectif de 5 % du PIB"
+   ],
+   "S": {
+    "hu": [
+     "PCF, discours à la Fête de l'Humanité",
+     "https://www.pcf.fr/fete_de_lhumanite_2026_discours_de_fabien_roussel",
+     "2026-09-15"
+    ],
+    "ue": [
+     "PCF, discours des universités d'été",
+     "https://www.pcf.fr/ue_26_discours_fr",
+     "2026-08-26"
+    ],
+    "bud": [
+     "PCF, propositions sur le budget 2027",
+     "https://www.pcf.fr/budget_2027_lecornu_annonce_une_saignee_sociale_au_service_du_capital",
+     "2026-09-18"
+    ],
+    "secu": [
+     "PCF, cahier « La Sécurité sociale, une ambition communiste »",
+     "https://assets.nationbuilder.com/pcf/pages/36196/attachments/original/1766073347/document_-_cahier_se%CC%81cu_v2.pdf",
+     "2025"
+    ],
+    "paix": [
+     "PCF, cahier « Paix et défense nationale »",
+     "https://assets.nationbuilder.com/pcf/pages/41211/attachments/original/1779954906/document_cahier_paix_ppp_stc.pdf",
+     "2026"
+    ],
+    "lc": [
+     "lacampagne2027 (agrégateur, à vérifier)",
+     "https://lacampagne2027.com/candidats/fabien-roussel",
+     "2026-10"
+    ],
+    "sud": [
+     "Sud Radio, entretien",
+     "https://www.sudradio.fr/linvite-politique/il-y-a-du-trumpisme-dans-la-maniere-de-faire-de-jean-luc-melenchon-affirme-fabien-roussel",
+     "2023-12-05"
+    ],
+    "nat": [
+     "PCF, nationalisation de TotalEnergies",
+     "https://www.pcf.fr/nationalisation_total",
+     "2026-05"
+    ]
+   },
+   "src": {
+    "eco": [
+     "ue",
+     "bud"
+    ],
+    "ent": [
+     "hu",
+     "bud"
+    ],
+    "fis": [
+     "hu"
+    ],
+    "fin": [
+     "hu"
+    ],
+    "ret": [
+     "secu",
+     "ue"
+    ],
+    "edu": [
+     "lc"
+    ],
+    "san": [
+     "ue",
+     "secu"
+    ],
+    "def": [
+     "ue",
+     "paix"
+    ],
+    "eur": [
+     "ue",
+     "paix"
+    ],
+    "etr": [
+     "hu"
+    ],
+    "imm": [
+     "sud"
+    ],
+    "sec": [
+     "ue"
+    ],
+    "ecol": [
+     "hu",
+     "nat"
+    ],
+    "inst": [
+     "hu"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] SMIC à 1 700 € nets, +5 % sur tous les salaires, point d'indice +30 %, échelle mobile",
+     "[P] carburant bloqué à 1,60 €/l, électricité et gaz −30 %"
+    ],
+    "ent": [
+     "[D] abrogation de la loi Travail, retour des CHSCT, autant de salariés que d'actionnaires dans les CA",
+     "[P] fin des aides aux entreprises sans critère, plan de 60 Md€"
+    ],
+    "fis": [
+     "[D] rétablissement de l'ISF ; héritages exonérés sous 200 000 € ; prison pour la fraude fiscale"
+    ],
+    "fin": [
+     "[D] nationalisation d'une grande banque pour créer un pôle public bancaire"
+    ],
+    "ret": [
+     "[P] retraite pleine à 60 ans",
+     "[D] aucune retraite sous le SMIC, refus de la capitalisation"
+    ],
+    "edu": [
+     "[D] recrutement de 24 000 enseignants"
+    ],
+    "san": [
+     "[D] retour des hôpitaux de proximité",
+     "[P] remboursement à 100 % des soins prescrits"
+    ],
+    "def": [
+     "[D] refus de l'« économie de guerre »",
+     "[P] refus de l'objectif de 5 % du PIB et de la dissuasion étendue"
+    ],
+    "eur": [
+     "[D] refus d'une Europe fédérale",
+     "[P] Europe « à géométrie choisie »"
+    ],
+    "etr": [
+     "[D] cessez-le-feu et dialogue en Ukraine ; sanctions contre le gouvernement israélien"
+    ],
+    "imm": [
+     "[H] régularisation des travailleurs sans papiers (2023)"
+    ],
+    "sec": [
+     "[D] loi-cadre contre les violences sexuelles (3 Md€) ; plus de commissariats"
+    ],
+    "ecol": [
+     "[D] doublement de l'électricité décarbonée, nucléaire et renouvelables ; sortie des fossiles en 15 ans",
+     "[P] nationalisation de TotalEnergies et Engie"
+    ],
+    "inst": [
+     "[D] 50 % d'ouvriers et d'employés parmi les candidats aux législatives"
+    ]
+   }
+  },
+  {
+   "id": "tondelier",
+   "n": "Marine Tondelier",
+   "p": "Les Écologistes",
+   "b": "g",
+   "st": "Investie ; propose le 18/11/2026 (France 2) une coalition autour de la candidature de Mélenchon et se dit toujours candidate ; vote militant du 10 au 13/12/2026, options fixées le 26/11 (candidature autonome, soutien à Mélenchon ou rapprochement avec Glucksmann)",
+   "pr": "Programme du parti (juillet 2026, 208 pages)",
+   "s": [
+    -3.5,
+    -4.5,
+    -4,
+    -3.5,
+    -5,
+    null
+   ],
+   "cf": "moyenne",
+   "j": [
+    "ISF climatique, État actif",
+    "Europe fédérale, fin des vetos",
+    "régularisations, fin des OQTF automatiques",
+    "interdiction des LBD, cannabis encadré",
+    "arrêt des EPR2, 44 % de renouvelables",
+    "défense européenne intégrée : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "pdf": [
+     "Les Écologistes, programme « Pour une prospérité écologique »",
+     "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+     "2026-07-13"
+    ],
+    "gaz": [
+     "La Gazette France, présentation du programme",
+     "https://www.lagazettefrance.fr/article/2027-les-ecologistes-veulent-instaurer-la-premiere-republique-ecologique-et-citoyenne",
+     "2026-07-13"
+    ],
+    "lc": [
+     "lacampagne2027, d'après le programme (agrégateur, à vérifier)",
+     "https://lacampagne2027.com/candidats/marine-tondelier",
+     "2026-10"
+    ],
+    "disc": [
+     "Les Écologistes, discours des journées d'été",
+     "https://lesecologistes.fr/posts/2s0kOxQEOQdC8JP4jkXuu7/discours-de-marine-tondelier-aux-journees-d-ete-des-ecologistes-2026",
+     "2026-08-21"
+    ],
+    "ps19t": [
+     "Public Sénat, « La main tendue de Marine Tondelier à Mélenchon… »",
+     "https://www.publicsenat.fr/actualites/politique/la-main-tendue-de-marine-tondelier-a-melenchon-peut-elle-faire-imploser-les-ecologistes",
+     "2026-11-19"
+    ]
+   },
+   "src": {
+    "eco": [
+     "pdf"
+    ],
+    "ent": [
+     "pdf"
+    ],
+    "fis": [
+     "gaz"
+    ],
+    "fin": [
+     "lc"
+    ],
+    "ret": [
+     "lc",
+     "disc"
+    ],
+    "edu": [
+     "lc"
+    ],
+    "san": [
+     "disc"
+    ],
+    "def": [
+     "gaz"
+    ],
+    "eur": [
+     "pdf"
+    ],
+    "etr": [
+     "lc"
+    ],
+    "imm": [
+     "lc"
+    ],
+    "sec": [
+     "lc"
+    ],
+    "ecol": [
+     "pdf"
+    ],
+    "inst": [
+     "lc",
+     "ps19t"
+    ],
+    "num": [
+     "pdf"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[P] « bouclier climat » pour ménages modestes et moyens ; électricité découplée des fossiles, baisse de la TVA sur l'électricité"
+    ],
+    "ent": [
+     "[P] « sobriété compétitive », relocalisation, écoconception"
+    ],
+    "fis": [
+     "[P] ISF climatique, TVA verte, avion plus cher et train moins cher"
+    ],
+    "fin": [
+     "[P] approche keynésienne ; renégociation de la trajectoire avec l'UE (à vérifier)"
+    ],
+    "ret": [
+     "[D] 62 ans, 60 ans pour carrières longues et pénibles",
+     "[P] sécurité sociale de l'alimentation"
+    ],
+    "edu": [
+     "[P] enseignants +15 % sur 5 ans, 19 élèves par classe, remplacement de Parcoursup (à vérifier)"
+    ],
+    "san": [
+     "[P] santé environnementale prioritaire ; « congé climatique »"
+    ],
+    "def": [
+     "[P] haut conseil militaire intégré rattaché au Conseil européen"
+    ],
+    "eur": [
+     "[P] Europe fédérale ; limites planétaires dans les traités ; majorité qualifiée"
+    ],
+    "etr": [
+     "[P] soutien militaire à l'Ukraine, frappes longue portée comprises (à vérifier)"
+    ],
+    "imm": [
+     "[P] régularisation des travailleurs, étudiants et parents ; fin des OQTF automatiques (à vérifier)"
+    ],
+    "sec": [
+     "[P] police de proximité, interdiction des LBD, 9 000 magistrats, cannabis encadré (à vérifier)"
+    ],
+    "ecol": [
+     "[P] arrêt des EPR2 et SMR, fermeture des réacteurs vieillissants en 20 ans ; 44 % de renouvelables en 2030"
+    ],
+    "inst": [
+     "[P] fin du présidentialisme ; septennat unique, RIC, proportionnelle, vote à 16 ans (à vérifier)",
+     "[D] au journal de France 2 le 18 novembre, se dit prête à travailler à une coalition autour de la candidature de Jean-Luc Mélenchon : accord programmatique, gouvernemental et législatif, et dispositif commun de campagne, sans changer son programme, notamment sur l'Ukraine ; se dit toujours candidate ; le conseil fédéral du 26 novembre fixera les options du vote militant des 10-13 décembre (candidature autonome, soutien à Mélenchon ou rapprochement avec Glucksmann)"
+    ],
+    "num": [
+     "[P] technologies sobres et ouvertes, « techno-diversités numériques »"
+    ]
+   }
+  },
+  {
+   "id": "ruffin",
+   "n": "François Ruffin",
+   "p": "Debout !",
+   "b": "g",
+   "st": "Retiré le 21/11/2026 (communiqué : campagne jugée dans « l'impasse » faute de grande primaire de la gauche) ; ne soutient aucun candidat ; déclaré en avril 2026",
+   "pr": "7 « cahiers de campagne » publiés",
+   "s": [
+    -3.5,
+    1,
+    -3,
+    -1,
+    0,
+    null
+   ],
+   "cf": "élevée",
+   "j": [
+    "taxe sur les dividendes, SMIC à 1 700 €",
+    "contre le libre-échange et la majorité qualifiée",
+    "régularisation des travailleurs présents",
+    "indépendance du parquet",
+    "EPR2 maintenus, priorité climat",
+    "coopération industrielle européenne : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "tr": [
+     "Cahier « Travailleurs essentiels »",
+     "https://nouspresident.fr/statut-travailleurs-essentiels/",
+     "2026-04-13"
+    ],
+    "or": [
+     "Actu Orange, lancement de campagne",
+     "https://actu.orange.fr/france/presidentielle-2027-francois-ruffin-lance-sa-campagne-en-se-posant-en-defenseur-des-travailleurs-essentiels-magic-CNT000002oTqjw.html",
+     "2026-04-25"
+    ],
+    "tw": [
+     "Cahier « Travaillisme écologique »",
+     "https://nouspresident.fr/travaillisme-ecologique/",
+     "2026-09-09"
+    ],
+    "log": [
+     "Cahier logement",
+     "https://nouspresident.fr/face-a-la-crise-du-logement-faire-sauter-le-verrou/",
+     "2026-09-24"
+    ],
+    "ind": [
+     "Cahier industrie",
+     "https://nouspresident.fr/pour-proteger-notre-industrie-relocaliser-100-produits-strategiques/",
+     "2026-10-15"
+    ],
+    "man": [
+     "Manifeste de Debout !",
+     "https://www.debout.fr/notre-manifeste",
+     "non daté"
+    ],
+    "gc": [
+     "Le Grand Continent, doctrine de F. Ruffin sur l'Europe",
+     "https://legrandcontinent.eu/fr/2026/02/25/pour-une-declaration-dindependance-la-doctrine-ruffin-sur-leurope/",
+     "2026-02-25"
+    ],
+    "sep": [
+     "Cahier « Séparation de l'argent et de l'État »",
+     "https://nouspresident.fr/separation-argent-etat/",
+     "2026-07-02"
+    ],
+    "rt21": [
+     "RTBF, retrait de la candidature",
+     "https://www.rtbf.be/article/france-ma-campagne-est-dans-une-impasse-francois-ruffin-retire-sa-candidature-pour-la-presidentielle-11819128",
+     "2026-11-21"
+    ]
+   },
+   "src": {
+    "eco": [
+     "or",
+     "log"
+    ],
+    "ent": [
+     "tr"
+    ],
+    "fis": [
+     "tw"
+    ],
+    "ret": [
+     "man"
+    ],
+    "edu": [
+     "tw"
+    ],
+    "san": [
+     "ind"
+    ],
+    "def": [
+     "gc"
+    ],
+    "eur": [
+     "ind",
+     "gc"
+    ],
+    "etr": [
+     "gc"
+    ],
+    "imm": [
+     "man"
+    ],
+    "sec": [
+     "sep"
+    ],
+    "ecol": [
+     "tw"
+    ],
+    "inst": [
+     "sep"
+    ],
+    "num": [
+     "gc",
+     "ind"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] SMIC à 1 700 € nets, prime de 1 000 € défiscalisée",
+     "[P] salaires indexés, encadrement des loyers partout, 200 000 logements publics par an"
+    ],
+    "ent": [
+     "[P] heures avant 8 h et après 18 h payées double ; statut des travailleurs essentiels ; 80 % de commande publique en France"
+    ],
+    "fis": [
+     "[P] taxe sur les dividendes soumise à référendum ; meublés touristiques taxés ; taxe Zucman"
+    ],
+    "ret": [
+     "[P] abrogation des 64 ans ; trimestres bonus pour les métiers pénibles"
+    ],
+    "edu": [
+     "[P] rénovation d'environ 80 % des écoles ; classes moins chargées"
+    ],
+    "san": [
+     "[P] pôle public du médicament"
+    ],
+    "def": [
+     "[D] industrie de défense européenne par coopération entre États"
+    ],
+    "eur": [
+     "[P] clauses de sauvegarde Mercosur, CETA non ratifié",
+     "[D] refus de la majorité qualifiée en politique étrangère"
+    ],
+    "etr": [
+     "[D] ni dépendance aux États-Unis ni concession à la Russie"
+    ],
+    "imm": [
+     "[P] régularisation des travailleurs présents"
+    ],
+    "sec": [
+     "[P] indépendance du parquet ; suppression de la Cour de justice de la République"
+    ],
+    "ecol": [
+     "[P] prolongation du parc et 6 EPR2 ; leasing de 3 M de petites voitures électriques ; 15 Md€/an de rénovation"
+    ],
+    "inst": [
+     "[P] fin des avantages post-mandat ; Haute Autorité à la probité ; RIC"
+    ],
+    "num": [
+     "[D] « CECA du numérique »",
+     "[P] cloud réservé aux fournisseurs de droit européen ; communs numériques"
+    ]
+   }
+  },
+  {
+   "id": "batho",
+   "n": "Delphine Batho",
+   "p": "Génération Écologie",
+   "b": "g",
+   "st": "Investie le 06/06/2026",
+   "pr": "Pas de programme ; livre (juin 2026)",
+   "s": [
+    -3,
+    -1,
+    -2.5,
+    -1,
+    -5,
+    null
+   ],
+   "cf": "faible",
+   "j": [
+    "décroissance assumée",
+    "contre le Mercosur",
+    "contre la loi immigration 2023",
+    "peu de positions",
+    "écologie prioritaire, contre l'accélération du nucléaire",
+    "pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "lj": [
+     "Libre Journal, entretien",
+     "https://librejournal.fr/article/delphine-batho-tournons-la-page-des-verts/",
+     "2026-06-26"
+    ],
+    "mv": [
+     "monvote2027 (agrégateur, à vérifier)",
+     "https://monvote2027.fr/candidat/batho",
+     "2026-10"
+    ],
+    "fv": [
+     "france-vote, votes à l'Assemblée (agrégateur)",
+     "https://www.france-vote.fr/candidats/delphine-batho",
+     "2026-10"
+    ],
+    "ge": [
+     "Génération Écologie, « Les lycées mobilisés »",
+     "https://www.generationecologie.fr/2026/10/06/les-lycees-mobilises-ecoutons-la-jeunesse/",
+     "2026-10-06"
+    ],
+    "ge2": [
+     "Génération Écologie, réponse à M. Tondelier",
+     "https://www.generationecologie.fr/2026/08/20/reponse-de-generation-ecologie-a-marine-tondelier/",
+     "2026-08-20"
+    ],
+    "os": [
+     "Objectif Sud, entretien",
+     "https://www.objectifsud.fr/environnement/linterview-delphine-batho-nous-sommes-dans-une-situation-dinsecurite-climatique-qui-nous-concerne-tous-164678.php",
+     "2026-05-29"
+    ]
+   },
+   "src": {
+    "eco": [
+     "lj"
+    ],
+    "ent": [
+     "lj"
+    ],
+    "fis": [
+     "mv"
+    ],
+    "ret": [
+     "fv"
+    ],
+    "edu": [
+     "ge"
+    ],
+    "san": [
+     "lj"
+    ],
+    "def": [
+     "ge2"
+    ],
+    "eur": [
+     "fv"
+    ],
+    "etr": [
+     "lj"
+    ],
+    "imm": [
+     "mv"
+    ],
+    "sec": [
+     "lj"
+    ],
+    "ecol": [
+     "os",
+     "mv"
+    ],
+    "inst": [
+     "mv"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] modèle de décroissance, pas de financement par la croissance"
+    ],
+    "ent": [
+     "[D] adaptation du travail à la chaleur"
+    ],
+    "fis": [
+     "[H] impôt minimum de 2 % sur les très grandes fortunes"
+    ],
+    "ret": [
+     "[H] vote pour l'abrogation de la réforme de 2023"
+    ],
+    "edu": [
+     "[P] rénovation des écoles, classes moins chargées, cantines bio"
+    ],
+    "san": [
+     "[D] lieux rafraîchis lors des nuits chaudes"
+    ],
+    "def": [
+     "[D] « écologie de gouvernement » sur la défense"
+    ],
+    "eur": [
+     "[H] rejet de l'accord UE-Mercosur"
+    ],
+    "etr": [
+     "[D] écologie comme stratégie de souveraineté"
+    ],
+    "imm": [
+     "[H] opposée à la loi immigration de 2023"
+    ],
+    "sec": [
+     "[D] écologie traitée comme enjeu de sécurité civile"
+    ],
+    "ecol": [
+     "[D] plan national d'isolation ; maintien du Fonds vert et de l'ADEME",
+     "[H] contre la loi d'accélération du nucléaire"
+    ],
+    "inst": [
+     "[H] VIe République, suppression du 49.3"
+    ]
+   }
+  },
+  {
+   "id": "glucksmann",
+   "n": "Raphaël Glucksmann",
+   "p": "Place publique (PS-PP-GRS)",
+   "b": "g",
+   "st": "Désigné par la primaire le 11/10/2026",
+   "pr": "Pas de programme présidentiel ; « premières lignes » (mai 2026)",
+   "s": [
+    -2,
+    -4,
+    -2,
+    -0.5,
+    -2,
+    null
+   ],
+   "cf": "moyenne",
+   "j": [
+    "taxation des grands patrimoines, baisse de la CSG",
+    "fin du veto, souveraineté européenne",
+    "convention citoyenne",
+    "sécurité sans mesure détaillée",
+    "renouvelables, nucléaire maintenu",
+    "défense européenne, service civique : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "rfi09": [
+     "Dakaractu, d'après RFI, programme des « 100 premiers jours »",
+     "https://www.dakaractu.com/Presidentielle-en-France-Raphael-Glucksmann-presente-son-projet-de-revolution-ecologique_a278006.html",
+     "2026-11-09"
+    ],
+    "lcp1": [
+     "LCP, premières lignes du programme",
+     "https://lcp.fr/actualites/presidentielle-raphael-glucksmann-devoile-les-premieres-lignes-de-son-possible-programme",
+     "2026-05-26"
+    ],
+    "lcp2": [
+     "LCP, différences entre les candidats de la primaire",
+     "https://lcp.fr/actualites/glucksmann-faure-royal-maurel-guedj-quelles-differences-entre-les-candidats-a-la",
+     "2026-10-09"
+    ],
+    "psg": [
+     "Public Sénat, ce que propose R. Glucksmann",
+     "https://www.publicsenat.fr/actualites/politique/fiscalite-ecole-immigration-ce-que-propose-raphael-glucksmann",
+     "2026-08-24"
+    ],
+    "ps": [
+     "Public Sénat, premier débat devant le Medef",
+     "https://www.publicsenat.fr/actualites/politique/dette-retraites-fiscalite-que-retenir-du-premier-debat-des-candidats-a-lelection-presidentielle",
+     "2026-08-27"
+    ],
+    "sud": [
+     "Sud Radio, dernier débat de la primaire",
+     "https://www.sudradio.fr/societe/un-dernier-debat-pour-departager-les-candidats-de-la-primaire-de-la-gauche",
+     "2026-10-04"
+    ],
+    "ps25": [
+     "Public Sénat, projet de Place publique",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-pas-candidat-pour-le-moment-raphael-glucksmann-trace-son-chemin-et-defend-sa-vision-pour-le-pays",
+     "2025-06-23"
+    ],
+    "ely": [
+     "ÉlyséeScope (agrégateur, à vérifier)",
+     "https://www.elyseescope.com/questions/raphael-glucksmann-positions-programme-20260930",
+     "2026-09-30"
+    ],
+    "pp08": [
+     "Parlons Politique, coalition sans programme commun",
+     "https://www.parlons-politique.fr/elections/presidentielle-2027-une-coalition-sans-programme-commun-peut-elle-vraiment-convaincre-les-electeurs_30929/",
+     "2026-11-08"
+    ],
+    "v16": [
+     "Public Sénat, vote à 16 ans",
+     "https://www.publicsenat.fr/actualites/politique/vote-a-16-ans-la-jeunesse-doit-elle-avoir-son-mot-a-dire-dans-les-urnes",
+     "2026-10-16"
+    ],
+    "psr16": [
+     "Public Sénat, débat des candidats aux Restos du Cœur",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos",
+     "2026-11-17"
+    ],
+    "ps19t": [
+     "Public Sénat, « La main tendue de Marine Tondelier à Mélenchon… »",
+     "https://www.publicsenat.fr/actualites/politique/la-main-tendue-de-marine-tondelier-a-melenchon-peut-elle-faire-imploser-les-ecologistes",
+     "2026-11-19"
+    ]
+   },
+   "src": {
+    "eco": [
+     "lcp2"
+    ],
+    "ent": [
+     "ps"
+    ],
+    "fis": [
+     "sud",
+     "rfi09"
+    ],
+    "fin": [
+     "ps"
+    ],
+    "ret": [
+     "lcp2",
+     "psr16"
+    ],
+    "edu": [
+     "psg"
+    ],
+    "def": [
+     "lcp2"
+    ],
+    "eur": [
+     "lcp1"
+    ],
+    "etr": [
+     "lcp2"
+    ],
+    "imm": [
+     "lcp1"
+    ],
+    "sec": [
+     "lcp1"
+    ],
+    "ecol": [
+     "ps25",
+     "rfi09",
+     "rfi09"
+    ],
+    "inst": [
+     "v16",
+     "pp08",
+     "ps19t"
+    ],
+    "num": [
+     "ely"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] baisse de la CSG ; 15 Md€ issus des grands héritages reversés sur les fiches de paie"
+    ],
+    "ent": [
+     "[D] « contrat patriotique », protection face aux importations chinoises"
+    ],
+    "fis": [
+     "[D] taxation des très grands héritages, des superprofits et des hauts patrimoines",
+     "[D] mise à contribution des patrimoines supérieurs à 100 M€ pour un fonds consacré à la transition écologique ; taux non précisé (9 novembre)"
+    ],
+    "fin": [
+     "[D] économies et taxation des hauts patrimoines ; grand emprunt européen"
+    ],
+    "ret": [
+     "[D] retour à 62 ans, départ modulé selon l'espérance de vie en bonne santé",
+     "[D] maintien de la retraite par répartition ; revalorisation des petites pensions au-delà de l'inflation et meilleure prise en compte des carrières hachées, notamment des femmes (débat des Restos du Cœur, 16 novembre)"
+    ],
+    "edu": [
+     "[D] loi de programmation sur 5 ans ; hausse des salaires enseignants ; mixité imposée au privé"
+    ],
+    "def": [
+     "[D] défense européenne ; service civique obligatoire de 10 mois"
+    ],
+    "eur": [
+     "[D] suppression du droit de veto ; plan de souveraineté européenne"
+    ],
+    "etr": [
+     "[D] aide renforcée à l'Ukraine par la saisie des avoirs russes"
+    ],
+    "imm": [
+     "[D] convention citoyenne sur l'immigration, propositions votées au Parlement"
+    ],
+    "sec": [
+     "[D] sécurité affichée comme axe, sans mesure détaillée"
+    ],
+    "ecol": [
+     "[D] sortie du nucléaire non visée ; développement des renouvelables",
+     "[D] programme des « 100 premiers jours » pour sortir de la dépendance aux énergies fossiles : investissement massif dans les renouvelables, rénovation énergétique des logements, ferroviaire, fin de la dépendance énergétique à la Russie, sans montants (9 novembre)",
+     "[D] pérenniser le nucléaire avec un programme de nouveaux réacteurs, en complément des renouvelables, sans nombre précisé (9 novembre)"
+    ],
+    "inst": [
+     "[D] proportionnelle ; assemblées citoyennes ; vote à 16 ans",
+     "[D] le 7 novembre, rejette l'idée d'un rapprochement avec le projet de David Lisnard prêtée à l'entourage d'Emmanuel Macron, jugeant que gauche et droite ne sont pas « solubles l'une dans l'autre »",
+     "[D] se dit déçu de la proposition de coalition de Marine Tondelier autour de Mélenchon, qu'il juge contraire à la tradition pro-européenne des Écologistes, et souhaite conduire la « révolution écologique » avec eux"
+    ],
+    "num": [
+     "[D] « Airbus du numérique » européen (à vérifier)"
+    ]
+   }
+  },
+  {
+   "id": "bouamrane",
+   "n": "Karim Bouamrane",
+   "p": "PS (hors primaire)",
+   "b": "g",
+   "st": "Déclaré le 09/06/2026",
+   "pr": "Manifeste en 5 axes, non chiffré",
+   "s": [
+    -1,
+    -1.5,
+    0,
+    1,
+    -0.5,
+    3.5
+   ],
+   "cf": "faible",
+   "j": [
+    "aides conditionnées, gestion rigoureuse",
+    "politique numérique européenne commune",
+    "accueil et reconduite",
+    "lutte contre le narcotrafic",
+    "nucléaire et géothermie",
+    "forte hausse des dépenses de défense"
+   ],
+   "S": {
+    "man": [
+     "Manifeste de K. Bouamrane",
+     "https://www.karimbouamrane2027.org/manifeste",
+     "non daté"
+    ],
+    "ou": [
+     "Oumma, entretien",
+     "https://oumma.com/karim-bouamrane-defie-melenchon-et-vise-le-second-tour-de-la-presidentielle-2027/",
+     "2026-07-02"
+    ]
+   },
+   "src": {
+    "eco": [
+     "ou"
+    ],
+    "ent": [
+     "ou"
+    ],
+    "fis": [
+     "ou"
+    ],
+    "fin": [
+     "man"
+    ],
+    "ret": [
+     "ou"
+    ],
+    "edu": [
+     "ou"
+    ],
+    "san": [
+     "man"
+    ],
+    "def": [
+     "ou"
+    ],
+    "eur": [
+     "ou"
+    ],
+    "etr": [
+     "ou"
+    ],
+    "imm": [
+     "man"
+    ],
+    "sec": [
+     "man"
+    ],
+    "ecol": [
+     "ou"
+    ],
+    "num": [
+     "man"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] baisse de la TVA sur la construction de logements"
+    ],
+    "ent": [
+     "[D] accès des PME aux marchés publics ; aides conditionnées à l'emploi local"
+    ],
+    "fis": [
+     "[D] aides conditionnées au paiement des impôts en France"
+    ],
+    "fin": [
+     "[P] gestion rigoureuse, sans objectif chiffré"
+    ],
+    "ret": [
+     "[D] départ plus tôt pour les métiers pénibles, jusqu'à 67-69 ans possible pour les autres"
+    ],
+    "edu": [
+     "[D] investissement dans l'élémentaire et le périscolaire"
+    ],
+    "san": [
+     "[P] lutte contre les déserts médicaux"
+    ],
+    "def": [
+     "[D] forte hausse des dépenses de défense"
+    ],
+    "eur": [
+     "[D] politique européenne commune sur l'IA, le cloud et la cybersécurité"
+    ],
+    "etr": [
+     "[D] solution à deux États"
+    ],
+    "imm": [
+     "[P] accueil digne, reconduite des irréguliers, maintien de l'asile"
+    ],
+    "sec": [
+     "[P] lutte contre le narcotrafic ; protection de l'enfance"
+    ],
+    "ecol": [
+     "[D] nucléaire et géothermie, sortie progressive des fossiles"
+    ],
+    "num": [
+     "[P] maîtrise française des règles de l'IA"
+    ]
+   }
+  },
+  {
+   "id": "cazeneuve",
+   "n": "Bernard Cazeneuve",
+   "p": "La Convention",
+   "b": "g",
+   "st": "Déclaré le 16/07/2026",
+   "pr": "« Lettre aux Français » de 86 pages",
+   "s": [
+    -1,
+    -3,
+    -0.5,
+    0,
+    -0.5,
+    2
+   ],
+   "cf": "élevée",
+   "j": [
+    "contribution des grandes fortunes, règle d'or sociale",
+    "vote à la majorité dans l'UE",
+    "accueil et fermeté",
+    "police de proximité, moins de prison par défaut",
+    "nucléaire pilier et renouvelables",
+    "réarmement proportionné"
+   ],
+   "S": {
+    "a": [
+     "La Convention, Lettre aux Français",
+     "https://www.la-convention.fr/lettre",
+     "2026-07-15"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eco": [
+     "[P] plan logement ; aides sociales automatisées"
+    ],
+    "ent": [
+     "[P] emploi des seniors au niveau allemand ; plan industriel sur 10 ans"
+    ],
+    "fis": [
+     "[P] contribution des très grandes fortunes ; retour sur la flat tax ; baisse des impôts de production"
+    ],
+    "fin": [
+     "[P] « règle d'or sociale » sur 5 ans"
+    ],
+    "ret": [
+     "[P] pas de relèvement de l'âge ; durée de cotisation ; pénibilité rétablie"
+    ],
+    "edu": [
+     "[P] +2 000 €/an pour les boursiers ; avance jeunesse de 3 000 €"
+    ],
+    "san": [
+     "[P] santé mentale grande cause ; réorganisation des urgences"
+    ],
+    "def": [
+     "[P] réarmement proportionné ; dialogue franco-britannique sur la dissuasion ; maintien dans l'OTAN"
+    ],
+    "eur": [
+     "[P] vote à la majorité ; politique industrielle commune"
+    ],
+    "etr": [
+     "[P] réforme du Conseil de sécurité ; partenariat avec l'Afrique"
+    ],
+    "imm": [
+     "[P] accueil digne, intégration, fermeté contre l'irrégulier"
+    ],
+    "sec": [
+     "[P] police de proximité ; unités contre le crime organisé ; moins de prison par défaut"
+    ],
+    "ecol": [
+     "[P] nucléaire pilier, renouvelables, « DATAR du climat »"
+    ],
+    "inst": [
+     "[P] septennat ; encadrement du 49.3 ; dose de proportionnelle"
+    ],
+    "num": [
+     "[P] données sous droit européen ; recours humain contre les algorithmes"
+    ]
+   }
+  },
+  {
+   "id": "massard",
+   "n": "Lydie Massard",
+   "p": "Union démocratique bretonne",
+   "b": "g",
+   "st": "Sous conditions",
+   "pr": "Aucune mesure publiée",
+   "t": {}
+  },
+  {
+   "id": "attal",
+   "n": "Gabriel Attal",
+   "p": "Renaissance",
+   "b": "c",
+   "st": "Déclaré le 22/05/2026",
+   "pr": "6 « chantiers » en ligne, peu chiffrés",
+   "s": [
+    2.5,
+    -5,
+    1.5,
+    1.5,
+    -1,
+    4
+   ],
+   "cf": "moyenne",
+   "j": [
+    "zéro déficit, 100 000 postes, aucune hausse d'impôt",
+    "États-Unis d'Europe",
+    "système à points, préférence travail",
+    "peu de mesures vérifiées",
+    "baisse des émissions de 5 %/an",
+    "amplification du réarmement, dissuasion « avancée »"
+   ],
+   "S": {
+    "ti24": [
+     "Tahiti Infos (AFP), « Attal exhorte Philippe à trouver une autre modalité de départage »",
+     "https://www.tahiti-infos.com/%E2%80%8BAttal-exhorte-Philippe-a-trouver-une-autre-modalite-de-departage-s-il-refuse-la-primaire_a240158.html",
+     "2026-11-24"
+    ],
+    "21n10": [
+     "21News, G. Attal sur France Inter",
+     "https://www.21news.be/gabriel-attal-envisage-de-voter-a-droite-si-la-primaire-designe-retailleau-ou-lisnard/",
+     "2026-11-10"
+    ],
+    "ev07": [
+     "Entrevue, « Attal affirme que la primaire se rapproche, Philippe lui oppose un nouveau refus »",
+     "https://entrevue.fr/politique/presidentielle-2027/presidentielle-2027-attal-affirme-que-la-primaire-se-rapproche-philippe-lui/",
+     "2026-11-07"
+    ],
+    "lcp28": [
+     "LCP, « grande primaire des démocrates »",
+     "https://lcp.fr/actualites/presidentielle-2027-gabriel-attal-veut-une-grande-primaire-des-democrates-444417",
+     "2026-10-28"
+    ],
+    "ts": [
+     "Programme de G. Attal, travail et salaires",
+     "https://attalpresident.fr/programme/travail-salaires",
+     "non daté"
+    ],
+    "de": [
+     "Programme de G. Attal, dette de l'État",
+     "https://attalpresident.fr/programme/dette-de-letat",
+     "non daté"
+    ],
+    "fr": [
+     "Programme de G. Attal, frontières",
+     "https://attalpresident.fr/programme/frontieres",
+     "non daté"
+    ],
+    "ia": [
+     "Programme de G. Attal, intelligence artificielle",
+     "https://attalpresident.fr/programme/intelligence-artificielle",
+     "non daté"
+    ],
+    "ec": [
+     "Programme de G. Attal, dette écologique",
+     "https://attalpresident.fr/programme/dette-ecologique",
+     "non daté"
+    ],
+    "ed": [
+     "Programme de G. Attal, éducation",
+     "https://attalpresident.fr/programme/education",
+     "non daté"
+    ],
+    "ap": [
+     "Acteurs publics, d'après Le Parisien",
+     "https://acteurspublics.fr/articles/gabriel-attal-propose-100-000-fonctionnaires-en-moins-et-limpunite-zero-pour-les-ministres-depensiers/",
+     "2026-07-03"
+    ],
+    "pr": [
+     "Public Sénat, retraites : ce que proposent les candidats",
+     "https://www.publicsenat.fr/actualites/politique/reculer-ou-avancer-lage-legal-avec-ou-sans-capitalisation-ce-que-proposent-les-principaux-candidats-a-lelection-presidentielle-sur-les-retraites",
+     "2026-09-30"
+    ],
+    "lcp": [
+     "LCP, propositions pour l'école",
+     "https://lcp.fr/actualites/presidentielle-retour-du-certificat-d-etudes-revalorisation-des-salaires-ce-que-propose",
+     "2026-08-25"
+    ],
+    "pe": [
+     "Public Sénat, « États-Unis d'Europe »",
+     "https://www.publicsenat.fr/actualites/politique/gabriel-attal-veut-construire-les-etats-unis-deurope-proposition-choc-pour-relancer-lideal-europeen",
+     "2026-09-17"
+    ],
+    "gz": [
+     "La Gazette France, immigration",
+     "https://www.lagazettefrance.fr/article/attal-veut-une-immigration-plus-faible-et-axee-sur-le-travail",
+     "2026-05-26"
+    ],
+    "fi12": [
+     "Yahoo Finance, entretien de Gabriel Attal sur franceinfo",
+     "https://fr.finance.yahoo.com/actualites/indemnit%C3%A9-quitter-fonction-publique-gabriel-220438244.html",
+     "2026-11-12"
+    ],
+    "sh11": [
+     "Shango, d'après BFMTV, réunion des directeurs de campagne le 17 novembre (agrégateur, à vérifier)",
+     "https://www.shango.media/bfm-tv-primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre-12040845",
+     "2026-11-11"
+    ],
+    "psr16": [
+     "Public Sénat, débat des candidats aux Restos du Cœur",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos",
+     "2026-11-17"
+    ],
+    "sr17": [
+     "Sud Radio, primaire à droite sans Édouard Philippe",
+     "https://www.sudradio.fr/politique/primaire-a-droite-attal-retailleau-et-lisnard-avancent-sans-edouard-philippe-pour-tenter-de-fixer-les-regles",
+     "2026-11-17"
+    ],
+    "pm19": [
+     "PolitiqueMatin, « Gabriel Attal sur France 2 voit une place pour Hollande dans une coalition » (agrégateur, à vérifier)",
+     "https://www.politiquematin.fr/attal-coalition-hollande-primaire-2027",
+     "2026-11-20"
+    ]
+   },
+   "src": {
+    "eco": [
+     "ts"
+    ],
+    "ent": [
+     "ts"
+    ],
+    "fis": [
+     "ap",
+     "ts",
+     "psr16"
+    ],
+    "fin": [
+     "de",
+     "ap",
+     "fi12"
+    ],
+    "ret": [
+     "pr"
+    ],
+    "edu": [
+     "lcp",
+     "ed"
+    ],
+    "def": [
+     "fr"
+    ],
+    "eur": [
+     "pe"
+    ],
+    "etr": [
+     "fr"
+    ],
+    "imm": [
+     "fr",
+     "gz"
+    ],
+    "ecol": [
+     "ec"
+    ],
+    "inst": [
+     "ap",
+     "lcp28",
+     "ev07",
+     "21n10",
+     "sh11",
+     "sr17",
+     "pm19",
+     "ti24"
+    ],
+    "num": [
+     "ia"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[P] « choc salarial » par baisse des charges salariales ; livret d'épargne pour les crèches"
+    ],
+    "ent": [
+     "[P] fin du plafond de 220 heures supplémentaires ; « Constitution du travail » ; semaine de 4 jours possible"
+    ],
+    "fis": [
+     "[D] aucune hausse d'impôts",
+     "[P] baisse des charges salariales",
+     "[D] selon Public Sénat, propose la suppression de la CSG, sans chiffrage (débat des Restos du Cœur, 16 novembre)"
+    ],
+    "fin": [
+     "[P] zéro déficit en 10 ans",
+     "[D] 100 000 postes en moins, 120 à 150 Md€ d'économies, règle d'or par référendum",
+     "[D] précise que les 100 000 suppressions de postes passeraient par un plan de départs volontaires indemnisés, montant fixé par le dialogue social, fonction publique territoriale incluse"
+    ],
+    "ret": [
+     "[D] fin de l'âge légal : durée de cotisation avec décote et surcote ; pilier de capitalisation"
+    ],
+    "edu": [
+     "[D] certificat d'études à l'entrée en 6e ; brevet obligatoire pour la seconde",
+     "[P] moins de 20 élèves en primaire ; réseaux sociaux interdits avant 15 ans"
+    ],
+    "def": [
+     "[P] amplification du réarmement ; dissuasion « avancée »"
+    ],
+    "eur": [
+     "[D] « États-Unis d'Europe », président européen élu au suffrage universel"
+    ],
+    "etr": [
+     "[P] soutien à l'Ukraine ; taxes sur les produits chinois vendus à perte"
+    ],
+    "imm": [
+     "[P] système à points inspiré du Canada",
+     "[D] « préférence travail »"
+    ],
+    "ecol": [
+     "[P] baisse des émissions de 5 %/an d'ici 2030 ; rénovation thermique massive"
+    ],
+    "inst": [
+     "[D] démission du gouvernement si la trajectoire budgétaire est manquée trois ans de suite",
+     "[D] propose sur TF1 le 28 octobre une « grande primaire des démocrates » pour éviter un second tour LFI-RN, ouverte aux candidats refusant toute alliance avec l'extrême droite ou l'extrême gauche ; règles et calendrier non fixés",
+     "[D] en déplacement dans le Nord le 6 novembre, affirme que les discussions entre partis sur une primaire de la droite et du centre se sont nettement intensifiées et juge responsables d'une division des voix ceux qui resteraient en dehors",
+     "[D] dit le 10 novembre sur France Inter ne voir « pas de raison » de ne pas voter pour Retailleau ou Lisnard si l'un d'eux est le seul à pouvoir empêcher un second tour Mélenchon-Le Pen ; souhaite participer lui-même à une primaire",
+     "[D] juge la primaire de la droite et du centre « inéluctable » ; son équipe doit réunir le 17 novembre les directeurs de campagne de Bruno Retailleau et de David Lisnard (BFMTV, 11 novembre)",
+     "[D] souhaite un vote avant la fin janvier et s'oppose à la participation d'Éric Zemmour à la primaire (réunion des équipes du 17 novembre)",
+     "[D] dans « L'Heure de vérité » (France 2, 19 novembre), dit qu'il retirerait sa candidature si David Lisnard était désigné par la primaire, présentée comme une première étape ; envisage pour gouverner une coalition de la droite républicaine, du centre et de la gauche sociale-démocrate, où il situe François Hollande ; demande à Édouard Philippe d'envoyer un représentant à la prochaine réunion sur la primaire",
+     "[D] le 24 novembre, souhaite au moins deux débats avant Noël avec Bruno Retailleau, David Lisnard et Édouard Philippe, puis une primaire entre le 15 janvier et le 15 février ; estime que Philippe, s'il refuse la primaire, doit proposer une autre modalité de départage"
+    ],
+    "num": [
+     "[P] maîtrise de la chaîne de valeur de l'IA ; formation à l'IA obligatoire"
+    ]
+   }
+  },
+  {
+   "id": "becht",
+   "n": "Olivier Becht",
+   "p": "Sans parti (« extrême centre »)",
+   "b": "c",
+   "st": "Déclaré le 24/09/2026",
+   "pr": "Plateforme participative ; pas de programme",
+   "s": [
+    1.5,
+    -2.5,
+    0,
+    2,
+    0,
+    null
+   ],
+   "cf": "faible",
+   "j": [
+    "contrat de travail unique, moins de normes",
+    "noyau dur européen",
+    "pas de position",
+    "centres de redressement",
+    "carburants de synthèse",
+    "pas de position sur la défense"
+   ],
+   "S": {
+    "sr": [
+     "Sud Radio, entretien",
+     "https://www.sudradio.fr/politique/olivier-becht-je-suis-candidat-a-lelection-presidentielle-et-jirai-jusquau-bout",
+     "2026-10-11"
+    ],
+    "en": [
+     "Entrevue, annonce de candidature",
+     "https://entrevue.fr/entrevue/presidentielle-2027-lancien-ministre-olivier-becht-annonce-sa-candidature/",
+     "2026-09-24"
+    ],
+    "sp": [
+     "Sud Radio, portrait",
+     "https://www.sudradio.fr/politique/qui-est-olivier-becht-cet-ancien-ministre-qui-se-lance-dans-la-course-a-lelysee",
+     "2026-10-08"
+    ]
+   },
+   "src": {
+    "eco": [
+     "sr"
+    ],
+    "ent": [
+     "sr"
+    ],
+    "ret": [
+     "sp"
+    ],
+    "edu": [
+     "sr"
+    ],
+    "eur": [
+     "sr"
+    ],
+    "sec": [
+     "sp"
+    ],
+    "ecol": [
+     "en"
+    ],
+    "inst": [
+     "sr"
+    ],
+    "num": [
+     "en"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] modèle économique plus souverain"
+    ],
+    "ent": [
+     "[D] contrat de travail unique et portable ; moins de normes"
+    ],
+    "ret": [
+     "[D] accompagnement universel fondé sur droits et devoirs"
+    ],
+    "edu": [
+     "[D] suppression de Parcoursup ; recrutement des enseignants par les chefs d'établissement"
+    ],
+    "eur": [
+     "[D] « noyau dur » de 6 à 8 États"
+    ],
+    "sec": [
+     "[D] « centres de redressement » encadrés par d'anciens militaires"
+    ],
+    "ecol": [
+     "[D] plan sur 20 ans fondé sur les carburants de synthèse"
+    ],
+    "inst": [
+     "[D] davantage de fédéralisme"
+    ],
+    "num": [
+     "[D] épargne orientée vers des fonds souverains IA et quantique"
+    ]
+   }
+  },
+  {
+   "id": "philippe",
+   "n": "Édouard Philippe",
+   "p": "Horizons",
+   "b": "c",
+   "st": "Déclaré en septembre 2024",
+   "pr": "Programme, volume 1 (18/11/2026), en ligne en 15 thèmes ; autres volumes annoncés",
+   "s": [
+    3.5,
+    -2,
+    3,
+    3.5,
+    2,
+    4
+   ],
+   "cf": "élevée",
+   "j": [
+    "sortie des 35 h, 250 000 postes en moins, 65 ans",
+    "Europe intégrée et protectrice",
+    "immigration divisée par deux",
+    "peines planchers, suppression du JAP",
+    "8 EPR supplémentaires",
+    "250 000 réservistes, service national obligatoire, loi de massification des armées"
+   ],
+   "S": {
+    "fi24": [
+     "franceinfo, direct du 24 novembre : Édouard Philippe « vote blanc » dans un duel Mélenchon-Le Pen (titre seul, article non lu : accès bloqué)",
+     "https://www.franceinfo.fr/elections/direct-presidentielle-2027-le-congres-des-maires-s-ouvre-plusieurs-candidats-attendus-sur-place_8297094.html",
+     "2026-11-24"
+    ],
+    "ps24": [
+     "Public Sénat, É. Philippe : « On peut aimer les tronçonneuses et ne pas savoir trancher ! »",
+     "https://www.publicsenat.fr/actualites/politique/on-peut-aimer-les-tronconneuses-et-ne-pas-savoir-trancher-le-tacle-dedouard-philippe-a-david-lisnard-accuse-de-pas-etre-assez-etanche-a-l",
+     "2026-11-24"
+    ],
+    "eu15": [
+     "Europe 1, d'après Le Parisien et l'AFP, réunion autour de G. Larcher",
+     "https://www.europe1.fr/politique/presidentielle-2027-edouard-philippe-daccord-pour-une-reunion-autour-de-gerard-larcher-mais-pas-pour-parler-dune-primaire-1235514",
+     "2026-11-15"
+    ],
+    "ev07": [
+     "Entrevue, « Attal affirme que la primaire se rapproche, Philippe lui oppose un nouveau refus »",
+     "https://entrevue.fr/politique/presidentielle-2027/presidentielle-2027-attal-affirme-que-la-primaire-se-rapproche-philippe-lui/",
+     "2026-11-07"
+    ],
+    "nt01": [
+     "La Nouvelle Tribune, invité du 20 heures de TF1 (1er novembre)",
+     "https://lanouvelletribune.info/2026/11/edouard-philippe-ecarte-la-primaire-dattal-et-lie-pillages-et-jeunes-issus-de-limmigration-sur-tf1/",
+     "2026-11-01"
+    ],
+    "tm28": [
+     "TIME France, la primaire dans le débat",
+     "https://www.timefrance.fr/politique/presidentielle-2027-a-droite-et-au-centre-la-primaire-simpose-dans-le-debat/",
+     "2026-10-28"
+    ],
+    "go": [
+     "BFMTV, « Grand Oral 2027 » (vidéos Orange Actualités)",
+     "https://actu.orange.fr/videos/france/17-octobre-ce-qui-est-en-cause-c-est-la-democratie-detaille-edouard-philippe-candidat-horizons-a-la-presidentielle-CNT000002t7j6L.html",
+     "2026-10-18"
+    ],
+    "jdn": [
+     "Journal du Net, déplacement à Charleville-Mézières (21 octobre)",
+     "https://www.journaldunet.com/business/action-publique/1557005-edouard-philippe-presente-ses-propositions-pour-les-familles-et-defend-ses-positions-securitaires/",
+     "2026-10-22"
+    ],
+    "su": [
+     "É. Philippe, « Pour une France plus sûre »",
+     "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure",
+     "non daté"
+    ],
+    "pp": [
+     "É. Philippe, « Pour une France plus prospère »",
+     "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere",
+     "non daté"
+    ],
+    "co": [
+     "É. Philippe, « Pour une France plus conquérante »",
+     "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante",
+     "non daté"
+    ],
+    "en": [
+     "É. Philippe, « Pour une France plus attentive à ses enfants »",
+     "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-attentive-a-ses-enfants",
+     "non daté"
+    ],
+    "eun": [
+     "Euronews, É. Philippe mise sur le travail",
+     "https://fr.euronews.com/2026/10/09/presidentielle-2027-edouard-philippe-mise-sur-le-travail-et-la-reduction-des-depenses-publ",
+     "2026-10-09"
+    ],
+    "lr": [
+     "LCP, retraites à 65 ans",
+     "https://lcp.fr/actualites/retraites-edouard-philippe-veut-porter-l-age-de-depart-a-65-ans-et-la-duree-de",
+     "2026-09-30"
+    ],
+    "pv1": [
+     "É. Philippe, programme présidentiel, volume 1 (15 thèmes)",
+     "https://www.edouardphilippe.fr/programme",
+     "2026-11-18"
+    ],
+    "ep18": [
+     "Echos Plus, « Retraites, fonction publique, école : les principales mesures du programme d'Édouard Philippe »",
+     "https://echosplus.com/2026/11/18/retraites-fonction-publique-ecole-les-principales-mesures-du-programme-dedouard-philippe/",
+     "2026-11-18"
+    ],
+    "rfi18": [
+     "RFI avec agences (Yahoo Actualités), « Édouard Philippe mise sur des réformes radicales »",
+     "https://fr.news.yahoo.com/pr%C3%A9sidentielle-2027-france-%C3%A9douard-philippe-160325860.html",
+     "2026-11-18"
+    ],
+    "sl18": [
+     "Stéphane Larue, « 35 heures, chômage et carence, ce que son projet changerait au travail » (blog, à vérifier)",
+     "https://stephanelarue.com/edouard-philippe-35-heures-chomage-et-carence-ce-que-son-projet-changerait-au-travail/",
+     "2026-11-18"
+    ],
+    "or18": [
+     "Orange Actualités (AFP), « Lisnard et Retailleau appellent Philippe à rejoindre la primaire »",
+     "https://actu.orange.fr/politique/lisnard-et-retailleau-appellent-philippe-a-rejoindre-la-primaire-mais-se-divisent-sur-son-perimetre-CNT000002tNqzd.html",
+     "2026-11-18"
+    ],
+    "ps26": [
+     "É. Philippe, programme, volet « Santé » (page mise à jour le 26 novembre)",
+     "https://www.edouardphilippe.fr/programme/sante",
+     "2026-11-26"
+    ]
+   },
+   "src": {
+    "eco": [
+     "en",
+     "jdn",
+     "pv1"
+    ],
+    "ent": [
+     "pp",
+     "go",
+     "sl18"
+    ],
+    "fis": [
+     "pp",
+     "pv1"
+    ],
+    "fin": [
+     "pp",
+     "ep18"
+    ],
+    "ret": [
+     "lr",
+     "pv1"
+    ],
+    "edu": [
+     "en",
+     "go",
+     "ep18"
+    ],
+    "san": [
+     "pp",
+     "ps26"
+    ],
+    "def": [
+     "su",
+     "pv1"
+    ],
+    "eur": [
+     "pp"
+    ],
+    "etr": [
+     "eun",
+     "pv1"
+    ],
+    "imm": [
+     "su",
+     "go",
+     "nt01",
+     "ep18"
+    ],
+    "sec": [
+     "su",
+     "go",
+     "jdn",
+     "pv1",
+     "rfi18"
+    ],
+    "ecol": [
+     "co",
+     "pv1"
+    ],
+    "inst": [
+     "eun",
+     "tm28",
+     "nt01",
+     "ev07",
+     "eu15",
+     "or18",
+     "ps24",
+     "fi24"
+    ],
+    "num": [
+     "co",
+     "pv1"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[P] allocation familiale unique de 350 €/mois dès le 1er enfant ; prêt à taux zéro à chaque naissance",
+     "[D] allocation unique et dégressive dès le 1er enfant ; réduction d'impôt sur le revenu pendant trois ans après une naissance pour les classes moyennes, jusqu'à 3 000 € ; garantie d'une place de garde dans les mois suivant la naissance ; réfléchit à un travail à « 80 % payés 100 % » pour les mères de nouveau-nés",
+     "[P] programme du 18 novembre : allocation familiale de 350 € dès le premier enfant, pas d'impôt sur le revenu pour les classes moyennes pendant les trois premières années de l'enfant, prêt à taux zéro à chaque naissance ; contrôle systématique des antécédents des personnels périscolaires"
+    ],
+    "ent": [
+     "[P] sortie des 35 h, zéro cotisation patronale au-delà de 37 h ; chômage limité à 12 mois avant 50 ans ; 3 jours de carence",
+     "[D] travailler deux heures de plus par semaine pour gagner en pouvoir d'achat ; juge que les 35 heures ont été une erreur",
+     "[P] programme du 18 novembre : durée du travail fixée par accord d'entreprise ; heures au-delà de la 35e exonérées d'impôt sur le revenu et de cotisations salariales, cotisations patronales supprimées à partir de la 38e heure ; indemnisation du chômage limitée à 12 mois avant 50 ans ; trois jours de carence pour tous les actifs ; fin des arrêts maladie illimités ; apprentissage étendu ; droit à la reconversion pour les métiers exposés à l'IA"
+    ],
+    "fis": [
+     "[P] −50 Md€/an d'impôts de production contre −50 Md€ d'aides ; moratoire fiscal",
+     "[P] programme du 18 novembre : aucun nouvel impôt pendant cinq ans ; baisse de 50 Md€ des impôts de production ; arrêt des surtranspositions de normes européennes"
+    ],
+    "fin": [
+     "[P] règle d'or par référendum ; déficit à 2 % ; un tiers des départs de fonctionnaires non remplacés",
+     "[P] programme du 18 novembre : déficit ramené sous 2,5 % du PIB, règle d'or adoptée par référendum, environ 150 Md€ d'économies selon la presse ; statut de fonctionnaire réservé aux fonctions essentielles (régalien, enseignement), autres recrutements en droit privé, 250 000 postes en moins sur le quinquennat ; une trentaine d'agences et d'opérateurs fusionnés, supprimés ou privatisés, privatisation de France Travail et suppression du Cese"
+    ],
+    "ret": [
+     "[P] 65 ans et 45 ans de cotisation ; capitalisation collective obligatoire",
+     "[P] programme du 18 novembre : âge légal porté à 65 ans et 45 ans de cotisation en moins de dix ans ; départs anticipés maintenus (carrières longues, handicap, incapacité, invalidité) ; capitalisation collective pour tous les salariés en complément de la répartition ; plan d'épargne retraite pour chaque Français, abondé de 500 € par l'État au premier emploi ; pilotage confié aux partenaires sociaux une fois l'équilibre rétabli"
+    ],
+    "edu": [
+     "[P] enseignants +20 % ; autonomie des établissements ; amende pour les parents ; portable interdit",
+     "[D] un peu plus de semaines de cours avec un peu moins d'heures, donc moins de vacances",
+     "[P] programme du 18 novembre : lecture, écriture et calcul au cœur du projet ; salaires des enseignants +20 % ; statut d'école publique autonome ; classes réduites en maternelle"
+    ],
+    "san": [
+     "[P] prévention et technologie ; santé mentale à l'école",
+     "[P] chaque médecin consacre au moins une semaine par an à des consultations ou des gardes en zone sous-dotée ; vaccination obligatoire contre la grippe (soignants, résidents d'Ehpad) et contre les papillomavirus (filles et garçons) ; 14 000 médecins formés par an, 20 000 assistants médicaux et 10 000 infirmiers en pratique avancée sur le quinquennat ; assistant médical IA gratuit hébergé en France ; Assurance maladie à l'équilibre sans nouvel impôt"
+    ],
+    "def": [
+     "[P] 250 000 réservistes ; service militaire volontaire de 50 000 places ; drones et obus",
+     "[P] programme du 18 novembre : loi de massification des armées et rétablissement d'un service national obligatoire (les « premières orientations » prévoyaient un service militaire volontaire)"
+    ],
+    "eur": [
+     "[P] protection face à la Chine ; union des marchés de capitaux ; « verrou Schengen »"
+    ],
+    "etr": [
+     "[D] soutien à l'Ukraine ; désaccord avec le gouvernement israélien sur Gaza",
+     "[P] programme du 18 novembre : soutien constant à l'Ukraine"
+    ],
+    "imm": [
+     "[P] immigration divisée par deux ; suspension du regroupement familial ; dénonciation de l'accord de 1968",
+     "[D] juge qu'un référendum sur l'immigration n'est « ni un totem ni un tabou »",
+     "[D] maintient que de nombreux jeunes Français issus de l'immigration figuraient parmi les auteurs des pillages d'octobre et appelle à regarder en face l'échec de l'intégration (TF1, 1er novembre)",
+     "[P] programme du 18 novembre : entrées légales divisées par deux ; titres de séjour centrés sur le travail et les études, quotas pour l'immigration de travail ; moratoire sur le regroupement familial pendant le quinquennat ; dénonciation de l'accord franco-algérien de 1968 en vue de le renégocier ; moratoire total sur l'immigration à Mayotte"
+    ],
+    "sec": [
+     "[P] peines planchers, suppression du JAP ; état d'urgence narcotrafic",
+     "[D] après le 17 octobre : loi « casseur-payeur » ; favorable à une commission d'enquête parlementaire",
+     "[D] peines minimales pour les violences et pillages en manifestation ; autoriser la reconnaissance faciale et des techniques de marquage ; élargir les pouvoirs des polices municipales",
+     "[P] programme du 18 novembre : état d'urgence contre le narcotrafic ; pouvoirs de police accrus pour les maires ; amendes prélevées sur les prestations sociales ; peines planchers et courtes peines dès la première infraction, 30 000 places de prison dédiées ; imprescriptibilité des crimes contre les mineurs",
+     "[P] assignation à résidence des « casseurs » lors des manifestations à risque et fichier dédié sur le modèle du FSPRT ; suspension automatique du RSA pour les délinquants condamnés, sauf opposition du maire dans certains cas"
+    ],
+    "ecol": [
+     "[P] 8 EPR en plus des 6 prévus ; fonds d'adaptation de 2 Md€/an",
+     "[P] programme du 18 novembre : relance du nucléaire ; baisse du prix de l'électricité pour l'industrie ; soutien au marché du véhicule électrique d'occasion ; plan de sécurité climatique, climatisation et rénovation des bâtiments publics, stockage et réutilisation de l'eau"
+    ],
+    "inst": [
+     "[D] une vingtaine d'ordonnances en juillet 2027",
+     "[D] exclut toute participation à une primaire ; propose une rencontre des dirigeants de la droite et du centre début novembre",
+     "[D] rejette la « primaire des démocrates » proposée par Gabriel Attal, qu'il juge source de division et ne pense pas voir aboutir ; préconise un rassemblement de la droite et du centre dont les modalités seraient fixées en février (TF1, 1er novembre)",
+     "[D] en déplacement dans les Bouches-du-Rhône le 6 novembre, refuse de nouveau de participer à une primaire et décline les trois débats proposés par Bruno Retailleau ; dit avoir proposé un échange public à Jean-Luc Mélenchon",
+     "[D] accepte de participer à la réunion des candidats de la droite et du centre proposée le 14 novembre par Gérard Larcher, à condition qu'elle porte sur leur rassemblement pour la présidentielle et les législatives et non sur une primaire, à laquelle il confirme qu'il ne participera pas (Le Parisien, 15 novembre)",
+     "[D] le 18 novembre, maintient son refus de participer à la primaire de la droite et du centre et dit qu'il ne changera pas d'avis",
+     "[D] le 24 novembre, au Congrès des maires, réaffirme son refus d'une primaire, conteste que le choix du candidat dépende des sondages et juge que personne ne pourrait soutenir son vainqueur ; accepte la réunion proposée par Gérard Larcher ; reproche à David Lisnard de ne pas « trancher » face à l'extrême droite, tout en disant avoir voté pour sa réélection à l'AMF",
+     "[D] selon le titre d'un direct de franceinfo (24 novembre, article non lu), voterait blanc en cas de second tour entre Jean-Luc Mélenchon et Marine Le Pen"
+    ],
+    "num": [
+     "[P] IA souveraine européenne ; « Buy European Tech Act » ; 100 000 ingénieurs par an",
+     "[P] programme du 18 novembre : pacte européen de puissance numérique ; la France en tête pour la puissance de calcul ; 100 000 ingénieurs formés par an"
+    ]
+   }
+  },
+  {
+   "id": "retailleau",
+   "n": "Bruno Retailleau",
+   "p": "Les Républicains",
+   "b": "d",
+   "st": "Désigné le 19/04/2026",
+   "pr": "11 thèmes sur 18 publiés ; plan budgétaire le 12/10/2026",
+   "s": [
+    4,
+    2,
+    4,
+    4,
+    4,
+    3.5
+   ],
+   "cf": "élevée",
+   "j": [
+    "197 Md€ d'économies, Code du travail en 50 principes",
+    "primauté du droit national, clause de sauvegarde",
+    "fin du droit du sol, quotas",
+    "réforme pénale par référendum",
+    "fin des subventions à l'éolien, nucléaire à 80 ans",
+    "IA militaire multipliée par cinq, dissuasion ni partagée ni élargie"
+   ],
+   "S": {
+    "qz11": [
+     "Quartz, d'après l'AFP et Le Figaro, primaire les 31 janvier et 7 février",
+     "https://fr.qz.com/primaire-droite-centre-retailleau-propose-31-janvier-7-fevrier-111126",
+     "2026-11-11"
+    ],
+    "ev07": [
+     "Entrevue, « Attal affirme que la primaire se rapproche, Philippe lui oppose un nouveau refus »",
+     "https://entrevue.fr/politique/presidentielle-2027/presidentielle-2027-attal-affirme-que-la-primaire-se-rapproche-philippe-lui/",
+     "2026-11-07"
+    ],
+    "lc03": [
+     "Le Courrier (reprise de presse), « Retailleau remet la pression sur Philippe »",
+     "https://lecourrier.vn/primaire-a-droite-et-au-centre-retailleau-remet-la-pression-sur-philippe/1358720.html",
+     "2026-11"
+    ],
+    "bf03r": [
+     "BFMTV, retraites par répartition, titre repris par Titres Presse (agrégateur, à vérifier)",
+     "https://www.titrespresse.com/27676142603/bruno-retailleau-bfmtv",
+     "2026-11-03"
+    ],
+    "bf03": [
+     "BFMTV, « Vous Président », titres repris par Titres Presse (agrégateur, à vérifier)",
+     "https://www.titrespresse.com/27680422603/bruno-retailleau-bfmtv",
+     "2026-11-03"
+    ],
+    "ip29": [
+     "Imaz Press, d'après l'AFP, primaire des démocrates",
+     "https://imazpress.com/france-monde/presidentielle-attal-primaire-democrates",
+     "2026-10-29"
+    ],
+    "jdd25": [
+     "Le JDD, « Retailleau-Lisnard : condamnés à s'entendre »",
+     "https://www.lejdd.fr/politique/retailleau-lisnard-condamnes-a-sentendre-186882",
+     "2026-10-25"
+    ],
+    "en": [
+     "Entrevue, déjeuner avec D. Lisnard (21 octobre)",
+     "https://entrevue.fr/presidentielle-2027/presidentielle-2027-grace-a-menard-retailleau-et-lisnard-negocient/",
+     "2026-10-23"
+    ],
+    "jdn": [
+     "Journal du Net, date du second tour",
+     "https://www.journaldunet.com/business/action-publique/1556849-bruno-retailleau-demande-au-gouvernement-de-changer-la-date-du-second-tour-de-la-presidentielle/",
+     "2026-10-20"
+    ],
+    "eu18": [
+     "Europe 1, réactions après les violences du 17 octobre",
+     "https://www.europe1.fr/societe/en-direct-emeutes-du-17-octobre-emmanuel-macron-sadressera-aux-francais-a-20-heures-1159713",
+     "2026-10-18"
+    ],
+    "tr": [
+     "Projet de B. Retailleau, travail et famille",
+     "https://www.avecretailleau.fr/projet/theme/travail",
+     "non daté"
+    ],
+    "ind": [
+     "Projet de B. Retailleau, industrie et entreprises",
+     "https://www.avecretailleau.fr/projet/theme/industrie-entreprises",
+     "non daté"
+    ],
+    "cp": [
+     "Projet de B. Retailleau, comptes publics",
+     "https://www.avecretailleau.fr/projet/theme/comptes-publics",
+     "non daté"
+    ],
+    "re": [
+     "Projet de B. Retailleau, retraites",
+     "https://www.avecretailleau.fr/projet/theme/retraites",
+     "non daté"
+    ],
+    "ed": [
+     "Projet de B. Retailleau, éducation",
+     "https://www.avecretailleau.fr/projet/theme/education",
+     "non daté"
+    ],
+    "el": [
+     "Projet de B. Retailleau, électricité",
+     "https://www.avecretailleau.fr/projet/theme/electricite",
+     "non daté"
+    ],
+    "ia": [
+     "Projet de B. Retailleau, intelligence artificielle",
+     "https://www.avecretailleau.fr/projet/theme/l-ia",
+     "non daté"
+    ],
+    "pj": [
+     "Projet de B. Retailleau, institutions",
+     "https://www.avecretailleau.fr/projet",
+     "non daté"
+    ],
+    "p12": [
+     "Public Sénat, plan de près de 200 Md€",
+     "https://www.publicsenat.fr/actualites/economie/presidentielle-2027-bruno-retailleau-sengage-sur-un-plan-deconomies-de-pres-de-200-milliards-deuros-sil-est-elu",
+     "2026-10-12"
+    ],
+    "pse": [
+     "Public Sénat, refonder l'école",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-bruno-retailleau-veut-refonder-lecole-autour-de-quatre-axes-principaux",
+     "2026-08-31"
+    ],
+    "dis": [
+     "B. Retailleau, communiqué sur la dissuasion",
+     "https://www.avecretailleau.fr/presse/communiques/la-dissuasion-nucleaire-francaise-ne-se-partage-pas",
+     "2026-03-01"
+    ],
+    "lt": [
+     "Les Républicains, lettre de B. Retailleau",
+     "https://republicains.fr/wp-content/uploads/2026/04/LETTRE-BR-MAJ.pdf",
+     "2026-04-29"
+    ],
+    "ref": [
+     "Public Sénat, projet de référendums",
+     "https://www.publicsenat.fr/actualites/politique/referendum-sur-limmigration-primaute-du-droit-national-le-projet-de-bruno-retailleau-est-il-faisable",
+     "2026-02-13"
+    ],
+    "nx": [
+     "Next, B. Retailleau et l'IA",
+     "https://next.ink/247354/pour-bruno-retailleau-lia-nattend-pas-notre-consentement/",
+     "2026-07-16"
+    ],
+    "lx14": [
+     "L'Express (via Orange Actualités), G. Larcher appelle les candidats à « se retrouver »",
+     "https://actu.orange.fr/politique/presidentielle-2027-gerard-larcher-appelle-a-son-tour-les-candidats-de-la-droite-et-du-centre-a-se-retrouver-l-express-via-6medias-CNT000002tJ131.html",
+     "2026-11-14"
+    ],
+    "ev13": [
+     "Entrevue, B. Retailleau aux « 4 Vérités » (France 2) sur la primaire",
+     "https://entrevue.fr/politique/presidentielle-2027/primaire-a-droite-retailleau-ne-croit-pas-a-une-victoire-dattal-et-refuse/",
+     "2026-11"
+    ],
+    "sh11": [
+     "Shango, d'après BFMTV, réunion des directeurs de campagne le 17 novembre (agrégateur, à vérifier)",
+     "https://www.shango.media/bfm-tv-primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre-12040845",
+     "2026-11-11"
+    ],
+    "psr16": [
+     "Public Sénat, débat des candidats aux Restos du Cœur",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos",
+     "2026-11-17"
+    ],
+    "ev18": [
+     "Entrevue, principe d'une primaire à deux tours en janvier",
+     "https://entrevue.fr/presidentielle-2027/presidentielle-2027-attal-retailleau-et-lisnard-actent-le-principe-dune/",
+     "2026-11-18"
+    ],
+    "ps18": [
+     "Public Sénat, « La participation d'Éric Zemmour flinguerait la primaire, estime Bruno Retailleau »",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-la-participation-deric-zemmour-flinguerait-la-primaire-estime-bruno-retailleau",
+     "2026-11-18"
+    ]
+   },
+   "src": {
+    "eco": [
+     "tr"
+    ],
+    "ent": [
+     "ind",
+     "bf03"
+    ],
+    "fis": [
+     "p12"
+    ],
+    "fin": [
+     "cp",
+     "p12"
+    ],
+    "ret": [
+     "re",
+     "bf03r"
+    ],
+    "edu": [
+     "ed",
+     "pse",
+     "psr16"
+    ],
+    "san": [
+     "p12"
+    ],
+    "def": [
+     "dis",
+     "ia"
+    ],
+    "eur": [
+     "pj"
+    ],
+    "etr": [
+     "lt"
+    ],
+    "imm": [
+     "pj",
+     "p12"
+    ],
+    "sec": [
+     "ref",
+     "pj",
+     "eu18"
+    ],
+    "ecol": [
+     "el"
+    ],
+    "inst": [
+     "pj",
+     "jdn",
+     "en",
+     "jdd25",
+     "ip29",
+     "lc03",
+     "ev07",
+     "qz11",
+     "sh11",
+     "ev13",
+     "lx14",
+     "ev18",
+     "ps18"
+    ],
+    "num": [
+     "ia",
+     "nx"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[P] 500 € par an versés à chaque salarié ; revenu familial de 240 €/mois par enfant"
+    ],
+    "ent": [
+     "[P] Code du travail refondé sur 50 principes ; chômage réduit et plafonné",
+     "[D] propose d'enterrer la semaine de 35 heures, avec 30 minutes de travail en plus par jour pour gagner un 13e voire un 14e mois, et de plafonner l'ensemble des aides sociales à 70 % du SMIC ; écarte une hausse du SMIC (BFMTV, « Vous Président », 3 novembre)"
+    ],
+    "fis": [
+     "[D] 21 Md€ de baisses pour les ménages, 30 Md€ pour les entreprises"
+    ],
+    "fin": [
+     "[P] 197 Md€ d'économies sur 5 ans",
+     "[D] 400 000 départs non remplacés ; règle d'or par référendum"
+    ],
+    "ret": [
+     "[P] départ dès 63 ans avec décote, taux plein à 65 ans ; capital retraite",
+     "[D] dit vouloir sauver le régime de retraites par répartition (BFMTV, 3 novembre)"
+    ],
+    "edu": [
+     "[P] fin du collège unique ; 1 000 écoles autonomes",
+     "[D] examen d'entrée en 6e",
+     "[D] défend la sélection à l'université, l'école devant être le principal outil contre la reproduction sociale (débat des Restos du Cœur, 16 novembre)"
+    ],
+    "san": [
+     "[D] jour de carence non remboursable ; volet santé à venir"
+    ],
+    "def": [
+     "[D] dissuasion ni partagée ni élargie",
+     "[P] IA militaire ×5"
+    ],
+    "eur": [
+     "[P] droit de l'UE écarté quand il excède ses compétences ; clause de sauvegarde constitutionnelle"
+    ],
+    "etr": [
+     "[D] dénonciation de l'accord de 1968 ; baisse de l'aide au développement"
+    ],
+    "imm": [
+     "[P] fin du droit du sol par référendum ; quotas ; prestations après 5 ans",
+     "[D] asile traité hors de France"
+    ],
+    "sec": [
+     "[D] réforme pénale par référendum",
+     "[P] droit à la sécurité dans la Constitution",
+     "[D] demande l'instauration sans délai de l'état d'urgence après les violences du 17 octobre"
+    ],
+    "ecol": [
+     "[P] nucléaire prolongé à 80 ans, EPR2 ; fin des subventions à l'éolien ; principe de précaution supprimé"
+    ],
+    "inst": [
+     "[P] référendum sur toutes les matières législatives ; racines judéo-chrétiennes dans la Constitution",
+     "[D] demande au gouvernement de déplacer le second tour, fixé au 2 mai 2027 au lendemain du 1er-Mai, par crainte de troubles (BFMTV, 19 octobre)",
+     "[D] après un déjeuner avec David Lisnard le 21 octobre, son porte-parole évoque une candidature commune pour « éviter la dispersion des candidatures » ; serait prêt, selon la presse, à discuter d'une primaire, sans calendrier ni règles acceptés",
+     "[D] selon Le JDD (25 octobre), juge qu'une primaire perd son sens sans Édouard Philippe et propose une charte obligeant les perdants à se rallier au vainqueur ; selon Robert Ménard, Lisnard et lui se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027",
+     "[D] son entourage juge « mort-né » le projet de primaire de G. Attal, au périmètre jugé flou",
+     "[D] juge qu'une primaire de la droite et du centre aura sans doute lieu en début d'année 2027 et qu'à défaut d'un vote il ira « jusqu'au bout » ; propose trois débats (pouvoir d'achat, régalien, écologie) à Édouard Philippe, Gabriel Attal et David Lisnard, dont il se dit le plus proche (BFMTV, 3 novembre)",
+     "[D] selon Entrevue (7 novembre), accepte le principe d'une primaire de la droite et du centre, à tenir au plus tard dans la première quinzaine de février 2027, et maintient sa proposition de trois débats télévisés avant Noël",
+     "[D] adresse le 10 novembre à Édouard Philippe, Gabriel Attal et David Lisnard des courriers proposant une primaire de la droite et du centre les dimanches 31 janvier et 7 février 2027 et une réunion des directeurs de campagne sous quinze jours ; juge infondé le refus de Philippe",
+     "[D] son équipe doit participer le 17 novembre, avec celles de Gabriel Attal et de David Lisnard, à une réunion des directeurs de campagne sur l'organisation d'une primaire (BFMTV, 11 novembre)",
+     "[D] le 13 novembre sur France 2, souhaite une primaire ouverte aux règles communes, avec une participation de quelques euros, premier tour le 31 janvier et second le 7 février 2027, dates jugées négociables ; demande aux participants une « forme de loyauté » envers le résultat, sans obligation de défendre ensuite le programme du vainqueur ; ne promet pas de soutenir publiquement Gabriel Attal s'il gagnait, invoquant des convictions différentes ; périmètre (Éric Zemmour, centre gauche) encore à discuter",
+     "[D] après l'invitation de Gérard Larcher (14 novembre) à une réunion des candidats sur une « méthode de départage », juge que la primaire doit avoir lieu même sans Édouard Philippe et appelle ses concurrents à se rassembler",
+     "[D] réunion du 17 novembre avec les équipes d'Attal et de Lisnard : principe d'une primaire ouverte à deux tours en janvier (17 et 24 ou 24 et 31 janvier envisagés), participation d'environ 2 €, vote surtout électronique, parrainages d'élus et charte commune (respect du résultat, refus d'alliance avec les extrêmes) ; périmètre et seuils non tranchés",
+     "[D] le 18 novembre, estime que la participation d'Éric Zemmour ferait échouer la primaire et réserve celle-ci à des candidats « sérieux » ; met en doute la volonté de David Lisnard de la faire aboutir ; refuse de laisser à Édouard Philippe un pouvoir de décision sur la primaire ; précise que les perdants s'engageraient à se retirer, sans obligation de soutenir le vainqueur ; nouvelle réunion des équipes prévue la semaine suivante"
+    ],
+    "num": [
+     "[P] assistant IA « Marianne »",
+     "[D] 23 Md€ ; régime dérogatoire au RGPD et à l'AI Act"
+    ]
+   }
+  },
+  {
+   "id": "lisnard",
+   "n": "David Lisnard",
+   "p": "Nouvelle Énergie",
+   "b": "d",
+   "st": "Déclaré le 31/03/2026 ; dit avoir obtenu les 500 parrainages (BFMTV, 03/11/2026, selon Midi Libre) ; soutenu le 26/11/2026 par huit députés LR (tribune dans Paris Match)",
+   "pr": "Programme en ligne par thèmes ; discours de Bayeux (17/06/2026)",
+   "s": [
+    5,
+    1.5,
+    4.5,
+    4,
+    3.5,
+    5
+   ],
+   "cf": "élevée",
+   "j": [
+    "200 Md€ d'économies, dérégulation, capitalisation",
+    "dérogation sur le modèle danois, pas de sortie de l'UE",
+    "titres de séjour ÷ 8, sortie de la CEDH en dernier recours",
+    "majorité pénale à 16 ans, peines planchers",
+    "nucléaire, principe de responsabilité",
+    "réarmement immédiat, doctrine de puissance autonome"
+   ],
+   "S": {
+    "sr25": [
+     "Sud Radio, « David Lisnard brigue un troisième mandat à l'AMF et l'Élysée »",
+     "https://www.sudradio.fr/societe/lisnard-cherche-a-crever-lecran-chez-les-maires-avant-la-presidentielle",
+     "2026-11-25"
+    ],
+    "ps24": [
+     "Public Sénat, É. Philippe : « On peut aimer les tronçonneuses et ne pas savoir trancher ! »",
+     "https://www.publicsenat.fr/actualites/politique/on-peut-aimer-les-tronconneuses-et-ne-pas-savoir-trancher-le-tacle-dedouard-philippe-a-david-lisnard-accuse-de-pas-etre-assez-etanche-a-l",
+     "2026-11-24"
+    ],
+    "qz07": [
+     "Quartz (fr), d'après Le Figaro Immobilier, flat tax de 25 % sur les revenus fonciers et financiers",
+     "https://fr.qz.com/david-lisnard-propose-flat-tax-25-revenus-capital-fonciers-110726",
+     "2026-11-07"
+    ],
+    "bf06": [
+     "BFMTV, « un grand ministère du savoir », titre repris par Titres Presse (agrégateur, à vérifier)",
+     "https://www.titrespresse.com/28095672603/david-lisnard-energie",
+     "2026-11-06"
+    ],
+    "bf03": [
+     "AFP, repris par Imaz Press : « gouvernement commando » (BFMTV, 3 novembre)",
+     "https://imazpress.com/france-monde/presidentielle-s-il-est-elu-david-lisnard-promet-un-gouvernement-commando",
+     "2026-11-04"
+    ],
+    "ev02": [
+     "Entrevue, réponse aux critiques de J.-F. Copé et M. Fesneau",
+     "https://entrevue.fr/politique/presidentielle-2027/ni-avec-les-macronistes-ni-avec-le-rn-david-lisnard-repond-aux-attaques/",
+     "2026-11-02"
+    ],
+    "pm01": [
+     "P. Messad, « Bulletin de l'énergie » (newsletter, à vérifier)",
+     "https://paulmessad.substack.com/p/bulletin-de-lenergie-david-lisnard",
+     "2026-11-01"
+    ],
+    "ia04": [
+     "JDNews (repris par Nouvelle Énergie), essai sur l'IA avec R. Marsily",
+     "https://www.unenouvelleenergie.fr/david-lisnard-et-romain-marsily-la-france-face-au-defi-de-lia/",
+     "2026-11-04"
+    ],
+    "ne28": [
+     "Nouvelle Énergie, compte rendu de « Objectif Élysée 2027 » (CNews-Europe 1, 27 octobre)",
+     "https://www.unenouvelleenergie.fr/david-lisnard-sur-cnews-et-europe-1-je-ne-suis-pas-candidat-pour-un-poste-je-viens-pour-redresser-le-pays/",
+     "2026-10-28"
+    ],
+    "cp28": [
+     "Capital (repris par Yahoo Actualités), baisse de la CSG",
+     "https://fr.finance.yahoo.com/actualites/cotisez-moins-gagner-david-lisnard-134350547.html",
+     "2026-10-28"
+    ],
+    "ip29": [
+     "Imaz Press, d'après l'AFP, primaire des démocrates",
+     "https://imazpress.com/france-monde/presidentielle-attal-primaire-democrates",
+     "2026-10-29"
+    ],
+    "ti28": [
+     "Times of Israel (fr), d'après l'AFP, appel à Éric Ciotti",
+     "https://fr.timesofisrael.com/presidentielle-lisnard-appelle-ciotti-a-se-separer-du-rn-et-a-le-rejoindre/",
+     "2026-10-28"
+    ],
+    "cn27": [
+     "Capital (repris par Yahoo Actualités), invité de CNews le 27 octobre",
+     "https://fr.finance.yahoo.com/actualites/%C3%A7a-n-aucun-sens-qu-190455319.html",
+     "2026-10-28"
+    ],
+    "jdd25": [
+     "Le JDD, « Retailleau-Lisnard : condamnés à s'entendre »",
+     "https://www.lejdd.fr/politique/retailleau-lisnard-condamnes-a-sentendre-186882",
+     "2026-10-25"
+    ],
+    "e1": [
+     "Europe 1, entretien",
+     "https://www.europe1.fr/politique/aujourdhui-en-france-on-depouille-les-actifs-au-profit-des-inactifs-denonce-david-lisnard-938960",
+     "2026-05-27"
+    ],
+    "vt": [
+     "votons-2027, d'après le programme de Nouvelle Énergie (agrégateur, à vérifier sur le site du parti)",
+     "https://votons-2027.fr/candidats/lisnard/programme/economie",
+     "non daté"
+    ],
+    "pg": [
+     "Nouvelle Énergie, programme",
+     "https://www.unenouvelleenergie.fr/notre-programme/",
+     "non daté"
+    ],
+    "ed": [
+     "Nouvelle Énergie, programme éducation",
+     "https://www.unenouvelleenergie.fr/notre-programme/education/",
+     "non daté"
+    ],
+    "sa": [
+     "Nouvelle Énergie, livret santé",
+     "https://www.unenouvelleenergie.fr/notre-programme/sante/",
+     "2026-05"
+    ],
+    "im": [
+     "Nouvelle Énergie, programme immigration",
+     "https://www.unenouvelleenergie.fr/notre-programme/immigration/",
+     "non daté"
+    ],
+    "se": [
+     "Nouvelle Énergie, programme sécurité",
+     "https://www.unenouvelleenergie.fr/notre-programme/securite/",
+     "non daté"
+    ],
+    "ba": [
+     "Discours de Bayeux",
+     "https://nouvelle-energie-media-prod.s3.fr-par.scw.cloud/media/legacy/2026/06/Discours-de-David-Lisnard-a-Bayeux-17062026.pdf",
+     "2026-06-17"
+    ],
+    "jd": [
+     "Le JDD, entretien",
+     "https://www.lejdd.fr/politique/david-lisnard-il-faudra-un-candidat-qui-porte-toute-la-droite-155878",
+     "2025-03-12"
+    ],
+    "bf": [
+     "BFMTV-RMC, Face-à-Face (vidéo relayée par Orange Actu)",
+     "https://actu.orange.fr/videos/france/revoir-l-excuse-de-minorite-david-lisnard-candidat-nouvelle-energie-a-la-presidentielle-souhaite-que-les-jeunes-casseurs-fassent-des-travaux-d-interet-general-CNT000002sJaNM.html",
+     "2026-10-13"
+    ],
+    "uk": [
+     "Nouvelle Énergie, position sur l'Ukraine",
+     "https://www.unenouvelleenergie.fr/questions/quelle-est-la-position-de-david-lisnard-sur-la-guerre-en-ukraine/",
+     "2026-04-20"
+    ],
+    "tf": [
+     "Capital (repris par Yahoo Actualités), invité du 20 heures de TF1",
+     "https://fr.finance.yahoo.com/actualites/moins-l%C3%A9tat-capable-punir-cassent-220339491.html",
+     "2026-10-19"
+    ],
+    "ic": [
+     "ICI Azur, invité de la matinale (vidéo)",
+     "https://www.ici.fr/emissions/l-invite-d-ici-matin-ici-azur/david-lisnard-comme-avec-les-hooligans-isoler-les-voyous-des-manifestations-en-les-mettant-dans-des-centres-fermes-7571835",
+     "2026-10-22"
+    ],
+    "en": [
+     "Entrevue, déjeuner avec B. Retailleau (21 octobre)",
+     "https://entrevue.fr/presidentielle-2027/presidentielle-2027-grace-a-menard-retailleau-et-lisnard-negocient/",
+     "2026-10-23"
+    ],
+    "pp": [
+     "Parlons Politique, primaire à droite",
+     "https://www.parlons-politique.fr/elections/primaire-a-droite-comment-retailleau-et-lisnard-peuvent-eviter-de-laisser-les-electeurs-face-a-deux-candidatures-rivales-en-2027_29875/",
+     "2026-10-21"
+    ],
+    "ja11": [
+     "Journal de l'Agence, propositions de D. Lisnard pour le logement",
+     "https://www.journaldelagence.com/1414680-presidentielle-2027-quelles-sont-les-propositions-de-david-lisnard-pour-le-logement",
+     "2026-11-11"
+    ],
+    "sh11": [
+     "Shango, d'après BFMTV, réunion des directeurs de campagne le 17 novembre (agrégateur, à vérifier)",
+     "https://www.shango.media/bfm-tv-primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre-12040845",
+     "2026-11-11"
+    ],
+    "ds13": [
+     "Nouvelle Énergie, podcast « Destinée » avec Anne Coffinier",
+     "https://www.unenouvelleenergie.fr/david-lisnard-dans-le-podcast-destinee-faire-de-la-france-une-superpuissance-educative/",
+     "2026-11-13"
+    ],
+    "cp06": [
+     "Capital (repris par Yahoo Finance), retraite par capitalisation obligatoire",
+     "https://fr.finance.yahoo.com/actualites/retraite-capitalisation-obligatoire-g%C3%A9r%C3%A9e-fonds-191620450.html",
+     "2026-11-06"
+    ],
+    "dl13": [
+     "Nouvelle Énergie, compte rendu du premier « DLive » (10 novembre)",
+     "https://www.unenouvelleenergie.fr/dlive-david-lisnard-lance-son-nouveau-rendez-vous-mensuel-avec-les-francais/",
+     "2026-11-13"
+    ],
+    "ra13": [
+     "Nouvelle Énergie, compte rendu des Rencontres de l'Avenir (Saint-Raphaël, 6 novembre)",
+     "https://www.unenouvelleenergie.fr/intelligence-artificielle-robotique-economie-david-lisnard-defend-une-france-conquerante-aux-rencontres-de-lavenir/",
+     "2026-11-13"
+    ],
+    "ev18": [
+     "Entrevue, principe d'une primaire à deux tours en janvier",
+     "https://entrevue.fr/presidentielle-2027/presidentielle-2027-attal-retailleau-et-lisnard-actent-le-principe-dune/",
+     "2026-11-18"
+    ],
+    "or18": [
+     "Orange Actualités (AFP), « Lisnard et Retailleau appellent Philippe à rejoindre la primaire »",
+     "https://actu.orange.fr/politique/lisnard-et-retailleau-appellent-philippe-a-rejoindre-la-primaire-mais-se-divisent-sur-son-perimetre-CNT000002tNqzd.html",
+     "2026-11-18"
+    ],
+    "ev19": [
+     "Entrevue, « David Lisnard veut mettre la pression sur Édouard Philippe » (matinale de TF1, 18 novembre)",
+     "https://entrevue.fr/politique/presidentielle-2027/primaire-a-droite-david-lisnard-veut-mettre-la-pression-sur-edouard/",
+     "2026-11-19"
+    ],
+    "fg17": [
+     "Tribune au Figaro, reprise par Nouvelle Énergie",
+     "https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/",
+     "2026-11-17"
+    ],
+    "tf18n": [
+     "TF1, entretien du 18 novembre (compte rendu Nouvelle Énergie)",
+     "https://www.unenouvelleenergie.fr/je-crois-a-la-competition-pas-a-la-compromission/",
+     "2026-11-19"
+    ],
+    "cap23": [
+     "Capital, « Un discours économique très proche du mien mais... », ce que David Lisnard pense de Sarah Knafo (propos tenus sur Public Sénat)",
+     "https://fr.finance.yahoo.com/actualites/discours-%C3%A9conomique-tr%C3%A8s-proche-mien-211258332.html",
+     "2026-11-23"
+    ],
+    "ev23": [
+     "Entrevue, « Je ne gouvernerai pas avec le RN » : Lisnard riposte à Marine Le Pen sur le Code du travail",
+     "https://entrevue.fr/politique/presidentielle-2027/je-ne-gouvernerai-pas-avec-le-rn-lisnard-riposte-a-marine-le-pen/",
+     "2026-11-23"
+    ],
+    "sr22": [
+     "Sud Radio (AFP), « Le Pen attaque Lisnard et son projet de \"broyer\" le code du travail »",
+     "https://www.sudradio.fr/societe/le-pen-attaque-lisnard-et-son-projet-de-broyer-le-code-du-travail",
+     "2026-11-22"
+    ],
+    "of22": [
+     "Ouest-France, « Ça n'a aucun sens » : sans Édouard Philippe à la primaire de la droite, David Lisnard n'y participera pas (titre seul, article non lu : accès bloqué)",
+     "https://www.ouest-france.fr/politique/david-lisnard/ca-na-aucun-sens-sans-edouard-philippe-a-la-primaire-de-la-droite-david-lisnard-ny-participera-pas-70977960-e685-11f1-afa7-9a0bb82a33d1",
+     "2026-11-22"
+    ]
+   },
+   "src": {
+    "eco": [
+     "e1",
+     "ra13"
+    ],
+    "ent": [
+     "vt",
+     "ev23"
+    ],
+    "fis": [
+     "vt",
+     "cp28",
+     "qz07"
+    ],
+    "fin": [
+     "e1",
+     "vt",
+     "cn27",
+     "dl13",
+     "tf18n"
+    ],
+    "ret": [
+     "vt",
+     "ti28",
+     "ne28",
+     "dl13",
+     "cp06",
+     "fg17",
+     "tf18n"
+    ],
+    "edu": [
+     "ed",
+     "cn27",
+     "bf06",
+     "ds13"
+    ],
+    "san": [
+     "sa"
+    ],
+    "def": [
+     "jd"
+    ],
+    "eur": [
+     "ba",
+     "vt",
+     "cap23"
+    ],
+    "etr": [
+     "im",
+     "uk"
+    ],
+    "imm": [
+     "im",
+     "ne28"
+    ],
+    "sec": [
+     "se",
+     "bf",
+     "tf",
+     "ic",
+     "ne28"
+    ],
+    "ecol": [
+     "vt",
+     "ba",
+     "pm01",
+     "pm01",
+     "ja11"
+    ],
+    "inst": [
+     "ba",
+     "en",
+     "jdd25",
+     "ip29",
+     "ti28",
+     "ev02",
+     "bf03",
+     "bf03",
+     "sh11",
+     "ev18",
+     "or18",
+     "ev19",
+     "sr22",
+     "of22",
+     "ps24",
+     "sr25"
+    ],
+    "num": [
+     "ba",
+     "ne28",
+     "ia04",
+     "ra13"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] « cotiser moins pour gagner plus » ; baisse des taxes sur les carburants",
+     "[D] propose un fonds souverain pour les épargnants ne souhaitant pas confier leur épargne à des acteurs privés, et un marché européen des capitaux pour orienter l'épargne vers l'investissement (Rencontres de l'Avenir, 6 novembre)"
+    ],
+    "ent": [
+     "[P] contrat de travail unique ; dérégulation large ; charges négatives pour l'embauche d'allocataires du RSA",
+     "[D] répondant le 22 novembre à Marine Le Pen, qui critique son projet de « broyer » le Code du travail, veut réécrire ce code, qu'il juge « le plus lourd du monde », en donnant plus de poids aux accords d'entreprise sur le temps de travail ; oppose la négociation et la liberté économique au « social-étatisme » qu'il prête au RN"
+    ],
+    "fis": [
+     "[P] suppression de la C3S et de la CVAE, impôts de production divisés par deux ; plafond du quotient familial levé",
+     "[D] baisser la CSG sur les revenus d'activité de 9,2 % à 6,6 %, au niveau de celle des inactifs, pour augmenter le salaire net sans alourdir le coût du travail (CNews-Europe 1, 27 octobre)",
+     "[D] propose une flat tax de 25 % unifiant l'imposition des revenus fonciers et des revenus financiers, avec option pour le barème progressif, au nom d'une fiscalité « plus lisible » (Le Figaro Immobilier, 7 novembre)"
+    ],
+    "fin": [
+     "[D] 80 Md€ d'économies la 1re année, 200 Md€ sur le quinquennat ; suppression d'agences",
+     "[P] règle d'or sur les dépenses de fonctionnement",
+     "[D] non-remplacement des départs dans la fonction publique, en commençant par les fonctions administratives (CNews, 27 octobre)",
+     "[D] réduire la masse salariale publique d'au moins 12 %, avec un objectif de 20 %, en automatisant des tâches administratives par l'IA et la robotique et en réaffectant des agents vers le terrain (DLive, 10 novembre)",
+     "[D] baisse d'au moins 12 % des effectifs publics, soit 400 000 fonctionnaires en moins, par une réorganisation des administrations, avec redéploiement d'agents vers la justice, la police et les soins et une direction des ressources humaines de l'État clairement identifiée (TF1, 18 novembre)"
+    ],
+    "ret": [
+     "[P] socle par répartition dès 65 ans, minimum vieillesse à 1 000 € ; bascule vers la capitalisation",
+     "[D] juge l'abaissement de l'âge de départ à 62 ans, voire 60 ans, promis par le RN incompatible avec la baisse des dépenses (CNews, 27 octobre)",
+     "[D] parmi les pistes d'économies, cite en exemple la non-revalorisation des pensions supérieures à 2 200 € (CNews-Europe 1, 27 octobre)",
+     "[D] veut un échelon obligatoire de retraite par capitalisation, complémentaire au système actuel, et annonce un plan de réforme des retraites avant la fin de l'année (DLive, 10 novembre)",
+     "[D] veut transférer environ 40 % des cotisations vers des comptes individuels d'épargne retraite obligatoires, pouvant être gérés par des fonds d'investissement privés, avec un fonds souverain par défaut ; propose aussi de supprimer l'abattement de 10 % pour frais professionnels des retraités (Capital, 6 novembre)",
+     "[D] tribune au Figaro : étage de capitalisation collective obligatoire, complétant une répartition réformée et une capitalisation individuelle libre, pour orienter l'épargne longue vers l'économie ; fin des régimes spéciaux et convergence des règles du public et du privé, pénibilité reconnue sur des critères communs ; désindexation certaines années des pensions les plus élevées ; refuse d'aligner la CSG des retraités sur celle des actifs ; financement de la transition à préciser « bientôt »",
+     "[D] annonce pour les prochaines semaines son projet de retraites, avec une part de capitalisation obligatoire plus importante que dans le projet du RN, financée par des économies structurelles (TF1, 18 novembre)"
+    ],
+    "edu": [
+     "[P] abrogation de la carte scolaire, chèque-éducation, certificat de fin de primaire, enseignants +20 % sous conditions ; suppression de Parcoursup",
+     "[D] recrutement des nouveaux enseignants comme contractuels et non plus comme fonctionnaires ; liberté pour les enseignants de choisir leur statut (CNews, 27 octobre)",
+     "[D] veut créer « un grand ministère du savoir », sans détail publié à ce stade (BFMTV, Rencontres de l'avenir de Saint-Raphaël, 6 novembre)",
+     "[D] rétablir les notes chiffrées et instaurer des évaluations en CM2, en sixième et en troisième ; enseigner la philosophie dès l'école primaire ; publier des évaluations des établissements ; garantir un réseau d'établissements de proximité à l'échelle des anciens cantons ; créer des établissements publics disciplinaires de haut niveau avec internats ; développer les dispositifs ULIS (podcast « Destinée », 13 novembre)"
+    ],
+    "san": [
+     "[P] suppression des ARS ; accès direct aux infirmiers, kinés et pharmaciens ; doublement des étudiants en médecine"
+    ],
+    "def": [
+     "[D] réarmement immédiat, doctrine de puissance autonome"
+    ],
+    "eur": [
+     "[D] dérogation asile et immigration sur le modèle danois, pas de sortie de l'UE",
+     "[P] traité de démocratisation de l'Europe",
+     "[D] le 23 novembre sur Public Sénat, refuse d'appartenir à un groupe européen partageant les positions de l'AfD, qu'il juge « contre les intérêts de la France » ; dit son discours économique proche de celui de Sarah Knafo, tout en écartant ses choix politiques et tout rapprochement avec Marine Le Pen"
+    ],
+    "etr": [
+     "[P] révision de l'accord de 1968, rétorsions contre les pays non coopératifs",
+     "[D] soutien à l'Ukraine"
+    ],
+    "imm": [
+     "[P] titres de séjour divisés par huit ; AME remplacée par une aide d'urgence ; fin de l'automaticité du droit du sol ; sortie de la CEDH en dernier recours",
+     "[D] réduire les prestations non contributives versées aux étrangers, avec un objectif de 2 à 3 Md€ d'économies la 1re année (CNews-Europe 1, 27 octobre)"
+    ],
+    "sec": [
+     "[P] majorité pénale à 16 ans ; peines planchers pour les récidivistes ; interdiction des Frères musulmans",
+     "[D] revoir l'excuse de minorité ; travaux d'intérêt général pour les jeunes auteurs de violences",
+     "[D] interdire les manifestations présentant un risque grave pour l'ordre public ; mieux sanctionner les auteurs de dégradations",
+     "[D] isoler les casseurs des manifestations dans des centres fermés, en comparant la mesure au traitement des hooligans",
+     "[D] principe « casseurs-payeurs » : rendre les auteurs de destructions financièrement responsables, avec des mécanismes de recouvrement des sommes dues (CNews-Europe 1, 27 octobre)"
+    ],
+    "ecol": [
+     "[P] réacteurs prolongés, nouveaux EPR, petits réacteurs",
+     "[D] principe de précaution remplacé par un principe de responsabilité",
+     "[D] opposé au dernier appel d'offres pour 11 parcs éoliens en mer, dont il estime le coût à 82 Md€ sur leur durée de vie, et qu'il ne financerait pas ; se dit favorable à l'autoconsommation et au solaire sur les bâtiments agricoles, et soutient l'hydroélectricité",
+     "[D] revenir sur l'interdiction de la vente de voitures thermiques neuves en 2035 ; lever l'interdiction de l'exploration et de la production d'hydrocarbures en France",
+     "[P] suppression du DPE ; assouplissement du ZAN par un bonus à la densification et un malus à l'étalement urbain ; remplacement des quotas de logements sociaux de la loi SRU par des objectifs portant sur les constructions neuves (Journal de l'Agence, 11 novembre)"
+    ],
+    "inst": [
+     "[D] retour au septennat ; référendum sur tous sujets ; une cinquantaine de provinces",
+     "[D] réclame une primaire ouverte de la droite et du centre, avant la fin de l'année ; déjeuner avec Bruno Retailleau le 21 octobre, à l'initiative de Robert Ménard, sur une candidature commune, sans accord conclu",
+     "[D] selon Le JDD (25 octobre), veut une primaire ouverte à tous les candidats de droite et la liberté de ne pas soutenir le vainqueur ; selon Robert Ménard, Retailleau et lui se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027",
+     "[D] salue l'idée de « primaire des démocrates » lancée par Gabriel Attal le 28 octobre, qu'il dit proposer depuis deux ans, et appelle à aller vite",
+     "[D] appelle Éric Ciotti (UDR) à se séparer du RN et à le rejoindre, jugeant le programme de l'UDR proche de ses idées (CNews, 27 octobre)",
+     "[D] répondant le 1er novembre aux critiques de Jean-François Copé et de Marc Fesneau sur sa relation au RN, déclare qu'il ne gouvernerait « ni avec les macronistes ni avec le RN », juge ces accusations fausses et maintient sa demande de primaire ouverte de la droite et du centre",
+     "[D] s'il est élu, promet de nommer immédiatement un « gouvernement commando » resserré, avec des missions sur les 200 premiers jours, de convoquer une session extraordinaire du Parlement à l'été 2027 et de remplacer les ministres dont les chantiers ne seraient pas engagés au bout de 200 jours (BFMTV, 3 novembre)",
+     "[D] se dit le plus proche de Bruno Retailleau, tout en jugeant que la participation de celui-ci aux gouvernements d'Emmanuel Macron les distingue ; maintient sa demande de primaire de la droite et du centre (BFMTV, 3 novembre)",
+     "[D] son équipe doit participer le 17 novembre, avec celles de Gabriel Attal et de Bruno Retailleau, à une réunion des directeurs de campagne sur les modalités et les dates d'une primaire de la droite et du centre (BFMTV, 11 novembre)",
+     "[D] à la réunion du 17 novembre, son équipe défend une primaire très large, sans exclure Éric Zemmour avant que les conditions d'accès soient fixées ; Nouvelle Énergie précise qu'aucun accord définitif n'est conclu et réaffirme son attachement à une compétition aussi ouverte que possible",
+     "[D] le 18 novembre, juge la participation d'Édouard Philippe à la primaire « indispensable » et veut lui « mettre la pression » ; plaide pour un périmètre pouvant aller jusqu'à Nicolas Dupont-Aignan et Éric Zemmour s'ils respectent les critères de la primaire ; se dit « incapable » de dire si elle aura lieu",
+     "[D] sur TF1 (18 novembre), distingue le choix d'un candidat commun d'une coalition fondée sur un programme entièrement négocié ; estime qu'une primaire sans Philippe placerait celui-ci en position privilégiée",
+     "[D] le 22 novembre, en réponse à Marine Le Pen, déclare qu'il ne gouvernera pas avec le RN et conteste avoir demandé à être ministre d'Emmanuel Macron",
+     "[D] selon le titre d'un article d'Ouest-France (22 novembre), ne participerait pas à une primaire de la droite et du centre sans Édouard Philippe, jugeant qu'elle n'aurait « aucun sens »",
+     "[D] selon Public Sénat (24 novembre), a déclaré le 22 novembre qu'une primaire pourrait servir à « éliminer les macronistes » et qu'il ne soutiendrait pas son vainqueur s'il était battu",
+     "[D] candidat à un nouveau mandat à la présidence de l'AMF (résultat attendu le 25 novembre), annonce qu'il se mettrait en retrait de l'association pendant la campagne, au profit d'une direction collégiale, et s'engage à défendre les mairies s'il est élu"
+    ],
+    "num": [
+     "[D] IA centrale pour la performance publique ; « produire l'IA avant de la réguler »",
+     "[D] transparence algorithmique, financement des entreprises françaises de l'IA et de la robotique, apprentissages sans machine à l'école (CNews-Europe 1, 27 octobre)",
+     "[D] dans un essai sur l'IA cosigné avec R. Marsily : exiger la réversibilité dans la commande publique ; réaffirme le remplacement du principe de précaution par un principe de responsabilité dans la Constitution",
+     "[D] propose une structure franco-européenne d'innovation sur le modèle de la DARPA américaine, l'étiquetage des contenus générés par IA, une alliance des démocraties pour des règles communes, et l'exigence d'implantations industrielles et de transferts de technologie lors d'achats à des fournisseurs étrangers (Rencontres de l'Avenir, 6 novembre)"
+    ]
+   }
+  },
+  {
+   "id": "bertrand",
+   "n": "Xavier Bertrand",
+   "p": "Nous France",
+   "b": "d",
+   "st": "Confirmé le 27/08/2026",
+   "pr": "Pas de programme",
+   "s": [
+    2,
+    0,
+    3,
+    4,
+    2,
+    null
+   ],
+   "cf": "faible",
+   "j": [
+    "classes moyennes, capitalisation",
+    "pas de position",
+    "quotas, AME supprimée",
+    "majorité pénale à 15 ans",
+    "nucléaire (2021)",
+    "pas de position sur la défense"
+   ],
+   "S": {
+    "lcp": [
+     "LCP, X. Bertrand teste ses idées",
+     "https://lcp.fr/actualites/presidentielle-xavier-bertrand-indique-tester-ses-idees-et-envisager-de-concourir-en",
+     "2026-08-03"
+    ],
+    "edm": [
+     "L'Écho du mardi (campagne 2021)",
+     "https://echodumardi.com/politiqueetterritoire/xavier-bertrand-a-courthezon-je-veux-mettre-en-place-une-republique-des-territoires",
+     "2021-10-30"
+    ],
+    "ti": [
+     "TIME France, portrait",
+     "https://www.timefrance.fr/politique/les-visages-des-presidentielles-2027-xavier-bertrand-le-candidat-sans-parti-ni-primaire/",
+     "2026-08-28"
+    ]
+   },
+   "src": {
+    "eco": [
+     "lcp",
+     "edm"
+    ],
+    "ent": [
+     "edm"
+    ],
+    "fin": [
+     "lcp"
+    ],
+    "ret": [
+     "lcp"
+    ],
+    "imm": [
+     "ti"
+    ],
+    "sec": [
+     "ti"
+    ],
+    "ecol": [
+     "edm"
+    ],
+    "inst": [
+     "ti"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] priorité aux classes moyennes",
+     "[H] prime garantissant 1 500 € nets (2021)"
+    ],
+    "ent": [
+     "[H] heures au-delà de 35 h sans impôt ni charges (2021)"
+    ],
+    "fin": [
+     "[D] baisse des dépenses sociales"
+    ],
+    "ret": [
+     "[D] capitalisation"
+    ],
+    "imm": [
+     "[D] quotas votés au Parlement ; AME supprimée hors urgences"
+    ],
+    "sec": [
+     "[D] majorité pénale à 15 ans ; peines planchers"
+    ],
+    "ecol": [
+     "[H] refus de ramener le nucléaire à 50 % (2021)"
+    ],
+    "inst": [
+     "[D] septennat unique par référendum ; compétences transférées aux régions"
+    ]
+   }
+  },
+  {
+   "id": "platret",
+   "n": "Gilles Platret",
+   "p": "Divers droite",
+   "b": "d",
+   "st": "Déclaré le 08/10/2026",
+   "pr": "Pas de programme ; livre en novembre",
+   "s": [
+    2.5,
+    2,
+    4.5,
+    4,
+    1,
+    4
+   ],
+   "cf": "faible",
+   "j": [
+    "39 heures, dette sous 100 %",
+    "rétablissement des frontières",
+    "forte baisse des titres, voile interdit",
+    "interdiction des Frères musulmans",
+    "pas de position",
+    "accélération du réarmement"
+   ],
+   "S": {
+    "dj": [
+     "Dijon Actualités, déclaration de candidature",
+     "https://dijon-actualites.fr/2026/10/10/presidentielle-2027-le-maire-de-chalon-sur-saone-gilles-platret-sest-lance-dans-la-course-a-lelysee/",
+     "2026-10-10"
+    ],
+    "lc": [
+     "Lyon Capitale",
+     "https://www.lyoncapitale.fr/?p=521848",
+     "2026-10-08"
+    ],
+    "a": [
+     "Dijon Actualités, déclaration de candidature",
+     "https://dijon-actualites.fr/2026/10/10/presidentielle-2027-le-maire-de-chalon-sur-saone-gilles-platret-sest-lance-dans-la-course-a-lelysee/",
+     "2026-10-10"
+    ]
+   },
+   "src": {
+    "ent": [
+     "lc"
+    ]
+   },
+   "t": {
+    "ent": [
+     "[D] retour aux 39 heures ; soutien à l'agriculture"
+    ],
+    "fin": [
+     "[D] dette ramenée sous 100 % du PIB"
+    ],
+    "ret": [
+     "[D] 39 heures pour limiter le recul de l'âge"
+    ],
+    "edu": [
+     "[D] discipline ; fin de l'autonomie des universités"
+    ],
+    "def": [
+     "[D] accélération du réarmement"
+    ],
+    "etr": [
+     "[D] soutien renforcé à Israël ; rupture avec l'Iran"
+    ],
+    "imm": [
+     "[D] frontières nationales ; baisse des titres ; voile interdit dans l'espace public"
+    ],
+    "sec": [
+     "[D] interdiction des Frères musulmans"
+    ],
+    "inst": [
+     "[D] Conseil constitutionnel d'avant 1971 ; scrutin uninominal à un tour"
+    ]
+   }
+  },
+  {
+   "id": "dupontaignan",
+   "n": "Nicolas Dupont-Aignan",
+   "p": "Debout la France",
+   "b": "s",
+   "st": "Déclaré le 08/03/2025",
+   "pr": "Projet en ligne ; livre (avril 2026)",
+   "s": [
+    -0.5,
+    4,
+    4,
+    3,
+    4,
+    2.5
+   ],
+   "cf": "élevée",
+   "j": [
+    "protectionnisme, impôt sur les grandes fortunes, 130 Md€ d'économies",
+    "référendum sur l'UE",
+    "fin du droit du sol",
+    "+10 000 policiers",
+    "nucléaire à 70 %, moins de renouvelables",
+    "2,5 % du PIB pour la défense"
+   ],
+   "S": {
+    "ec": [
+     "DLF, projet économie et travail",
+     "https://www.debout-la-france.fr/projet/economie-travail/",
+     "2026-10-10"
+    ],
+    "re": [
+     "DLF, projet retraites",
+     "https://www.debout-la-france.fr/projet/retraites/",
+     "2024-02-05"
+    ],
+    "in": [
+     "DLF, projet instruction publique",
+     "https://www.debout-la-france.fr/projet/instruction-publique/",
+     "2026-10-12"
+    ],
+    "sa": [
+     "DLF, projet santé",
+     "https://www.debout-la-france.fr/projet/sante/",
+     "2024-02-05"
+    ],
+    "de": [
+     "DLF, projet défense",
+     "https://www.debout-la-france.fr/projet/defense/",
+     "2026-10-08"
+    ],
+    "eu": [
+     "DLF, projet affaires européennes",
+     "https://www.debout-la-france.fr/projet/affaires-europeennes/",
+     "2026-10-05"
+    ],
+    "if": [
+     "info.fr, candidature",
+     "https://info.fr/yerres-dupont-aignan-candidature-presidentielle-2027-sursaut-gaulliste/",
+     "2026-04-23"
+    ],
+    "im": [
+     "DLF, projet immigration",
+     "https://www.debout-la-france.fr/projet/immigration-et-assimilation/",
+     "2026-03-03"
+    ],
+    "se": [
+     "DLF, projet sécurité",
+     "https://www.debout-la-france.fr/projet/securite/",
+     "2026-02-16"
+    ],
+    "en": [
+     "DLF, projet environnement et énergie",
+     "https://www.debout-la-france.fr/projet/environnement-energie/",
+     "2025-10-29"
+    ],
+    "dm": [
+     "DLF, projet démocratie",
+     "https://www.debout-la-france.fr/projet/refonder-et-moraliser-notre-democratie/",
+     "2026-06-09"
+    ],
+    "ia": [
+     "DLF, projet intelligence artificielle",
+     "https://www.debout-la-france.fr/projet/intelligence-artificielle/",
+     "2026-10-12"
+    ],
+    "bf26": [
+     "BFMTV, vidéo du 26 novembre (titre seul, page non lue)",
+     "https://www.bfmtv.com/politique/video-guerre-en-ukraine-je-ne-veux-pas-que-l-otan-avance-en-ukraine-je-ne-veux-pas-que-l-ukraine-rentre-dans-l-union-europeenne-declare-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle_VN-202611260935.html",
+     "2026-11-26"
+    ]
+   },
+   "src": {
+    "eco": [
+     "ec"
+    ],
+    "ent": [
+     "ec"
+    ],
+    "fis": [
+     "ec"
+    ],
+    "fin": [
+     "ec"
+    ],
+    "ret": [
+     "re"
+    ],
+    "edu": [
+     "in"
+    ],
+    "san": [
+     "sa"
+    ],
+    "def": [
+     "de"
+    ],
+    "eur": [
+     "eu"
+    ],
+    "etr": [
+     "if",
+     "bf26"
+    ],
+    "imm": [
+     "im"
+    ],
+    "sec": [
+     "se"
+    ],
+    "ecol": [
+     "en"
+    ],
+    "inst": [
+     "dm"
+    ],
+    "num": [
+     "ia"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[P] électricité divisée par deux ; carburant moins cher ; TVA supprimée sur 50 produits"
+    ],
+    "ent": [
+     "[P] salaires +8 % ; 75 % de la commande publique aux producteurs français"
+    ],
+    "fis": [
+     "[P] impôt sur les très grandes fortunes ; IS divisé par deux sur les bénéfices réinvestis"
+    ],
+    "fin": [
+     "[P] déficit sous 3 %, 130 Md€ d'économies"
+    ],
+    "ret": [
+     "[P] âge et durée maintenus ; capital de 10 000 € par nouveau-né"
+    ],
+    "edu": [
+     "[P] uniforme ; +30 % de français et maths ; enseignants +15 %"
+    ],
+    "san": [
+     "[P] études de médecine contre 5 ans en zone sous-dotée"
+    ],
+    "def": [
+     "[P] sortie du commandement intégré de l'OTAN ; 2,5 % du PIB ; fin du SCAF"
+    ],
+    "eur": [
+     "[P] référendum sur le maintien dans l'UE ; sortie de Schengen"
+    ],
+    "etr": [
+     "[D] renouer avec la Russie ; dénonciation de l'accord de 1968",
+     "[D] s'oppose à l'avancée de l'OTAN en Ukraine et à l'entrée de l'Ukraine dans l'Union européenne"
+    ],
+    "imm": [
+     "[P] droit du sol supprimé par référendum ; AME supprimée"
+    ],
+    "sec": [
+     "[P] +10 000 policiers et gendarmes ; 40 000 places de prison"
+    ],
+    "ecol": [
+     "[P] nucléaire ≥ 70 % ; 4 Md€ des renouvelables redirigés"
+    ],
+    "inst": [
+     "[P] RIC à un million d'inscrits ; 500 députés"
+    ],
+    "num": [
+     "[P] fonds souverain IA ; cloud souverain"
+    ]
+   }
+  },
+  {
+   "id": "philippot",
+   "n": "Florian Philippot",
+   "p": "Les Patriotes",
+   "b": "s",
+   "st": "Déclaré le 09/05/2026",
+   "pr": "« Projet pour la France 2026-2027 »",
+   "s": [
+    -0.5,
+    5,
+    4,
+    3,
+    4,
+    null
+   ],
+   "cf": "élevée",
+   "j": [
+    "retour au franc, État stratège",
+    "sortie de l'UE",
+    "sortie de Schengen, exécution des OQTF",
+    "peines planchers",
+    "moratoire éolien",
+    "sortie de l'OTAN : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "a": [
+     "Les Patriotes, Projet pour la France 2026-2027",
+     "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
+     "2026-09"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eco": [
+     "[P] retour au franc ; tarifs nationaux de l'électricité"
+    ],
+    "ent": [
+     "[P] réindustrialisation ; fin de l'immigration de travail"
+    ],
+    "fis": [
+     "[P] allègement pour indépendants et TPE"
+    ],
+    "fin": [
+     "[P] 60 Md€/an d'économies"
+    ],
+    "ret": [
+     "[P] possibilité d'abaisser l'âge"
+    ],
+    "edu": [
+     "[P] moitié du primaire en français ; fin du collège unique"
+    ],
+    "san": [
+     "[P] suppression des ARS ; sortie de l'OMS"
+    ],
+    "def": [
+     "[P] sortie de l'OTAN"
+    ],
+    "eur": [
+     "[P] sortie de l'UE, de l'euro, de Schengen et de la CEDH"
+    ],
+    "etr": [
+     "[P] fin de l'engagement en Ukraine"
+    ],
+    "imm": [
+     "[P] sortie de Schengen ; exécution des OQTF"
+    ],
+    "sec": [
+     "[P] peines planchers ; expulsion des détenus étrangers"
+    ],
+    "ecol": [
+     "[P] sortie du marché européen de l'électricité ; moratoire éolien"
+    ],
+    "inst": [
+     "[P] RIC constitutionnel"
+    ],
+    "num": [
+     "[P] sortie des GAFAM en 3 ans ; école sans IA"
+    ]
+   }
+  },
+  {
+   "id": "asselineau",
+   "n": "François Asselineau",
+   "p": "UPR",
+   "b": "s",
+   "st": "Déclaré le 07/07/2026",
+   "pr": "Programme 2027 « en élaboration »",
+   "s": [
+    -1,
+    5,
+    0,
+    0,
+    0,
+    null
+   ],
+   "cf": "faible",
+   "j": [
+    "peu de positions",
+    "sortie de l'UE et de l'euro",
+    "référendum sans position",
+    "pas de mesure",
+    "référendum sur le nucléaire",
+    "sortie de l'OTAN : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "a": [
+     "UPR, nos fondamentaux",
+     "https://www.upr.fr/nos-fondamentaux",
+     "non daté"
+    ]
+   },
+   "src": {},
+   "t": {
+    "fin": [
+     "[P] référendum sur la dette"
+    ],
+    "def": [
+     "[P] sortie de l'OTAN"
+    ],
+    "eur": [
+     "[P] sortie de l'UE et de l'euro"
+    ],
+    "etr": [
+     "[P] siège permanent à l'ONU incessible"
+    ],
+    "imm": [
+     "[P] référendum, sans position fixée"
+    ],
+    "ecol": [
+     "[P] référendum sur le nucléaire"
+    ],
+    "inst": [
+     "[P] vote blanc reconnu ; RIC"
+    ]
+   }
+  },
+  {
+   "id": "lepen",
+   "n": "Marine Le Pen",
+   "p": "Rassemblement national",
+   "b": "ed",
+   "st": "Déclarée le 07/07/2026 (pourvoi en cassation)",
+   "pr": "Pas de programme ; plan de finances publiques le 06/10/2026 ; réforme des retraites présentée le 17/11/2026",
+   "s": [
+    -0.5,
+    3,
+    5,
+    3.5,
+    4.5,
+    null
+   ],
+   "cf": "moyenne",
+   "j": [
+    "TVA énergie à 5,5 %, retraite à 62 ans, 140 Md€ d'économies",
+    "primauté du droit français",
+    "priorité nationale, restriction du droit du sol",
+    "expulsions des logements sociaux",
+    "moratoire éolien et solaire",
+    "commandement intégré de l'OTAN : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "ps25": [
+     "Public Sénat, discours d'Orléans (gouvernement d'union nationale)",
+     "https://www.publicsenat.fr/actualites/politique/si-elle-gagne-en-2027-marine-le-pen-appelle-a-la-formation-dun-gouvernement-dunion-nationale",
+     "2026-10-25"
+    ],
+    "ps6": [
+     "Public Sénat, plan de 140 Md€ d'économies",
+     "https://www.publicsenat.fr/actualites/politique/140-milliards-deuros-deconomies-dici-2032-leffort-radical-propose-par-marine-le-pen-pour-redresser-les-f",
+     "2026-10-06"
+    ],
+    "eu18": [
+     "Europe 1, réactions après les violences du 17 octobre",
+     "https://www.europe1.fr/societe/en-direct-emeutes-du-17-octobre-emmanuel-macron-sadressera-aux-francais-a-20-heures-1159713",
+     "2026-10-18"
+    ],
+    "sr13": [
+     "Sud Radio, rentrée politique de M. Le Pen",
+     "https://www.sudradio.fr/politique/programme-presidentiel-et-communication-que-vaut-la-rentree-politique-de-marine-le-pen",
+     "2026-09-13"
+    ],
+    "eu17": [
+     "Europe 1, présentation du projet RN sur les retraites",
+     "https://www.europe1.fr/politique/maintien-de-lage-legal-a-62-ans-dose-de-capitalisation-le-rassemblement-national-veut-defendre-sa-credibilite-sur-les-retraites-1238295",
+     "2026-11-17"
+    ],
+    "ht16": [
+     "Head Topics, J.-P. Tanguy sur la capitalisation (agrégateur, à vérifier)",
+     "https://fr.headtopics.com/news/30-ans-de-mensonges-sur-les-retraites-jean-philippe-89907246",
+     "2026-11-16"
+    ],
+    "sr27": [
+     "Sud Radio, M. Le Pen devant le Medef",
+     "https://www.sudradio.fr/societe/marine-le-pen-et-la-delicate-operation-seduction-du-monde-economique",
+     "2026-08-27"
+    ],
+    "cb": [
+     "Public Sénat, contre-budget du RN",
+     "https://www.publicsenat.fr/actualites/economie/contre-budget-du-rn-des-propositions-qui-manquent-de-credibilite-economique-mais-trahissent-une-veritable-coherence-doctrinale",
+     "2025-10-23"
+    ],
+    "or": [
+     "Actu Orange, d'après BFMTV",
+     "https://actu.orange.fr/question-du-jour-2026-09-21-CNT000002s0few.html",
+     "2026-09-21"
+    ],
+    "inf": [
+     "Informat.ro, d'après Politico (source secondaire)",
+     "https://informat.ro/en/international/marine-le-pen-delays-frances-withdrawal-from-nato-command-140447",
+     "2026-09-24"
+    ],
+    "pm": [
+     "Paris Match Belgique, d'après la VRT",
+     "https://www.parismatch.be/actualites/monde/2026/10/15/presidentielle-francaise-si-elle-arrive-a-lelysee-marine-le-pen-promet-de-couper-laide-a-lukraine-je-ne-prends-personne-en-traitre-EKOIX7JLGZBBTPVJXNLDVDTVXY/",
+     "2026-10-14"
+    ],
+    "ha": [
+     "Harici, d'après Le Monde (source secondaire)",
+     "https://harici.com.tr/en/marine-le-pen-plans-french-constitutional-referendum-on-immigration/",
+     "2026-08-19"
+    ],
+    "eun17": [
+     "Euronews, M. Le Pen présente sa réforme des retraites",
+     "https://fr.euronews.com/2026/11/17/dose-de-capitalisation-depart-de-60-a-62-ans-marine-le-pen-devoile-sa-reforme-des-retraite",
+     "2026-11-17"
+    ],
+    "psr16": [
+     "Public Sénat, débat des candidats aux Restos du Cœur",
+     "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-pauvrete-pouvoir-dachat-logement-le-pen-melenchon-glucksmann-retailleau-attal-confrontent-leurs-visions-de-la-solidarite-aux-restos",
+     "2026-11-17"
+    ],
+    "lx17": [
+     "L’Express (Reuters), repris par Orange Actualités",
+     "https://actu.orange.fr/politique/ukraine-marine-le-pen-veut-changer-la-nature-de-l-aide-francaise-a-kiev-l-express-CNT000002tLg5S.html",
+     "2026-11-17"
+    ],
+    "sr22n": [
+     "Sud Radio (AFP), « Le Pen attaque Lisnard et son projet de \"broyer\" le code du travail »",
+     "https://www.sudradio.fr/societe/le-pen-attaque-lisnard-et-son-projet-de-broyer-le-code-du-travail",
+     "2026-11-22"
+    ]
+   },
+   "src": {
+    "eco": [
+     "or"
+    ],
+    "ent": [
+     "sr27",
+     "sr22n"
+    ],
+    "fis": [
+     "cb"
+    ],
+    "fin": [
+     "ps6"
+    ],
+    "ret": [
+     "sr27",
+     "eun17",
+     "eu17",
+     "ht16"
+    ],
+    "edu": [
+     "sr13",
+     "psr16"
+    ],
+    "san": [
+     "cb"
+    ],
+    "def": [
+     "inf"
+    ],
+    "eur": [
+     "pm"
+    ],
+    "etr": [
+     "pm",
+     "lx17"
+    ],
+    "imm": [
+     "ha"
+    ],
+    "sec": [
+     "sr13",
+     "eu18"
+    ],
+    "ecol": [
+     "sr13",
+     "psr16"
+    ],
+    "inst": [
+     "ps6",
+     "ps25"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] TVA sur carburants, électricité et gaz à 5,5 % ; logement social et APL réservés aux Français"
+    ],
+    "ent": [
+     "[D] fin des cotisations retraite et chômage après l'âge de départ",
+     "[D] le 22 novembre (France 2, France Inter), juge qu'il y a trop de règles à simplifier, mais s'oppose à passer le Code du travail « à la broyeuse », ce qui laisserait selon elle les travailleurs démunis"
+    ],
+    "fis": [
+     "[P] −16 Md€ d'impôts de production ; impôt sur la fortune financière (2025)"
+    ],
+    "fin": [
+     "[D] 140 Md€ d'économies d'ici 2032 ; règle d'or par référendum"
+    ],
+    "ret": [
+     "[D] 62 ans, 60 ans si début avant 20 ans ; pilier de capitalisation",
+     "[D] présente le 17 novembre sa réforme : abrogation de la réforme Borne au 1er janvier 2028 ; âge d'ouverture de 60 à 62 ans et 160 à 168 trimestres selon l'âge d'entrée dans un emploi stable (cinq catégories) ; taux plein maintenu à 67 ans ; trimestre validé dès un mi-temps ; indexation de toutes les pensions pendant cinq ans ; pilier de capitalisation obligatoire pour les actifs de moins de 52 ans, géré par la Caisse des dépôts et alimenté par la réaffectation de cotisations patronales existantes (1 % logement, FNAL, moitié de la formation professionnelle), sans prélèvement nouveau ; coût annoncé de 18,6 Md€ bruts et 10,1 Md€ nets ; référendum envisagé",
+     "[D] selon Europe 1, le projet présenté le 17 novembre exclut tout report de l'âge légal au-delà de 62 ans et prévoit une part de capitalisation ; Marine Le Pen chiffre le maintien à 62 ans à 9 milliards d'euros par an",
+     "[D] le député RN Jean-Philippe Tanguy promet une part de capitalisation pour tous, financée par des économies dans le système social, et l'alignement des trimestres validés sur les trimestres cotisés, sans relever l'âge ni la durée de cotisation (16 novembre)"
+    ],
+    "edu": [
+     "[D] priorité des Français en résidence étudiante",
+     "[D] hausse de la rémunération des apprentis et prime d'activité étudiante (débat des Restos du Cœur, 16 novembre)"
+    ],
+    "san": [
+     "[P] AME remplacée par une aide d'urgence (2025)"
+    ],
+    "def": [
+     "[D] sortie du commandement intégré de l'OTAN, reportée pendant la guerre"
+    ],
+    "eur": [
+     "[D] pas de hausse de la contribution ; primauté du droit français"
+    ],
+    "etr": [
+     "[D] aide à l'Ukraine maintenue 6 mois puis arrêtée",
+     "[D] communiqué du 16 novembre après une rencontre avec l'ambassadeur d'Ukraine : fin de l'aide financière française, mais maintien des dons de matériel, de l'aide humanitaire et des engagements pris, dont le prêt européen de 90 Md€ ; veut peser dans les négociations de paix"
+    ],
+    "imm": [
+     "[D] référendum : restriction du droit du sol, priorité nationale"
+    ],
+    "sec": [
+     "[D] expulsion des familles délinquantes des logements sociaux",
+     "[D] après les violences du 17 octobre : règle du « casseur/payeur » et rétablissement de l'ordre républicain"
+    ],
+    "ecol": [
+     "[D] moratoire éolien et solaire ; Fessenheim ; fin du ZAN",
+     "[D] gratuité des trains aux heures creuses (débat des Restos du Cœur, 16 novembre)"
+    ],
+    "inst": [
+     "[D] référendums sur la règle d'or et l'immigration",
+     "[D] en cas de victoire, annonce un gouvernement « ouvert et pluraliste », d'union nationale, avec Jordan Bardella à Matignon (Orléans, 25 octobre)"
+    ]
+   }
+  },
+  {
+   "id": "zemmour",
+   "n": "Éric Zemmour",
+   "p": "Reconquête",
+   "b": "ed",
+   "st": "Annoncé le 17/09/2026 ; candidature confirmée au journal de TF1 le 10/11/2026 ; meeting de lancement à Toulon le 21/11/2026 ; annonce le 26/11/2026 que 2027 sera sa « dernière campagne »",
+   "pr": "Pas de programme ; consultation en cours",
+   "s": [
+    4,
+    3,
+    5,
+    5,
+    4.5,
+    null
+   ],
+   "cf": "moyenne",
+   "j": [
+    "fin des droits de succession, 140 Md€/an (Knafo)",
+    "budget de l'UE réduit, pas de sortie",
+    "« remigration »",
+    "renvoi des délinquants étrangers",
+    "fin du soutien aux renouvelables",
+    "pas de position sur la défense"
+   ],
+   "S": {
+    "pm10": [
+     "Politique Matin, premières mesures sur TF1 (agrégateur, à vérifier)",
+     "https://www.politiquematin.fr/zemmour-presidentielle-2027-confirme-candidature-tf1-programme-101126-2055",
+     "2026-11-10"
+    ],
+    "21n": [
+     "21News, candidature confirmée sur TF1",
+     "https://www.21news.be/eric-zemmour-confirme-sa-candidature-a-la-presidentielle-de-2027-pour-conserver-une-france-francaise/",
+     "2026-11-10"
+    ],
+    "bv": [
+     "Boulevard Voltaire, lancement de campagne",
+     "https://www.bvoltaire.fr/nous-sommes-en-train-de-manquer-notre-siecle-zemmour-lance-reconquete-vers-2027/",
+     "2026-09-13"
+    ],
+    "ps": [
+     "Public Sénat, candidature d'É. Zemmour",
+     "https://www.publicsenat.fr/actualites/politique/eric-zemmour-officialise-sa-candidature-a-la-presidentielle-2027",
+     "2026-09-17"
+    ],
+    "ag": [
+     "Agra, É. Zemmour et la production",
+     "https://www.agra.fr/articles/presidentielle-zemmour-veut-remettre-la-production-au-coeur-du-systeme",
+     "2026-10-07"
+    ],
+    "b27": [
+     "budget2027.fr (Sarah Knafo)",
+     "https://budget2027.fr",
+     "2026"
+    ],
+    "la": [
+     "L'Avenir, d'après BFMTV",
+     "https://www.lavenir.net/actu/monde/2026/09/18/zemmour-confirme-quil-sera-candidat-a-lelection-presidentielle-en-france-et-durcit-encore-son-discours-sur-limmigration-5OFMOVM6CVCDFHY4B3GI5QID3Q/",
+     "2026-09-17"
+    ],
+    "cap21": [
+     "Capital via Yahoo Finance, meeting de Toulon",
+     "https://fr.finance.yahoo.com/actualites/enfants-h%C3%A9riteront-payer-euro-eric-225243177.html",
+     "2026-11-21"
+    ]
+   },
+   "src": {
+    "eco": [
+     "bv"
+    ],
+    "ent": [
+     "ps"
+    ],
+    "fis": [
+     "ag",
+     "cap21"
+    ],
+    "fin": [
+     "b27",
+     "pm10"
+    ],
+    "ret": [
+     "b27"
+    ],
+    "edu": [
+     "bv"
+    ],
+    "san": [
+     "b27"
+    ],
+    "eur": [
+     "b27"
+    ],
+    "imm": [
+     "la",
+     "21n"
+    ],
+    "sec": [
+     "la",
+     "cap21"
+    ],
+    "ecol": [
+     "bv"
+    ],
+    "inst": [
+     "bv"
+    ],
+    "num": [
+     "bv",
+     "21n"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] baisse des taxes sur les carburants (Knafo)"
+    ],
+    "ent": [
+     "[D] automatisation contre la main-d'œuvre immigrée"
+    ],
+    "fis": [
+     "[D] abolition des droits de succession ; fin de la CSG sur le travail (Knafo)",
+     "[D] suppression des droits de succession réaffirmée au meeting de lancement de Toulon (21/11), dans un plan de baisse des prélèvements"
+    ],
+    "fin": [
+     "[D] 140 Md€/an d'économies, 800 000 départs non remplacés (Knafo)",
+     "[D] plan de redressement des finances publiques de 280 Md€ de baisses de dépenses et d'impôts, sans période ni ventilation précisées (TF1, 10 novembre, selon Politique Matin)"
+    ],
+    "ret": [
+     "[D] capitalisation ; prestations réservées aux Français (Knafo)"
+    ],
+    "edu": [
+     "[D] école exigeante ; fin de la gratuité pour les étudiants étrangers"
+    ],
+    "san": [
+     "[D] suppression de l'AME et des ARS (Knafo)"
+    ],
+    "eur": [
+     "[D] contre le DSA ; budget de l'UE ramené à avant-Covid"
+    ],
+    "imm": [
+     "[D] « remigration » ; référendum",
+     "[D] objectif de réduire de deux millions le nombre d'immigrés au cours du quinquennat ; renvoi des étrangers au chômage depuis plus de six mois, y compris en situation régulière ; politique migratoire soumise à référendum (TF1, 10 novembre)"
+    ],
+    "sec": [
+     "[D] renvoi des détenus et délinquants étrangers",
+     "[D] fermeté promise envers les squatteurs et fin de « l'indulgence judiciaire » envers les atteintes à la propriété (Toulon, 21/11)"
+    ],
+    "ecol": [
+     "[D] relance massive du nucléaire ; fin des renouvelables intermittents"
+    ],
+    "inst": [
+     "[D] contre la régulation des réseaux sociaux ; suppression du CESE"
+    ],
+    "num": [
+     "[D] surplus nucléaire réservé à l'IA ; pas de régulation spécifique",
+     "[D] investissements dans l'intelligence artificielle, présentée comme pouvant remplacer une partie du travail des immigrés ; montant non précisé (TF1, 10 novembre)"
+    ]
+   }
+  },
+  {
+   "id": "polony",
+   "n": "Natacha Polony",
+   "p": "Nous sommes la France",
+   "b": "div",
+   "st": "Déclarée le 14/10/2026",
+   "pr": "Pas de programme ; déclarations",
+   "s": [
+    -1.5,
+    1.5,
+    1.5,
+    0,
+    2,
+    null
+   ],
+   "cf": "faible",
+   "j": [
+    "salaires +20-30 %, EDF renationalisée",
+    "préférence communautaire",
+    "départ des étrangers délinquants",
+    "pas de position",
+    "nucléaire, EDF publique",
+    "préférence européenne dans l'armement : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "lcp": [
+     "LCP, annonce de candidature",
+     "https://lcp.fr/actualites/natacha-polony-annonce-sa-candidature-a-l-election-presidentielle-443808",
+     "2026-10-14"
+    ],
+    "sr": [
+     "Sud Radio, entretien (avant la déclaration)",
+     "https://www.sudradio.fr/sud-radio/natacha-polony-je-lance-un-appel-aux-orphelins-de-la-politique",
+     "2026-09-15"
+    ],
+    "pc": [
+     "Pleinchamp, N. Polony et l'agriculture",
+     "https://www.pleinchamp.com/actualite/natacha-polony-candidate-a-l-elysee-avec-l-agriculture-comme-champ-de-bataille",
+     "2026-10-14"
+    ],
+    "eu": [
+     "Euronews, candidature",
+     "https://fr.euronews.com/2026/10/14/france-natacha-polony-officialise-sa-candidature-a-la-presidentielle",
+     "2026-10-14"
+    ]
+   },
+   "src": {
+    "eco": [
+     "lcp"
+    ],
+    "ent": [
+     "lcp"
+    ],
+    "fis": [
+     "sr"
+    ],
+    "fin": [
+     "sr"
+    ],
+    "def": [
+     "eu"
+    ],
+    "eur": [
+     "pc"
+    ],
+    "etr": [
+     "sr"
+    ],
+    "imm": [
+     "sr"
+    ],
+    "ecol": [
+     "sr"
+    ]
+   },
+   "t": {
+    "eco": [
+     "[D] salaires +20 à 30 % ; « état d'urgence de la production »"
+    ],
+    "ent": [
+     "[D] priorité à la production française ; nouvelle loi Egalim"
+    ],
+    "fis": [
+     "[D] taxe sur les superprofits des énergéticiens"
+    ],
+    "fin": [
+     "[D] réforme de l'État, sans chiffrage"
+    ],
+    "def": [
+     "[D] préférence européenne dans l'armement"
+    ],
+    "eur": [
+     "[D] préférence communautaire ; clauses miroirs"
+    ],
+    "etr": [
+     "[D] rapport de force avec les États-Unis"
+    ],
+    "imm": [
+     "[D] départ des étrangers qui enfreignent les règles"
+    ],
+    "ecol": [
+     "[D] renationalisation d'EDF ; soutien au nucléaire"
+    ]
+   }
+  },
+  {
+   "id": "branco",
+   "n": "Juan Branco",
+   "p": "Les Ruches",
+   "b": "div",
+   "st": "Déclaré le 19/12/2025",
+   "pr": "Projet en ligne de plus de 300 propositions",
+   "s": [
+    -4,
+    4,
+    -1,
+    -3,
+    -1,
+    null
+   ],
+   "cf": "élevée",
+   "j": [
+    "ISF, annulation partielle de dette, nationalisations",
+    "référendum de sortie",
+    "régularisation sur critères",
+    "police municipalisée, garde à vue de 24 h",
+    "nationalisation de l'électricité",
+    "pôle public de l'armement : pas de position sur l'effort militaire"
+   ],
+   "S": {
+    "a": [
+     "Les Ruches, projet",
+     "https://ruches.org/le-projet",
+     "non daté"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eco": [
+     "[P] SMIC à 1 500 € nets"
+    ],
+    "ent": [
+     "[P] salariés dans les CA ; 75 % des appels d'offres aux entreprises nationales"
+    ],
+    "fis": [
+     "[P] rétablissement de l'ISF ; taxe sur les transactions financières"
+    ],
+    "fin": [
+     "[P] annulation partielle de la dette ; circuit du Trésor"
+    ],
+    "ret": [
+     "[P] régimes alignés ; RSA sans condition dès 18 ans"
+    ],
+    "edu": [
+     "[P] université gratuite ; fin de Parcoursup"
+    ],
+    "san": [
+     "[P] service public de santé universel"
+    ],
+    "def": [
+     "[P] pôle public de l'armement"
+    ],
+    "eur": [
+     "[P] référendum sur la sortie de l'UE et de l'euro"
+    ],
+    "etr": [
+     "[P] référendum sur la sortie de l'OTAN"
+    ],
+    "imm": [
+     "[P] regroupement familial conditionné ; régularisations sur critères"
+    ],
+    "sec": [
+     "[P] police municipalisée ; procureur élu"
+    ],
+    "ecol": [
+     "[P] nationalisation du marché de l'électricité"
+    ],
+    "inst": [
+     "[P] RIC ; suppression du Premier ministre ; septennat"
+    ],
+    "num": [
+     "[P] transparence des algorithmes ; indépendance numérique"
+    ]
+   }
+  },
+  {
+   "id": "lalanne",
+   "n": "Francis Lalanne",
+   "p": "France Libre",
+   "b": "div",
+   "st": "Déclaré le 19/08/2026",
+   "pr": "Déclarations",
+   "S": {
+    "a": [
+     "Brussels Signal",
+     "https://brusselssignal.eu/2026/08/french-singer-turned-activist-francis-lalanne-announces-2027-presidential-run/",
+     "2026-08-20"
+    ]
+   },
+   "src": {},
+   "t": {
+    "eur": [
+     "[D] sortie de l'UE et retour au franc"
+    ],
+    "etr": [
+     "[D] sortie de l'OTAN"
+    ],
+    "sec": [
+     "[D] abrogation des lois Pleven, Gayssot et Avia"
+    ],
+    "inst": [
+     "[D] RIC"
+    ]
+   }
+  },
+  {
+   "id": "riner",
+   "n": "Teddy Riner",
+   "p": "Sans étiquette",
+   "b": "div",
+   "st": "Déclaré le 09/11/2026 (vidéo sur les réseaux sociaux et entretien au Parisien)",
+   "pr": "Pas de programme ; son conseiller Philippe Veran annonce un programme de 585 propositions, non publié (LCP, 13/11/2026)",
+   "S": {
+    "yh13": [
+     "AFP (Yahoo Actualités), premier déplacement de campagne",
+     "https://fr.news.yahoo.com/pr%C3%A9sidentielle-2027-premier-d%C3%A9placement-campagne-230253360.html",
+     "2026-11-13"
+    ],
+    "a": [
+     "Actumag, annonce de candidature",
+     "https://www.actumag.fr/2026/11/09/des-tatamis-a-lelysee-teddy-riner-officialise-sa-candidature-surprise-pour-la-presidentielle-2027",
+     "2026-11-09"
+    ],
+    "fj": [
+     "France-Jeunes, annonce de candidature",
+     "https://france-jeunes.net/actualites/teddy-riner-candidat-presidentielle-2027-annonce-authentique-beaucoup-ont-prise-fausse/",
+     "2026-11-09"
+    ],
+    "rt": [
+     "Reuters (Boursorama), point sur les candidatures",
+     "https://www.boursorama.com/actualite-economique/actualites/france-le-pen-et-melenchon-s-installent-dans-la-course-a-l-elysee-embouteillage-a-leur-suite-bb903935e024d11a3fac476d27885ecb",
+     "2026-11-09"
+    ]
+   },
+   "src": {
+    "eco": [
+     "fj"
+    ],
+    "ent": [
+     "fj"
+    ],
+    "fin": [
+     "fj"
+    ],
+    "ret": [
+     "a"
+    ],
+    "etr": [
+     "fj"
+    ],
+    "inst": [
+     "rt"
+    ],
+    "san": [
+     "yh13"
+    ]
+   },
+   "t": {
+    "san": [
+     "[D] fait de la santé une priorité ; premier déplacement de campagne le 13 novembre aux urgences pédiatriques de l'hôpital Delafontaine (Saint-Denis), à l'écoute des soignants, sans mesure détaillée"
+    ],
+    "eco": [
+     "[D] allègements de charges pour rapprocher le salaire net du brut"
+    ],
+    "ent": [
+     "[D] sortir du « carcan figé des 35 heures » sans les remettre en cause"
+    ],
+    "fin": [
+     "[D] « dépenser moins et réinjecter mieux », sans chiffrage"
+    ],
+    "ret": [
+     "[D] réforme combinant répartition et incitation à la capitalisation"
+    ],
+    "etr": [
+     "[D] relation « ferme » avec Donald Trump, sans précision"
+    ],
+    "inst": [
+     "[D] candidature sans étiquette, « ni de droite, ni de gauche »"
+    ]
+   }
+  },
+  {
+   "id": "villepin",
+   "n": "Dominique de Villepin",
+   "p": "La France humaniste",
+   "b": "div",
+   "st": "Déclaré le 20/11/2026 (conférence de presse à Paris)",
+   "pr": "Pas de programme présidentiel ; texte « Big bang - la règle républicaine » (site du parti, 28/08/2026)",
+   "S": {
+    "a": [
+     "LCP, déclaration de candidature (conférence de presse du 20 novembre)",
+     "https://lcp.fr/actualites/presidentielle-2027-dominique-de-villepin-officiellement-candidat-a-l-elysee-445372",
+     "2026-11-20"
+    ],
+    "lcp28": [
+     "LCP, texte « Big bang - la règle républicaine »",
+     "https://lcp.fr/actualites/presidentielle-2027-dominique-villepin-veut-une-nouvelle-abolition-des-privileges-et-un",
+     "2026-08-28"
+    ]
+   },
+   "src": {
+    "fis": [
+     "lcp28"
+    ],
+    "fin": [
+     "a",
+     "lcp28"
+    ],
+    "ret": [
+     "a"
+    ],
+    "inst": [
+     "a",
+     "a"
+    ]
+   },
+   "t": {
+    "fis": [
+     "[P] ne conserver que neuf grands impôts, dont un impôt unique sur le patrimoine ; taux unique de CSG à assiette élargie ; extinction progressive de toutes les niches fiscales et sociales"
+    ],
+    "fin": [
+     "[D] première mesure annoncée : redresser les comptes publics selon une « trajectoire pluriannuelle »",
+     "[P] ramener le déficit public à 3 % du PIB d'ici la fin du quinquennat par une forte baisse des dépenses"
+    ],
+    "ret": [
+     "[D] écarte une réforme des retraites annoncée par un seul candidat et privilégie la concertation"
+    ],
+    "inst": [
+     "[D] veut une présidence « arbitre » et une « démocratie du consentement » (conventions citoyennes, conférences sociales)",
+     "[D] écarte toute primaire de la droite et du centre"
+    ]
+   }
+  },
+  {
+   "id": "lassalle",
+   "n": "Jean Lassalle",
+   "p": "Résistons",
+   "b": "div",
+   "st": "Non confirmée au 08/10/2026",
+   "pr": "Déclarations",
+   "S": {
+    "a": [
+     "Pleinchamp, J. Lassalle",
+     "https://www.pleinchamp.com/actualite/jean-lassalle-agriculteurs-reprenez-vos-reves.-parce-que-les-reves-ca-permet-de-sortir-du-cauchemar",
+     "2026-10-08"
+    ]
+   },
+   "src": {},
+   "t": {
+    "ent": [
+     "[D] SMIC pour le conjoint d'agriculteur au foyer"
+    ],
+    "edu": [
+     "[D] investissement dans les lycées agricoles"
+    ]
+   }
+  },
+  {
+   "id": "markovic",
+   "n": "Mira Markovic",
+   "p": "Parti animaliste",
+   "b": "div",
+   "st": "Présentée le 02/10/2026",
+   "pr": "Objectifs du parti",
+   "S": {
+    "a": [
+     "Parti animaliste",
+     "https://www.parti-animaliste.fr",
+     "non daté"
+    ]
+   },
+   "src": {},
+   "t": {
+    "ecol": [
+     "[P] consommation de produits animaux −40 % d'ici 2030 (objectif du parti)"
+    ]
+   }
+  },
+  {
+   "id": "mathieu",
+   "n": "Benoît Mathieu",
+   "p": "Indépendant",
+   "b": "div",
+   "st": "Déclaré en mars 2026",
+   "pr": "Programme collaboratif",
+   "S": {
+    "a": [
+     "Sud Radio, portrait",
+     "https://www.sudradio.fr/sud-radio/presidentielle-2027-un-professeur-sillonne-la-france-a-velo-en-quete-des-500-parrainages",
+     "2026-05-06"
+    ]
+   },
+   "src": {},
+   "t": {
+    "inst": [
+     "[D] conventions citoyennes tirées au sort"
+    ]
+   }
+  },
+  {
+   "id": "egger",
+   "n": "Clara Egger",
+   "p": "Solution démocratique",
+   "b": "div",
+   "st": "Maintien non vérifié",
+   "pr": "RIC constituant (2022)",
+   "S": {
+    "a": [
+     "Solution démocratique",
+     "https://solutiondemocratique.substack.com/p/premieres-retombees-medias-pour-notre",
+     "2026-04-26"
+    ]
+   },
+   "src": {},
+   "t": {
+    "inst": [
+     "[H] RIC constituant (2022)"
+    ]
+   }
+  },
+  {
+   "id": "mikolajczak",
+   "n": "Antoine Mikolajczak",
+   "p": "Équinoxe",
+   "b": "div",
+   "st": "Déclaré le 27/06/2026",
+   "pr": "Trois priorités, sans mesure détaillée",
+   "t": {}
+  },
+  {
+   "id": "durif",
+   "n": "Sylvain Durif",
+   "p": "—",
+   "b": "div",
+   "st": "Déclaré le 23/08/2026",
+   "pr": "Aucune mesure publiée",
+   "t": {}
+  },
+  {
+   "id": "mlekuz",
+   "n": "Manolo Mlekuz",
+   "p": "—",
+   "b": "div",
+   "st": "Déclaré",
+   "pr": "Aucune mesure publiée",
+   "t": {}
+  },
+  {
+   "id": "legendre",
+   "n": "Jean-François Legendre",
+   "p": "À nous maintenant",
+   "b": "div",
+   "st": "Déclaré",
+   "pr": "Aucune information",
+   "t": {}
+  }
+ ],
+ "POLLS": {
+  "rule": "Chaque écart est calculé dans une seule hypothèse d'une seule enquête, sur une même liste de candidats. Les scores de David Lisnard dans des enquêtes ou des hypothèses différentes ne forment pas une série temporelle : aucune moyenne ni courbe ne les relie.",
+  "polls": [
+   {
+    "id": "owcnews1126",
+    "inst": "OpinionWay",
+    "com": "CNews (vague 5)",
+    "terrain": "25-26 novembre 2026",
+    "end": "2026-11-26",
+    "pub": "2026-11-26",
+    "n": "912 inscrits sur les listes électorales, extraits d'un échantillon de 1 020 personnes de 18 ans et plus ; en ligne, méthode des quotas",
+    "marge": "±1,7 à ±3,8 points au premier tour, ±4,2 à ±4,6 points selon le duel (rapport)",
+    "src": [
+     [
+      "Rapport OpinionWay pour CNews, intentions de vote, 26 novembre 2026 (PDF)",
+      "https://www.opinion-way.com/wp-content/uploads/2026/11/OpinionWay-pour-CNEWS-Les-intentions-de-vote-a-lelection-presidentielle-2027-26-novembre-2026.pdf"
+     ]
+    ],
+    "hyps": [
+     {
+      "label": "Hypothèse unique",
+      "scores": {
+       "lepen": 33,
+       "melenchon": 16,
+       "lisnard": 12,
+       "glucksmann": 10,
+       "philippe": 8,
+       "attal": 4,
+       "retailleau": 4,
+       "zemmour": 3,
+       "villepin": 2,
+       "roussel": 2,
+       "riner": 2,
+       "dupontaignan": 2,
+       "arthaud": 1,
+       "tondelier": 1
+      },
+      "note": "Rapport, p. 8-9. Karim Bouamrane : moins de 1 % (non représenté). 14 % des inscrits n'expriment pas d'intention de vote. Total des candidats à 101 % (arrondis)."
+     }
+    ],
+    "duels": [
+     [
+      "lisnard",
+      45,
+      "lepen",
+      55
+     ],
+     [
+      "melenchon",
+      31,
+      "lepen",
+      69
+     ],
+     [
+      "glucksmann",
+      42,
+      "lepen",
+      58
+     ],
+     [
+      "philippe",
+      41,
+      "lepen",
+      59
+     ]
+    ],
+    "note": "Une seule hypothèse : David Lisnard obtient 12 % (3e), devant Raphaël Glucksmann (10 %), Édouard Philippe (8 %) et Bruno Retailleau (4 %). Premier duel d'intentions de vote de second tour testant Lisnard : 45 % contre 55 % pour Marine Le Pen (33 % n'expriment pas d'intention dans ce duel ; rapport, p. 19). Les évolutions indiquées par le rapport ne sont pas reprises. Aucune question de solidité du choix ; les croisements par proximité partisane et vote antérieur (p. 10-11) ne sont pas repris, leur lecture restant à vérifier sur le PDF."
+   },
+   {
+    "id": "toluna1119",
+    "inst": "Toluna Harris Interactive",
+    "com": "M6, RTL et L'Express",
+    "terrain": "18-19 novembre 2026",
+    "end": "2026-11-19",
+    "pub": "2026-11-23",
+    "n": "2 088 inscrits sur les listes électorales, extraits d'un échantillon de 2 378 personnes de 18 ans et plus ; en ligne, méthode des quotas et redressement",
+    "marge": "±1,4 à ±2,9 points au premier tour, ±2,9 à ±3,0 points au second tour (rapport)",
+    "src": [
+     [
+      "Rapport Toluna Harris Interactive, baromètre vague 10 (PDF)",
+      "https://tolunacorporate.com/wp-content/uploads/2026/11/Rapport-Toluna-Barometre-Presidentielle-2027-Vague-10-M6-RTL-LExpress-23-novembre-2026.pdf"
+     ],
+     [
+      "Toluna, « Intentions de vote à l'élection présidentielle 2027 - Vague 10 »",
+      "https://tolunacorporate.com/fr/intentions-de-vote-a-lelection-presidentielle-2027-vague-10/"
+     ]
+    ],
+    "hyps": [
+     {
+      "label": "H1 : Attal et Philippe candidats",
+      "scores": {
+       "lepen": 31,
+       "melenchon": 18,
+       "glucksmann": 11,
+       "lisnard": 11,
+       "philippe": 9,
+       "attal": 4,
+       "retailleau": 4,
+       "riner": 4,
+       "zemmour": 3,
+       "arthaud": 1,
+       "roussel": 1,
+       "tondelier": 1,
+       "villepin": 1,
+       "dupontaignan": 1
+      },
+      "note": "Rapport, p. 13."
+     },
+     {
+      "label": "H2 : Philippe candidat unique du centre",
+      "scores": {
+       "lepen": 31,
+       "melenchon": 19,
+       "glucksmann": 11,
+       "lisnard": 11,
+       "philippe": 10,
+       "retailleau": 4,
+       "zemmour": 4,
+       "riner": 4,
+       "villepin": 2,
+       "arthaud": 1,
+       "roussel": 1,
+       "tondelier": 1,
+       "dupontaignan": 1
+      },
+      "note": "Rapport, p. 16."
+     },
+     {
+      "label": "H3 : Attal candidat unique du centre",
+      "scores": {
+       "lepen": 30,
+       "melenchon": 19,
+       "lisnard": 12,
+       "glucksmann": 11,
+       "attal": 7,
+       "retailleau": 5,
+       "riner": 5,
+       "zemmour": 4,
+       "tondelier": 2,
+       "villepin": 2,
+       "arthaud": 1,
+       "roussel": 1,
+       "dupontaignan": 1
+      },
+      "note": "Rapport, p. 19."
+     }
+    ],
+    "duels": [
+     [
+      "lepen",
+      65,
+      "melenchon",
+      35
+     ]
+    ],
+    "note": "Trois hypothèses qui diffèrent par l'offre du centre ; David Lisnard obtient 11 % dans H1 et H2 et 12 % dans H3, scores issus d'hypothèses différentes qui ne se comparent pas entre eux. Il devance Bruno Retailleau dans les trois. Seul duel chiffré : Le Pen-Mélenchon (p. 25). Teddy Riner est testé pour la première fois dans ce baromètre. Totaux à 100 % dans chaque hypothèse."
+   },
+   {
+    "id": "ifopsud1104",
+    "inst": "Ifop-Fiducial",
+    "com": "Sud Radio",
+    "terrain": "2-4 novembre 2026",
+    "end": "2026-11-04",
+    "pub": "2026-11-20",
+    "n": "1 834 inscrits sur les listes électorales, extraits d'un échantillon de 1 978 personnes de 18 ans et plus ; questionnaire auto-administré en ligne",
+    "marge": "Non précisée pour cet effectif dans la notice (±2,2 points à 50 % pour 2 000 répondants selon le tableau de la notice)",
+    "src": [
+     [
+      "Notice de la Commission des sondages n° 10392 (PDF)",
+      "http://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10392-pres-iv-ifop-sud-radio-20-novembre.pdf"
+     ],
+     [
+      "Sud Radio, « Le Pen au-dessus du lot, Philippe seul résistant face à Mélenchon »",
+      "https://www.sudradio.fr/sud-radio/presidentielle-2027-le-pen-au-dessus-du-lot-philippe-seul-resistant-face-a-melenchon"
+     ]
+    ],
+    "hyps": [
+     {
+      "label": "H1 : Philippe, candidat unique de la droite et du centre",
+      "scores": {
+       "lepen": 37,
+       "philippe": 19,
+       "melenchon": 18,
+       "glucksmann": 13,
+       "zemmour": 5,
+       "roussel": 3,
+       "tondelier": 3,
+       "dupontaignan": 1.5,
+       "arthaud": 0.5
+      },
+      "note": "Ne se prononcent pas : 32 %."
+     },
+     {
+      "label": "H2 : Retailleau, candidat unique de la droite et du centre",
+      "scores": {
+       "lepen": 38,
+       "melenchon": 18,
+       "glucksmann": 17,
+       "retailleau": 14,
+       "zemmour": 4,
+       "tondelier": 3.5,
+       "roussel": 3,
+       "dupontaignan": 2,
+       "arthaud": 0.5
+      },
+      "note": "Ne se prononcent pas : 34,4 %."
+     },
+     {
+      "label": "H3 : Lisnard, candidat unique de la droite et du centre",
+      "scores": {
+       "lepen": 37,
+       "glucksmann": 18,
+       "melenchon": 17,
+       "lisnard": 14,
+       "zemmour": 4,
+       "roussel": 3.5,
+       "tondelier": 3.5,
+       "dupontaignan": 2,
+       "arthaud": 1
+      },
+      "note": "Ne se prononcent pas : 33,2 %."
+     },
+     {
+      "label": "H4 : Attal, candidat unique de la droite et du centre",
+      "scores": {
+       "lepen": 38,
+       "melenchon": 18,
+       "glucksmann": 16,
+       "attal": 13,
+       "zemmour": 5,
+       "dupontaignan": 3,
+       "roussel": 3,
+       "tondelier": 3,
+       "arthaud": 1
+      },
+      "note": "Ne se prononcent pas : 34,6 %."
+     }
+    ],
+    "duels": [],
+    "note": "Enquête publiée le 20 novembre, mais dont le terrain (2-4 novembre) est antérieur à celui des autres enquêtes de la liste. Quatre hypothèses de candidature unique de la droite et du centre, chacune sans les trois autres candidats de ce bloc : David Lisnard y obtient 14 % (H3), comme Retailleau dans H2 ; ces scores relèvent d'hypothèses différentes et ne se comparent pas entre eux. Lisnard n'est testé que dans H3. Aucun duel de second tour. Scores lus sur la notice de la Commission des sondages (totaux à 100 %)."
+   },
+   {
+    "id": "ifopfid1116",
+    "inst": "Ifop-Fiducial",
+    "com": "TF1, LCI, Le Figaro et Sud Radio",
+    "terrain": "13-16 novembre 2026",
+    "end": "2026-11-16",
+    "pub": "2026-11-18",
+    "n": "1 690 inscrits sur les listes électorales, extraits d'un échantillon de 1 823 personnes de 18 ans et plus ; questionnaire auto-administré en ligne, méthode des quotas",
+    "marge": "Indicative : ±1,5 point pour un score de 10 % sur 1 500 répondants (rapport, p. 2)",
+    "src": [
+     [
+      "Ifop, « Petit-déjeuner électoral : intentions de vote et déterminants du vote » (PDF)",
+      "https://www.ifopgroup.com/wp-content/uploads/2026/11/122919-petit-dejeuner-electoral-intentions-de-vote-et-determinants-du-vote.pdf"
+     ],
+     [
+      "Ifop, « Les intentions de vote à l'élection présidentielle 2027 »",
+      "https://www.ifopgroup.com/article/les-intentions-de-vote-a-lelection-presidentielle-2027/"
+     ],
+     [
+      "Sud Radio, « Présidentielle 2027 : le duel Le Pen-Mélenchon se dessine »",
+      "https://www.sudradio.fr/sud-radio/presidentielle-2027-le-pen-et-melenchon-qualifies-dans-tous-les-scenarios-la-droite-et-le-centre-disperses"
+     ]
+    ],
+    "hyps": [
+     {
+      "label": "H1 : liste élargie avec Riner, Villepin, Ruffin et Polony",
+      "scores": {
+       "lepen": 32,
+       "melenchon": 17,
+       "philippe": 10,
+       "glucksmann": 8,
+       "lisnard": 8,
+       "attal": 4.5,
+       "retailleau": 4,
+       "riner": 4,
+       "zemmour": 3,
+       "ruffin": 2,
+       "tondelier": 2,
+       "roussel": 1.5,
+       "dupontaignan": 1.5,
+       "polony": 1
+      },
+      "other": {
+       "Dominique de Villepin": 1.5
+      },
+      "note": "Rapport, p. 5. Nathalie Arthaud non testée dans cette hypothèse."
+     },
+     {
+      "label": "H2 : Philippe, Attal, Retailleau et Lisnard candidats",
+      "scores": {
+       "lepen": 34,
+       "melenchon": 19,
+       "philippe": 11,
+       "glucksmann": 10,
+       "lisnard": 9,
+       "attal": 4,
+       "retailleau": 4,
+       "zemmour": 3,
+       "tondelier": 2.5,
+       "roussel": 1.5,
+       "dupontaignan": 1.5,
+       "arthaud": 0.5
+      },
+      "note": "Rapport, p. 6 (scénario de référence)."
+     },
+     {
+      "label": "H3 : Philippe, Retailleau et Lisnard (sans Attal)",
+      "scores": {
+       "lepen": 35,
+       "melenchon": 19.5,
+       "philippe": 12,
+       "glucksmann": 10,
+       "lisnard": 10,
+       "retailleau": 4,
+       "zemmour": 3,
+       "roussel": 2.5,
+       "tondelier": 2.5,
+       "dupontaignan": 1.5
+      },
+      "note": "Rapport, p. 7. Nathalie Arthaud non testée dans cette hypothèse."
+     },
+     {
+      "label": "H4 : Attal, Retailleau et Lisnard (sans Philippe)",
+      "scores": {
+       "lepen": 35,
+       "melenchon": 19,
+       "glucksmann": 11,
+       "lisnard": 11,
+       "attal": 9,
+       "retailleau": 5,
+       "zemmour": 3,
+       "tondelier": 2.5,
+       "roussel": 2,
+       "dupontaignan": 2,
+       "arthaud": 0.5
+      },
+      "note": "Rapport, p. 8."
+     },
+     {
+      "label": "H5 : Philippe et Lisnard (sans Attal ni Retailleau)",
+      "scores": {
+       "lepen": 34,
+       "melenchon": 19.5,
+       "philippe": 14,
+       "lisnard": 12,
+       "glucksmann": 11,
+       "zemmour": 3,
+       "tondelier": 2.5,
+       "roussel": 2,
+       "dupontaignan": 1.5,
+       "arthaud": 0.5
+      },
+      "note": "Rapport, p. 9."
+     },
+     {
+      "label": "H6 : Philippe et Retailleau (sans Attal ni Lisnard)",
+      "scores": {
+       "lepen": 36,
+       "melenchon": 19,
+       "philippe": 15,
+       "glucksmann": 11.5,
+       "retailleau": 7,
+       "zemmour": 3.5,
+       "tondelier": 3,
+       "roussel": 2.5,
+       "dupontaignan": 2,
+       "arthaud": 0.5
+      },
+      "note": "Lisnard non testé. Rapport, p. 10."
+     }
+    ],
+    "duels": [],
+    "note": "David Lisnard obtient de 8 à 12 % dans les cinq hypothèses où il est testé, devant Bruno Retailleau dans les quatre qui testent les deux (8 contre 4, 9 contre 4, 10 contre 4 et 11 contre 5 %). Aucun duel de second tour chiffré n'est publié ; Le Pen et Mélenchon sont qualifiés dans toutes les hypothèses. Scores lus sur le rapport PDF (p. 5 à 11), totaux vérifiés à 100 %. Autres résultats (hypothèse H2) : 44 % des électeurs de Lisnard se disent sûrs de leur choix (voir onglet Opinion) ; ses électeurs jugent déterminantes la réduction de la dette (87 %), la sécurité (83 %) et la maîtrise des impôts (75 %) (p. 16). Reports en cas d'absence (p. 13) : sans Retailleau, ses électeurs iraient à 39 % vers Lisnard, 33 % vers Le Pen et 28 % vers Philippe ; sans Lisnard, les siens iraient à 30 % vers Retailleau, 20 % vers Philippe, 19 % vers Le Pen et 10 % vers Zemmour. Ces reports déclarés ne prédisent pas les reports réels. Profil de l'électorat de Lisnard (p. 12) : lecture du graphique incertaine, non reprise."
+   },
+   {
+    "id": "yougov1117",
+    "inst": "YouGov",
+    "com": "Le HuffPost",
+    "terrain": "12-17 novembre 2026",
+    "end": "2026-11-17",
+    "pub": "2026-11-17",
+    "n": "1 030 personnes de 18 ans et plus, dont 952 inscrites sur les listes électorales ; en ligne, panel YouGov France ; intentions de vote calculées sur les « votants décidés » (bases pondérées de 608 à 661 selon le scénario)",
+    "marge": "Non indiquée dans le document",
+    "src": [
+     [
+      "YouGov pour Le HuffPost, résultats « Intentions de vote à l'élection présidentielle 2027 – Novembre 2026 » (PDF)",
+      "https://ygo-assets-websites-editorial-emea.yougov.net/documents/R%C3%A9sultats_YouGov_pour_le_HuffPost_Intentions_de_vote_Novembre_2026_17.11.2026.pdf"
+     ]
+    ],
+    "hyps": [
+     {
+      "label": "Scénario principal : Philippe, Attal, Retailleau et Lisnard candidats",
+      "scores": {
+       "lepen": 32,
+       "melenchon": 19,
+       "glucksmann": 9,
+       "lisnard": 9,
+       "philippe": 8,
+       "retailleau": 6,
+       "attal": 5,
+       "tondelier": 4,
+       "zemmour": 3,
+       "roussel": 2,
+       "dupontaignan": 2,
+       "arthaud": 1
+      },
+      "note": "Base pondérée de 656 votants décidés."
+     },
+     {
+      "label": "Scénario Attal (sans Philippe)",
+      "scores": {
+       "lepen": 34,
+       "melenchon": 19,
+       "glucksmann": 10,
+       "lisnard": 10,
+       "retailleau": 8,
+       "attal": 7,
+       "tondelier": 6,
+       "zemmour": 3,
+       "roussel": 2,
+       "dupontaignan": 1,
+       "arthaud": 1
+      },
+      "note": "Base pondérée de 653."
+     },
+     {
+      "label": "Scénario Philippe (sans Attal)",
+      "scores": {
+       "lepen": 33,
+       "melenchon": 19,
+       "glucksmann": 10,
+       "lisnard": 10,
+       "philippe": 9,
+       "retailleau": 7,
+       "tondelier": 4,
+       "zemmour": 3,
+       "roussel": 3,
+       "dupontaignan": 2,
+       "arthaud": 1
+      },
+      "note": "Base pondérée de 652."
+     },
+     {
+      "label": "Scénario Philippe unique (sans Retailleau, Attal, Tondelier ni Lisnard)",
+      "scores": {
+       "lepen": 40,
+       "melenchon": 22,
+       "philippe": 16,
+       "glucksmann": 12,
+       "zemmour": 4,
+       "roussel": 3,
+       "dupontaignan": 2,
+       "arthaud": 1
+      },
+      "note": "Lisnard non testé. Base pondérée de 608."
+     },
+     {
+      "label": "Scénario complet avec Riner et Villepin",
+      "scores": {
+       "lepen": 32,
+       "melenchon": 17,
+       "glucksmann": 9,
+       "lisnard": 9,
+       "philippe": 7,
+       "retailleau": 6,
+       "tondelier": 5,
+       "attal": 4,
+       "riner": 3,
+       "zemmour": 3,
+       "roussel": 2,
+       "dupontaignan": 2,
+       "arthaud": 1
+      },
+      "other": {
+       "Dominique de Villepin": 2
+      },
+      "note": "Base pondérée de 661."
+     }
+    ],
+    "duels": [
+     [
+      "philippe",
+      46,
+      "lepen",
+      54
+     ],
+     [
+      "glucksmann",
+      42,
+      "lepen",
+      58
+     ],
+     [
+      "melenchon",
+      37,
+      "lepen",
+      63
+     ],
+     [
+      "attal",
+      45,
+      "lepen",
+      55
+     ],
+     [
+      "philippe",
+      61,
+      "melenchon",
+      39
+     ]
+    ],
+    "note": "David Lisnard obtient 9 ou 10 % dans les quatre scénarios où il est testé, devant Bruno Retailleau dans chacun (6, 8, 7 et 6 %). Totaux arrondis pouvant ne pas faire exactement 100 %. Certitude d'aller voter publiée (69 % certains au premier tour) : c'est une mesure de participation, pas de solidité du choix. Aucune question de thèmes, de critères, de solidité du choix ni de composition de l'électorat de Lisnard dans le document. Duels : aucun n'inclut Lisnard ou Retailleau. Notice de la Commission des sondages non consultée."
+   },
+   {
+    "id": "elabe1113",
+    "inst": "Elabe",
+    "com": "BFMTV et La Tribune Dimanche",
+    "terrain": "12-13 novembre 2026",
+    "end": "2026-11-13",
+    "pub": "2026-11-14",
+    "n": "1 500 personnes de 18 ans et plus, dont 1 391 inscrits sur les listes électorales ; en ligne, méthode des quotas ; intentions de vote calculées sur les inscrits déclarant une probabilité d'aller voter de 8 à 10 sur 10",
+    "marge": "1,1 à 3,5 points selon le résultat (rapport) ; 1,1 à 3,1 points selon la presse",
+    "src": [
+     [
+      "Elabe, rapport « Les Français et l'élection présidentielle 2027 », novembre 2026 (PDF)",
+      "https://elabe.fr/fichier-pdf/13399-les-francais-et-lelection-presidentielle-2027/"
+     ],
+     [
+      "Elabe, présentation de l'enquête",
+      "https://elabe.fr/presidentielle-2027-novembre/"
+     ]
+    ],
+    "hyps": [
+     {
+      "label": "Cas 1 : Philippe, Tondelier et Villepin candidats",
+      "scores": {
+       "lepen": 33,
+       "melenchon": 17,
+       "philippe": 15,
+       "glucksmann": 13.5,
+       "retailleau": 6,
+       "zemmour": 4.5,
+       "tondelier": 3,
+       "dupontaignan": 3,
+       "roussel": 2,
+       "arthaud": 0.5
+      },
+      "other": {
+       "Dominique de Villepin": 2.5
+      },
+      "note": "Lisnard non testé. 11,5 % sans intention de vote."
+     },
+     {
+      "label": "Cas 2 : Attal, Tondelier et Villepin candidats",
+      "scores": {
+       "lepen": 33,
+       "melenchon": 17.5,
+       "glucksmann": 14,
+       "attal": 10,
+       "retailleau": 9,
+       "zemmour": 4.5,
+       "tondelier": 3,
+       "dupontaignan": 2.5,
+       "roussel": 2.5,
+       "arthaud": 1
+      },
+      "other": {
+       "Dominique de Villepin": 3
+      },
+      "note": "Lisnard non testé. 14 % sans intention de vote."
+     },
+     {
+      "label": "Cas 3 : Philippe et Attal candidats",
+      "scores": {
+       "lepen": 33,
+       "melenchon": 17.5,
+       "glucksmann": 13,
+       "philippe": 12,
+       "retailleau": 6,
+       "attal": 5.5,
+       "zemmour": 4,
+       "tondelier": 3.5,
+       "dupontaignan": 3,
+       "roussel": 2,
+       "arthaud": 0.5
+      },
+      "note": "Lisnard non testé. 12 % sans intention de vote."
+     },
+     {
+      "label": "Cas 4 : Attal, Ruffin et Lisnard candidats",
+      "scores": {
+       "lepen": 32,
+       "melenchon": 17.5,
+       "glucksmann": 14,
+       "lisnard": 10.5,
+       "attal": 8.5,
+       "retailleau": 6,
+       "zemmour": 4,
+       "ruffin": 3,
+       "dupontaignan": 2.5,
+       "roussel": 1.5,
+       "arthaud": 0.5
+      },
+      "note": "Ni Philippe ni Tondelier. 12,5 % sans intention de vote."
+     },
+     {
+      "label": "Cas 5 : Philippe et Lisnard candidats",
+      "scores": {
+       "lepen": 32.5,
+       "melenchon": 18.5,
+       "glucksmann": 13.5,
+       "philippe": 13,
+       "lisnard": 9,
+       "retailleau": 4,
+       "zemmour": 3.5,
+       "dupontaignan": 3,
+       "roussel": 2.5,
+       "arthaud": 0.5
+      },
+      "note": "Ni Attal, ni Tondelier, ni Ruffin. 12 % sans intention de vote."
+     },
+     {
+      "label": "Cas 6 : liste large avec Philippe, Attal, Lisnard, Polony et Riner",
+      "scores": {
+       "lepen": 31,
+       "melenchon": 17,
+       "glucksmann": 10.5,
+       "philippe": 9.5,
+       "lisnard": 8,
+       "riner": 4.5,
+       "attal": 4,
+       "retailleau": 4,
+       "zemmour": 3,
+       "tondelier": 3,
+       "dupontaignan": 2,
+       "polony": 1.5,
+       "roussel": 1.5,
+       "arthaud": 0.5
+      },
+      "note": "Première hypothèse de ce baromètre testant Teddy Riner. 9,5 % sans intention de vote."
+     }
+    ],
+    "duels": [
+     [
+      "melenchon",
+      31.5,
+      "lepen",
+      68.5
+     ],
+     [
+      "glucksmann",
+      45,
+      "lepen",
+      55
+     ],
+     [
+      "philippe",
+      45,
+      "lepen",
+      55
+     ]
+    ],
+    "note": "Quatrième vague du baromètre Elabe. David Lisnard obtient 10,5 % (cas 4, avec Attal), 9 % (cas 5, avec Philippe) et 8 % (cas 6, liste large), devant Retailleau dans les trois (6, 4 et 4 %). Scores relevés dans le tableau récapitulatif du rapport (chaque hypothèse totalise 100 %) ; un compte rendu de presse (Le Centrisme) attribue certains scores à d'autres cas : se reporter au rapport. Les évolutions publiées par l'institut se rapportent à des hypothèses différentes de la vague d'octobre et ne sont pas reprises. Solidité du choix publiée pour le cas 1 seulement, sans Lisnard (voir l'onglet Opinions) ; part de chaque électorat déclarant voter Lisnard publiée pour les cas 4 et 5. Duels : aucun n'inclut Lisnard ou Retailleau."
+   }
+  ],
+  "history": [
+   {
+    "d": "2026-11-10",
+    "inst": "OpinionWay",
+    "com": "Les Échos et Radio Classique",
+    "v": "10 à 12 % (3 hypothèses, scores relevés dans la presse)"
+   },
+   {
+    "d": "2026-11-10",
+    "inst": "Cluster17",
+    "com": "Politico",
+    "v": "8 à 10 % (4 hypothèses, listes en partie connues par la presse)"
+   },
+   {
+    "d": "2026-11-05",
+    "inst": "Toluna Harris Interactive",
+    "com": "M6 et RTL",
+    "v": "9 % (2 hypothèses)"
+   },
+   {
+    "d": "2026-10-29",
+    "inst": "Ifop",
+    "com": "LCI",
+    "v": "7 à 9 % (3 hypothèses)"
+   },
+   {
+    "d": "2026-10-22",
+    "inst": "Cluster17",
+    "com": "Politico",
+    "v": "8 % (1 hypothèse)"
+   },
+   {
+    "d": "2026-10-22",
+    "inst": "Ipsos bva",
+    "com": "Le Parisien, avec CESI École d'ingénieurs",
+    "v": "6,5 % (1 hypothèse)"
+   },
+   {
+    "d": "2026-10-21",
+    "inst": "Toluna Harris Interactive",
+    "com": "M6 et RTL",
+    "v": "7 et 8 % (2 hypothèses)"
+   },
+   {
+    "d": "2026-10-22",
+    "inst": "OpinionWay",
+    "com": "CNEWS",
+    "v": "6 % (1 hypothèse)"
+   },
+   {
+    "d": "2026-10-20",
+    "inst": "Ifop-Fiducial",
+    "com": "LCI, Le Figaro et Sud Radio",
+    "v": "5,5 et 7 % (2 hypothèses)"
+   },
+   {
+    "d": "2026-10-16",
+    "inst": "Elabe",
+    "com": "BFMTV et La Tribune Dimanche",
+    "v": "5,5 et 6,5 % (2 hypothèses)"
+   },
+   {
+    "d": "2026-10-15",
+    "inst": "Cluster17",
+    "com": "Le Point",
+    "v": "7 et 17 % (2 hypothèses)"
+   },
+   {
+    "d": "2026-10-15",
+    "inst": "YouGov",
+    "com": "Le HuffPost",
+    "v": "4 % (1 hypothèse)"
+   },
+   {
+    "d": "2026-10-14",
+    "inst": "OpinionWay",
+    "com": "CNEWS",
+    "v": "4 %"
+   },
+   {
+    "d": "2026-10-14",
+    "inst": "Ifop-Fiducial",
+    "com": "LCI et Sud Radio",
+    "v": "6 % (1 hypothèse)"
+   },
+   {
+    "d": "2026-09-29",
+    "inst": "Ifop",
+    "com": "LCI, Le Figaro, Sud Radio",
+    "v": "3,5 %"
+   },
+   {
+    "d": "2026-09-21",
+    "inst": "YouGov",
+    "com": "Le HuffPost",
+    "v": "2 %"
+   },
+   {
+    "d": "2026-09-16",
+    "inst": "Cluster17",
+    "com": "Politico",
+    "v": "5,2 %"
+   },
+   {
+    "d": "2026-09-10",
+    "inst": "OpinionWay",
+    "com": "CNews",
+    "v": "2 % (3 hypothèses)"
+   },
+   {
+    "d": "2026-09-01",
+    "inst": "Cluster17",
+    "com": "Le Point",
+    "v": "4,2 %"
+   },
+   {
+    "d": "2026-08-28",
+    "inst": "Elabe",
+    "com": "BFMTV, La Tribune Dimanche",
+    "v": "3 et 3,5 % (2 hypothèses)"
+   },
+   {
+    "d": "2026-07-09",
+    "inst": "Cluster17",
+    "com": "Le Point",
+    "v": "4,1 %"
+   },
+   {
+    "d": "2026-06-24",
+    "inst": "Ifop",
+    "com": "LCI, Le Figaro, Sud Radio",
+    "v": "2 %"
+   }
+  ],
+  "historySrc": [
+   "sondages2027.fr, enquêtes testant David Lisnard (agrégateur)",
+   "https://sondages2027.fr/candidats/david-lisnard/"
+  ],
+  "duelNote": "Premier duel d'intentions de vote de second tour testant David Lisnard : OpinionWay pour CNews (25-26 novembre), Lisnard 45 %, Marine Le Pen 55 % ; les duels ne se comparent qu'à l'intérieur d'une même enquête. Le baromètre Odoxa-Mascaret pour Public Sénat, la presse régionale et L'Obs (18-19 novembre, 1 005 personnes de 18 ans et plus, publié le 24 novembre) pose une autre question : la préférence entre Marine Le Pen et sept candidats, avec l'option « aucun des deux », choisie par 29 à 42 % des répondants selon le duel. David Lisnard y est préféré à Marine Le Pen (32 % contre 27 %), comme Édouard Philippe (35 % contre 31 %) ; ces préférences ne sont pas des intentions de vote et ne se comparent pas aux duels ci-dessous (Public Sénat, 24 novembre ; notice 10395 de la Commission des sondages)."
+ },
+ "OPINION": {
+  "intro": "Ce que les personnes interrogées déclarent : les thèmes qui comptent pour leur vote, l'importance de chaque critère dans leur choix, la solidité de ce choix, et la composition de l'électorat de David Lisnard. Ces réponses décrivent un état déclaré à une date ; elles ne mesurent ni les causes d'un changement de vote ni sa probabilité.",
+  "harris": {
+   "inst": "Toluna Harris Interactive",
+   "com": "M6, RTL et L'Express",
+   "terrain": "18-19 novembre 2026",
+   "pub": "2026-11-23",
+   "n": "2 088 inscrits issus d'un échantillon de 2 378 personnes de 18 ans et plus ; en ligne, quotas et redressement",
+   "marge": "±1,4 à ±2,9 points",
+   "url": "https://tolunacorporate.com/wp-content/uploads/2026/11/Rapport-Toluna-Barometre-Presidentielle-2027-Vague-10-M6-RTL-LExpress-23-novembre-2026.pdf"
+  },
+  "priorities": {
+   "q": "Thèmes qui compteront le plus pour votre vote au premier tour (jusqu'à cinq réponses)",
+   "page": 29,
+   "all": [
+    [
+     "Pouvoir d'achat",
+     59,
+     "eco"
+    ],
+    [
+     "Santé",
+     40,
+     "san"
+    ],
+    [
+     "Immigration",
+     36,
+     "imm"
+    ],
+    [
+     "Retraites",
+     31,
+     "ret"
+    ],
+    [
+     "Impôts et fiscalité",
+     29,
+     "fis"
+    ],
+    [
+     "Déficits et dette publics",
+     28,
+     "fin"
+    ],
+    [
+     "Sécurité des personnes et des biens",
+     25,
+     "sec"
+    ],
+    [
+     "Emploi",
+     23,
+     "ent"
+    ],
+    [
+     "Éducation et formation",
+     23,
+     "edu"
+    ],
+    [
+     "Inégalités",
+     17,
+     null
+    ],
+    [
+     "Terrorisme",
+     15,
+     "sec"
+    ],
+    [
+     "Environnement et développement durable",
+     13,
+     "ecol"
+    ],
+    [
+     "Logement",
+     13,
+     null
+    ],
+    [
+     "Guerre en Ukraine",
+     12,
+     "etr"
+    ],
+    [
+     "Réforme des institutions",
+     10,
+     "inst"
+    ],
+    [
+     "Égalité femmes-hommes",
+     10,
+     null
+    ],
+    [
+     "Compétitivité des entreprises françaises",
+     10,
+     "ent"
+    ],
+    [
+     "Politique étrangère",
+     9,
+     "etr"
+    ],
+    [
+     "Europe",
+     9,
+     "eur"
+    ],
+    [
+     "Prise en charge des personnes âgées",
+     8,
+     null
+    ],
+    [
+     "Moralisation de la vie politique",
+     7,
+     "inst"
+    ],
+    [
+     "Tensions au Proche et au Moyen-Orient",
+     4,
+     "etr"
+    ],
+    [
+     "Développement du référendum",
+     4,
+     "inst"
+    ],
+    [
+     "Décentralisation",
+     2,
+     "inst"
+    ]
+   ],
+   "groups": {
+    "Proches de LFI": [
+     [
+      "Pouvoir d'achat",
+      60
+     ],
+     [
+      "Santé",
+      42
+     ],
+     [
+      "Inégalités",
+      42
+     ],
+     [
+      "Emploi",
+      37
+     ],
+     [
+      "Impôts et fiscalité",
+      28
+     ]
+    ],
+    "Proches du PS": [
+     [
+      "Pouvoir d'achat",
+      69
+     ],
+     [
+      "Santé",
+      47
+     ],
+     [
+      "Retraites",
+      34
+     ],
+     [
+      "Inégalités",
+      29
+     ],
+     [
+      "Éducation et formation",
+      26
+     ]
+    ],
+    "Proches des Écologistes": [
+     [
+      "Santé",
+      40
+     ],
+     [
+      "Environnement et développement durable",
+      39
+     ],
+     [
+      "Emploi",
+      35
+     ],
+     [
+      "Éducation et formation",
+      35
+     ],
+     [
+      "Pouvoir d'achat",
+      34
+     ]
+    ],
+    "Proches de Renaissance": [
+     [
+      "Pouvoir d'achat",
+      55
+     ],
+     [
+      "Déficits et dette publics",
+      34
+     ],
+     [
+      "Santé",
+      32
+     ],
+     [
+      "Retraites",
+      32
+     ],
+     [
+      "Impôts et fiscalité",
+      29
+     ]
+    ],
+    "Proches de LR": [
+     [
+      "Immigration",
+      51
+     ],
+     [
+      "Pouvoir d'achat",
+      49
+     ],
+     [
+      "Déficits et dette publics",
+      44
+     ],
+     [
+      "Impôts et fiscalité",
+      43
+     ],
+     [
+      "Sécurité des personnes et des biens",
+      39
+     ]
+    ],
+    "Proches du RN": [
+     [
+      "Immigration",
+      66
+     ],
+     [
+      "Pouvoir d'achat",
+      64
+     ],
+     [
+      "Santé",
+      37
+     ],
+     [
+      "Retraites",
+      33
+     ],
+     [
+      "Sécurité des personnes et des biens",
+      33
+     ]
+    ]
+   },
+   "groupNote": "Cinq premiers thèmes par proximité partisane (pages 31-32, vague du 18-19 novembre). Le texte extrait du rapport ne porte pas les libellés de parti : l'attribution suit l'ordre habituel du baromètre (LFI, PS, Écologistes, Renaissance, LR, RN) et reste à vérifier sur le PDF. Effectifs des sous-groupes non publiés : aucune marge propre n'est calculée et les écarts ne sont pas présentés comme significatifs."
+  },
+  "criteria": {
+   "q": "Importance de chaque élément dans votre choix au premier tour (réponse « beaucoup »)",
+   "page": 33,
+   "all": [
+    [
+     "Projet proposé",
+     63
+    ],
+    [
+     "Honnêteté du candidat",
+     62
+    ],
+    [
+     "Valeurs défendues",
+     62
+    ],
+    [
+     "Souhait de voir ce candidat gagner",
+     61
+    ],
+    [
+     "Présence de son candidat au second tour",
+     58
+    ],
+    [
+     "Prise en compte de ses préoccupations",
+     57
+    ],
+    [
+     "Idées nouvelles",
+     56
+    ],
+    [
+     "Capacité à battre Jean-Luc Mélenchon au second tour",
+     56
+    ],
+    [
+     "Empêcher la qualification de Jean-Luc Mélenchon",
+     55
+    ],
+    [
+     "Représentation de la France à l'étranger",
+     51
+    ],
+    [
+     "Capacité à rassembler",
+     50
+    ],
+    [
+     "Personnalité du candidat",
+     48
+    ],
+    [
+     "Empêcher la qualification d'un autre candidat",
+     45
+    ],
+    [
+     "Parti ou mouvement",
+     43
+    ],
+    [
+     "Capacité à battre Marine Le Pen au second tour",
+     42
+    ],
+    [
+     "Expérience et parcours",
+     42
+    ],
+    [
+     "Bilan du candidat",
+     42
+    ],
+    [
+     "Empêcher la qualification de Marine Le Pen",
+     40
+    ],
+    [
+     "Personnalités qui le soutiennent",
+     33
+    ],
+    [
+     "Notoriété du candidat",
+     33
+    ],
+    [
+     "Score dans les sondages",
+     29
+    ]
+   ],
+   "groups": {
+    "Proches de LFI": [
+     [
+      "Empêcher la qualification de Marine Le Pen",
+      70
+     ],
+     [
+      "Présence de son candidat au second tour",
+      68
+     ],
+     [
+      "Projet proposé",
+      64
+     ],
+     [
+      "Souhait de voir ce candidat gagner",
+      64
+     ],
+     [
+      "Capacité à battre Marine Le Pen au second tour",
+      64
+     ]
+    ],
+    "Proches du PS": [
+     [
+      "Honnêteté du candidat",
+      71
+     ],
+     [
+      "Projet proposé",
+      69
+     ],
+     [
+      "Empêcher la qualification de Marine Le Pen",
+      62
+     ],
+     [
+      "Valeurs défendues",
+      62
+     ],
+     [
+      "Prise en compte de ses préoccupations",
+      58
+     ]
+    ],
+    "Proches des Écologistes": [
+     [
+      "Honnêteté du candidat",
+      64
+     ],
+     [
+      "Projet proposé",
+      63
+     ],
+     [
+      "Prise en compte de ses préoccupations",
+      59
+     ],
+     [
+      "Valeurs défendues",
+      56
+     ],
+     [
+      "Souhait de voir ce candidat gagner",
+      50
+     ]
+    ],
+    "Proches de Renaissance": [
+     [
+      "Capacité à battre Jean-Luc Mélenchon au second tour",
+      75
+     ],
+     [
+      "Honnêteté du candidat",
+      69
+     ],
+     [
+      "Valeurs défendues",
+      65
+     ],
+     [
+      "Souhait de voir ce candidat gagner",
+      64
+     ],
+     [
+      "Capacité à battre Marine Le Pen au second tour",
+      64
+     ]
+    ],
+    "Proches de LR": [
+     [
+      "Empêcher la qualification de Jean-Luc Mélenchon",
+      77
+     ],
+     [
+      "Capacité à battre Jean-Luc Mélenchon au second tour",
+      75
+     ],
+     [
+      "Souhait de voir ce candidat gagner",
+      70
+     ],
+     [
+      "Valeurs défendues",
+      68
+     ],
+     [
+      "Honnêteté du candidat",
+      67
+     ]
+    ],
+    "Proches du RN": [
+     [
+      "Empêcher la qualification de Jean-Luc Mélenchon",
+      77
+     ],
+     [
+      "Présence de son candidat au second tour",
+      75
+     ],
+     [
+      "Capacité à battre Jean-Luc Mélenchon au second tour",
+      74
+     ],
+     [
+      "Souhait de voir ce candidat gagner",
+      74
+     ],
+     [
+      "Projet proposé",
+      70
+     ]
+    ]
+   },
+   "groupNote": "Cinq premiers critères par proximité partisane (pages 34-35, vague du 18-19 novembre). Le rapport présente six blocs sans libellé de parti dans le texte extrait ; leur attribution suit l'ordre habituel du baromètre (LFI, PS, Écologistes, Renaissance, LR, RN) et reste à vérifier sur le PDF. Pour l'ensemble (p. 33), l'appariement des libellés et des valeurs a été reconstitué à partir du texte extrait (valeurs décroissantes) et reste lui aussi à vérifier. Effectifs non publiés."
+  },
+  "certainty": {
+   "inst": "Ifop-Fiducial",
+   "com": "TF1, LCI, Le Figaro et Sud Radio",
+   "terrain": "13-16 novembre 2026",
+   "url": "https://www.ifopgroup.com/wp-content/uploads/2026/11/122919-petit-dejeuner-electoral-intentions-de-vote-et-determinants-du-vote.pdf",
+   "base": "Inscrits exprimant une intention de vote, hypothèse H2 (Philippe, Attal, Retailleau et Lisnard candidats)",
+   "all": [
+    69,
+    31
+   ],
+   "byCand": [
+    [
+     "zemmour",
+     95,
+     5
+    ],
+    [
+     "lepen",
+     88,
+     12
+    ],
+    [
+     "melenchon",
+     85,
+     15
+    ],
+    [
+     "retailleau",
+     59,
+     41
+    ],
+    [
+     "dupontaignan",
+     52,
+     48
+    ],
+    [
+     "attal",
+     47,
+     53
+    ],
+    [
+     "philippe",
+     47,
+     53
+    ],
+    [
+     "lisnard",
+     44,
+     56
+    ],
+    [
+     "glucksmann",
+     41,
+     59
+    ],
+    [
+     "tondelier",
+     35,
+     65
+    ],
+    [
+     "roussel",
+     29,
+     71
+    ]
+   ],
+   "note": "Enquête Ifop-Fiducial des 13-16 novembre, qui remplace Elabe (12-13 novembre) : même question (« sûr de son choix » ou non), terrain plus récent, et première mesure publiée pour l'électorat de David Lisnard (44 % sûrs de leur choix). Part « peut encore changer » calculée comme complément de la part « sûr » publiée (rapport, p. 14) ; les valeurs de Lisnard, Le Pen, Mélenchon, Philippe, Attal et Glucksmann sont confirmées par Sud Radio. Effectifs des électorats non publiés, à lire avec prudence, surtout pour les petits candidats. Mesure distincte, à ne pas confondre : Toluna Harris Interactive (19-21 octobre) publie un potentiel électoral sur l'ensemble des inscrits (note de 0 à 10) ; 6 % se disent certains de voter pour Lisnard (10) et 43 % certains de ne pas voter pour lui (0)."
+  },
+  "lisnardElectorate": {
+   "inst": "Elabe",
+   "terrain": "12-13 novembre 2026",
+   "url": "https://elabe.fr/fichier-pdf/13399-les-francais-et-lelection-presidentielle-2027/",
+   "rows": [
+    [
+     "Sympathisants Renaissance et alliés (total)",
+     14,
+     10
+    ],
+    [
+     "Sympathisants de droite (total)",
+     44,
+     42
+    ],
+    [
+     "dont sympathisants LR",
+     27,
+     23
+    ],
+    [
+     "Sympathisants RN et souverainistes (total)",
+     3,
+     4
+    ],
+    [
+     "Sans préférence partisane",
+     13,
+     10
+    ],
+    [
+     "Électeurs LR, DVD, UDI aux législatives 2024",
+     32,
+     31
+    ],
+    [
+     "Électeurs Ensemble aux législatives 2024",
+     19,
+     13
+    ],
+    [
+     "Électeurs de V. Pécresse au 1er tour 2022",
+     37,
+     33
+    ],
+    [
+     "Électeurs d'E. Macron au 1er tour 2022",
+     18,
+     14
+    ],
+    [
+     "Électeurs d'É. Zemmour au 1er tour 2022",
+     12,
+     10
+    ],
+    [
+     "Abstentionnistes et autres votes au 1er tour 2022",
+     11,
+     12
+    ]
+   ],
+   "cols": [
+    "Cas 4 (avec Attal et Ruffin)",
+    "Cas 5 (avec Philippe)"
+   ],
+   "note": "Enquête de novembre, qui remplace celle des 14-16 octobre (même question, même institut). Part de chaque groupe qui déclare voter Lisnard (rapport, p. 39 et 41), et non poids de chaque groupe parmi ses électeurs ; effectifs des sous-groupes non publiés, à lire avec prudence. Les deux colonnes viennent de deux hypothèses différentes de la même enquête et ne se comparent pas comme une évolution. Les lignes « sympathisants de gauche » et « électeurs RN aux législatives 2024 » n'ont pas été relevées dans cette vague."
+  },
+  "change2022": {
+   "inst": "BVA",
+   "com": "RTL et Orange",
+   "date": "2022-04-03",
+   "url": "https://presidentielle2022.bva-group.com/wp-content/uploads/2022/04/BVA-RTL-Orange-Presidentielle-2022-Bilan-quinquennat-E.-Macron.pdf",
+   "analysis": "https://presidentielle2022.bva-group.com/etudes-analyses/engagement-presidentielle2022-bruno-cautres-7/",
+   "q": "Évolution du jugement sur Emmanuel Macron pendant son premier mandat (archive 2022)",
+   "vals": [
+    [
+     "Jugement devenu plus favorable",
+     17
+    ],
+    [
+     "Jugement devenu moins favorable",
+     24
+    ]
+   ],
+   "base": "1 638 adultes",
+   "note": "Archive d'un autre contexte : évolution d'image déclarée rétrospectivement, pas un changement de vote mesuré. Dans les réponses ouvertes, l'analyse de Bruno Cautrès relève surtout la gestion des crises sanitaire et ukrainienne chez ceux dont le jugement s'est amélioré. Non transposable à 2027."
+  },
+  "gap2027": "Pour 2027, aucune enquête consultée ne mesure encore les motifs d'un changement d'avis effectivement intervenu. Les priorités et les critères ne sont pas utilisés pour combler ce manque."
+ },
+ "COMMS": {
+  "intro": "Sept segments d'électorat retenus à partir de deux critères : la proximité de programme mesurée par la grille, et le poids électoral des candidats concurrents dans les hypothèses de sondage d'octobre 2026 qui testent David Lisnard. Chaque fiche propose un angle, une formulation de message, des preuves tirées de son programme, un contraste factuel et une réponse à l'objection la plus probable.",
+  "segments": [
+   {
+    "id": "lr",
+    "titre": "Électeurs de droite tentés par Bruno Retailleau",
+    "cible": "Électorat LR classique, attaché à l'ordre et à la maîtrise des comptes",
+    "pourquoi": "Proximité de programme la plus forte (94/100, sur 5 axes documentés). Dans les quatorze hypothèses des enquêtes en cours testant les deux, Retailleau obtient entre 4 et 7 % et Lisnard entre 7 et 12 % : c'est le premier réservoir. François Fillon a annoncé son soutien à Retailleau le 17 octobre.",
+    "angle": "Même fermeté régalienne, davantage de liberté économique et de décentralisation.",
+    "message": "La droite qui tient ses promesses sur l'ordre et qui ose enfin libérer le travail : moins de normes, moins d'impôts de production, plus de pouvoir aux territoires.",
+    "preuves": [
+     "[P] impôts de production divisés par deux",
+     "[P] contrat de travail unique et dérégulation large",
+     "[D] regroupement en une cinquantaine de provinces"
+    ],
+    "contraste": "Le programme LR publié laisse encore la santé, la sécurité et l'Europe « à venir » ; Lisnard a déjà publié ses volets santé (suppression des ARS) et sécurité (majorité pénale à 16 ans).",
+    "objection": "« Diviser la droite fait perdre la droite. » Réponse proposée : défendre une primaire ouverte, que Lisnard réclame depuis sa déclaration, plutôt qu'une candidature imposée.",
+    "canal": "Presse régionale, réunions publiques avec des élus locaux, réseaux militants LR."
+   },
+   {
+    "id": "centre",
+    "titre": "Électeurs de centre droit tentés par Édouard Philippe",
+    "cible": "Cadres, professions libérales, électeurs d'Emmanuel Macron en 2017",
+    "pourquoi": "Proximité de 80/100 et réservoir important (8 à 17 % dans les hypothèses des enquêtes en cours où il est testé avec Lisnard) : Philippe est le concurrent le plus fort parmi les candidats proches.",
+    "angle": "Les mêmes réformes de structure, menées plus loin et plus vite.",
+    "message": "Sortir des 35 heures et redresser les comptes, beaucoup le promettent ; la question est de savoir qui ira jusqu'au bout. 80 milliards d'économies dès la première année.",
+    "preuves": [
+     "[D] 80 Md€ d'économies la 1re année, 200 Md€ sur le quinquennat",
+     "[P] chèque-éducation et abrogation de la carte scolaire",
+     "[P] suppression de Parcoursup"
+    ],
+    "contraste": "Philippe propose le non-remplacement d'un tiers des départs de fonctionnaires et un déficit à 2 % en fin de quinquennat ; Lisnard fixe un objectif d'économies plus élevé et plus rapide.",
+    "objection": "« Philippe est mieux placé pour battre Marine Le Pen. » Réponse proposée : rappeler que les sondages de second tour à six mois du scrutin ont un faible pouvoir prédictif, et porter le débat sur le contenu.",
+    "canal": "Presse économique, LinkedIn, tribunes, débats d'idées dans les grandes écoles."
+   },
+   {
+    "id": "rn",
+    "titre": "Électeurs de droite tentés par Zemmour ou le RN pour l'immigration",
+    "cible": "Électeurs qui placent l'immigration et la sécurité en tête mais doutent du programme économique du RN",
+    "pourquoi": "Zemmour est proche sur la grille (90/100) mais faible dans les sondages (3 à 5 %) ; Marine Le Pen obtient 30,5 à 36 % dans les hypothèses d'octobre et de novembre testant Lisnard, mais s'éloigne de lui sur l'économie.",
+    "angle": "La fermeté migratoire sans quitter l'Europe ni sacrifier le sérieux budgétaire.",
+    "message": "Diviser par huit les titres de séjour et remplacer l'AME par une aide d'urgence, oui. Promettre la retraite à 62 ans sans dire qui paie, non.",
+    "preuves": [
+     "[P] titres de séjour divisés par huit, AME remplacée par une aide d'urgence",
+     "[P] fin de l'automaticité du droit du sol",
+     "[D] dérogation asile et immigration sur le modèle danois, sans sortie de l'UE"
+    ],
+    "contraste": "Le RN propose un départ à 62 ans et une TVA à 5,5 % sur l'énergie ; Lisnard propose un socle de retraite à 65 ans et la baisse des cotisations.",
+    "objection": "« Seul le RN peut gagner. » Réponse proposée : insister sur la crédibilité d'exécution (expérience de maire de Cannes) plutôt que sur le rapport de force.",
+    "canal": "Télévision d'information, réseaux sociaux grand public, déplacements en zones périurbaines."
+   },
+   {
+    "id": "pme",
+    "titre": "Artisans, commerçants, indépendants et dirigeants de PME",
+    "cible": "Dirigeants de TPE et PME, artisans, commerçants et indépendants",
+    "pourquoi": "Segment le plus aligné sur le cœur du programme (axe État et économie, note de +5).",
+    "angle": "Le candidat qui allège le coût du travail et la paperasse.",
+    "message": "Embaucher ne doit plus être un risque. Contrat unique, charges allégées, impôts de production divisés par deux.",
+    "preuves": [
+     "[P] contrat de travail unique",
+     "[P] charges patronales négatives pour l'embauche d'allocataires du RSA de longue durée",
+     "[P] suppression de la C3S et de la CVAE"
+    ],
+    "contraste": "Philippe compense la baisse des impôts de production par la suppression de 50 Md€ d'aides aux entreprises ; vérifier avant diffusion si Lisnard prévoit une compensation, pour éviter un contraste inexact.",
+    "objection": "« Qui paie ? » Réponse proposée : relier chaque baisse à la trajectoire d'économies publiée, chiffre par chiffre.",
+    "canal": "Chambres de commerce et de métiers, fédérations professionnelles, presse spécialisée, LinkedIn."
+   },
+   {
+    "id": "parents",
+    "titre": "Parents d'élèves des classes moyennes",
+    "cible": "Familles préoccupées par le niveau scolaire et la carte scolaire",
+    "pourquoi": "L'éducation est l'un des volets les plus détaillés du programme et distingue Lisnard des autres candidats de droite.",
+    "angle": "Rendre aux parents le choix de l'école et aux enseignants une meilleure rémunération.",
+    "message": "Vous devriez pouvoir choisir l'école de vos enfants. Fin de la carte scolaire, chèque-éducation, et des enseignants mieux payés.",
+    "preuves": [
+     "[P] abrogation de la carte scolaire et chèque-éducation",
+     "[P] certificat de fin de primaire conditionnant l'entrée au collège",
+     "[D] notes chiffrées rétablies ; évaluations en CM2, en sixième et en troisième",
+     "[P] salaires des enseignants +20 % en 5 ans, sous conditions"
+    ],
+    "contraste": "Attal propose de fermer 100 collèges jugés les plus ségrégués ; Lisnard mise sur le libre choix des familles.",
+    "objection": "« Le chèque-éducation videra l'école publique. » Réponse proposée : préciser les règles d'affectation et les garanties pour les établissements publics, sur la base de documents de campagne.",
+    "canal": "Presse parentale, réunions en mairie, réseaux sociaux ciblés par centres d'intérêt (sans données personnelles)."
+   },
+   {
+    "id": "territoires",
+    "titre": "Élus locaux et habitants des territoires ruraux",
+    "cible": "Maires, élus départementaux, habitants des déserts médicaux",
+    "pourquoi": "Maire de Cannes et défenseur d'une décentralisation radicale, Lisnard dispose d'une légitimité propre sur ce segment.",
+    "angle": "Rendre le pouvoir aux territoires et l'accès aux soins à ceux qui en sont privés.",
+    "message": "Ceux qui connaissent le terrain doivent décider. Moins d'administration à Paris, plus de pouvoir aux maires et aux régions, et un accès direct aux infirmiers et aux pharmaciens.",
+    "preuves": [
+     "[P] suppression des ARS au profit des préfets et des élus",
+     "[P] accès direct aux infirmiers, kinés et pharmaciens ; remboursement majoré en zones sous-dotées",
+     "[P] doublement des étudiants en médecine d'ici 2030"
+    ],
+    "contraste": "Bertrand propose aussi de confier la santé de proximité aux régions ; l'angle distinctif de Lisnard est l'accès direct sans passage par le médecin.",
+    "objection": "« Supprimer les ARS, c'est désorganiser la santé. » Réponse proposée : expliquer qui reprend chaque mission et selon quel calendrier.",
+    "canal": "Congrès des maires, presse quotidienne régionale, réunions de canton."
+   },
+   {
+    "id": "actifs",
+    "titre": "Jeunes actifs du secteur privé",
+    "cible": "25-40 ans salariés, qui financent les retraites sans croire en toucher une",
+    "pourquoi": "Le message « cotiser moins pour gagner plus » et la capitalisation leur sont directement adressés.",
+    "angle": "Gagner plus sur sa fiche de paie et construire sa propre retraite.",
+    "message": "Votre salaire net doit refléter votre travail. Cotiser moins pour gagner plus, et bâtir une retraite qui vous appartient.",
+    "preuves": [
+     "[D] « cotiser moins pour gagner plus »",
+     "[P] socle par répartition dès 65 ans, puis capitalisation",
+     "[P] suppression de Parcoursup ; doublement des étudiants en médecine"
+    ],
+    "contraste": "Le RN maintient un départ à 62 ans avec une part de capitalisation ; Lisnard propose un socle à 65 ans et le transfert d'environ 40 % des cotisations vers des comptes individuels obligatoires.",
+    "objection": "« La capitalisation, c'est le risque des marchés. » Réponse proposée : préciser le niveau du socle garanti et le calendrier de transition.",
+    "canal": "Réseaux sociaux vidéo, podcasts, médias économiques grand public."
+   }
+  ],
+  "atouts": {
+   "note": "Argumentaire partisan rédigé pour l'équipe de David Lisnard : il présente le point de vue de Nouvelle Énergie, pas une évaluation neutre. Il s'appuie uniquement sur les positions recensées dans le comparatif.",
+   "t": {
+    "eco": "Baisser les cotisations augmente le salaire net sans alourdir le coût du travail pour l'employeur : le pouvoir d'achat vient du travail, pas d'une hausse du SMIC qui pèse sur l'emploi des moins qualifiés, ni d'un chèque financé par la dette.",
+    "ent": "Réécrire le Code du travail en donnant plus de poids aux accords d'entreprise sur le temps de travail rend la décision à ceux qui connaissent le terrain, et le contrat de travail unique met fin à l'opposition entre CDI protégés et CDD précaires. Les charges négatives rendent l'embauche d'un allocataire du RSA rentable : on finance le retour à l'emploi plutôt que l'inactivité.",
+    "fis": "Diviser par deux les impôts de production, qui frappent l'entreprise avant tout bénéfice, et ramener la CSG sur les revenus d'activité au niveau de celle des inactifs récompensent l'industrie et le travail. Une flat tax unique de 25 % sur les revenus fonciers et financiers, avec option pour le barème, et la levée du plafond du quotient familial rendent la fiscalité plus lisible pour les épargnants et les familles.",
+    "fin": "C'est l'un des rares programmes qui chiffre ses économies (80 Md€ la première année, 200 Md€ sur le quinquennat) au lieu de financer ses promesses par l'impôt ou la dette. La règle d'or sur le fonctionnement et une masse salariale publique réduite d'au moins 12 %, par l'automatisation des tâches administratives et le redéploiement d'agents vers le terrain, tiennent la dépense courante tout en remettant plus d'humains au contact des usagers.",
+    "ret": "Un socle par répartition réformé dès 65 ans, complété par un étage obligatoire de capitalisation, rend à chacun la propriété d'une partie de sa retraite et oriente l'épargne longue vers l'économie, avec un fonds souverain par défaut. La fin des régimes spéciaux et des règles communes au public et au privé, pénibilité comprise, rendent le système plus juste, tandis que le minimum vieillesse à 1 000 € protège les petites retraites et que l'effort porte d'abord sur les pensions les plus élevées.",
+    "edu": "Le chèque-éducation et la fin de la carte scolaire donnent aux familles modestes la liberté de choix que les familles aisées ont déjà, tandis que les notes chiffrées, les évaluations en CM2, en sixième et en troisième et le certificat de fin de primaire vérifient les fondamentaux. Des enseignants mieux payés sous conditions, des établissements de proximité dans les anciens cantons et des établissements disciplinaires de haut niveau avec internats portent la même exigence partout sur le territoire.",
+    "san": "Supprimer les ARS, c'est retirer une couche administrative entre les soignants et les patients. L'accès direct aux infirmiers, kinés et pharmaciens soigne plus vite là où les médecins manquent, et doubler les étudiants en médecine traite la pénurie à la racine.",
+    "def": "Réarmer tout de suite, et non à l'horizon d'une loi de programmation, répond à la réalité des menaces. La doctrine de puissance autonome garde la France maîtresse de ses choix tout en restant un allié fiable.",
+    "eur": "Obtenir des dérogations sur l'asile et l'immigration, comme le Danemark, permet de reprendre la main sans le risque économique d'une sortie de l'UE. Le traité de démocratisation répond au déficit démocratique européen au lieu de le subir.",
+    "etr": "Réviser l'accord de 1968 et sanctionner les pays qui refusent de reprendre leurs ressortissants transforme la diplomatie en levier concret sur l'immigration. Le soutien à l'Ukraine reste ferme : la fermeté ne s'arrête pas aux frontières.",
+    "imm": "Un objectif chiffré (titres de séjour divisés par huit) se vérifie, contrairement aux promesses vagues. Remplacer l'AME par une aide d'urgence soigne sans attirer, et la sortie de la CEDH n'est envisagée qu'en dernier recours, ce qui reste dans le cadre de l'État de droit.",
+    "sec": "La majorité pénale à 16 ans, les peines planchers pour les récidivistes et les travaux d'intérêt général apportent une sanction rapide et visible à la délinquance telle qu'elle est aujourd'hui. Isoler les casseurs dans des centres fermés, interdire les manifestations à risque grave et mieux sanctionner les dégradations protège la liberté de manifester de tous, comme l'interdiction des Frères musulmans s'attaque à l'islamisme à la source.",
+    "ecol": "Le nucléaire (réacteurs prolongés, nouveaux EPR, petits réacteurs), avec l'hydroélectricité et l'autoconsommation solaire, offre une électricité décarbonée et pilotable sans engager l'argent public dans un nouvel appel d'offres d'éolien en mer. Remplacer le principe de précaution par un principe de responsabilité, supprimer le DPE et récompenser la densification plutôt que geler le foncier permet d'innover et de construire au lieu de bloquer.",
+    "inst": "Le référendum sur tous les sujets rend la parole aux citoyens, le septennat et une cinquantaine de provinces donnent du temps et de la proximité à l'action publique, et un gouvernement commando resserré, jugé sur ses 200 premiers jours avec une session extraordinaire du Parlement à l'été 2027, engage les réformes sans attendre. Nouvelle Énergie revendique une ligne indépendante, sans gouverner ni avec les macronistes ni avec le RN, et une primaire ouverte de la droite et du centre pour désigner un candidat commun.",
+    "num": "Produire l'IA en France avant de la réguler, avec une structure franco-européenne d'innovation sur le modèle de la DARPA et des transferts de technologie exigés des fournisseurs étrangers, c'est la voie pour ne pas dépendre des États-Unis et de la Chine. La transparence des algorithmes, l'étiquetage des contenus générés par IA, la réversibilité dans la commande publique et des apprentissages sans machine à l'école gardent l'humain et la souveraineté au centre."
+   }
+  },
+  "ralliements": {
+   "intro": "Un désistement se négocie avec des arguments de fond (ce que le candidat retrouve chez Lisnard), une offre (ce qu'il obtient en se ralliant) et une réponse à son principal risque (perdre la face devant ses soutiens). Les convergences et divergences ci-dessous reprennent uniquement des positions recensées dans le comparatif. La proximité et les scores de sondage sont recalculés à chaque mise à jour.",
+   "realite": "Dans les hypothèses publiées depuis la mi-octobre qui testent les deux, Bruno Retailleau devance David Lisnard dans quatre cas sur trente-sept ; Lisnard le devance dans trente cas (OpinionWay pour CNews, 25-26 novembre, 12 % contre 4 % ; Toluna Harris Interactive pour M6, RTL et L'Express, 18-19 novembre, 11 % contre 4 % dans deux hypothèses et 12 % contre 5 % sans Philippe ; Ifop-Fiducial pour TF1, LCI, Le Figaro et Sud Radio, 13-16 novembre, 8 % contre 4 % dans la liste élargie, 9 % contre 4 % dans le scénario de référence, 10 % contre 4 % sans Attal et 11 % contre 5 % sans Philippe ; YouGov pour Le HuffPost, 12-17 novembre, 9 % contre 6 % dans le scénario principal, 10 % contre 8 % sans Philippe, 10 % contre 7 % sans Attal et 9 % contre 6 % dans la liste complète ; Elabe pour BFMTV et La Tribune Dimanche, 12-13 novembre, 10,5 % contre 6 % avec Attal, 9 % contre 4 % avec Philippe et 8 % contre 4 % dans la liste large ; OpinionWay pour Les Échos et Radio Classique, 9-10 novembre, 10 % contre 4 %, 12 % contre 6 % et 11 % contre 4 %, scores relevés dans la presse ; Cluster17 pour Politico, 9-10 novembre, 10 % contre 5 % dans deux hypothèses et 8 % contre 5 % dans la liste large, listes en partie connues par la presse seulement ; Toluna Harris Interactive, 3-5 novembre, 9 % contre 5 % et 9 % contre 6 % ; Ifop pour LCI, 27-29 octobre, 7 % contre 4 % et 7,5 % contre 5 % ; Ifop, 12-14 octobre ; Toluna Harris Interactive, 19-21 octobre, 7 % contre 4 % et 8 % contre 5 % ; Ipsos bva, 21-22 octobre, 6,5 % contre 5,5 % ; Cluster17 pour Politico, 19-22 octobre, 8 % contre 7 %) et les deux sont à égalité dans trois autres (Cluster17, 14-15 octobre, 7 % chacun ; Ifop, 17-19 octobre, 5,5 % chacun ; OpinionWay, 21-22 octobre, 6 % chacun). Le rapport de force reste donc partagé. Les deux hommes ont déjeuné le 21 octobre et évoqué une candidature commune et une primaire, sans accord conclu ; selon Robert Ménard (Le JDD, 25 octobre), ils se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027, mais divergent sur le périmètre de la primaire et l'obligation de soutenir le vainqueur. Le 3 novembre sur BFMTV, chacun se dit le plus proche de l'autre ; Retailleau juge une primaire probable en début d'année 2027 et dit qu'à défaut de vote il ira « jusqu'au bout ». Le 8 novembre, Laurent Wauquiez (LR) demande à Philippe, Retailleau et Lisnard de se rencontrer sous quinze jours pour convenir d'une méthode de désignation d'un candidat commun avant Noël, de préférence une primaire. Le 10 novembre, Retailleau propose par courrier à Philippe, Attal et Lisnard une primaire les dimanches 31 janvier et 7 février 2027 ; le même jour, Gabriel Attal dit qu'il pourrait voter pour Retailleau ou Lisnard si l'un d'eux est le seul à pouvoir éviter un second tour Mélenchon-Le Pen. Les directeurs de campagne d'Attal, Retailleau et Lisnard doivent se réunir le 17 novembre sur les modalités et les dates de cette primaire (BFMTV, 11 novembre) ; l'entourage d'Édouard Philippe réitère le 12 novembre son refus d'y participer (Le Figaro). Le 13 novembre sur France 2, Retailleau souhaite une primaire ouverte, avec une participation de quelques euros, et demande aux participants une « forme de loyauté » envers le résultat sans obligation de défendre le programme du vainqueur (Entrevue). Le 17 novembre, les équipes d'Attal, Retailleau et Lisnard actent le principe d'une primaire ouverte à deux tours en janvier, avec une participation d'environ 2 € ; les dates, les parrainages et le périmètre restent à fixer, l'équipe de Lisnard refusant d'exclure Éric Zemmour à ce stade et celle d'Attal s'y opposant ; Édouard Philippe refuse toujours d'y participer (Entrevue, 18 novembre). Le 18 novembre, Lisnard juge la présence de Philippe « indispensable » et accepte Zemmour et Dupont-Aignan s'ils respectent les critères ; Retailleau estime qu'une participation de Zemmour ferait échouer la primaire et met en doute la volonté de Lisnard de la faire aboutir ; Philippe maintient son refus ; une nouvelle réunion des équipes est prévue la semaine suivante (AFP, Public Sénat). Un sondage Ifop pour Le Figaro sur la primaire (13-18 novembre, 996 personnes envisageant d'y participer parmi 2 542 inscrits) donne Attal 38 %, Lisnard 33 % et Retailleau 29 % sans Philippe, et Lisnard 29 %, Philippe 28 %, Attal 25 % et Retailleau 18 % avec lui ; chez les sympathisants LR, Retailleau 39 % et Lisnard 34 % (scénario avec Philippe). Ces intentions de vote à une primaire ne se comparent pas aux intentions de premier tour. Dans l'enquête Ifop-Fiducial des 13-16 novembre, sans Retailleau, 39 % de ses électeurs déclarent qu'ils se reporteraient sur Lisnard (33 % sur Le Pen, 28 % sur Philippe) ; sans Lisnard, 30 % des siens iraient à Retailleau. Le 19 novembre sur France 2, Gabriel Attal dit qu'il retirerait sa candidature si Lisnard était désigné par la primaire (PolitiqueMatin, à vérifier). Le 22 novembre, Lisnard déclare qu'il ne gouvernera pas avec le RN (Sud Radio, AFP) ; selon le titre d'un article d'Ouest-France du même jour, il ne participerait pas à une primaire sans Édouard Philippe. Le 25 novembre, selon le titre d'un article de BFMTV, Lisnard rejette un débat avec Philippe proposé à la place de la primaire. Le 26 novembre, huit députés LR, dont les vice-présidents du groupe Ian Boucard et Justine Gruet, appellent dans une tribune à Paris Match à soutenir Lisnard plutôt que Retailleau ; Lisnard, Retailleau, Attal et Philippe doivent se réunir le 30 novembre autour de Gérard Larcher (L'Express, via Orange Actualités). Additionner deux scores ne prédit pas le report réel des électeurs.",
+   "fiches": [
+    {
+     "c": "platret",
+     "scenario": "Le plus accessible",
+     "pourquoi": "Candidat de droite déclaré le 8 octobre, sans programme publié (livre annoncé en novembre) et non testé dans les sondages : il a peu de chances de réunir ses parrainages et cherchera à peser.",
+     "conv": [
+      [
+       "sec",
+       "Les deux veulent interdire les Frères musulmans."
+      ],
+      [
+       "imm",
+       "Forte baisse des titres de séjour des deux côtés."
+      ],
+      [
+       "def",
+       "Réarmement accéléré pour l'un, immédiat pour l'autre."
+      ],
+      [
+       "fin",
+       "Réduction de la dette et de la dépense publique."
+      ]
+     ],
+     "div": [
+      [
+       "ent",
+       "Platret défend le retour aux 39 heures ; Lisnard un contrat de travail unique et une dérégulation large.",
+       "Présenter la liberté de négocier le temps de travail dans l'entreprise comme le moyen d'y parvenir."
+      ],
+      [
+       "inst",
+       "Platret veut un scrutin uninominal à un tour et un Conseil constitutionnel d'avant 1971 ; Lisnard le septennat et le référendum.",
+       "Proposer un groupe de travail commun sur les institutions plutôt qu'un arbitrage immédiat."
+      ]
+     ],
+     "args": [
+      "Sur l'immigration, la sécurité et l'islamisme, vos priorités sont déjà dans le programme de Lisnard : les porter ensemble leur donne une chance d'être appliquées.",
+      "Lisnard dit disposer de 500 promesses de parrainage : votre engagement ne se perd pas dans une candidature qui risque de ne pas être sur le bulletin.",
+      "Votre livre de novembre peut devenir la contribution d'un allié plutôt que le programme d'un candidat isolé."
+     ],
+     "gestes": [
+      "Reprendre dans le programme une ou deux mesures signées Platret (temps de travail, discipline à l'école) en les lui attribuant publiquement.",
+      "Lui confier la coordination d'un volet régalien de la campagne."
+     ],
+     "message": "Nos combats sont les mêmes : l'ordre, la frontière, la lutte contre l'islamisme. Je préfère les gagner avec vous qu'en face de vous.",
+     "risque": "Faible poids électoral mesuré : le gain est d'abord symbolique (dynamique de rassemblement à droite)."
+    },
+    {
+     "c": "bertrand",
+     "scenario": "Ralliement d'expérience",
+     "pourquoi": "Candidature confirmée le 27 août, sans programme publié et non testée dans les sondages d'octobre. Profil d'élu de terrain proche de celui de Lisnard.",
+     "conv": [
+      [
+       "ret",
+       "Les deux veulent introduire la capitalisation."
+      ],
+      [
+       "sec",
+       "Peines planchers et majorité pénale abaissée (15 ans pour Bertrand, 16 ans pour Lisnard)."
+      ],
+      [
+       "imm",
+       "AME supprimée ou remplacée par une aide d'urgence."
+      ],
+      [
+       "inst",
+       "Retour au septennat chez les deux (unique et par référendum pour Bertrand)."
+      ]
+     ],
+     "div": [
+      [
+       "eco",
+       "Bertrand met en avant le pouvoir d'achat des classes moyennes et a proposé en 2021 une prime garantissant 1 500 € nets ; Lisnard mise sur la baisse des cotisations.",
+       "« Cotiser moins pour gagner plus » répond au même objectif : faire du salaire net le cœur du message commun."
+      ],
+      [
+       "inst",
+       "Bertrand transfère des compétences aux régions ; Lisnard veut une cinquantaine de provinces.",
+       "Mettre en avant l'objectif commun, la décentralisation, et renvoyer la carte à une concertation."
+      ]
+     ],
+     "args": [
+      "Vous défendez les classes moyennes ; la baisse des cotisations est la mesure la plus directe pour augmenter leur salaire net.",
+      "Sur la sécurité, la retraite et l'immigration, vos positions et celles de Lisnard sont presque identiques : deux candidatures se neutralisent.",
+      "Le septennat que vous proposez figure aussi dans le programme de Lisnard : vous pouvez en faire une promesse commune."
+     ],
+     "gestes": [
+      "Faire du septennat unique par référendum un engagement commun signé par les deux.",
+      "Lui confier le pilote d'un volet « pouvoir d'achat des classes moyennes » dans le programme."
+     ],
+     "message": "Vous parlez aux classes moyennes, je veux leur rendre ce qu'elles gagnent. Ensemble, c'est une même promesse : travailler doit payer.",
+     "risque": "Notoriété supérieure à son poids sondagier actuel : il peut exiger plus qu'un rôle de soutien. Les écarts sur l'économie restent à documenter, faute de programme."
+    },
+    {
+     "c": "retailleau",
+     "scenario": "Union de la droite (conditionnel)",
+     "pourquoi": "Proximité de programme la plus forte de toute la grille. Les deux ont évoqué le 21 octobre une candidature commune et une primaire, sans accord conclu ; selon Robert Ménard, ils se sont engagés à ne pas être candidats tous les deux d'ici avril 2027. Points ouverts : périmètre de la primaire (tous les candidats de droite pour Lisnard, présence de Philippe pour Retailleau) et charte de ralliement au vainqueur, que Lisnard ne veut pas obligatoire. Retailleau devance Lisnard dans quatre hypothèses sur trente-sept depuis la mi-octobre (trois égalités, trente cas inverses, dont celle d'OpinionWay pour CNews des 25-26 novembre, 12 % contre 4 %, les trois de Toluna Harris Interactive pour M6, RTL et L'Express des 18-19 novembre, de 11 à 12 % contre 4 à 5 %, les quatre d'Ifop-Fiducial pour TF1, LCI, Le Figaro et Sud Radio des 13-16 novembre, de 8 à 11 % contre 4 à 5 %, les quatre de YouGov pour Le HuffPost des 12-17 novembre, de 9 à 10 % contre 6 à 8 %, les trois d'Elabe pour BFMTV et La Tribune Dimanche des 12-13 novembre, de 8 à 10,5 % contre 4 à 6 %, les trois de Cluster17 pour Politico des 9-10 novembre, 10 % contre 5 % deux fois et 8 % contre 5 %, et les trois d'OpinionWay pour Les Échos et Radio Classique des 9-10 novembre, de 10 à 12 % contre 4 à 6 %) et dispose de l'appareil LR. Ce scénario ne devient crédible que si Lisnard passe durablement devant lui. Le 28 octobre, Lisnard salue l'idée de « primaire des démocrates » lancée par Gabriel Attal, projet que l'entourage de Retailleau juge « mort-né ». Le 3 novembre sur BFMTV, Retailleau juge une primaire probable en début d'année 2027, faute de quoi il ira « jusqu'au bout », et propose trois débats à Philippe, Attal et Lisnard ; Lisnard se dit le plus proche de lui, tout en soulignant sa participation aux gouvernements d'Emmanuel Macron. Le 6 novembre, selon Entrevue, Retailleau accepte le principe d'une primaire à tenir au plus tard dans la première quinzaine de février 2027, tandis qu'Édouard Philippe refuse d'y participer. Le 8 novembre, Laurent Wauquiez demande une rencontre des trois candidats de droite sous quinze jours et un candidat commun avant Noël. Le 10 novembre, Retailleau adresse à Lisnard, Philippe et Attal une proposition écrite de primaire les dimanches 31 janvier et 7 février 2027, avec une réunion des directeurs de campagne sous quinze jours. Une réunion des directeurs de campagne de Retailleau, Attal et Lisnard est annoncée pour le 17 novembre. Le 13 novembre, Retailleau demande aux participants de la primaire une « forme de loyauté » envers le résultat, sans obligation de défendre le programme du vainqueur, ce qui rapproche sa position de la liberté de soutien que réclame Lisnard. Le 14 novembre, Gérard Larcher invite Retailleau, Lisnard, Philippe et Attal à convenir d'une « méthode de départage » ; Retailleau juge que la primaire doit se faire même sans Philippe, qui accepte la réunion mais exclut d'y parler de primaire (15 novembre). Le 18 novembre, Retailleau juge qu'une participation de Zemmour ferait échouer la primaire et met en doute la volonté de Lisnard de la faire aboutir, tandis que Lisnard maintient un périmètre ouvert sous conditions. Dans l'enquête Ifop pour Le Figaro sur la primaire (13-18 novembre), Retailleau devance Lisnard chez les sympathisants LR (39 % contre 34 %, scénario avec Philippe), mais Lisnard le devance sur l'ensemble des participants potentiels (33 % contre 29 % sans Philippe, 29 % contre 18 % avec lui). Dans la même enquête Ifop-Fiducial, 39 % des électeurs de Retailleau déclarent qu'ils se reporteraient sur Lisnard en son absence (33 % sur Le Pen, 28 % sur Philippe), et 30 % des électeurs de Lisnard sur Retailleau dans le cas inverse ; Retailleau garde un électorat plus sûr de son choix (59 % contre 44 %). Le 26 novembre, huit députés LR, dont les vice-présidents du groupe Ian Boucard et Justine Gruet, appellent à soutenir Lisnard plutôt que Retailleau (tribune à Paris Match), avant la réunion du 30 novembre autour de Gérard Larcher.",
+     "conv": [
+      [
+       "fin",
+       "Environ 200 Md€ d'économies sur le quinquennat des deux côtés (197 Md€ pour Retailleau)."
+      ],
+      [
+       "imm",
+       "Fin de l'automaticité du droit du sol et prestations conditionnées."
+      ],
+      [
+       "etr",
+       "Révision ou dénonciation de l'accord franco-algérien de 1968."
+      ],
+      [
+       "ecol",
+       "Nucléaire prolongé, nouveaux EPR et suppression du principe de précaution."
+      ],
+      [
+       "inst",
+       "Référendum élargi à tous les sujets ; primaire ouverte de la droite et du centre, sans obligation pour les perdants de défendre le programme du vainqueur."
+      ]
+     ],
+     "div": [
+      [
+       "ret",
+       "Départ possible dès 63 ans avec décote pour Retailleau ; socle par répartition dès 65 ans et bascule vers la capitalisation pour Lisnard.",
+       "Mettre en avant le capital retraite que les deux défendent."
+      ],
+      [
+       "eur",
+       "Clause de sauvegarde constitutionnelle pour Retailleau ; dérogations sur le modèle danois pour Lisnard.",
+       "Deux chemins vers le même objectif : reprendre la main sur l'immigration sans quitter l'UE."
+      ],
+      [
+       "inst",
+       "Périmètre de la primaire : ouvert à Éric Zemmour et Nicolas Dupont-Aignan sous conditions pour Lisnard ; pour Retailleau, la participation de Zemmour ferait échouer la primaire.",
+       "Fixer d'abord des critères d'accès communs (parrainages, charte), puis les appliquer à toutes les candidatures."
+      ]
+     ],
+     "args": [
+      "Nos programmes convergent sur l'essentiel : deux candidatures de droite au même niveau laissent le second tour au RN et au centre.",
+      "Lisnard a déjà publié ses volets santé et sécurité ; le programme commun serait complet tout de suite.",
+      "La primaire ouverte que Lisnard réclame est le moyen le plus loyal de départager les deux sans division."
+     ],
+     "gestes": [
+      "Proposer une primaire ouverte ou un départage sur une série de sondages convenue à l'avance.",
+      "Garantir la place de LR dans la future majorité et le gouvernement."
+     ],
+     "message": "Nous voulons la même France. Ce qui nous sépare tient en une question : lequel de nous deux peut gagner. Laissons les électeurs de droite trancher, puis rassemblons-nous.",
+     "risque": "Un appel prématuré, avec des sondages défavorables, peut se retourner en demande de désistement de Lisnard au profit de Retailleau. Refuser la charte de ralliement peut être présenté comme un refus de l'union. Le soutien de députés LR à Lisnard (26 novembre) peut être perçu comme une division de LR et durcir la position de Retailleau avant la réunion du 30 novembre."
+    },
+    {
+     "c": "dupontaignan",
+     "scenario": "Ralliement souverainiste",
+     "pourquoi": "Testé entre 1 et 3 % en octobre, candidat pour la quatrième fois : il peut chercher une sortie honorable.",
+     "conv": [
+      [
+       "imm",
+       "Suppression du droit du sol par référendum et de l'AME."
+      ],
+      [
+       "ecol",
+       "Nucléaire majoritaire et moins d'argent public pour les renouvelables (Lisnard ne financerait pas le dernier appel d'offres d'éolien en mer)."
+      ],
+      [
+       "sec",
+       "Fermeté pénale et plus de moyens pour les forces de l'ordre."
+      ]
+     ],
+     "div": [
+      [
+       "eur",
+       "Dupont-Aignan veut un référendum sur le maintien dans l'UE et la sortie de Schengen ; Lisnard exclut la sortie de l'UE.",
+       "Ne pas transiger : présenter les dérogations danoises comme une souveraineté obtenue sans rupture."
+      ],
+      [
+       "eco",
+       "Protectionnisme, impôt sur les très grandes fortunes et baisse de TVA chez Dupont-Aignan ; libéralisme chez Lisnard.",
+       "Chercher un terrain commun sur l'énergie moins chère et la commande publique, sans reprendre la fiscalité."
+      ],
+      [
+       "def",
+       "Sortie du commandement intégré de l'OTAN contre « doctrine de puissance autonome ».",
+       "Mettre en avant l'autonomie stratégique, sans engagement sur l'OTAN."
+      ],
+      [
+       "etr",
+       "Dupont-Aignan s'oppose à l'avancée de l'OTAN en Ukraine et à l'entrée de l'Ukraine dans l'UE ; Lisnard soutient l'Ukraine.",
+       "Ne pas en faire un point d'accord ; chercher le terrain commun sur la souveraineté et la défense nationale, sans rien céder sur le soutien à l'Ukraine."
+      ]
+     ],
+     "args": [
+      "Sur l'immigration et le nucléaire, Lisnard porte vos combats avec une chance réelle de peser dans la recomposition de la droite.",
+      "La souveraineté par dérogation, sur le modèle danois, donne des résultats concrets sans attendre un référendum incertain.",
+      "Votre électorat attend un débouché : le diriger vers une candidature de droite de gouvernement plutôt que vers le RN."
+     ],
+     "gestes": [
+      "Reprendre la mesure sur le prix de l'électricité si elle est compatible avec le cadrage budgétaire.",
+      "Associer Debout la France à un volet « souveraineté énergétique »."
+     ],
+     "message": "Vous avez toujours défendu la nation et l'énergie française. Je vous propose de les défendre là où se décidera la majorité de demain.",
+     "risque": "Coût d'image élevé auprès des électeurs du centre et de la droite modérée à cause de l'écart sur l'Europe ; à réserver à un accord sans concession européenne."
+    },
+    {
+     "c": "becht",
+     "scenario": "Ralliement libéral-réformateur",
+     "pourquoi": "Candidat sans parti déclaré le 24 septembre, sans programme ni score mesuré ; ancien membre de la majorité présidentielle, il peut ouvrir vers le centre-droit.",
+     "conv": [
+      [
+       "ent",
+       "Contrat de travail unique chez les deux, et moins de normes."
+      ],
+      [
+       "edu",
+       "Suppression de Parcoursup des deux côtés ; plus de pouvoir aux chefs d'établissement."
+      ],
+      [
+       "num",
+       "Priorité à l'investissement souverain dans l'IA."
+      ]
+     ],
+     "div": [
+      [
+       "eur",
+       "Becht veut un « noyau dur » européen et davantage de fédéralisme ; Lisnard des dérogations nationales.",
+       "Insister sur l'objectif partagé d'une Europe plus démocratique (traité de démocratisation proposé par Lisnard)."
+      ],
+      [
+       "ecol",
+       "Becht mise sur les carburants de synthèse ; Lisnard sur le nucléaire.",
+       "Présenter les deux comme complémentaires dans un mix décarboné."
+      ]
+     ],
+     "args": [
+      "Le contrat de travail unique et la fin de Parcoursup figurent déjà dans le programme de Lisnard : vos réformes ont un porteur.",
+      "Lisnard offre ce que votre démarche n'a pas encore : une équipe, des parrainages et un programme complet.",
+      "Rallier un candidat de droite libéral élargit votre audience au-delà du centre."
+     ],
+     "gestes": [
+      "Lui confier le volet « simplification et travail » ou « éducation ».",
+      "Ouvrir la plateforme participative de Becht à la campagne commune."
+     ],
+     "message": "Vous voulez libérer le travail et l'école. C'est exactement mon programme. Faisons-en une majorité.",
+     "risque": "Positions européennes opposées : le ralliement peut brouiller le message souverainiste de Lisnard auprès des électeurs de droite."
+    }
+   ]
+  },
+  "vulnerabilites": [
+   {
+    "p": "Retraite par capitalisation",
+    "r": "Sujet anxiogène pour les retraités et les 50-64 ans, d'autant que la non-revalorisation des pensions supérieures à 2 200 € est citée comme piste d'économies (CNews-Europe 1, 27 octobre). Préciser le périmètre et la durée de cette piste, garantir explicitement les pensions en cours et détailler la transition."
+   },
+   {
+    "p": "Suppression des ARS",
+    "r": "Peut être lue comme une désorganisation de la santé. Montrer qui reprend chaque mission."
+   },
+   {
+    "p": "200 Md€ d'économies",
+    "r": "Les adversaires demanderont où. Publier la liste des économies par poste avant qu'elle ne soit reconstituée par d'autres."
+   },
+   {
+    "p": "Score dans les sondages (4 à 12 % depuis la mi-octobre lorsque Retailleau est aussi testé)",
+    "r": "Argument du vote utile contre lui, repris le 21 octobre par Éric Ciotti (UDR), qui appelle Lisnard et Retailleau à se rallier à Marine Le Pen (21News, 22 octobre). Travailler la notoriété et les ralliements d'élus plutôt que commenter les sondages. À l'inverse, Jean-François Copé lui reproche une ambiguïté envers le RN et Marc Fesneau (MoDem) veut l'exclure d'une primaire élargie (La Tribune Dimanche, 1er novembre) ; il répond ne gouverner ni avec les macronistes ni avec le RN (Entrevue, 2 novembre) : tenir cette ligne de façon constante. Le 24 novembre, Édouard Philippe lui reproche à son tour de ne pas « trancher » face à l'extrême droite et estime qu'il aurait du mal à dire son vote dans un duel face à Marine Le Pen (Public Sénat) : préparer une réponse explicite sur ce cas de second tour. Le porte-parole de Retailleau relativise sa progression : « les sondages de novembre sont toujours démentis par les votes d'avril » (AFP, 4 novembre) ; s'appuyer sur des résultats d'hypothèses précises plutôt que sur une tendance."
+   },
+   {
+    "p": "Réponse sur le 17 octobre 1961 (LCI, 19 octobre)",
+    "r": "Échange vif avec une étudiante, vivement critiqué par LFI et le PS ; 61 maires, dont celui de Paris, lui demandent par lettre ouverte (20 octobre) de retirer ses propos ou de quitter la présidence de l'AMF. Exposé à un procès en indifférence mémorielle : préparer une réponse sur le fond plutôt que sur le ton."
+   },
+   {
+    "p": "Propos sur le plateau de Millevaches (RTL, 20 octobre)",
+    "r": "Après l'incendie de la mairie de Limoges, il évoque des « camps d'entraînement terroristes » d'ultragauche sur le plateau ; une cinquantaine d'élus du Limousin lui demandent par lettre ouverte (29 octobre) de retirer ses propos et de choisir entre l'AMF et sa candidature, avec une pétition ouverte aux élus (Radio Totem). Expose à nouveau la question du cumul AMF-candidature avant le congrès des maires du 24 au 26 novembre, où Philippe Laurent (UDI) lui dispute la présidence et où Marc Fesneau (MoDem) critique la « double casquette » (AFP, 29 octobre) : préparer une réponse sur les faits et sur ce cumul. Il annonce le 25 novembre qu'il se mettrait en retrait de l'AMF pendant la campagne s'il est réélu, au profit d'une direction collégiale (Sud Radio). Réélu le 25 novembre avec 72 % des voix (Public Sénat) : tenir l'engagement de retrait pendant la campagne et le faire savoir."
+   },
+   {
+    "p": "Sortie de la CEDH en dernier recours",
+    "r": "Exposée juridiquement et à gauche. Expliquer les étapes préalables et le modèle danois de dérogation."
+   },
+   {
+    "p": "Réécriture du Code du travail",
+    "r": "Attaquée le 22 novembre par Marine Le Pen, pour qui passer le code « à la broyeuse » laisserait les travailleurs démunis (Sud Radio, AFP). Préciser ce qui reste garanti par la loi et ce qui relèverait des accords d'entreprise, plutôt que de s'en tenir à l'image de la broyeuse."
+   },
+   {
+    "p": "Accusation d'usage de comptes automatisés",
+    "r": "Selon le titre d'un article de 20 Minutes (27 novembre, non lu), Lisnard est accusé d'utiliser des bots sur les réseaux sociaux pour ne pas être associé à Marine Le Pen. Établir les faits avant toute réponse, puis répondre par la transparence sur la campagne numérique, sans laisser l'accusation brouiller la distance affichée avec le RN."
+   }
+  ]
+ },
+ "JOURNAL": [
+  {
+   "d": "2026-11-27",
+   "c": "Communication",
+   "t": "Champ « réalité » des ralliements et fiche Retailleau mis à jour : décompte Retailleau/Lisnard porté à quatre hypothèses sur trente-sept (trente cas en faveur de Lisnard avec OpinionWay pour CNews), ajout de la tribune de huit députés LR et de la réunion du 30 novembre autour de Gérard Larcher ; risque de la fiche Retailleau complété. Fiche Dupont-Aignan : désaccord ajouté sur l'Ukraine. Vulnérabilité ajoutée : accusation d'usage de bots (titre de 20 Minutes, article non lu). Argumentaire et segments inchangés."
+  },
+  {
+   "d": "2026-11-27",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure des thèmes du vote, des critères, de la solidité du choix ou des motifs de changement d'avis. L'enquête OpinionWay pour CNews donne des croisements par proximité partisane et vote antérieur pour l'électorat de Lisnard, non intégrés faute de lecture fiable du PDF : le bloc Elabe (12-13 novembre) est conservé."
+  },
+  {
+   "d": "2026-11-27",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête OpinionWay pour CNews (vague 5, terrain 25-26 novembre, publiée le 26 novembre, 912 inscrits, une hypothèse). David Lisnard obtient 12 % et se place 3e, derrière Marine Le Pen (33 %) et Jean-Luc Mélenchon (16 %), devant Raphaël Glucksmann (10 %), Édouard Philippe (8 %) et Bruno Retailleau (4 %). Premier duel de second tour testant Lisnard : 45 % contre 55 % pour Le Pen ; autres duels : Le Pen-Mélenchon 69-31, Le Pen-Glucksmann 58-42, Le Pen-Philippe 59-41. L'enquête OpinionWay pour Les Échos et Radio Classique (9-10 novembre) passe dans l'historique de Lisnard. Page Sondages : l'indicateur « Second tour » affiche désormais le duel testé au lieu d'un texte fixe."
+  },
+  {
+   "d": "2026-11-27",
+   "c": "Candidats",
+   "t": "David Lisnard : soutien de huit députés LR, dont Ian Boucard et Justine Gruet, dans une tribune à Paris Match (26 novembre), mentionné dans son statut ; aucune proposition programmatique nouvelle. Édouard Philippe : entrée ajoutée en santé d'après son volet programme mis à jour le 26 novembre (semaine annuelle en zone sous-dotée pour les médecins, vaccinations obligatoires, objectifs de formation et de recrutement, assistant médical IA). Nicolas Dupont-Aignan : entrée ajoutée en relations internationales (opposition à l'avancée de l'OTAN en Ukraine et à l'entrée de l'Ukraine dans l'UE, BFMTV, 26 novembre, titre seul). Éric Zemmour : annonce que 2027 sera sa « dernière campagne », mentionnée dans son statut. Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait ni désistement de candidat suivi."
+  },
+  {
+   "d": "2026-11-26",
+   "c": "Candidats",
+   "t": "David Lisnard : deux entrées ajoutées en institutions. Il est réélu le 25 novembre président de l'AMF pour un troisième mandat, avec 72 % des voix face à Philippe Laurent (Public Sénat) ; selon le titre d'un article de BFMTV non lu, il rejette un débat avec Édouard Philippe proposé à la place de la primaire. Aucune proposition programmatique nouvelle. Édouard Philippe : entrée ajoutée en santé (vaccination obligatoire contre les papillomavirus, LCP, 24 novembre). Teddy Riner : entrée ajoutée en défense (critique de l'envoi de militaires en Ukraine, Euronews, 25 novembre). Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi ; primaire de la droite et du centre : pas de décision nouvelle relevée."
+  },
+  {
+   "d": "2026-11-26",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis le baromètre Toluna Harris Interactive (18-19 novembre). Le baromètre Odoxa (18-19 novembre), non intégré la veille faute de chiffre publié sur Lisnard, est mentionné dans la note des seconds tours : selon Public Sénat, Lisnard y est préféré à Marine Le Pen (32 % contre 27 %), sur une question de préférence avec option « aucun des deux », distincte d'une intention de vote ; il n'est pas ajouté aux duels. Opinion inchangée : aucune nouvelle mesure des thèmes du vote, des critères, de la solidité du choix, de l'électorat de Lisnard ou des motifs de changement d'avis."
+  },
+  {
+   "d": "2026-11-26",
+   "c": "Communication",
+   "t": "Vulnérabilité sur le cumul AMF-candidature complétée par la réélection du 25 novembre (72 %). Champ « réalité » des ralliements complété par le refus d'un débat avec Philippe à la place de la primaire. Argumentaire, segments et fiches de ralliement inchangés."
+  },
+  {
+   "d": "2026-11-25",
+   "c": "Candidats",
+   "t": "David Lisnard : deux entrées ajoutées en institutions. Selon Public Sénat (24 novembre), il a déclaré le 22 novembre qu'une primaire pourrait servir à « éliminer les macronistes » et qu'il ne soutiendrait pas son vainqueur s'il était battu ; candidat à sa réélection à l'AMF (résultat attendu le 25 novembre), il annonce qu'il se mettrait en retrait de l'association pendant la campagne (Sud Radio). Édouard Philippe : refus de la primaire réaffirmé au Congrès des maires, critique de Lisnard sur l'extrême droite, vote pour sa réélection à l'AMF (Public Sénat) et, selon le titre d'un direct de franceinfo non lu, vote blanc dans un duel Mélenchon-Le Pen. Gabriel Attal : deux débats avant Noël puis une primaire entre le 15 janvier et le 15 février (AFP). Aucune proposition programmatique nouvelle ; notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi."
+  },
+  {
+   "d": "2026-11-25",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis le baromètre Toluna Harris Interactive (18-19 novembre). Le baromètre Odoxa pour Public Sénat, la presse régionale et L'Obs (18-19 novembre, publié le 24 novembre) mesure l'adhésion et le mécontentement en cas d'élection de plusieurs candidats, sans donnée publiée sur Lisnard : non intégré. Opinion inchangée : aucune nouvelle mesure des thèmes du vote, des critères, de la solidité du choix, de l'électorat de Lisnard ou des motifs de changement d'avis."
+  },
+  {
+   "d": "2026-11-25",
+   "c": "Communication",
+   "t": "Deux vulnérabilités complétées : la critique d'Édouard Philippe sur la netteté de Lisnard face à l'extrême droite (24 novembre) est ajoutée à celle sur le score et les accusations d'ambiguïté ; l'annonce d'un retrait de l'AMF pendant la campagne est ajoutée à celle sur le cumul. Argumentaire, segments, fiches de ralliement et champ « réalité » inchangés."
+  },
+  {
+   "d": "2026-11-24",
+   "c": "Candidats",
+   "t": "David Lisnard : entrée ajoutée en Europe. Le 23 novembre sur Public Sénat, il refuse d'appartenir à un groupe européen partageant les positions de l'AfD. Il dit son discours économique proche de celui de Sarah Knafo, mais écarte ses choix politiques et tout rapprochement avec Marine Le Pen (Capital). Il dit aussi qu'il restera candidat même s'il n'est pas réélu à la présidence de l'AMF, dont le congrès s'ouvre le 24 novembre (BFMTV) : aucune proposition nouvelle. Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi. Primaire de la droite et du centre : pas de décision nouvelle relevée."
+  },
+  {
+   "d": "2026-11-24",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis le baromètre Toluna Harris Interactive (18-19 novembre). Les articles du 23 novembre (CNews, La Libre) qui présentent Lisnard devant Philippe portent sur cette même enquête, déjà intégrée. Opinion inchangée."
+  },
+  {
+   "d": "2026-11-24",
+   "c": "Communication",
+   "t": "Aucun changement. La position ajoutée en Europe complète les positions existantes de Lisnard sans les modifier : argumentaire « Europe » inchangé. Fiches de ralliement et champ « réalité » inchangés."
+  },
+  {
+   "d": "2026-11-23",
+   "c": "Candidats",
+   "t": "David Lisnard : entrée ajoutée en entreprise et travail (réécriture du Code du travail donnant plus de poids aux accords d'entreprise sur le temps de travail, en réponse le 22 novembre aux critiques de Marine Le Pen ; Entrevue) et deux entrées en institutions (refus de gouverner avec le RN, Sud Radio-AFP ; selon le titre d'un article d'Ouest-France non lu, pas de participation à une primaire sans Édouard Philippe). Marine Le Pen : entrée ajoutée en entreprise et travail (simplification des règles, mais refus de passer le Code du travail « à la broyeuse », France 2 et France Inter, 22 novembre). Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait ni ralliement de candidat suivi ; primaire de la droite et du centre : pas de décision nouvelle relevée."
+  },
+  {
+   "d": "2026-11-23",
+   "c": "Sondages",
+   "t": "Ajout du baromètre Toluna Harris Interactive pour M6, RTL et L'Express (vague 10, terrain 18-19 novembre, publié le 23 novembre, 3 hypothèses, un duel). David Lisnard obtient 11 % avec Attal et Philippe, 11 % avec Philippe seul au centre et 12 % avec Attal seul ; il devance Retailleau (4 à 5 %) dans les trois hypothèses, et Philippe (9 à 10 %) dans les deux où celui-ci est testé. Duel Le Pen-Mélenchon : 65-35. L'enquête Cluster17 pour Politico (9-10 novembre) sort de la liste et passe dans l'historique de Lisnard (8 à 10 %)."
+  },
+  {
+   "d": "2026-11-23",
+   "c": "Opinion",
+   "t": "Priorités et critères de choix : les blocs de la vague 9 de Toluna Harris Interactive (3-5 novembre) sont remplacés par ceux de la vague 10 (18-19 novembre, mêmes questions, pages 29 et 33 ; pouvoir d'achat 59 %, santé 40 %, immigration 36 %). Attribution des sous-groupes partisans et appariement libellés-valeurs des critères à vérifier sur le PDF. Aucune nouvelle mesure de solidité du choix, de composition de l'électorat de Lisnard ou de motifs de changement d'avis."
+  },
+  {
+   "d": "2026-11-23",
+   "c": "Communication",
+   "t": "Argumentaire « entreprise et travail » réécrit (réécriture du Code du travail par les accords d'entreprise, en plus du contrat unique et des charges négatives). Vulnérabilité ajoutée sur la réécriture du Code du travail après l'attaque de Marine Le Pen. Champ « réalité » des ralliements et fiche Retailleau (champ « pourquoi ») mis à jour : Lisnard devance Retailleau dans 29 hypothèses sur 36 (trois de Toluna Harris Interactive ajoutées) ; refus de gouverner avec le RN et position sur une primaire sans Philippe ajoutés au champ « réalité ». Autres fiches et segments inchangés."
+  },
+  {
+   "d": "2026-11-22",
+   "c": "Candidats",
+   "t": "François Ruffin (Debout !) retire sa candidature le 21 novembre par communiqué, jugeant sa campagne dans « l'impasse » faute de grande primaire de la gauche ; il ne soutient aucun candidat (RTBF). Statut mis à jour ; il reste présent dans les hypothèses des enquêtes déjà publiées. Éric Zemmour lance sa campagne à Toulon le 21 novembre : entrées ajoutées en fiscalité (suppression des droits de succession réaffirmée) et sécurité (fermeté envers les squatteurs), d'après Capital. Aucune nouvelle mesure de David Lisnard relevée (réunions de Troyes le 21 et de Nice le 22 novembre annoncées sur son site). Primaire de la droite et du centre : pas de décision nouvelle relevée. Notes d'axes inchangées."
+  },
+  {
+   "d": "2026-11-22",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Ifop-Fiducial pour Sud Radio (terrain 2-4 novembre, publiée le 20 novembre, 4 hypothèses de candidature unique de la droite et du centre, aucun duel). David Lisnard, testé seul pour son bloc, obtient 14 % (Le Pen 37 %, Glucksmann 18 %, Mélenchon 17 %). L'enquête ne teste jamais Lisnard et Retailleau ensemble : champ « réalité » des ralliements inchangé. L'enquête Toluna Harris Interactive (3-5 novembre) sort de la liste et passe dans l'historique de Lisnard (9 %, 2 hypothèses) ; elle reste la source du bloc Opinion des priorités et critères."
+  },
+  {
+   "d": "2026-11-22",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis ; blocs inchangés."
+  },
+  {
+   "d": "2026-11-22",
+   "c": "Communication",
+   "t": "Aucun changement : pas de nouvelle position de Lisnard ni des candidats ayant une fiche de ralliement ; le retrait de Ruffin ne concerne aucune fiche."
+  },
+  {
+   "d": "2026-11-21",
+   "c": "Candidats",
+   "t": "Dominique de Villepin (La France humaniste) déclare sa candidature le 20 novembre lors d'une conférence de presse à Paris : ajouté aux candidats (bloc « Divers » par défaut, sans notes d'axes faute de trois axes documentés). Entrées en fiscalité et finances (texte « Big bang » d'août : neuf grands impôts, impôt unique sur le patrimoine, déficit à 3 % du PIB en fin de quinquennat), retraites (refus d'une réforme annoncée par un seul candidat) et institutions (présidence « arbitre », refus d'une primaire de la droite et du centre). Aucune nouvelle mesure de David Lisnard relevée (réunions publiques du 20 novembre à Nancy, Angers, Agde et Strasbourg ; articles de presse sur sa stratégie de primaire, sans proposition nouvelle). Primaire de la droite et du centre : pas de décision nouvelle relevée. Aucun retrait, désistement ni ralliement de candidat suivi."
+  },
+  {
+   "d": "2026-11-21",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis Ifop-Fiducial (13-16 novembre) et YouGov (12-17 novembre). Opinion et onglet Communication inchangés."
+  },
+  {
+   "d": "2026-11-20",
+   "c": "Candidats",
+   "t": "Lisnard : deux entrées ajoutées en retraites, d'après sa tribune au Figaro reprise par Nouvelle Énergie le 17 novembre (étage de capitalisation collective obligatoire, fin des régimes spéciaux et convergence public-privé, désindexation certaines années des pensions les plus élevées, refus d'aligner la CSG des retraités sur celle des actifs) et son entretien sur TF1 du 18 novembre (projet de retraites annoncé pour les prochaines semaines) ; une entrée en finances publiques (au moins 12 % d'effectifs en moins, soit 400 000 fonctionnaires, avec redéploiement vers la justice, la police et les soins). Notes d'axes inchangées."
+  },
+  {
+   "d": "2026-11-20",
+   "c": "Candidats",
+   "t": "Gauche : Marine Tondelier propose le 18 novembre sur France 2 une coalition autour de la candidature de Jean-Luc Mélenchon tout en restant candidate ; Mélenchon juge le 19 novembre que l'alliance « devrait pouvoir se faire » ; Glucksmann se dit déçu. Entrées ajoutées en institutions pour Tondelier, Mélenchon et Glucksmann ; statut de Tondelier mis à jour (options du vote militant des 10-13 décembre fixées le 26 novembre). Hors candidats suivis : Yannick Jadot et Jérémie Iordanoff quittent Les Écologistes ; le PS suspend ses discussions avec eux (titres de presse). Attal (France 2, 19 novembre) : dit qu'il retirerait sa candidature si Lisnard était désigné par la primaire et envisage une coalition jusqu'à la gauche sociale-démocrate (source agrégateur, à vérifier). Le Pen : entrée ajoutée en international (fin de l'aide financière à l'Ukraine, maintien de l'aide matérielle et humanitaire, communiqué du 16 novembre). Dominique de Villepin est présenté comme en route vers une candidature, sans déclaration à ce jour. Aucun retrait, désistement ni ralliement de candidat relevé."
+  },
+  {
+   "d": "2026-11-20",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Ifop-Fiducial pour TF1, LCI, Le Figaro et Sud Radio (13-16 novembre, 6 hypothèses, aucun duel chiffré). David Lisnard obtient de 8 à 12 % dans les cinq hypothèses où il est testé (12 % face à Philippe sans Attal ni Retailleau), devant Retailleau dans les quatre qui testent les deux. Reports déclarés : 39 % des électeurs de Retailleau iraient vers Lisnard en son absence. L'enquête Ifop pour LCI (27-29 octobre) sort de la liste et passe dans l'historique de Lisnard (7 à 9 %, 3 hypothèses)."
+  },
+  {
+   "d": "2026-11-20",
+   "c": "Opinion",
+   "t": "Solidité du choix : le bloc Elabe (12-13 novembre) est remplacé par Ifop-Fiducial (13-16 novembre, même question), qui publie pour la première fois une mesure pour l'électorat de David Lisnard : 44 % de ses électeurs se disent sûrs de leur choix (69 % pour l'ensemble, 59 % chez Retailleau, 47 % chez Philippe et Attal). Ifop publie aussi des déterminants du vote (question « rôle déterminant » par thème, santé 79 %, pouvoir d'achat 75 %, sécurité 70 %, dette 61 %) : formulation différente de celle de Toluna Harris Interactive (cinq thèmes au plus), bloc des priorités non remplacé. Profil de l'électorat de Lisnard (p. 12 du rapport) non repris, lecture du graphique incertaine ; aucun motif de changement d'avis publié."
+  },
+  {
+   "d": "2026-11-20",
+   "c": "Communication",
+   "t": "Argumentaire « retraites » réécrit (étage obligatoire de capitalisation, fin des régimes spéciaux et règles communes public-privé). Champ « réalité » des ralliements et fiche Retailleau (champ « pourquoi ») mis à jour : Lisnard devance Retailleau dans 26 hypothèses sur 33 (quatre d'Ifop-Fiducial ajoutées), reports déclarés et solidité du choix comparée ; propos d'Attal du 19 novembre ajoutés au champ « réalité ». Segments, autres fiches et vulnérabilités inchangés."
+  },
+  {
+   "d": "2026-11-19",
+   "c": "Candidats",
+   "t": "Édouard Philippe présente le 18 novembre le premier volume de son programme (site de campagne, 15 thèmes ; autres volumes annoncés) : entrées ajoutées en finances (déficit sous 2,5 % du PIB, 250 000 postes en moins, statut réservé aux fonctions essentielles, privatisation de France Travail, suppression du Cese), fiscalité, travail (durée fixée par accord d'entreprise, chômage limité à 12 mois avant 50 ans, trois jours de carence), retraites (65 ans, 45 ans de cotisation, PER abondé de 500 €), famille, école, sécurité (assignation à résidence des casseurs, suspension du RSA des délinquants condamnés), immigration, défense, Ukraine, énergie et numérique. Défense : le service national devient obligatoire (service militaire volontaire dans les premières orientations) ; justification de l'axe défense mise à jour, notes d'axes inchangées. État du programme mis à jour."
+  },
+  {
+   "d": "2026-11-19",
+   "c": "Candidats",
+   "t": "Primaire de la droite et du centre : Lisnard (TF1, 18 novembre) juge la participation de Philippe « indispensable », accepte Zemmour et Dupont-Aignan s'ils respectent les critères et dit ne pas savoir si la primaire aura lieu ; Retailleau estime qu'une participation de Zemmour la ferait échouer et met en doute la volonté de Lisnard de l'organiser ; Philippe maintient son refus ; nouvelle réunion des équipes la semaine suivante. Entrées ajoutées pour Lisnard (deux), Retailleau et Philippe en institutions. Aucune nouvelle mesure de Lisnard ; notes d'axes inchangées. Aucune candidature, aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-19",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête YouGov pour Le HuffPost (12-17 novembre, 5 scénarios, 5 duels). David Lisnard obtient 9 ou 10 % dans les quatre scénarios où il est testé, devant Retailleau dans chacun (6 à 8 %) ; aucun duel ne l'inclut. L'enquête Cluster17 pour Politico (19-22 octobre) sort de la liste et passe dans l'historique de Lisnard (8 %, 1 hypothèse). Hors intentions de premier tour : sondage Ifop pour Le Figaro sur une primaire de la droite et du centre (13-18 novembre) : Lisnard en tête avec Philippe (29 %, contre 28 % à Philippe, 25 % à Attal, 18 % à Retailleau), deuxième sans lui (33 %, derrière Attal à 38 %) ; non intégré aux intentions de vote présidentielles, mentionné dans l'onglet Communication."
+  },
+  {
+   "d": "2026-11-19",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard (YouGov ne publie qu'une certitude d'aller voter) ; blocs inchangés."
+  },
+  {
+   "d": "2026-11-19",
+   "c": "Communication",
+   "t": "Champ « réalité » des ralliements mis à jour : Lisnard devance Retailleau dans 22 hypothèses sur 29 (quatre de YouGov ajoutées), échanges du 18 novembre sur la primaire et sondage Ifop sur la primaire. Fiche Retailleau : champ « pourquoi » mis à jour (décomptes, sympathisants LR) et divergence ajoutée sur le périmètre de la primaire. Argumentaire, segments, autres fiches et vulnérabilités inchangés."
+  },
+  {
+   "d": "2026-11-18",
+   "c": "Candidats",
+   "t": "Primaire de la droite et du centre : réunion du 17 novembre des équipes d'Attal, Retailleau et Lisnard, sans Philippe. Principe acté d'une primaire ouverte à deux tours en janvier (17 et 24 ou 24 et 31 janvier envisagés), participation d'environ 2 €, vote surtout électronique, parrainages et charte commune ; périmètre et seuils non tranchés (Entrevue, Sud Radio). Lisnard : entrée ajoutée en institutions (primaire très large, sans exclure Zemmour à ce stade ; aucun accord définitif selon Nouvelle Énergie). Entrées ajoutées pour Attal (vote avant fin janvier, opposé à la participation de Zemmour) et Retailleau (modalités). Aucune nouvelle mesure de Lisnard relevée ; notes d'axes inchangées."
+  },
+  {
+   "d": "2026-11-18",
+   "c": "Candidats",
+   "t": "Le Pen : la réforme des retraites présentée le 17 novembre remplace l'entrée d'annonce (Euronews) : âge d'ouverture de 60 à 62 ans selon l'âge d'entrée dans l'emploi, taux plein à 67 ans, indexation des pensions cinq ans, capitalisation obligatoire pour les moins de 52 ans via la Caisse des dépôts, coût net annoncé de 10,1 Md€, référendum envisagé. Débat des Restos du Cœur (16 novembre, Public Sénat) : entrées ajoutées pour Le Pen (trains gratuits aux heures creuses, apprentis), Attal (suppression de la CSG, selon Public Sénat), Glucksmann et Mélenchon (petites pensions), Retailleau (sélection à l'université). Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-18",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis Elabe (12-13 novembre)."
+  },
+  {
+   "d": "2026-11-18",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."
+  },
+  {
+   "d": "2026-11-18",
+   "c": "Communication",
+   "t": "Champ « réalité » des ralliements complété par l'issue de la réunion du 17 novembre sur la primaire ; ordre Retailleau/Lisnard dans les sondages inchangé. Argumentaire, segments, fiches et vulnérabilités inchangés (la position de Lisnard sur la primaire ouverte est précisée, pas modifiée)."
+  },
+  {
+   "d": "2026-11-17",
+   "c": "Candidats",
+   "t": "Lisnard : entrée ajoutée en retraites d'après Capital (6 novembre) : transfert d'environ 40 % des cotisations vers des comptes individuels d'épargne retraite obligatoires, pouvant être gérés par des fonds privés, avec un fonds souverain par défaut, et suppression de l'abattement de 10 % des retraités. Un article du JDD annonçant « le plan de David Lisnard pour les retraites » (répartition réformée et part de capitalisation obligatoire) n'a pas pu être lu : détail non intégré. Notes d'axes inchangées. Aucune nouvelle mesure relevée sur le site de Nouvelle Énergie depuis le 13 novembre."
+  },
+  {
+   "d": "2026-11-17",
+   "c": "Candidats",
+   "t": "Le Pen : deux entrées ajoutées en retraites avant la conférence de presse du RN prévue ce 17 novembre à 11 h (comptes rendus préalables) : pas de report de l'âge légal au-delà de 62 ans et part de capitalisation (Europe 1) ; selon Jean-Philippe Tanguy, capitalisation pour tous financée par des économies et alignement des trimestres validés sur les trimestres cotisés (source agrégateur, à vérifier). Le contenu définitif sera vérifié à la prochaine mise à jour. Primaire de la droite et du centre : réunion des représentants d'Attal (trois), Retailleau et Lisnard (deux chacun) ce 17 novembre, sans l'équipe de Philippe, sur les dates (31 janvier et 7 février évoqués) et le mode de scrutin ; résultat non connu. Aucune candidature, aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-17",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis Elabe (12-13 novembre)."
+  },
+  {
+   "d": "2026-11-17",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."
+  },
+  {
+   "d": "2026-11-17",
+   "c": "Communication",
+   "t": "Argumentaire « retraites » réécrit à la suite de la nouvelle entrée de Lisnard (comptes individuels obligatoires recevant environ 40 % des cotisations, fonds souverain par défaut). Segment « 25-40 ans salariés » : contraste avec le RN corrigé, le RN prévoyant aussi une part de capitalisation. Champ « réalité », fiches de ralliement et vulnérabilités inchangés."
+  },
+  {
+   "d": "2026-11-16",
+   "c": "Candidats",
+   "t": "Primaire de la droite et du centre : le 14 novembre, le président du Sénat Gérard Larcher invite Attal, Philippe, Retailleau et Lisnard à se retrouver pour convenir d'une « méthode de départage » en vue d'une candidature unique au début de 2027. Philippe (Le Parisien, 15 novembre) accepte une réunion consacrée au rassemblement pour la présidentielle et les législatives, mais confirme qu'il ne participera pas à une primaire (entrée ajoutée en institutions). Retailleau juge que la primaire doit avoir lieu même sans Philippe (entrée ajoutée en institutions, d'après L'Express). La réunion des directeurs de campagne d'Attal, Retailleau et Lisnard reste annoncée pour le 17 novembre. Lisnard : aucune nouvelle mesure ni réaction publique relevée ; le site de Nouvelle Énergie annonce le soutien de la sénatrice des Alpes-Maritimes Alexandra Borchio Fontimp (13 novembre). Notes d'axes inchangées ; aucune candidature, aucun retrait ni désistement relevé. Hors champ des fiches : la députée Sandrine Rousseau appelle Les Écologistes à rejoindre Jean-Luc Mélenchon."
+  },
+  {
+   "d": "2026-11-16",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis Elabe (12-13 novembre). Un article du JDD sur les reports de voix au second tour (« face à Le Pen, seuls 26 % des électeurs de Glucksmann voteraient Mélenchon ») n'a pas pu être lu : institut et terrain inconnus, non intégré. Hors champ : le baromètre Ipsos bva pour La Tribune Dimanche (10-12 novembre, 1 000 personnes) mesure la satisfaction en cas d'élection de chaque personnalité, et non des intentions de vote ; Lisnard y obtient 20 % (+4 points) et 59 % chez les sympathisants LR-UDI-Nouvelle Énergie."
+  },
+  {
+   "d": "2026-11-16",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."
+  },
+  {
+   "d": "2026-11-16",
+   "c": "Communication",
+   "t": "Fiche Retailleau : champ « pourquoi » complété par l'invitation de Gérard Larcher, la position de Retailleau (primaire même sans Philippe) et le refus de Philippe d'y parler de primaire. Champ « réalité », argumentaire, segments, autres fiches et vulnérabilités inchangés (aucune position de Lisnard modifiée, aucun nouveau sondage)."
+  },
+  {
+   "d": "2026-11-15",
+   "c": "Sondages",
+   "t": "Nouvelle enquête Elabe pour BFMTV et La Tribune Dimanche (12-13 novembre, 1 500 personnes dont 1 391 inscrits, publiée le 14 novembre), ajoutée en tête avec ses six hypothèses et trois duels, d'après le rapport de l'institut. Lisnard obtient 10,5 % avec Attal (cas 4), 9 % avec Philippe (cas 5) et 8 % dans la liste large avec Riner et Polony (cas 6), devant Retailleau dans les trois (6, 4 et 4 %). Riner obtient 4,5 % dans le cas 6. Duels sans Lisnard : Le Pen 68,5 % contre Mélenchon, 55 % contre Glucksmann et contre Philippe. Enquête Ipsos bva du 21-22 octobre déplacée vers l'historique (Lisnard 6,5 %)."
+  },
+  {
+   "d": "2026-11-15",
+   "c": "Opinion",
+   "t": "Blocs « solidité du choix » et « électorat de David Lisnard » remplacés par la vague Elabe de novembre (même question que la vague d'octobre). Solidité : 55 % des personnes ayant une intention de vote se disent sûres de leur choix ; Lisnard n'est toujours pas mesuré (question publiée pour le cas 1 seulement, sans lui). Électorat : part de chaque groupe votant Lisnard dans les cas 4 et 5, notamment 27 et 23 % des sympathisants LR, 37 et 33 % des électeurs de Pécresse en 2022, 18 et 14 % de ceux de Macron. Aucune mesure des motifs de changement d'avis."
+  },
+  {
+   "d": "2026-11-15",
+   "c": "Candidats",
+   "t": "Retailleau : le 13 novembre sur France 2, souhaite une primaire ouverte avec une participation de quelques euros et des dates négociables (31 janvier et 7 février 2027), et demande aux participants une loyauté envers le résultat sans obligation de défendre le programme du vainqueur (entrée ajoutée en institutions, d'après Entrevue). Lisnard : aucune nouvelle mesure ni déclaration relevée depuis les comptes rendus du 13 novembre. Hors champ des fiches : le ministre Vincent Jeanbrun propose dans Le JDD une primaire à éliminations hebdomadaires du 30 novembre au 10 janvier. Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-15",
+   "c": "Communication",
+   "t": "Champ « réalité » et fiche Retailleau : Lisnard devant Retailleau dans dix-huit hypothèses sur vingt-cinq depuis la mi-octobre (quatre cas inverses, trois égalités), avec les trois hypothèses Elabe ; déclaration de Retailleau du 13 novembre ajoutée, et point d'accord sur la primaire ajouté en institutions dans la fiche. Segment LR actualisé (Lisnard 7 à 12 %, Retailleau 4 à 7 % dans quatorze hypothèses). Argumentaire, autres fiches et vulnérabilités inchangés."
+  },
+  {
+   "d": "2026-11-14",
+   "c": "Candidats",
+   "t": "Lisnard : entrées ajoutées d'après trois comptes rendus publiés le 13 novembre par Nouvelle Énergie. Éducation (podcast « Destinée ») : notes chiffrées, évaluations en CM2, sixième et troisième, philosophie dès le primaire, évaluation publiée des établissements, établissements de proximité à l'échelle des anciens cantons, établissements disciplinaires avec internats, dispositifs ULIS. Finances publiques (DLive du 10 novembre) : masse salariale publique réduite d'au moins 12 %, objectif 20 %. Retraites (DLive) : échelon obligatoire de capitalisation et plan de réforme annoncé avant la fin de l'année. Numérique et économie (Rencontres de l'Avenir, 6 novembre) : structure franco-européenne sur le modèle de la DARPA, étiquetage des contenus d'IA, transferts de technologie, fonds souverain pour les épargnants. Une réunion de Nouvelle Énergie est annoncée à Angers le 20 novembre, sans le candidat. Notes d'axes inchangées."
+  },
+  {
+   "d": "2026-11-14",
+   "c": "Candidats",
+   "t": "Teddy Riner : premier déplacement de campagne le 13 novembre aux urgences pédiatriques de l'hôpital Delafontaine (Saint-Denis) ; fait de la santé une priorité, sans mesure détaillée (entrée ajoutée en santé). Son conseiller annonce un programme de 585 propositions, non publié (champ programme mis à jour). Aucune autre candidature, aucun retrait, désistement ni ralliement relevé ; aucune nouveauté relevée pour Retailleau, Philippe, Attal, Le Pen ou Mélenchon sur la primaire ou les programmes."
+  },
+  {
+   "d": "2026-11-14",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis OpinionWay (9-10 novembre). Hors champ : une enquête Odoxa pour Le Figaro (publiée le 12 novembre, terrain non précisé par la source consultée) indique que 42 % des Français jugent que Teddy Riner a raison de se présenter ; question d'opinion sur une candidature, non intégrée. Blocs d'opinion inchangés : aucune mesure de solidité du choix ni de motifs de changement d'avis concernant Lisnard."
+  },
+  {
+   "d": "2026-11-14",
+   "c": "Communication",
+   "t": "Argumentaire réécrit pour quatre thèmes à la suite des nouvelles positions de Lisnard : éducation (notes chiffrées, évaluations, établissements de proximité et internats), finances publiques (réduction de la masse salariale publique), retraites (échelon obligatoire de capitalisation), numérique (structure de type DARPA, étiquetage des contenus d'IA). Segment « parents » : preuve ajoutée sur les notes chiffrées et les évaluations. Champ « réalité », fiches de ralliement et vulnérabilités inchangés (pas de nouveau sondage, pas de position modifiée chez les candidats ayant une fiche)."
+  },
+  {
+   "d": "2026-11-13",
+   "c": "Sondages",
+   "t": "Nouvelle enquête OpinionWay pour Les Échos et Radio Classique (Prési-Track, vague 4, 9-10 novembre, 982 personnes de 18 ans et plus, publiée le 12 novembre), ajoutée en tête avec trois hypothèses, d'après la presse (rapport et notice non consultés, à vérifier). Lisnard, testé pour la première fois dans ce baromètre, obtient 10 % avec Philippe et Attal, 12 % avec Attal seul et 11 % avec Philippe seul, devant Retailleau (4, 6 et 4 %). Aucun duel. Un sondage présenté par CNEWS le 12 novembre (« Teddy Riner rebat les cartes au centre ») n'a pas pu être lu : non intégré. Enquête Toluna Harris Interactive du 19-21 octobre déplacée vers l'historique (Lisnard 7 et 8 %)."
+  },
+  {
+   "d": "2026-11-13",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés."
+  },
+  {
+   "d": "2026-11-13",
+   "c": "Candidats",
+   "t": "Attal : précise le 12 novembre sur franceinfo que les 100 000 suppressions de postes de fonctionnaires passeraient par des départs volontaires indemnisés, fonction publique territoriale incluse (entrée ajoutée en finances publiques). Lisnard : aucune nouvelle mesure ni réponse publique relevée à la proposition de primaire de Retailleau. Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-13",
+   "c": "Communication",
+   "t": "Champ « réalité » et fiche Retailleau : Lisnard devant Retailleau dans quinze hypothèses sur vingt-deux depuis la mi-octobre (quatre cas inverses, trois égalités), avec les trois hypothèses OpinionWay. Segment LR (Lisnard 6,5 à 12 %, Retailleau 4 à 7 % dans douze hypothèses) et vulnérabilité « score dans les sondages » (4 à 12 %) actualisés. Argumentaire et autres fiches inchangés."
+  },
+  {
+   "d": "2026-11-12",
+   "c": "Sondages",
+   "t": "Nouvelle enquête Cluster17 pour Politico (9-10 novembre, 1 242 personnes dont 1 164 inscrits, publiée le 11 novembre), ajoutée en tête avec quatre hypothèses. Lisnard obtient 10 % lorsque le centre est représenté par Philippe (H1, liste complète relevée par un agrégateur d'après le graphique de Politico), par Christine Lagarde (14 %, non candidate) ou par Attal, et 8 % dans une liste large de 18 personnalités ; Retailleau 5 % là où son score est publié. Les hypothèses Lagarde, Attal et liste large ne sont connues que partiellement par la presse (rapport de l'institut et notice non consultables), d'où des listes incomplètes à vérifier. Aucun duel publié. Enquête OpinionWay pour CNEWS du 21-22 octobre déplacée vers l'historique (Lisnard 6 %)."
+  },
+  {
+   "d": "2026-11-12",
+   "c": "Opinion",
+   "t": "Aucune nouvelle mesure de thèmes du vote, critères de choix, solidité du choix, composition de l'électorat ou motifs de changement d'avis concernant Lisnard ; blocs inchangés. Hors champ des blocs : une enquête Cluster17 pour Le Point (2-3 novembre, 2 405 personnes de 18 ans et plus) mesure l'adhésion au principe d'une primaire (46 % favorables, 35 % opposés) et à six périmètres possibles ; une primaire du bloc central et de LR, d'Attal à Lisnard, recueille 33 % d'avis favorables et 49 % d'opposés. Non intégrée."
+  },
+  {
+   "d": "2026-11-12",
+   "c": "Candidats",
+   "t": "Lisnard : entrée ajoutée (écologie) sur ses propositions de logement présentées comme issues du programme de Nouvelle Énergie : suppression du DPE, assouplissement du ZAN (bonus à la densification, malus à l'étalement), remplacement des quotas SRU par des objectifs sur les constructions neuves (Journal de l'Agence, 11 novembre) ; entrée ajoutée (institutions) sur la réunion des directeurs de campagne d'Attal, Retailleau et Lisnard annoncée pour le 17 novembre (BFMTV, via un agrégateur), également ajoutée pour Retailleau et Attal. Mélenchon : le 11 novembre, demande l'évacuation de l'Ukraine par la Russie et une consultation des populations avant toute modification de frontières (AFP, d'après Quartz). Marine Le Pen : discours commémoratif à Hénin-Beaumont, sans mesure nouvelle. Notes d'axes inchangées ; aucune candidature, aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-12",
+   "c": "Communication",
+   "t": "Argumentaire, thème écologie : argument réécrit pour intégrer la suppression du DPE et la densification plutôt que le gel du foncier. Champ « réalité » et fiche Retailleau : Lisnard devant Retailleau dans douze hypothèses sur dix-neuf depuis la mi-octobre (quatre cas inverses, trois égalités), réunion du 17 novembre et nouveau refus de Philippe (12 novembre) ajoutés. Réservoirs actualisés : segment LR (Lisnard 6,5 à 10 %, Retailleau 4 à 7 % dans onze hypothèses), segment centre (Philippe 8 à 17 %), vulnérabilité « score dans les sondages » (4 à 10 %)."
+  },
+  {
+   "d": "2026-11-11",
+   "c": "Candidats",
+   "t": "Zemmour : confirme sa candidature au journal de TF1 le 10 novembre (statut mis à jour) ; entrées ajoutées : objectif de réduire de deux millions le nombre d'immigrés sur le quinquennat, renvoi des étrangers au chômage depuis plus de six mois, référendum sur la politique migratoire (immigration), investissements dans l'IA (numérique) et plan de 280 Md€ de baisses de dépenses et d'impôts, selon Politique Matin seulement (finances publiques). Glucksmann : présente le 9 novembre un programme des « 100 premiers jours » pour sortir des énergies fossiles, avec nouveaux réacteurs nucléaires et contribution des patrimoines de plus de 100 M€ (écologie, fiscalité ; d'après RFI). Notes d'axes inchangées."
+  },
+  {
+   "d": "2026-11-11",
+   "c": "Candidats",
+   "t": "Primaire de la droite et du centre : Retailleau propose le 10 novembre, par courrier à Philippe, Attal et Lisnard, un scrutin les dimanches 31 janvier et 7 février 2027 (Quartz, d'après l'AFP) ; Attal dit le même jour sur France Inter qu'il pourrait voter pour Retailleau ou Lisnard si l'un d'eux est le seul à pouvoir éviter un second tour Mélenchon-Le Pen. Entrées ajoutées (institutions) pour les deux. Aucune réponse de Lisnard relevée, aucune nouvelle mesure de sa part ; aucun retrait, désistement ni ralliement relevé."
+  },
+  {
+   "d": "2026-11-11",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis la vague 9 de Toluna Harris Interactive (3-5 novembre). Hors champ des blocs d'opinion : selon La Libre (10 novembre), le baromètre Verian pour Le Figaro Magazine de novembre crédite Lisnard de 23 % sur la « stature présidentielle » (+8 points sur un mois), à égalité avec Attal, Retailleau et Glucksmann, derrière Philippe (27 %) ; terrain et échantillon non vérifiés, non intégré. Aucune mesure de solidité du choix ni de motifs de changement d'avis concernant Lisnard."
+  },
+  {
+   "d": "2026-11-11",
+   "c": "Communication",
+   "t": "Champ « réalité » et fiche Retailleau (pourquoi) : ajout de la proposition de primaire des 31 janvier et 7 février 2027 et de la déclaration d'Attal du 10 novembre. Ordre Retailleau/Lisnard dans les sondages inchangé. Argumentaire, autres fiches et vulnérabilités inchangés (aucune position de Lisnard modifiée)."
+  },
+  {
+   "d": "2026-11-10",
+   "c": "Candidats",
+   "t": "Nouveau candidat : Teddy Riner annonce le 9 novembre sa candidature, sans étiquette, par une vidéo sur ses réseaux sociaux et un entretien au Parisien (selon Actumag, France-Jeunes et Reuters). Fiche ajoutée (bloc Divers) avec six déclarations non chiffrées : allègements de charges, sortie du « carcan » des 35 heures, réforme des retraites avec une part de capitalisation, baisse de la dépense publique. Pas de notes d'axes faute de positions suffisamment précises. Aucune nouvelle mesure de Lisnard (réunions publiques à Anglet le 9 novembre et à l'île Maurice le 10 novembre, sans annonce relevée) ni des autres candidats suivis ; aucun retrait, désistement ni ralliement relevé"
+  },
+  {
+   "d": "2026-11-10",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis la vague 9 de Toluna Harris Interactive (3-5 novembre). Aucune nouvelle mesure d'opinion (thèmes, critères, solidité du choix, composition de l'électorat, motifs de changement) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-10",
+   "c": "Communication",
+   "t": "Aucune position de Lisnard ni d'un candidat ayant une fiche de ralliement modifiée : argumentaire, fiches, champ « réalité » et vulnérabilités inchangés"
+  },
+  {
+   "d": "2026-11-09",
+   "c": "Sondages",
+   "t": "Nouvelle enquête Toluna Harris Interactive pour M6 et RTL (vague 9, 3-5 novembre, 2 101 inscrits, publiée le 9 novembre), ajoutée en tête avec ses cinq hypothèses et trois duels (rapport officiel). Lisnard obtient 9 % dans les deux hypothèses où il est testé (7 et 8 % dans la vague du 19-21 octobre), devant Retailleau (5 et 6 %). Duels : Le Pen 68-32 face à Mélenchon, 60-40 face à Glucksmann, 58-42 face à Philippe ; aucun duel avec Lisnard. Enquête Ifop-Fiducial du 17-19 octobre déplacée vers l'historique. Aucune mesure de solidité du choix ni de motifs de changement d'avis pour l'électorat de Lisnard ; le rapport donne seulement la part d'électeurs Macron 2022 qui le choisissent (13 et 14 %), notée avec l'enquête"
+  },
+  {
+   "d": "2026-11-09",
+   "c": "Opinion",
+   "t": "Blocs « thèmes du vote » et « critères de choix » remplacés par la vague 9 de Toluna Harris Interactive (même question, 3-5 novembre) : pouvoir d'achat 58 %, santé 38 %, immigration 36 % ; honnêteté 64 % et projet 62 % en tête des critères. Tops par proximité attribués selon l'ordre habituel du baromètre, à vérifier sur le PDF. Blocs solidité du choix et électorat de Lisnard (Elabe) inchangés"
+  },
+  {
+   "d": "2026-11-09",
+   "c": "Candidats",
+   "t": "Laurent Wauquiez (non candidat) demande le 8 novembre (France Inter, France 2) aux candidats de droite de convenir sous quinze jours d'une méthode de désignation et d'un candidat commun avant Noël, de préférence par primaire ; mentionné dans le champ « réalité » et la fiche Retailleau. Glucksmann : rejette le 7 novembre un rapprochement avec le projet de Lisnard prêté à l'entourage d'Emmanuel Macron ; entrée ajoutée (institutions). Aucune nouvelle mesure de Lisnard ni des autres candidats suivis, aucune candidature, aucun retrait, désistement ou ralliement relevé ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-11-09",
+   "c": "Communication",
+   "t": "Réservoirs actualisés après le sondage Harris : segment LR (Lisnard 6 à 9 %, Retailleau 4 à 7 % dans neuf hypothèses), segment centre (Philippe 9,5 à 17 %), segment RN (Le Pen 30,5 à 36 %) et vulnérabilité « score dans les sondages » (4 à 9 %). Champ « réalité » et fiche Retailleau : Lisnard devant dans neuf hypothèses sur seize, Retailleau dans quatre ; initiative Wauquiez ajoutée. Argumentaire inchangé (aucune position de Lisnard modifiée)"
+  },
+  {
+   "d": "2026-11-08",
+   "c": "Candidats",
+   "t": "Lisnard : propose une flat tax de 25 % unifiant l'imposition des revenus fonciers et financiers, avec option pour le barème progressif (Le Figaro Immobilier, 7 novembre, d'après Quartz) ; entrée ajoutée (fiscalité). Veut créer « un grand ministère du savoir » (BFMTV, 6 novembre, Rencontres de l'avenir de Saint-Raphaël) ; contenu non publié, entrée ajoutée (éducation) via un agrégateur, à vérifier. Notes d'axes inchangées. Primaire de la droite et du centre (Entrevue, 7 novembre) : Attal dit que les discussions s'intensifient ; Retailleau accepte le principe d'une primaire au plus tard début février 2027 ; Philippe refuse de nouveau d'y participer et décline les débats proposés par Retailleau. Entrées ajoutées (institutions) pour les trois. Aucune autre mesure, candidature, retrait, désistement ni ralliement relevé ; aucun détail nouveau trouvé sur le meeting de LFI au Bourget du 7 novembre"
+  },
+  {
+   "d": "2026-11-08",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis l'Ifop pour LCI (27-29 octobre). Notice officielle de cette enquête (Commission des sondages, n° 10351) désormais consultée : les scores des quatre hypothèses, repris d'un agrégateur le 4 novembre, sont confirmés à l'identique ; source, échantillon et note mis à jour, mention « à vérifier » levée. Aucun duel publié. Aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-08",
+   "c": "Communication",
+   "t": "Argumentaire fiscalité réécrit (flat tax de 25 % sur les revenus fonciers et financiers). Argumentaire éducation inchangé faute de contenu publié sur le « ministère du savoir ». Fiche Retailleau (champ « pourquoi ») complétée : acceptation du principe d'une primaire d'ici février 2027. Champ « réalité », autres fiches et vulnérabilités inchangés"
+  },
+  {
+   "d": "2026-11-07",
+   "c": "Candidats",
+   "t": "Mélenchon : contenu de la 5e édition de « L'Avenir en commun » désormais documenté (LCP, 6 novembre). SMIC porté à 1 700 € nets (au lieu de 1 600 €), ISF avec volet climatique, flat tax supprimée et héritage plafonné à 12 M€ confirmés ; retraite à 60 ans « à terme » pour 40 annuités ; sortie du commandement intégré de l'OTAN puis de l'organisation ; conscription citoyenne écologique ; 100 % renouvelables repoussé à 2060 ; interdiction des vols de nuit ; psychothérapie remboursée pour les moins de 26 ans ; indépendance de la Kanaky-Nouvelle-Calédonie au 1er janvier 2028. Entrées précisées ou ajoutées dans 12 thèmes ; mentions « à vérifier » levées en fiscalité, écologie et institutions. Notes d'axes inchangées. Fourchette du SMIC à gauche corrigée dans l'introduction du thème. Aucune nouvelle mesure de Lisnard ni d'autre candidat suivi, aucune candidature, aucun retrait, désistement ou ralliement relevé"
+  },
+  {
+   "d": "2026-11-07",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis l'Ifop pour LCI (27-29 octobre). Odoxa-Backbone pour Le Figaro (4-5 novembre, 1 005 personnes), sur une primaire de la droite et du centre : 37 % des Français (+10 depuis septembre) et 58 % des sympathisants de la droite hors RN et du centre (+17) jugent Lisnard « bon candidat » pour une primaire, contre 59 % pour Philippe et 62 % pour Retailleau dans ce second champ ; Lisnard arrive en tête pour la proximité et le dynamisme chez ces sympathisants. Questions sans équivalent dans l'onglet Opinion : non ajoutées aux blocs. Elabe pour Les Échos (3-4 novembre) : 22 % d'image positive pour Lisnard. Source : https://www.odoxa.fr/sondage/vox-populi-vox-dei-74-des-sympathisants-de-droite-et-du-centre-veulent-une-primaire-pour-2027/"
+  },
+  {
+   "d": "2026-11-07",
+   "c": "Communication",
+   "t": "Aucune position de Lisnard ni d'un candidat ayant une fiche de ralliement modifiée : argumentaire, fiches, champ « réalité » et vulnérabilités inchangés"
+  },
+  {
+   "d": "2026-11-06",
+   "c": "Candidats",
+   "t": "Lisnard : dans un court essai sur l'intelligence artificielle cosigné avec Romain Marsily (JDNews, 4 novembre, repris par Nouvelle Énergie), propose d'imposer la réversibilité dans la commande publique et réaffirme le remplacement du principe de précaution par un principe de responsabilité dans la Constitution (déjà recensé en écologie) ; entrée ajoutée (numérique). Notes d'axes inchangées. Nouvelle Énergie affiche 112 747 adhérents au 5 novembre. Mélenchon : sortie en librairie le 6 novembre de la 5e édition de « L'Avenir en commun » (1 069 mesures, dont 238 nouvelles et 118 modifiées), présentée au Bourget le 7 novembre ; détail des nouvelles mesures non encore consultable, état du programme mis à jour. Aucune autre mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-11-06",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'Ifop pour LCI (27-29 octobre) ; rapport complet de cette enquête toujours non trouvé. Aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-06",
+   "c": "Communication",
+   "t": "Argumentaire numérique réécrit (principe de responsabilité, réversibilité dans la commande publique). Fiches de ralliement, champ « réalité » et vulnérabilités inchangés"
+  },
+  {
+   "d": "2026-11-05",
+   "c": "Candidats",
+   "t": "Lisnard : Nouvelle Énergie fait certifier par un commissaire de justice 100 517 adhérents le 4 novembre et invite ses concurrents à la même transparence (Le Figaro, relayé par le site du mouvement) ; meeting annoncé à Lyon le 13 décembre 2026. Aucune nouvelle mesure ni position thématique relevée ; notes d'axes, argumentaire et fiches de ralliement inchangés. Autres candidats suivis : aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé depuis le 4 novembre (propos de Villepin et de Retailleau du 3 novembre déjà consignés) ; nouvelle édition du programme de LFI attendue le 6 novembre"
+  },
+  {
+   "d": "2026-11-05",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'Ifop pour LCI (27-29 octobre) ; rapport complet et notice de cette enquête toujours non trouvés. Aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-04",
+   "c": "Candidats",
+   "t": "Lisnard, sur BFMTV le 3 novembre : promet, s'il est élu, un « gouvernement commando » resserré aux missions fixées sur les 200 premiers jours, une session extraordinaire du Parlement à l'été 2027 et le remplacement des ministres dont les chantiers ne seraient pas engagés au bout de 200 jours ; se dit le plus proche de Bruno Retailleau tout en relevant sa participation aux gouvernements Macron (AFP) ; dit avoir obtenu les 500 parrainages (Midi Libre, via un agrégateur) : statut mis à jour. Entrées ajoutées (institutions). Notes d'axes inchangées"
+  },
+  {
+   "d": "2026-11-04",
+   "c": "Candidats",
+   "t": "Retailleau, sur BFMTV (« Vous Président », 3 novembre) : fin de la semaine de 35 heures avec 30 minutes de travail en plus par jour pour un 13e voire 14e mois, plafonnement des aides sociales à 70 % du SMIC, pas de hausse du SMIC (entreprise-travail) ; défense du régime par répartition (retraites) ; primaire jugée probable en début 2027, sinon il ira « jusqu'au bout », trois débats proposés à Philippe, Attal et Lisnard (institutions). Sources d'agrégateur à vérifier pour les deux premiers points. Notes d'axes inchangées. Dominique de Villepin (France Inter, 3 novembre) dit qu'il sera candidat sans l'officialiser : non ajouté. Gérald Darmanin appelle Attal et Retailleau à se rassembler derrière Édouard Philippe. Aucune autre mesure, candidature, retrait, désistement ni ralliement relevé ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"
+  },
+  {
+   "d": "2026-11-04",
+   "c": "Sondages",
+   "t": "Nouvelle enquête Ifop pour LCI (terrain 27-29 octobre, publiée le 3 novembre), 4 hypothèses : Lisnard 7 % contre 4 % pour Retailleau (H1, avec Philippe et Attal), 7,5 % contre 5 % (H2, sans Philippe), 9 % sans Attal ni Retailleau (H4). Rapport et notice officiels non encore disponibles : scores repris d'un agrégateur (à vérifier). Aucun duel publié ; aucune mesure de solidité du choix ni de composition de l'électorat de Lisnard. L'enquête Cluster17 pour Le Point (14-15 octobre) passe dans l'historique"
+  },
+  {
+   "d": "2026-11-04",
+   "c": "Communication",
+   "t": "Argumentaire institutions réécrit (gouvernement commando, 200 premiers jours, session extraordinaire à l'été 2027). Champ « réalité » et fiche Retailleau mis à jour : Lisnard devance désormais Retailleau dans sept hypothèses sur quatorze testant les deux depuis la mi-octobre (quatre cas inverses, trois égalités) ; déclarations croisées du 3 novembre ajoutées. Vulnérabilité « Score dans les sondages » complétée. Autres fiches inchangées"
+  },
+  {
+   "d": "2026-11-03",
+   "c": "Candidats",
+   "t": "Lisnard : répondant le 1er novembre aux critiques de Jean-François Copé (ambiguïté envers le RN) et de Marc Fesneau (MoDem), qui souhaite l'exclure d'une primaire allant des sociaux-démocrates à la droite (La Tribune Dimanche), il déclare qu'il ne gouvernerait « ni avec les macronistes ni avec le RN » et maintient sa demande de primaire ouverte de la droite et du centre (Entrevue, 2 novembre) ; entrée ajoutée (institutions). Notes d'axes inchangées. Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"
+  },
+  {
+   "d": "2026-11-03",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-03",
+   "c": "Communication",
+   "t": "Argumentaire institutions complété (ligne indépendante : ni macronistes ni RN, primaire ouverte de la droite et du centre). Vulnérabilité « Score dans les sondages » complétée par les critiques de J.-F. Copé et M. Fesneau et sa réponse. Fiches de ralliement et champ « réalité » inchangés"
+  },
+  {
+   "d": "2026-11-02",
+   "c": "Candidats",
+   "t": "Lisnard : positions sur l'énergie relevées dans une newsletter spécialisée (1er novembre, à vérifier) : opposition au dernier appel d'offres pour 11 parcs éoliens en mer, dont il estime le coût à 82 Md€ et qu'il ne financerait pas ; soutien à l'autoconsommation, au solaire sur les bâtiments agricoles et à l'hydroélectricité ; retour sur l'interdiction des voitures thermiques neuves en 2035 ; levée de l'interdiction de l'exploration d'hydrocarbures (écologie). Nouvelle Énergie revendique 100 000 adhérents (31 octobre, Dijon Actualités). Notes d'axes inchangées"
+  },
+  {
+   "d": "2026-11-02",
+   "c": "Candidats",
+   "t": "Édouard Philippe, au 20 heures de TF1 le 1er novembre : rejette la « primaire des démocrates » proposée par Gabriel Attal et préconise un rassemblement de la droite et du centre aux modalités fixées en février (institutions) ; maintient son analyse sur la présence de jeunes issus de l'immigration parmi les auteurs des pillages d'octobre (immigration). Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"
+  },
+  {
+   "d": "2026-11-02",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-02",
+   "c": "Communication",
+   "t": "Argumentaire réécrit sur le thème écologie-énergie (hydroélectricité, autoconsommation solaire, refus de financer le nouvel appel d'offres d'éolien en mer, retour sur l'interdiction des thermiques en 2035). Fiche Dupont-Aignan : convergence énergie complétée. Autres fiches, champ « réalité » et vulnérabilités inchangés"
+  },
+  {
+   "d": "2026-11-01",
+   "c": "Candidats",
+   "t": "Lisnard : autres propositions de l'émission « Objectif Élysée 2027 » (CNews-Europe 1, 27 octobre), non encore recensées, ajoutées d'après Capital (28 octobre) et le compte rendu de Nouvelle Énergie : CSG sur les revenus d'activité ramenée de 9,2 % à 6,6 % (fiscalité) ; non-revalorisation des pensions supérieures à 2 200 € citée en exemple de piste d'économies (retraites) ; réduction des prestations non contributives versées aux étrangers, 2 à 3 Md€ visés la 1re année (immigration) ; principe « casseurs-payeurs » (sécurité) ; transparence algorithmique, financement des entreprises françaises d'IA et de robotique, apprentissages sans machine à l'école (numérique). Selon Nouvelle Énergie, il publie le 28 octobre chez Fayard un livre co-écrit sur l'IA avec Romain Marsily. Positions conformes à son orientation ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-11-01",
+   "c": "Candidats",
+   "t": "Édouard Philippe est annoncé au 20 heures de TF1 le 1er novembre, sur la primaire et la mobilisation sociale (TF1 Info, relayé par un blog). Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis ; nouvelle édition du programme de LFI toujours attendue le 6 novembre"
+  },
+  {
+   "d": "2026-11-01",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre (dernières notices de la Commission des sondages, jusqu'au 30 octobre : baromètres et enquêtes thématiques) ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-11-01",
+   "c": "Communication",
+   "t": "Argumentaire réécrit sur les thèmes fiscalité (baisse de la CSG sur les revenus d'activité), retraites (mention « sans baisser les pensions » retirée, au vu de la piste de non-revalorisation au-delà de 2 200 €) et numérique (financement de l'IA et de la robotique, transparence algorithmique). Vulnérabilité « Retraite par capitalisation » complétée par cette piste. Thèmes immigration et sécurité inchangés (textes toujours exacts) ; fiches de ralliement et champ « réalité » inchangés"
+  },
+  {
+   "d": "2026-10-31",
+   "c": "Candidats",
+   "t": "Lisnard : sur CNews le 27 octobre (AFP, 28 octobre), appelle Éric Ciotti (UDR) à se séparer du RN et à le rejoindre, et juge l'abaissement de l'âge de départ à 62 voire 60 ans promis par le RN incompatible avec la baisse des dépenses ; entrées ajoutées (institutions, retraites). Il annonce un meeting le 13 décembre à Eurexpo, près de Lyon (Entrevue, 31 octobre). Notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-31",
+   "c": "Candidats",
+   "t": "AMF : selon l'AFP (29 octobre), Philippe Laurent (UDI), candidat face à Lisnard à la présidence de l'AMF lors du congrès du 24 au 26 novembre, et Marc Fesneau (MoDem) critiquent le cumul avec la candidature présidentielle. Aucune nouvelle mesure, candidature, retrait, désistement ni ralliement relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-31",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-10-31",
+   "c": "Communication",
+   "t": "Vulnérabilités : la ligne sur le plateau de Millevaches mentionne la candidature concurrente de Philippe Laurent à l'AMF et les critiques de Marc Fesneau sur le cumul (AFP, 29 octobre). Argumentaire, fiches de ralliement et champ « réalité » inchangés (la position de Lisnard sur les retraites ne change pas)"
+  },
+  {
+   "d": "2026-10-30",
+   "c": "Candidats",
+   "t": "Lisnard : une cinquantaine d'élus du Limousin lui demandent, par lettre ouverte rendue publique le 29 octobre, de retirer ses propos tenus sur RTL le 20 octobre sur des « camps d'entraînement terroristes » du plateau de Millevaches et de choisir entre la présidence de l'AMF et sa candidature (Radio Totem). Aucune nouvelle mesure ; positions et notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-30",
+   "c": "Candidats",
+   "t": "Primaire : selon 21News (29 octobre), Retailleau veut une consultation ouverte à la droite et au centre, sans Éric Zemmour, et jugée peu légitime sans Édouard Philippe ; Lisnard se dit ouvert à une consultation pour désigner un candidat unique ; Philippe reste réticent ; aucune date fixée ; pétition d'Hervé Morin pour une primaire. Aucun désistement ni ralliement. Aucune nouvelle mesure, candidature ni retrait relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-30",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre (les notices déposées du 27 au 29 octobre portent sur d'autres sujets) ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-10-30",
+   "c": "Communication",
+   "t": "Vulnérabilités : ajout d'une ligne sur les propos du 20 octobre concernant le plateau de Millevaches et la lettre ouverte d'élus du Limousin (29 octobre). Argumentaire, fiches de ralliement et champ « réalité » inchangés"
+  },
+  {
+   "d": "2026-10-29",
+   "c": "Candidats",
+   "t": "Lisnard (éducation, finances publiques) : sur CNews le 27 octobre, propose de recruter les nouveaux enseignants comme contractuels, de laisser les enseignants choisir leur statut et de ne pas remplacer les départs dans la fonction publique, en commençant par les fonctions administratives (Capital). Positions conformes à son orientation ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-29",
+   "c": "Candidats",
+   "t": "Primaire : Gabriel Attal propose sur TF1 le 28 octobre une « grande primaire des démocrates » (LCP). David Lisnard salue l'idée et appelle à aller vite ; l'entourage de Bruno Retailleau juge le projet « mort-né » (AFP, via Imaz Press) ; Édouard Philippe exclut toute primaire et propose une rencontre des dirigeants de la droite et du centre début novembre (TIME France). Aucun désistement ni ralliement ; notes d'axes inchangées. Aucune nouvelle mesure, candidature ni retrait relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-29",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Cluster17 pour Politico des 19-22 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement, composition de l'électorat) concernant Lisnard"
+  },
+  {
+   "d": "2026-10-29",
+   "c": "Communication",
+   "t": "Argumentaire réécrit sur les thèmes éducation (statut contractuel des nouveaux enseignants) et finances publiques (non-remplacement des départs administratifs). Fiche de ralliement Retailleau (pourquoi) complétée avec les réactions à la primaire proposée par G. Attal ; champ « réalité » inchangé"
+  },
+  {
+   "d": "2026-10-28",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Cluster17 pour Politico (19-22 octobre, 3 000 adultes, 3 hypothèses, sans duel ; publiée le 26 octobre, notice de la Commission des sondages non trouvée à cette date). David Lisnard, testé dans la seule hypothèse avec François Hollande et sans Raphaël Glucksmann, recueille 8 %, devant Bruno Retailleau (7 %) dans la même hypothèse ; 25 % des électeurs de V. Pécresse en 2022 et 31 % des électeurs LR aux européennes 2024 le choisiraient. L'enquête Elabe des 14-16 octobre sort de la liste et passe dans l'historique de Lisnard (5,5 et 6,5 %)"
+  },
+  {
+   "d": "2026-10-28",
+   "c": "Opinions",
+   "t": "L'enquête Cluster17 pour Politico ne publie ni solidité du choix, ni motifs de changement, ni composition de l'électorat de Lisnard (seulement la part de chaque groupe qui le choisit, portée en note de l'enquête, sur une seule hypothèse) ; sa question sur les attentes envers le prochain président diffère de celle de Toluna Harris Interactive. Blocs inchangés"
+  },
+  {
+   "d": "2026-10-28",
+   "c": "Candidats",
+   "t": "Lisnard et Retailleau : selon une dépêche AFP (27 octobre), Retailleau, lors d'un débat à HEC, doute de l'utilité d'une primaire entre eux, jugeant leurs idées très proches ; Lisnard déclare sur CNews que, d'après les sondages, ce n'est pas à lui de se retirer. Aucun désistement ni ralliement ; positions et notes d'axes inchangées. Aucune nouvelle mesure, candidature, désistement ni ralliement relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-28",
+   "c": "Communication",
+   "t": "Ralliements : champ « réalité » et fiche Retailleau mis à jour (douze hypothèses d'octobre testant les deux : quatre en faveur de Retailleau, cinq en faveur de Lisnard, trois égalités). Segment « droite tentée par Retailleau » actualisé (sept hypothèses en cours : Retailleau 4 à 7 %, Lisnard 5,5 à 8 %). Argumentaire inchangé"
+  },
+  {
+   "d": "2026-10-27",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Ipsos bva pour Le Parisien et CESI (21-22 octobre, 4 hypothèses, sans duel ; notice n° 10338). David Lisnard, testé pour la première fois dans ce baromètre, recueille 6,5 % dans l'hypothèse où Philippe et lui sont candidats, devant Bruno Retailleau (5,5 %) dans la même hypothèse. L'enquête YouGov des 12-15 octobre sort de la liste et passe dans l'historique de Lisnard (4 %)"
+  },
+  {
+   "d": "2026-10-27",
+   "c": "Opinions",
+   "t": "L'enquête Ipsos bva ne publie ni solidité du choix, ni motifs de changement, ni profil de l'électorat de Lisnard (seule donnée : 26 % des électeurs de Valérie Pécresse en 2022 le choisiraient, portée en note de l'enquête) ; onglet inchangé"
+  },
+  {
+   "d": "2026-10-27",
+   "c": "Candidats",
+   "t": "Tondelier : sur France 2 le 26 octobre, se dit prête à retirer sa candidature au profit d'une candidature commune de la gauche, à condition que l'écologie soit au cœur du projet ; décision renvoyée au vote militant du 10 au 13 décembre (Orange Actu d'après L'Express). Statut mis à jour ; positions et notes inchangées. Aucune nouvelle mesure de David Lisnard relevée ; aucune nouvelle mesure, candidature, désistement ni ralliement pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-27",
+   "c": "Communication",
+   "t": "Ralliements : champ « réalité » et fiche Retailleau mis à jour (onze hypothèses d'octobre testant les deux : quatre en faveur de Retailleau, quatre en faveur de Lisnard, trois égalités). Segments « droite tentée par Retailleau » et « centre droit tenté par Philippe » et vulnérabilité « score » actualisés avec les fourchettes des enquêtes en cours. Argumentaire inchangé ; aucun ralliement ni désistement concernant Lisnard"
+  },
+  {
+   "d": "2026-10-26",
+   "c": "Candidats",
+   "t": "Lisnard et Retailleau (institutions) : selon Robert Ménard, cité par Le JDD (25 octobre), les deux hommes se sont engagés à ne pas être candidats tous les deux, un seul devant rester d'ici avril 2027. Désaccords sur la primaire : Lisnard la veut ouverte à tous les candidats de droite et sans obligation de soutenir le vainqueur ; Retailleau la juge sans objet sans Édouard Philippe et propose une charte de ralliement. Aucun désistement ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-26",
+   "c": "Candidats",
+   "t": "Le Pen (institutions, retraites) : lors du lancement de campagne à Orléans le 25 octobre, annonce en cas de victoire un gouvernement « ouvert et pluraliste », d'union nationale, avec Jordan Bardella à Matignon, et la présentation de sa réforme des retraites le 17 novembre (Public Sénat). Aucune autre mesure détaillée relevée ; notes d'axes inchangées. Aucune nouvelle mesure, candidature, désistement ni ralliement relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-26",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Toluna Harris Interactive des 19-21 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement) concernant Lisnard"
+  },
+  {
+   "d": "2026-10-26",
+   "c": "Communication",
+   "t": "Ralliements : champ « réalité » et fiche Retailleau (pourquoi, risque) complétés avec l'engagement rapporté par Robert Ménard et les points de désaccord sur la primaire. Argumentaire, segments et vulnérabilités inchangés"
+  },
+  {
+   "d": "2026-10-25",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Toluna Harris Interactive des 19-21 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement) concernant Lisnard"
+  },
+  {
+   "d": "2026-10-25",
+   "c": "Candidats",
+   "t": "Congrès du Rassemblement national à Orléans les 24 et 25 octobre, avec un premier meeting de campagne de Marine Le Pen prévu le 25 octobre après-midi ; aucune mesure nouvelle publiée à ce stade, positions inchangées. Aucune nouvelle mesure, candidature, désistement ni ralliement relevé pour les autres candidats suivis"
+  },
+  {
+   "d": "2026-10-25",
+   "c": "Communication",
+   "t": "Vulnérabilités : la ligne sur le score dans les sondages mentionne l'appel d'Éric Ciotti (21 octobre) à Lisnard et Retailleau de se rallier à Marine Le Pen (21News). Argumentaire et fiches de ralliement inchangés"
+  },
+  {
+   "d": "2026-10-24",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Toluna Harris Interactive pour M6 et RTL (19-21 octobre, 5 hypothèses, 3 duels). David Lisnard, testé pour la première fois dans ce baromètre, recueille 7 % (avec Philippe) et 8 % (avec Attal), devant Bruno Retailleau dans ces mêmes hypothèses (4 et 5 %). L'enquête OpinionWay Presitrack des 13-14 octobre, qui ne testait pas Lisnard, sort de la liste ; historique inchangé"
+  },
+  {
+   "d": "2026-10-24",
+   "c": "Opinions",
+   "t": "Priorités et critères de choix remplacés par la vague 8 du baromètre Toluna Harris Interactive (19-21 octobre), mêmes questions : pouvoir d'achat 56 %, immigration 38 %, santé 36 %. Libellés des sous-groupes partisans attribués selon l'ordre du rapport, à vérifier. Le même rapport publie un potentiel électoral de Lisnard (6 % de notes 10, 43 % de notes 0), signalé dans le bloc Solidité du choix comme mesure distincte ; aucune mesure de solidité du choix ni de motifs de changement concernant son électorat"
+  },
+  {
+   "d": "2026-10-24",
+   "c": "Candidats",
+   "t": "Lisnard et Retailleau (institutions) : déjeuner le 21 octobre, à l'initiative de Robert Ménard, sur une candidature commune ; Lisnard réclame une primaire ouverte avant la fin de l'année, Retailleau serait prêt à en discuter, selon la presse, sans calendrier ni règles acceptés (Entrevue, Parlons Politique). Aucun accord ni désistement ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-24",
+   "c": "Communication",
+   "t": "Ralliements : champ « réalité » et fiche Retailleau mis à jour (sur dix hypothèses d'octobre testant les deux : quatre en faveur de Retailleau, trois en faveur de Lisnard, trois égalités ; mention du déjeuner du 21 octobre). Argumentaire inchangé"
+  },
+  {
+   "d": "2026-10-23",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête OpinionWay pour CNEWS (21-22 octobre, hypothèse unique, 3 duels) : David Lisnard recueille 6 %, à égalité avec Bruno Retailleau, contre 4 % dans la même hypothèse des 13-14 octobre (même liste de candidats). L'enquête OpinionWay pour CNEWS des 13-14 octobre sort de la liste et passe dans l'historique de Lisnard (4 %)"
+  },
+  {
+   "d": "2026-10-23",
+   "c": "Opinions",
+   "t": "L'enquête OpinionWay du 21-22 octobre ventile les duels de second tour selon le vote Lisnard (base très réduite), portés en note de l'enquête ; aucune mesure de solidité du choix ni de motifs de changement concernant Lisnard ; onglet inchangé"
+  },
+  {
+   "d": "2026-10-23",
+   "c": "Candidats",
+   "t": "Lisnard (sécurité) : sur ICI Azur le 22 octobre, propose d'isoler les casseurs des manifestations dans des centres fermés, en comparaison avec les hooligans ; position ajoutée au thème Sécurité, notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-23",
+   "c": "Candidats",
+   "t": "Philippe (Charleville-Mézières, 21 octobre ; Journal du Net) : précise sa politique familiale (allocation unique dégressive dès le 1er enfant, réduction d'impôt jusqu'à 3 000 € pendant trois ans, garantie d'une place de garde) et propose des peines minimales pour les violences en manifestation, la reconnaissance faciale et l'élargissement des pouvoirs des polices municipales ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-23",
+   "c": "Communication",
+   "t": "Argumentaire : texte du thème Sécurité réécrit pour intégrer la proposition du 22 octobre (centres fermés pour les casseurs). Ralliements : champ « réalité » et fiche Retailleau mis à jour (quatre hypothèses sur huit en octobre, trois égalités dont OpinionWay du 21-22 octobre). Segment RN (Le Pen 31 à 36 %) et vulnérabilité sur l'échange du 19 octobre actualisés (lettre ouverte de 61 maires, Algérie360, 22 octobre). Aucun ralliement ni désistement concernant Lisnard relevé"
+  },
+  {
+   "d": "2026-10-22",
+   "c": "Candidats",
+   "t": "Philippe (BFMTV, « Grand Oral 2027 », 18 octobre) : propose de travailler deux heures de plus par semaine, un calendrier scolaire avec plus de semaines et moins d'heures de cours, une loi « casseur-payeur » ; un référendum sur l'immigration n'est « ni un totem ni un tabou ». Positions ajoutées aux thèmes Entreprises, Éducation, Sécurité et Immigration ; notes d'axes inchangées"
+  },
+  {
+   "d": "2026-10-22",
+   "c": "Candidats",
+   "t": "Retailleau (institutions) : demande au gouvernement de déplacer le second tour, fixé au 2 mai 2027, par crainte de troubles liés au 1er-Mai (BFMTV, 19 octobre ; Journal du Net)"
+  },
+  {
+   "d": "2026-10-22",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote publiée depuis l'enquête Ifop-Fiducial du 17-19 octobre ; aucune nouvelle mesure d'opinion (solidité du choix, motifs de changement) concernant Lisnard"
+  },
+  {
+   "d": "2026-10-22",
+   "c": "Communication",
+   "t": "Aucune nouvelle mesure ni position de David Lisnard relevée (réunions publiques en Gironde, Vaucluse, Isère et à Aix-en-Provence le 22 octobre) ; aucun ralliement ni désistement. Argumentaire, fiches de ralliement et champ « réalité » inchangés"
+  },
+  {
+   "d": "2026-10-21",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Ifop-Fiducial pour LCI, Le Figaro et Sud Radio (17-19 octobre, 8 hypothèses, 5 duels) : David Lisnard recueille 5,5 %, à égalité avec Bruno Retailleau, dans l'hypothèse où Ruffin, Villepin et lui sont candidats, et 7 % dans l'hypothèse où il est le seul candidat de droite. L'enquête Ifop des 12-14 octobre sort de la liste et passe dans l'historique de Lisnard (6 %)"
+  },
+  {
+   "d": "2026-10-21",
+   "c": "Opinions",
+   "t": "L'enquête Ifop du 17-19 octobre ne contient ni question de solidité du choix ni profil de l'électorat de Lisnard ; onglet inchangé"
+  },
+  {
+   "d": "2026-10-21",
+   "c": "Candidats",
+   "t": "Le Pen (sécurité) : après les violences du 17 octobre, propose la règle du « casseur/payeur » et le rétablissement de l'ordre républicain ; Retailleau (sécurité) : demande l'instauration de l'état d'urgence (Europe 1, 18 octobre)"
+  },
+  {
+   "d": "2026-10-21",
+   "c": "Candidats",
+   "t": "Lisnard : sur LCI le 19 octobre, répond sèchement à une question sur le 17 octobre 1961, propos critiqués par des responsables de LFI et du PS (Le JDD, 20 octobre) ; aucune nouvelle mesure. Nouvelle Énergie annonce une réunion publique à Longchamp (Vosges) le 31 octobre"
+  },
+  {
+   "d": "2026-10-21",
+   "c": "Communication",
+   "t": "Ralliements : champ « réalité » et fiche Retailleau mis à jour (Retailleau devant dans quatre hypothèses sur sept en octobre, deux égalités dont l'enquête Ifop du 17-19 octobre). Segment « droite tentée par Retailleau » et vulnérabilité « score » actualisés ; nouvelle vulnérabilité sur l'échange du 19 octobre. Argumentaire inchangé ; aucun ralliement ni désistement concernant Lisnard relevé"
+  },
+  {
+   "d": "2026-10-20",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête Cluster17 pour Le Point (14-15 octobre, 5 hypothèses, sans duel) : David Lisnard recueille 7 %, à égalité avec Bruno Retailleau, dans l'hypothèse où Philippe, Retailleau et lui sont candidats, et 17 % dans l'hypothèse où il est le seul candidat du bloc central et de LR. L'enquête Toluna Harris Interactive (5-8 octobre), qui ne testait pas Lisnard, sort de la liste"
+  },
+  {
+   "d": "2026-10-20",
+   "c": "Opinions",
+   "t": "Cluster17 publie un profil de l'électorat de Lisnard (positionnement, vote 2022, priorités : immigration 54 %, cotisations 38 %, insécurité 37 %) et une question sur les qualités présidentielles (20 % pour Lisnard) ; portés en note de l'enquête, le bloc de l'onglet Opinions (part de chaque groupe votant Lisnard, Elabe) mesurant une autre question. Aucune mesure de solidité du choix ni de motifs de changement concernant Lisnard"
+  },
+  {
+   "d": "2026-10-20",
+   "c": "Candidats",
+   "t": "Lisnard (sécurité) : invité du 20 heures de TF1 le 19 octobre, se dit favorable à l'interdiction des manifestations présentant un risque grave pour l'ordre public et à une meilleure sanction des auteurs de dégradations (Capital)"
+  },
+  {
+   "d": "2026-10-20",
+   "c": "Communication",
+   "t": "Argumentaire : texte du thème Sécurité réécrit pour intégrer la position du 19 octobre. Ralliements : champ « réalité » et fiche Retailleau mis à jour (Retailleau devant dans quatre hypothèses sur six, une égalité dans l'enquête Cluster17). Aucun ralliement ni désistement concernant Lisnard relevé"
+  },
+  {
+   "d": "2026-10-19",
+   "c": "Méthode",
+   "t": "Nouvel axe « Défense et effort militaire » (désarmement à réarmement) : le thème Défense y est rattaché au lieu de l'axe Europe et souveraineté, qui ne mesurait pas l'effort militaire ; le thème Politique étrangère n'est plus rattaché à un axe. Notes établies à partir des positions recensées ; les candidats dont les positions ne portent que sur l'OTAN ou l'Europe de la défense restent non documentés sur cet axe."
+  },
+  {
+   "d": "2026-10-19",
+   "c": "Sondages",
+   "t": "Ajout de l'enquête YouGov pour Le HuffPost (12-15 octobre, 5 hypothèses, 6 duels) : David Lisnard, testé dans une seule hypothèse, y recueille 4 % (Retailleau 5 %) ; aucune question de solidité du choix ni de motifs de vote. L'enquête Odoxa-Backbone (24 septembre - 7 octobre), qui ne testait pas Lisnard, sort de la liste"
+  },
+  {
+   "d": "2026-10-19",
+   "c": "Communication",
+   "t": "Ralliements : champ « réalité » et fiche Retailleau mis à jour, Retailleau devançant Lisnard dans quatre des cinq hypothèses d'octobre testant les deux ; aucune nouvelle mesure, ni ralliement ou désistement concernant Lisnard relevé ; argumentaire inchangé"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Communication",
+   "t": "Ajout de l'argumentaire « Pourquoi Nouvelle Énergie est mieux », thème par thème, dans les vues Par thème et Par candidat ; affichage désactivable pour une lecture neutre"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Présentation",
+   "t": "Nouvelle présentation (fond clair, police plus lisible, écart à Lisnard en cinq niveaux), page d'accueil avec mode d'emploi, et section « Ralliements » dans l'onglet Communication : arguments pour obtenir le désistement de cinq candidats en faveur de Lisnard"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Candidats",
+   "t": "Lisnard (sécurité) : sur BFMTV-RMC le 13 octobre, propose de revoir l'excuse de minorité et des travaux d'intérêt général pour les jeunes auteurs de violences ; aucun nouveau sondage ni ralliement relevé depuis l'enquête Elabe du 16 octobre"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Tous",
+   "t": "Aucun changement significatif"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Sondages",
+   "t": "Ajout de trois enquêtes ne testant pas Lisnard : OpinionWay Presitrack pour Les Échos et Radio Classique (13-14 octobre, 3 hypothèses), Toluna Harris Interactive pour M6 et RTL (5-8 octobre, 5 hypothèses, 2 duels), Odoxa-Backbone (24 septembre - 7 octobre, 2 hypothèses, 2 duels)"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Opinions",
+   "t": "Odoxa : 19 % des Français jugent David Lisnard bon candidat pour son camp (78 % mauvais), mesure portée en note de l'enquête ; aucune nouvelle mesure de solidité du choix ni de motifs de changement le concernant"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Candidats",
+   "t": "Lisnard : dit disposer de 500 promesses de parrainage (Ouest-France, 14 octobre, d'après le site de Nouvelle Énergie)"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Candidats",
+   "t": "Ralliement : François Fillon annonce son soutien à Bruno Retailleau le 17 octobre à Avignon (CNews, Entrevue)"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Communication",
+   "t": "Segment Retailleau : mention du soutien de François Fillon dans le champ « pourquoi »"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Opinions",
+   "t": "Nouvel onglet Opinions et motivations : priorités et critères de vote (Harris, 5-8 octobre), solidité du choix (Elabe), composition de l'électorat de Lisnard (Elabe)"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Sondages",
+   "t": "Elabe 14-16 octobre vérifié sur le rapport de l'institut : correction du cas 2 (Mélenchon 16 %, Roussel 2 %) et ajout du cas 6"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Communication",
+   "t": "Chiffres des segments mis à jour d'après les hypothèses de sondage d'octobre et le nouvel indice de proximité"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Méthode",
+   "t": "Source et date ajoutées à chaque position ; indice de proximité calculé sur les seuls axes documentés (3 au minimum), couverture affichée"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Sondages",
+   "t": "Ajout de l'Elabe du 14-16 octobre (Lisnard 5,5 et 6,5 %) et de l'OpinionWay du 13-14 octobre (4 %) ; suppression de la courbe qui mélangeait des hypothèses différentes"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Communication",
+   "t": "Ajout de l'onglet de suggestions de communication pour l'équipe de David Lisnard (7 segments, 5 points de vulnérabilité)"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Sondages",
+   "t": "Ajout de l'onglet sondages : série des intentions de vote de David Lisnard (9 enquêtes) et dernier Ifop-Fiducial"
+  },
+  {
+   "d": "2026-10-18",
+   "c": "Tous",
+   "t": "Mise en ligne : 35 candidatures, 15 thèmes, grille de proximité avec David Lisnard"
+  }
+ ]
 };

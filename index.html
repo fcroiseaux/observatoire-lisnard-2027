@@ -578,13 +578,13 @@ function renderPolls(){
   const behind=gR.filter(x=>x<0).length;
   const ranks=LH.map(o=>ranked(o.hy).findIndex(([k])=>k==="lisnard")+1);
   const insts=[...new Set(LH.map(o=>o.p.inst))];
-  $("#sondLead").textContent=`En octobre 2026, David Lisnard est testé dans ${LH.length} hypothèses de ${insts.length} enquêtes : entre ${fr(Math.min(...vals))} et ${fr(Math.max(...vals))} % selon l'hypothèse, derrière Bruno Retailleau dans ${behind} cas sur ${gR.length}.`;
+  $("#sondLead").textContent=`Dans les enquêtes détaillées ci-dessous, David Lisnard est testé dans ${LH.length} hypothèses de ${insts.length} enquêtes : entre ${fr(Math.min(...vals))} et ${fr(Math.max(...vals))} % selon l'hypothèse, derrière Bruno Retailleau dans ${behind} cas sur ${gR.length}.`;
   const f=LH[0];
   $("#kpis").innerHTML=[
     ["Dernière enquête",LH.filter(o=>o.p===f.p).map(o=>fr(o.hy.scores.lisnard)).join(" et ")+" %",`${f.p.inst}, ${f.p.terrain}`,true],
     ["Écart avec Retailleau",`${gR.map(x=>(x>0?"+":"")+fr(x)).join(" / ")} pt`,"dans chacune des hypothèses testant les deux"],
     ["Rang de Lisnard",`${Math.min(...ranks)}e à ${Math.max(...ranks)}e`,"parmi les candidats testés"],
-    ["Second tour","non testé","aucune enquête publiée"]
+    (()=>{const d=P.polls.flatMap(p=>(p.duels||[]).filter(r=>r[0]==="lisnard"||r[2]==="lisnard").map(r=>({p,r})))[0];if(!d)return ["Second tour","non testé","aucune enquête publiée"];const a=d.r[0]==="lisnard";return ["Second tour",(a?fr(d.r[1])+" – "+fr(d.r[3]):fr(d.r[3])+" – "+fr(d.r[1]))+" %",`Lisnard face à ${byId(a?d.r[2]:d.r[0]).n} (${d.p.inst}, ${d.p.terrain})`]})()
   ].map(([l,v,s,a])=>`<div class="kpi"><div class="l">${l}</div><div class="v ${a?"acc":""}" style="font-size:${String(v).length>12?"22px":""}">${esc(v)}</div><div class="s">${esc(s)}</div></div>`).join("");
   $("#lisTable").innerHTML=`<table><thead><tr><th>Institut</th><th>Terrain</th><th>Hypothèse</th><th class="num">Lisnard</th><th class="num">Rang</th><th class="num">Écart avec Retailleau</th><th class="num">Écart avec le 2e</th></tr></thead><tbody>${LH.map(o=>{const rk=ranked(o.hy),l=o.hy.scores.lisnard,r=o.hy.scores.retailleau,i=rk.findIndex(([k])=>k==="lisnard")+1;return `<tr class="hrow" data-k="${o.key}" style="cursor:pointer"><td>${esc(o.p.inst)}</td><td>${esc(o.p.terrain)}</td><td>${esc(o.hy.label)}</td><td class="num"><b>${fr(l)} %</b></td><td class="num">${i}e</td><td class="num">${r!=null?((l-r)>0?"+":"")+fr(l-r)+" pt":"—"}</td><td class="num">${fr(l-rk[1][1])} pt</td></tr>`}).join("")}</tbody></table>`;
   if(!curH) curH=LH[0].key;
