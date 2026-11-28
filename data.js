@@ -1,5 +1,5 @@
 window.DATA={
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "THEMES": [
   {
    "k": "eco",
@@ -495,6 +495,21 @@ window.DATA={
      "Libération, « l’alliance avec Marine Tondelier « devrait pouvoir se faire », estime Mélenchon »",
      "https://www.liberation.fr/politique/elections/presidentielle-2027-lalliance-avec-marine-tondelier-devrait-pouvoir-se-faire-estime-melenchon-20261119_ER7TVKBPSZAYRLDDPPJDN2O52U/",
      "2026-11-19"
+    ],
+    "of27c": [
+     "Ouest-France, Mélenchon et la Chine (titre seul)",
+     "https://www.ouest-france.fr/politique/jean-luc-melenchon/en-cas-de-victoire-a-la-presidentielle-jean-luc-melenchon-entamera-immediatement-des-discussions-avec-la-chine-qualifiee-dalliee-634e9192-eaab-11f1-bb2d-c71dc7920c2a",
+     "2026-11-27"
+    ],
+    "bf27u": [
+     "BFMTV, Mélenchon écarte une sortie de l'UE (titre seul)",
+     "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-ecarte-une-sortie-de-la-france-de-l-ue-jamais-de-la-vie-vous-allez-devoir-nous-supporter-de-l-interieur-avec-nos-regles_VN-202611270899.html",
+     "2026-11-27"
+    ],
+    "bf27r": [
+     "BFMTV, Mélenchon et la révocation (titre seul)",
+     "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-si-les-francais-m-elisent-je-leur-donnerai-le-moyen-de-me-revoquer_VN-202611270888.html",
+     "2026-11-27"
     ]
    },
    "src": {
@@ -527,13 +542,15 @@ window.DATA={
     ],
     "eur": [
      "eu",
-     "lcp"
+     "lcp",
+     "bf27u"
     ],
     "etr": [
      "bam",
      "ely",
      "lcp",
-     "qz11m"
+     "qz11m",
+     "of27c"
     ],
     "imm": [
      "bs"
@@ -549,7 +566,8 @@ window.DATA={
     "inst": [
      "lcp",
      "lcp",
-     "lib19"
+     "lib19",
+     "bf27r"
     ],
     "num": [
      "fw",
@@ -589,13 +607,15 @@ window.DATA={
     ],
     "eur": [
      "[D] « désobéissance » aux règles européennes jugées contraires",
-     "[P] moratoire voté par le Parlement sur la libre circulation des marchandises et des capitaux, la concurrence appliquée aux services publics et les accords de libre-échange"
+     "[P] moratoire voté par le Parlement sur la libre circulation des marchandises et des capitaux, la concurrence appliquée aux services publics et les accords de libre-échange",
+     "[D] selon le titre d'un sujet de BFMTV (27 novembre, non lu), écarte toute sortie de la France de l'Union européenne"
     ],
     "etr": [
      "[D] canal direct avec Moscou sur les garanties de sécurité après les hostilités ; coopération avec la Chine",
      "[P] reconnaissance de l'État de Palestine, arrêt des ventes d'armes à Israël (à vérifier)",
      "[P] souveraineté de l'État de Palestine sur les territoires occupés depuis 1967, avec étude d'autres voies dont un État binational ; en Ukraine, cessez-le-feu, retrait russe et garanties collectives",
-     "[D] le 11 novembre, demande que la Russie évacue l'Ukraine et juge qu'aucune modification de frontières ne peut se faire sans consulter les populations concernées (AFP, d'après Quartz)"
+     "[D] le 11 novembre, demande que la Russie évacue l'Ukraine et juge qu'aucune modification de frontières ne peut se faire sans consulter les populations concernées (AFP, d'après Quartz)",
+     "[D] selon le titre d'un article d'Ouest-France (27 novembre, non lu), ouvrirait « immédiatement » en cas de victoire des discussions avec la Chine, qu'il qualifie d'« alliée » (déplacement à Berlin)"
     ],
     "imm": [
      "[D] statut légal pour tous les travailleurs sans papiers ; régularisation accélérée des familles"
@@ -611,7 +631,8 @@ window.DATA={
     "inst": [
      "[P] VIe République par une Constituante convoquée par référendum (article 11), proportionnelle, suppression du 49.3 (RIC non mentionné dans les comptes rendus consultés)",
      "[P] accession de la Kanaky-Nouvelle-Calédonie à l'indépendance au 1er janvier 2028, par référendum national",
-     "[D] le 19 novembre, estime que l'alliance proposée par Marine Tondelier « devrait pouvoir se faire » (titre de Libération)"
+     "[D] le 19 novembre, estime que l'alliance proposée par Marine Tondelier « devrait pouvoir se faire » (titre de Libération)",
+     "[D] selon le titre d'un sujet de BFMTV (27 novembre, non lu), promet aux Français, s'il est élu, un moyen de le révoquer"
     ],
     "num": [
      "[D] cloud public français ; gouvernance de l'IA confiée à l'ONU (2025)",
@@ -1332,6 +1353,11 @@ window.DATA={
      "Public Sénat, « La main tendue de Marine Tondelier à Mélenchon… »",
      "https://www.publicsenat.fr/actualites/politique/la-main-tendue-de-marine-tondelier-a-melenchon-peut-elle-faire-imploser-les-ecologistes",
      "2026-11-19"
+    ],
+    "fi26c": [
+     "franceinfo, « Conseil des territoires » (titre seul)",
+     "https://franceinfo.fr/elections/presidentielle/presidentielle-2027-depuis-la-mayenne-raphael-glucksmann-devoile-son-projet-de-conseil-des-territoires-pour-donner-plus-de-pouvoir-aux-elus-locaux_8300955.html",
+     "2026-11-26"
     ]
    },
    "src": {
@@ -1378,7 +1404,8 @@ window.DATA={
     "inst": [
      "v16",
      "pp08",
-     "ps19t"
+     "ps19t",
+     "fi26c"
     ],
     "num": [
      "ely"
@@ -1428,7 +1455,8 @@ window.DATA={
     "inst": [
      "[D] proportionnelle ; assemblées citoyennes ; vote à 16 ans",
      "[D] le 7 novembre, rejette l'idée d'un rapprochement avec le projet de David Lisnard prêtée à l'entourage d'Emmanuel Macron, jugeant que gauche et droite ne sont pas « solubles l'une dans l'autre »",
-     "[D] se dit déçu de la proposition de coalition de Marine Tondelier autour de Mélenchon, qu'il juge contraire à la tradition pro-européenne des Écologistes, et souhaite conduire la « révolution écologique » avec eux"
+     "[D] se dit déçu de la proposition de coalition de Marine Tondelier autour de Mélenchon, qu'il juge contraire à la tradition pro-européenne des Écologistes, et souhaite conduire la « révolution écologique » avec eux",
+     "[D] selon le titre d'un article de franceinfo (non lu), présente en Mayenne (26 novembre) un projet de « Conseil des territoires » destiné à donner plus de pouvoir aux élus locaux, sans détail vérifié"
     ],
     "num": [
      "[D] « Airbus du numérique » européen (à vérifier)"
@@ -2267,7 +2295,7 @@ window.DATA={
    "p": "Les Républicains",
    "b": "d",
    "st": "Désigné le 19/04/2026",
-   "pr": "11 thèmes sur 18 publiés ; plan budgétaire le 12/10/2026",
+   "pr": "12 thèmes sur 18 publiés en ligne (justice, sécurité, culture, santé, tourisme et écologie à venir) ; programme d'enseignement supérieur présenté le 27/11/2026 ; plan budgétaire le 12/10/2026",
    "s": [
     4,
     2,
@@ -2435,6 +2463,16 @@ window.DATA={
      "Public Sénat, « La participation d'Éric Zemmour flinguerait la primaire, estime Bruno Retailleau »",
      "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-la-participation-deric-zemmour-flinguerait-la-primaire-estime-bruno-retailleau",
      "2026-11-18"
+    ],
+    "ent27": [
+     "Entrevue (AFP), programme de Retailleau pour l'enseignement supérieur",
+     "https://entrevue.fr/education/enseignement-superieur-bruno-retailleau-veut-supprimer-parcoursup/",
+     "2026-11-27"
+    ],
+    "avp": [
+     "Projet de B. Retailleau, page des thèmes",
+     "https://www.avecretailleau.fr/projet",
+     "non daté"
     ]
    },
    "src": {
@@ -2459,7 +2497,8 @@ window.DATA={
     "edu": [
      "ed",
      "pse",
-     "psr16"
+     "psr16",
+     "ent27"
     ],
     "san": [
      "p12"
@@ -2528,7 +2567,8 @@ window.DATA={
     "edu": [
      "[P] fin du collège unique ; 1 000 écoles autonomes",
      "[D] examen d'entrée en 6e",
-     "[D] défend la sélection à l'université, l'école devant être le principal outil contre la reproduction sociale (débat des Restos du Cœur, 16 novembre)"
+     "[D] défend la sélection à l'université, l'école devant être le principal outil contre la reproduction sociale (débat des Restos du Cœur, 16 novembre)",
+     "[P] enseignement supérieur (27 novembre) : suppression de Parcoursup au profit d'une admission fondée surtout sur les résultats scolaires ; sélection dès la première année de licence ; année préparatoire pour les bacheliers jugés insuffisamment préparés ; droits d'inscription de 1 000 € en licence et 2 500 € en master ; bourses orientées davantage vers les classes moyennes ; 200 000 étudiants étrangers au plus ; pouvoirs renforcés des établissements face aux blocages"
     ],
     "san": [
      "[D] jour de carence non remboursable ; volet santé à venir"
@@ -2581,7 +2621,7 @@ window.DATA={
    "n": "David Lisnard",
    "p": "Nouvelle Énergie",
    "b": "d",
-   "st": "Déclaré le 31/03/2026 ; dit avoir obtenu les 500 parrainages (BFMTV, 03/11/2026, selon Midi Libre) ; soutenu le 26/11/2026 par huit députés LR (tribune dans Paris Match)",
+   "st": "Déclaré le 31/03/2026 ; dit avoir obtenu les 500 parrainages (BFMTV, 03/11/2026, selon Midi Libre) ; soutenu le 26/11/2026 par huit députés LR (tribune dans Paris Match) ; 15 à 20 sénateurs le soutiendraient selon la sénatrice Alexandra Borchio Fontimp (Public Sénat, 27/11/2026, chiffre non vérifié) ; meeting à Lyon annoncé le 13/12/2026",
    "pr": "Programme en ligne par thèmes ; discours de Bayeux (17/06/2026)",
    "s": [
     5,
@@ -2820,6 +2860,21 @@ window.DATA={
      "Ouest-France, « Ça n'a aucun sens » : sans Édouard Philippe à la primaire de la droite, David Lisnard n'y participera pas (titre seul, article non lu : accès bloqué)",
      "https://www.ouest-france.fr/politique/david-lisnard/ca-na-aucun-sens-sans-edouard-philippe-a-la-primaire-de-la-droite-david-lisnard-ny-participera-pas-70977960-e685-11f1-afa7-9a0bb82a33d1",
      "2026-11-22"
+    ],
+    "fm27": [
+     "Nouvelle Énergie, entretien au Figaro Magazine (sécurité, immigration)",
+     "https://www.unenouvelleenergie.fr/securite-immigration-david-lisnard-revele-son-programme-presidentiel-au-figaro-magazine/",
+     "2026-11-27"
+    ],
+    "bf27p": [
+     "BFMTV, son porte-parole Thomas Elexhauser sur la politique pénale (titre seul)",
+     "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-la-politique-penale-nous-promettons-la-creation-de-30-000-places-de-prison-et-5-000-postes-de-greffiers-et-juges-detaille-thomas-elexhauser-son-porte-parole_VN-202611270827.html",
+     "2026-11-27"
+    ],
+    "ps27s": [
+     "Public Sénat, soutiens de Lisnard au Sénat",
+     "https://www.publicsenat.fr/actualites/politique/de-15-a-20-senateurs-derriere-david-lisnard-qui-sont-les-soutiens-du-candidat-nouvelle-energie-au-senat",
+     "2026-11-27"
     ]
    },
    "src": {
@@ -2875,14 +2930,17 @@ window.DATA={
     ],
     "imm": [
      "im",
-     "ne28"
+     "ne28",
+     "fm27"
     ],
     "sec": [
      "se",
      "bf",
      "tf",
      "ic",
-     "ne28"
+     "ne28",
+     "fm27",
+     "bf27p"
     ],
     "ecol": [
      "vt",
@@ -2969,14 +3027,17 @@ window.DATA={
     ],
     "imm": [
      "[P] titres de séjour divisés par huit ; AME remplacée par une aide d'urgence ; fin de l'automaticité du droit du sol ; sortie de la CEDH en dernier recours",
-     "[D] réduire les prestations non contributives versées aux étrangers, avec un objectif de 2 à 3 Md€ d'économies la 1re année (CNews-Europe 1, 27 octobre)"
+     "[D] réduire les prestations non contributives versées aux étrangers, avec un objectif de 2 à 3 Md€ d'économies la 1re année (CNews-Europe 1, 27 octobre)",
+     "[D] moins de 100 000 titres de séjour par an et « green card » à la française ; délivrance des titres et acquisition de la nationalité rendues non automatiques ; déchéance de nationalité réexaminée pour les binationaux délinquants ; traitement de l'asile et rétention testés dans des « hubs » à l'étranger ; visas et aide au développement conditionnés à la reprise des ressortissants délinquants, notamment par l'Algérie ; référendum sur l'immigration (Le Figaro Magazine, 27 novembre)"
     ],
     "sec": [
      "[P] majorité pénale à 16 ans ; peines planchers pour les récidivistes ; interdiction des Frères musulmans",
      "[D] revoir l'excuse de minorité ; travaux d'intérêt général pour les jeunes auteurs de violences",
      "[D] interdire les manifestations présentant un risque grave pour l'ordre public ; mieux sanctionner les auteurs de dégradations",
      "[D] isoler les casseurs des manifestations dans des centres fermés, en comparant la mesure au traitement des hooligans",
-     "[D] principe « casseurs-payeurs » : rendre les auteurs de destructions financièrement responsables, avec des mécanismes de recouvrement des sommes dues (CNews-Europe 1, 27 octobre)"
+     "[D] principe « casseurs-payeurs » : rendre les auteurs de destructions financièrement responsables, avec des mécanismes de recouvrement des sommes dues (CNews-Europe 1, 27 octobre)",
+     "[D] code pénal des mineurs ; atténuation de peine liée à l'excuse de minorité plafonnée à 20 % (contre 50 %) ; création d'un délit de pillage ; recours accru aux drones pour identifier les auteurs de violences ; revalorisation des enquêteurs et transfert de tâches administratives à des civils ; accords avec des pays voisins, dont les Pays-Bas, pour y placer des détenus dangereux, puis construction de places de prison à terme (Le Figaro Magazine, 27 novembre)",
+     "[D] selon le titre d'un sujet de BFMTV (27 novembre, non lu), son porte-parole annonce la création de 30 000 places de prison et de 5 000 postes de greffiers et de juges"
     ],
     "ecol": [
      "[P] réacteurs prolongés, nouveaux EPR, petits réacteurs",
@@ -3513,7 +3574,7 @@ window.DATA={
    "p": "Rassemblement national",
    "b": "ed",
    "st": "Déclarée le 07/07/2026 (pourvoi en cassation)",
-   "pr": "Pas de programme ; plan de finances publiques le 06/10/2026 ; réforme des retraites présentée le 17/11/2026",
+   "pr": "Pas de programme ; plan de finances publiques le 06/10/2026 ; réforme des retraites présentée le 17/11/2026 ; programme outre-mer présenté le 27/11/2026",
    "s": [
     -0.5,
     3,
@@ -3611,6 +3672,16 @@ window.DATA={
      "Sud Radio (AFP), « Le Pen attaque Lisnard et son projet de \"broyer\" le code du travail »",
      "https://www.sudradio.fr/societe/le-pen-attaque-lisnard-et-son-projet-de-broyer-le-code-du-travail",
      "2026-11-22"
+    ],
+    "lcp27o": [
+     "LCP, ce que promet Marine Le Pen aux outre-mer",
+     "https://lcp.fr/actualites/pouvoir-d-achat-securite-aller-retour-dans-l-hexagone-ce-que-promet-marine-le-pen-aux",
+     "2026-11-27"
+    ],
+    "lcp27s": [
+     "LCP, Marine Le Pen et le secret de l'instruction",
+     "https://lcp.fr/actualites/si-elle-est-elue-marine-le-pen-veut-obliger-les-journalistes-a-respecter-le-secret-de-l",
+     "2026-11-27"
     ]
    },
    "src": {
@@ -3641,7 +3712,8 @@ window.DATA={
      "cb"
     ],
     "def": [
-     "inf"
+     "inf",
+     "lcp27o"
     ],
     "eur": [
      "pm"
@@ -3651,11 +3723,13 @@ window.DATA={
      "lx17"
     ],
     "imm": [
-     "ha"
+     "ha",
+     "lcp27o"
     ],
     "sec": [
      "sr13",
-     "eu18"
+     "eu18",
+     "lcp27s"
     ],
     "ecol": [
      "sr13",
@@ -3663,7 +3737,8 @@ window.DATA={
     ],
     "inst": [
      "ps6",
-     "ps25"
+     "ps25",
+     "lcp27o"
     ]
    },
    "t": {
@@ -3694,7 +3769,8 @@ window.DATA={
      "[P] AME remplacée par une aide d'urgence (2025)"
     ],
     "def": [
-     "[D] sortie du commandement intégré de l'OTAN, reportée pendant la guerre"
+     "[D] sortie du commandement intégré de l'OTAN, reportée pendant la guerre",
+     "[P] création d'une base interarmées renforcée à Nouméa (programme outre-mer, 27 novembre)"
     ],
     "eur": [
      "[D] pas de hausse de la contribution ; primauté du droit français"
@@ -3704,11 +3780,13 @@ window.DATA={
      "[D] communiqué du 16 novembre après une rencontre avec l'ambassadeur d'Ukraine : fin de l'aide financière française, mais maintien des dons de matériel, de l'aide humanitaire et des engagements pris, dont le prêt européen de 90 Md€ ; veut peser dans les négociations de paix"
     ],
     "imm": [
-     "[D] référendum : restriction du droit du sol, priorité nationale"
+     "[D] référendum : restriction du droit du sol, priorité nationale",
+     "[P] outre-mer : suppression du droit du sol à Mayotte, rétablissement des contrôles aux frontières, expulsion des clandestins et des délinquants étrangers (27 novembre)"
     ],
     "sec": [
      "[D] expulsion des familles délinquantes des logements sociaux",
-     "[D] après les violences du 17 octobre : règle du « casseur/payeur » et rétablissement de l'ordre républicain"
+     "[D] après les violences du 17 octobre : règle du « casseur/payeur » et rétablissement de l'ordre républicain",
+     "[D] le 27 novembre, veut alourdir les peines existantes pour recel de violation du secret de l'enquête et de l'instruction, y compris par des médias"
     ],
     "ecol": [
      "[D] moratoire éolien et solaire ; Fessenheim ; fin du ZAN",
@@ -3716,7 +3794,8 @@ window.DATA={
     ],
     "inst": [
      "[D] référendums sur la règle d'or et l'immigration",
-     "[D] en cas de victoire, annonce un gouvernement « ouvert et pluraliste », d'union nationale, avec Jordan Bardella à Matignon (Orléans, 25 octobre)"
+     "[D] en cas de victoire, annonce un gouvernement « ouvert et pluraliste », d'union nationale, avec Jordan Bardella à Matignon (Orléans, 25 octobre)",
+     "[P] programme outre-mer (27 novembre) : loi de programmation sur douze ans visant l'autonomie économique, alimentaire et énergétique ; ministère d'État des Outre-mer incluant le domaine maritime ; comité interministériel deux fois par an ; dépenses de l'État outre-mer +10 % (environ 3 Md€ sur le quinquennat selon Jordan Bardella) ; réforme de l'octroi de mer ; un aller-retour annuel vers l'Hexagone à prix plafonné ; pas de prise de position sur l'avenir institutionnel, dont la Nouvelle-Calédonie"
     ]
    }
   },
@@ -5937,8 +6016,8 @@ window.DATA={
     "def": "Réarmer tout de suite, et non à l'horizon d'une loi de programmation, répond à la réalité des menaces. La doctrine de puissance autonome garde la France maîtresse de ses choix tout en restant un allié fiable.",
     "eur": "Obtenir des dérogations sur l'asile et l'immigration, comme le Danemark, permet de reprendre la main sans le risque économique d'une sortie de l'UE. Le traité de démocratisation répond au déficit démocratique européen au lieu de le subir.",
     "etr": "Réviser l'accord de 1968 et sanctionner les pays qui refusent de reprendre leurs ressortissants transforme la diplomatie en levier concret sur l'immigration. Le soutien à l'Ukraine reste ferme : la fermeté ne s'arrête pas aux frontières.",
-    "imm": "Un objectif chiffré (titres de séjour divisés par huit) se vérifie, contrairement aux promesses vagues. Remplacer l'AME par une aide d'urgence soigne sans attirer, et la sortie de la CEDH n'est envisagée qu'en dernier recours, ce qui reste dans le cadre de l'État de droit.",
-    "sec": "La majorité pénale à 16 ans, les peines planchers pour les récidivistes et les travaux d'intérêt général apportent une sanction rapide et visible à la délinquance telle qu'elle est aujourd'hui. Isoler les casseurs dans des centres fermés, interdire les manifestations à risque grave et mieux sanctionner les dégradations protège la liberté de manifester de tous, comme l'interdiction des Frères musulmans s'attaque à l'islamisme à la source.",
+    "imm": "Un plafond vérifiable, moins de 100 000 titres de séjour par an avec une « green card » à la française, remplace l'automaticité par le choix. Remplacer l'AME par une aide d'urgence, conditionner visas et aide au développement aux réadmissions et ne sortir de la CEDH qu'en dernier recours tient l'objectif dans le cadre de l'État de droit.",
+    "sec": "Un code pénal des mineurs, l'excuse de minorité plafonnée, la majorité pénale à 16 ans et les peines planchers apportent une sanction rapide et visible à la délinquance telle qu'elle est aujourd'hui. Le délit de pillage, l'isolement des casseurs, des enquêteurs revalorisés et de nouvelles places de détention, y compris par accords avec des pays voisins, donnent à la justice les moyens d'appliquer ses peines.",
     "ecol": "Le nucléaire (réacteurs prolongés, nouveaux EPR, petits réacteurs), avec l'hydroélectricité et l'autoconsommation solaire, offre une électricité décarbonée et pilotable sans engager l'argent public dans un nouvel appel d'offres d'éolien en mer. Remplacer le principe de précaution par un principe de responsabilité, supprimer le DPE et récompenser la densification plutôt que geler le foncier permet d'innover et de construire au lieu de bloquer.",
     "inst": "Le référendum sur tous les sujets rend la parole aux citoyens, le septennat et une cinquantaine de provinces donnent du temps et de la proximité à l'action publique, et un gouvernement commando resserré, jugé sur ses 200 premiers jours avec une session extraordinaire du Parlement à l'été 2027, engage les réformes sans attendre. Nouvelle Énergie revendique une ligne indépendante, sans gouverner ni avec les macronistes ni avec le RN, et une primaire ouverte de la droite et du centre pour désigner un candidat commun.",
     "num": "Produire l'IA en France avant de la réguler, avec une structure franco-européenne d'innovation sur le modèle de la DARPA et des transferts de technologie exigés des fournisseurs étrangers, c'est la voie pour ne pas dépendre des États-Unis et de la Chine. La transparence des algorithmes, l'étiquetage des contenus générés par IA, la réversibilité dans la commande publique et des apprentissages sans machine à l'école gardent l'humain et la souveraineté au centre."
@@ -6064,6 +6143,10 @@ window.DATA={
       [
        "inst",
        "Référendum élargi à tous les sujets ; primaire ouverte de la droite et du centre, sans obligation pour les perdants de défendre le programme du vainqueur."
+      ],
+      [
+       "edu",
+       "Suppression de Parcoursup des deux côtés ; Retailleau y ajoute la sélection dès la première année de licence."
       ]
      ],
      "div": [
@@ -6231,6 +6314,21 @@ window.DATA={
   ]
  },
  "JOURNAL": [
+  {
+   "d": "2026-11-28",
+   "c": "Communication",
+   "t": "Argumentaire réécrit pour la sécurité (code pénal des mineurs, excuse de minorité plafonnée, délit de pillage, places de détention y compris à l'étranger) et l'immigration (moins de 100 000 titres de séjour par an, « green card » à la française, réadmissions), d'après l'entretien de David Lisnard au Figaro Magazine. Fiche Retailleau : convergence ajoutée en éducation (suppression de Parcoursup). Champ « réalité », segments et vulnérabilités inchangés."
+  },
+  {
+   "d": "2026-11-28",
+   "c": "Sondages",
+   "t": "Aucune nouvelle enquête d'intentions de vote depuis OpinionWay pour CNews (25-26 novembre). Opinion inchangée : aucune nouvelle mesure des thèmes du vote, des critères, de la solidité du choix, de l'électorat de Lisnard ou des motifs de changement d'avis."
+  },
+  {
+   "d": "2026-11-28",
+   "c": "Candidats",
+   "t": "David Lisnard : entretien au Figaro Magazine (27 novembre) repris par Nouvelle Énergie, ajouté en sécurité (code pénal des mineurs, excuse de minorité plafonnée à 20 %, délit de pillage, détenus dangereux placés dans des pays voisins) et en immigration (moins de 100 000 titres de séjour par an, « green card » à la française, « hubs » d'asile à l'étranger, référendum) ; selon le titre d'un sujet BFMTV non lu, son porte-parole annonce 30 000 places de prison et 5 000 postes de greffiers et juges ; statut complété (15 à 20 sénateurs revendiqués, chiffre non vérifié ; meeting à Lyon le 13 décembre). Marine Le Pen : programme outre-mer (27 novembre, LCP) ajouté en institutions, immigration et défense ; alourdissement des peines pour recel de violation du secret de l'instruction. Bruno Retailleau : programme d'enseignement supérieur (suppression de Parcoursup, sélection en licence, droits d'inscription, 200 000 étudiants étrangers au plus) ; son site affiche 12 thèmes sur 18. Jean-Luc Mélenchon : trois entrées d'après des titres (Chine, maintien dans l'UE, révocation de l'élu). Raphaël Glucksmann : « Conseil des territoires » (titre de franceinfo). Notes d'axes inchangées. Aucune nouvelle candidature, aucun retrait, désistement ni ralliement de candidat suivi ; réunion des quatre candidats de la droite et du centre autour de Gérard Larcher maintenue au 30 novembre."
+  },
   {
    "d": "2026-11-27",
    "c": "Communication",
